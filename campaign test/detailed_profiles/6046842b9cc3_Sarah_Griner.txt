@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - SARAH GRINER
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    6046842b9cc3c108fdb7d51e
+  Phone:          15035162658
+  Email:          Not provided
+  Tier:           Regular
+  Risk Status:    Inactive (123 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         5
+  Lifetime Value:       $119.27
+  Avg Transaction:      $23.85
+  Last Visit:           2025-06-21
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Monthly
+  Expected Annual Visits:   12
+  Potential Annual Value:   $286.20
+  
+  ROI Analysis:
+  - Discount Budget:        $4.77 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           6000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           3
+  Priority:       11
+  Send Timing:    Week 3
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS
+
+====================================================================================================

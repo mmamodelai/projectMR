@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - JON IMPARATO
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    00a0b900c08e00052a007201
+  Phone:          13238046065
+  Email:          Not provided
+  Tier:           Regular
+  Risk Status:    Dormant (89 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    6
+  Total Revenue:         $215.04
+  Average Transaction:   $35.84
+  Median Transaction:    $18.89
+  Min Transaction:      $3.17
+  Max Transaction:      $129.55
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      102.0 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Saturday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Credit
+  Favorite Staff:        Devon Calonzo
+
+  Payment Method Breakdown:
+    Credit            4 times ( 66.7%)
+    Cash              2 times ( 33.3%)
+
+  Staff Interaction Breakdown:
+    Devon Calonzo          2 times ( 33.3%)
+    Bob McGinn             2 times ( 33.3%)
+    Jimmy Silks            1 times ( 16.7%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    23
+  Unique Products:       20
+  Avg Items/Visit:       3.8
+  Favorite Category:     Flower PrePacks
+  Favorite Brand:        MOTA
+  Avg Item Price:        $10.43
+  Price Range:           $0.00 - $38.17
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            Regular
+  Engagement Level:      Low
+  Loyalty Score:         Low
+  Price Sensitivity:     Moderate
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              Win-Back Offer
+  Discount Level:        10-15%
+  Message Focus:         Flower PrePacks + MOTA
+  Channel:               SMS
+  Timing:                Saturday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi Jon, we miss you! 🌿
+   
+   We just restocked flower prepacks from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME00A0B9
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  102 days between visits
+  Expected Annual Visits: 3
+  Potential Annual Value: $107.52
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $7.17 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        1500%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          10
+Wave:                    2
+Send Window:            Week 2
+Best Contact Time:      Saturday at 0:00
+Follow-up Schedule:     None
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $35.84 (first visit)
+  Annual Value:          $107.52
+
+NOTES:
+  - Customer has been gone for 89 days
+  - Historical pattern: 6 visits, $215.04 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+====================================================================================================

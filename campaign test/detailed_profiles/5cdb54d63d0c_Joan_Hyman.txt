@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - JOAN HYMAN
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5cdb54d63d0c2f07f90f23d7
+  Phone:          13234451957
+  Email:          Not provided
+  Tier:           VIP
+  Risk Status:    Cooling (54 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         12
+  Lifetime Value:       $292.90
+  Avg Transaction:      $24.41
+  Last Visit:           2025-08-29
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Bi-weekly
+  Expected Annual Visits:   26
+  Potential Annual Value:   $634.66
+  
+  ROI Analysis:
+  - Discount Budget:        $4.88 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           13000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           1
+  Priority:       5
+  Send Timing:    Week 1 - URGENT
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS + Email
+
+====================================================================================================

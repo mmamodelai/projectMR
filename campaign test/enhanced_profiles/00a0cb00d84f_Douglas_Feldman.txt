@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - DOUGLAS FELDMAN
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    00a0cb00d84f00837100448d
+  Phone:          12136086510
+  Email:          Not provided
+  Tier:           VIP
+  Risk Status:    Dormant (91 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    11
+  Total Revenue:         $295.19
+  Average Transaction:   $26.84
+  Median Transaction:    $24.00
+  Min Transaction:      $0.01
+  Max Transaction:      $76.00
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      53.9 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Thursday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Cash
+  Favorite Staff:        Devon Calonzo
+
+  Payment Method Breakdown:
+    Cash              8 times ( 72.7%)
+    Credit            3 times ( 27.3%)
+
+  Staff Interaction Breakdown:
+    Devon Calonzo          5 times ( 45.5%)
+    Bob McGinn             4 times ( 36.4%)
+    Jimmy Silks            2 times ( 18.2%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    57
+  Unique Products:       16
+  Avg Items/Visit:       5.2
+  Favorite Category:     Edibles
+  Favorite Brand:        Smokiez
+  Avg Item Price:        $7.77
+  Price Range:           $0.01 - $17.00
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            VIP
+  Engagement Level:      Medium
+  Loyalty Score:         Low
+  Price Sensitivity:     Budget
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              Valued Customer
+  Discount Level:        15-20%
+  Message Focus:         Edibles + Smokiez
+  Channel:               SMS + Email
+  Timing:                Thursday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi Douglas, we miss you! 🌿
+   
+   We just restocked edibles from Smokiez - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME00A0CB
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  54 days between visits
+  Expected Annual Visits: 6
+  Potential Annual Value: $161.01
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $5.37 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        3000%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          6
+Wave:                    2
+Send Window:            Week 2
+Best Contact Time:      Thursday at 0:00
+Follow-up Schedule:     48 hours
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $26.84 (first visit)
+  Annual Value:          $161.01
+
+NOTES:
+  - Customer has been gone for 91 days
+  - Historical pattern: 11 visits, $295.19 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+====================================================================================================

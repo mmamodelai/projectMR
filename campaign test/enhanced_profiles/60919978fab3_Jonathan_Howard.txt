@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - JONATHAN HOWARD
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    60919978fab34f78f20f7e29
+  Phone:          16263606055
+  Email:          Not provided
+  Tier:           Super VIP
+  Risk Status:    Cooling (66 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    26
+  Total Revenue:         $812.38
+  Average Transaction:   $31.25
+  Median Transaction:    $26.27
+  Min Transaction:      $4.00
+  Max Transaction:      $87.25
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      23.0 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Sunday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Cash
+  Favorite Staff:        Jacob Vangellow
+
+  Payment Method Breakdown:
+    Cash             17 times ( 65.4%)
+    Credit            9 times ( 34.6%)
+
+  Staff Interaction Breakdown:
+    Jacob Vangellow        8 times ( 30.8%)
+    Devon Calonzo          4 times ( 15.4%)
+    Luis Bobadilla         3 times ( 11.5%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    74
+  Unique Products:       56
+  Avg Items/Visit:       2.8
+  Favorite Category:     Flower PrePacks
+  Favorite Brand:        MOTA
+  Avg Item Price:        $12.61
+  Price Range:           $0.00 - $38.17
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            Super VIP
+  Engagement Level:      High
+  Loyalty Score:         Medium
+  Price Sensitivity:     Moderate
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              VIP Treatment
+  Discount Level:        20-30%
+  Message Focus:         Flower PrePacks + MOTA
+  Channel:               SMS + Email + Call
+  Timing:                Sunday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi Jonathan, we miss you! 🌿
+   
+   We just restocked flower prepacks from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME609199
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  23 days between visits
+  Expected Annual Visits: 15
+  Potential Annual Value: $468.68
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $6.25 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        7500%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          1
+Wave:                    1
+Send Window:            Week 1 - URGENT
+Best Contact Time:      Sunday at 0:00
+Follow-up Schedule:     48 hours
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $31.25 (first visit)
+  Annual Value:          $468.68
+
+NOTES:
+  - Customer has been gone for 66 days
+  - Historical pattern: 26 visits, $812.38 total spent
+  - Standard campaign approach
+  - Consider phone call if SMS doesn't convert
+
+====================================================================================================

@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - DONALD GATES
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5ecef67dcee3d308dec752dc
+  Phone:          13237179550
+  Email:          Not provided
+  Tier:           VIP
+  Risk Status:    At Risk (159 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    10
+  Total Revenue:         $292.41
+  Average Transaction:   $29.24
+  Median Transaction:    $20.40
+  Min Transaction:      $1.91
+  Max Transaction:      $115.13
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      54.2 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Friday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Cash
+  Favorite Staff:        Jimmy Silks
+
+  Payment Method Breakdown:
+    Cash              6 times ( 60.0%)
+    Credit            4 times ( 40.0%)
+
+  Staff Interaction Breakdown:
+    Jimmy Silks            3 times ( 30.0%)
+    Jacob Vangellow        3 times ( 30.0%)
+    Devon Calonzo          2 times ( 20.0%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    28
+  Unique Products:       23
+  Avg Items/Visit:       2.8
+  Favorite Category:     Flower PrePacks
+  Favorite Brand:        MOTA
+  Avg Item Price:        $10.87
+  Price Range:           $0.00 - $34.00
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            VIP
+  Engagement Level:      Low
+  Loyalty Score:         Low
+  Price Sensitivity:     Budget
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              Valued Customer
+  Discount Level:        15-20%
+  Message Focus:         Flower PrePacks + MOTA
+  Channel:               SMS + Email
+  Timing:                Friday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi Donald, we miss you! 🌿
+   
+   We just restocked flower prepacks from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME5ECEF6
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  54 days between visits
+  Expected Annual Visits: 6
+  Potential Annual Value: $175.45
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $5.85 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        3000%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          8
+Wave:                    4
+Send Window:            Week 4
+Best Contact Time:      Friday at 0:00
+Follow-up Schedule:     48 hours
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $29.24 (first visit)
+  Annual Value:          $175.45
+
+NOTES:
+  - Customer has been gone for 159 days
+  - Historical pattern: 10 visits, $292.41 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+====================================================================================================

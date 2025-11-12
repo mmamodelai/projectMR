@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - KEVIN DEAGUEROS
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5ee524982455c508c5d62464
+  Phone:          13233779447
+  Email:          Not provided
+  Tier:           Super VIP
+  Risk Status:    Cooling (51 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    89
+  Total Revenue:         $2,266.92
+  Average Transaction:   $25.47
+  Median Transaction:    $14.88
+  Min Transaction:      $0.71
+  Max Transaction:      $138.27
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      6.9 days
+  Visit Frequency:       Weekly
+  Preferred Day:         Monday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Cash
+  Favorite Staff:        Jimmy Silks
+
+  Payment Method Breakdown:
+    Cash             50 times ( 56.2%)
+    Credit           38 times ( 42.7%)
+
+  Staff Interaction Breakdown:
+    Jimmy Silks           23 times ( 25.8%)
+    Jacob Vangellow       23 times ( 25.8%)
+    Devon Calonzo         13 times ( 14.6%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    202
+  Unique Products:       156
+  Avg Items/Visit:       2.3
+  Favorite Category:     Flower PrePacks
+  Favorite Brand:        MOTA
+  Avg Item Price:        $10.74
+  Price Range:           $0.00 - $56.53
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            Super VIP
+  Engagement Level:      High
+  Loyalty Score:         High
+  Price Sensitivity:     Budget
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              VIP Treatment
+  Discount Level:        20-30%
+  Message Focus:         Flower PrePacks + MOTA
+  Channel:               SMS + Email + Call
+  Timing:                Monday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi Kevin, we miss you! 🌿
+   
+   We just restocked flower prepacks from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME5EE524
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  7 days between visits
+  Expected Annual Visits: 52
+  Potential Annual Value: $1,324.49
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $5.09 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        26000%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          1
+Wave:                    1
+Send Window:            Week 1 - URGENT
+Best Contact Time:      Monday at 0:00
+Follow-up Schedule:     48 hours
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $25.47 (first visit)
+  Annual Value:          $1,324.49
+
+NOTES:
+  - Customer has been gone for 51 days
+  - Historical pattern: 89 visits, $2,266.92 total spent
+  - HIGH VALUE - Personal follow-up recommended
+  - Consider phone call if SMS doesn't convert
+
+====================================================================================================

@@ -1,0 +1,55 @@
+
+================================================================================
+CUSTOMER SNAPSHOT - HERNANDO UMANA
+================================================================================
+
+CONTACT INFORMATION:
+  Phone:          17863149092
+  Email:          Not provided
+  Customer ID:    67a13289ebbd807aed8064b7
+
+TIER & STATUS:
+  Tier:           Regular
+  Risk Status:    At Risk
+  Campaign Wave:  Wave 4 Priority
+
+ENGAGEMENT METRICS:
+  Last Visit:           2025-05-08
+  Days Since Last:      167 days
+  Total Visits:         6
+  Visit Frequency:      Monthly (when active)
+  
+VALUE METRICS:
+  Lifetime Value:       $276.53
+  Average Transaction:  $46.09
+  Estimated Annual:     $553.08 (if reactivated)
+
+URGENCY ASSESSMENT:
+  Level:          CRITICAL - At Risk of Lost Forever
+  Recommended:    Maximum effort, best offer
+
+REACTIVATION STRATEGY:
+
+  Approach:       Win-Back Offer
+  Offer:          10-15% off on next visit
+  Message:        "Come back and see what's new! Special offer just for you..."
+  Channel:        SMS
+  Budget:         Up to $6.91 discount value
+
+CAMPAIGN TIMING:
+  Send Window:    Week 1 - CRITICAL, send ASAP
+  Best Time:      Afternoon (2-5 PM) based on customer tier
+  Follow-up:      None scheduled
+
+SUCCESS METRICS:
+  Target ROI:     200%
+  Break-even:     1 visit at $46.09
+  Goal:           Restore to Monthly visits
+
+NOTES:
+  - Customer has been gone for 167 days
+  - Historical pattern: 6 visits, $276.53 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+================================================================================

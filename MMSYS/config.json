@@ -1,0 +1,22 @@
+{
+  "modem": {
+    "port": "COM24",
+    "baudrate": 115200,
+    "timeout": 5
+  },
+  "mms": {
+    "mmsc": "http://mms.msg.eng.t-mobile.com/mms/wapenc",
+    "mmsc_port": "8080",
+    "apn": "fast.t-mobile.com",
+    "apn_user": "",
+    "apn_password": "",
+    "proxy": "",
+    "proxy_port": ""
+  },
+  "settings": {
+    "max_message_length": 5000,
+    "tcp_timeout": 30,
+    "debug_mode": true
+  }
+}
+

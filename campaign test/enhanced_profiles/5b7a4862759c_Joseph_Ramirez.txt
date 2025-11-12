@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - JOSEPH RAMIREZ
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5b7a4862759ccf0813dcd8c5
+  Phone:          13234209260
+  Email:          Not provided
+  Tier:           Super VIP
+  Risk Status:    Cooling (61 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    22
+  Total Revenue:         $549.22
+  Average Transaction:   $24.96
+  Median Transaction:    $18.63
+  Min Transaction:      $1.00
+  Max Transaction:      $156.44
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      27.2 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Friday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Credit
+  Favorite Staff:        Bob McGinn
+
+  Payment Method Breakdown:
+    Credit           11 times ( 50.0%)
+    Cash             11 times ( 50.0%)
+
+  Staff Interaction Breakdown:
+    Bob McGinn             6 times ( 27.3%)
+    Devon Calonzo          4 times ( 18.2%)
+    Lizbeth Garcia         4 times ( 18.2%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    62
+  Unique Products:       42
+  Avg Items/Visit:       2.8
+  Favorite Category:     Flower PrePacks
+  Favorite Brand:        MOTA
+  Avg Item Price:        $9.23
+  Price Range:           $0.00 - $39.11
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            Super VIP
+  Engagement Level:      High
+  Loyalty Score:         Medium
+  Price Sensitivity:     Budget
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              VIP Treatment
+  Discount Level:        20-30%
+  Message Focus:         Flower PrePacks + MOTA
+  Channel:               SMS + Email + Call
+  Timing:                Friday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi Joseph, we miss you! 🌿
+   
+   We just restocked flower prepacks from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME5B7A48
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  27 days between visits
+  Expected Annual Visits: 13
+  Potential Annual Value: $324.54
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $4.99 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        6500%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          1
+Wave:                    1
+Send Window:            Week 1 - URGENT
+Best Contact Time:      Friday at 0:00
+Follow-up Schedule:     48 hours
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $24.96 (first visit)
+  Annual Value:          $324.54
+
+NOTES:
+  - Customer has been gone for 61 days
+  - Historical pattern: 22 visits, $549.22 total spent
+  - Standard campaign approach
+  - Consider phone call if SMS doesn't convert
+
+====================================================================================================

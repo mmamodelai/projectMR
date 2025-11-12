@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - STEPHANIE TIRADO
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5ea0eba5ef601f08d4101d07
+  Phone:          12138806457
+  Email:          Not provided
+  Tier:           Super VIP
+  Risk Status:    Dormant (94 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         25
+  Lifetime Value:       $892.57
+  Avg Transaction:      $35.70
+  Last Visit:           2025-07-20
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Weekly
+  Expected Annual Visits:   52
+  Potential Annual Value:   $1,856.40
+  
+  ROI Analysis:
+  - Discount Budget:        $7.14 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           26000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           2
+  Priority:       2
+  Send Timing:    Week 2
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS+ Email + Call
+
+====================================================================================================

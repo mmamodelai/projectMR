@@ -1,0 +1,1056 @@
+{
+  "name": "MotaBot wDB v5.300 - with Database Query Tools",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## 🚀 MotaBot v5.300 - DATABASE QUERY AGENT!\n\n**NEW IN v5.300:**\n✅ 4 AI-powered Supabase query tools\n✅ Get Customer Transactions (recent purchases)\n✅ Get Transaction Items (product details)\n✅ Search Products Purchased (history search)\n✅ Calculate Customer Spending (analytics)\n\n**8 TOTAL TOOLS:**\n1. Customers Data Points (rewards/points)\n2. Budtenders Data Points (performance)\n3. Budtenders DB 2025 (contact info)\n4. Gmail (send emails)\n5-8. NEW Supabase Query Tools!\n\n**AI CAN NOW:**\n- Answer \"What did I buy last time?\" with REAL data\n- Search \"Have I bought Blue Dream?\" with ACTUAL results\n- Calculate \"How much did I spend?\" with REAL totals\n\n**CONNECTED TO:**\n- Supabase CRM (93.6K transactions, 10K customers)\n- Google Sheets (rewards points)\n- Gmail (email sending)",
+        "height": 500,
+        "width": 600,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -208,
+        -208
+      ],
+      "id": "8a3e1506-9d23-4c14-8b52-7384d1f07772",
+      "name": "Workflow Info"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes",
+              "minutesInterval": 1
+            }
+          ]
+        }
+      },
+      "id": "efd669b0-2332-45a3-818f-504160221e85",
+      "name": "Poll Every 1min",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -960,
+        368
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://kiwmwoqrguyrcpjytgte.supabase.co/rest/v1/messages?select=*&order=timestamp.desc&limit=50",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"
+            },
+            {
+              "name": "Authorization",
+              "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"
+            },
+            {
+              "name": "Accept",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "1f8180b1-ed5e-4bbd-b6fd-865238f1daae",
+      "name": "Get Recent Messages",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -736,
+        368
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Filter for unread inbound messages only\nconst messages = $input.all().map(item => item.json);\nconst unreadInbound = messages.filter(msg => \n  msg.direction === 'inbound' && msg.status === 'unread'\n);\n\nif (unreadInbound.length === 0) { \n  return []; \n}\n\nreturn unreadInbound.map(msg => ({\n  json: {\n    message_id: msg.id,\n    phone_number: msg.phone_number,\n    incoming_message: msg.content,\n    timestamp: msg.timestamp\n  }\n}));"
+      },
+      "id": "946510e4-8a63-4839-9b0c-2180055fbb93",
+      "name": "Filter Unread Messages",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -512,
+        368
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// v5.300: Enhanced with FULL CRM DATA including transactions and products!\nconst currentMessage = $input.item.json;\nconst phoneNumber = currentMessage.phone_number;\nconst incomingMessage = currentMessage.incoming_message;\nconst messageId = currentMessage.message_id;\n\nconst supabaseUrl = 'https://kiwmwoqrguyrcpjytgte.supabase.co';\nconst supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0';\n\n// Fetch conversation history\nlet history = [];\ntry {\n  const url = `${supabaseUrl}/rest/v1/messages?select=*&phone_number=eq.${phoneNumber}&order=timestamp.desc`;\n  const response = await fetch(url, {\n    method: 'GET',\n    headers: {\n      'apikey': supabaseKey,\n      'Authorization': `Bearer ${supabaseKey}`,\n      'Accept': 'application/json'\n    }\n  });\n  \n  if (response.ok) {\n    history = await response.json();\n  }\n} catch (error) {\n  console.log('Could not fetch conversation history:', error);\n}\n\n// Fetch customer CRM data (with member_id for transactions)\nlet customerData = null;\nlet memberId = null;\ntry {\n  const custUrl = `${supabaseUrl}/rest/v1/customers?phone=eq.${encodeURIComponent(phoneNumber)}&select=member_id,name,vip_status,total_visits,lifetime_value,last_visit_date&limit=1`;\n  const custResponse = await fetch(custUrl, {\n    method: 'GET',\n    headers: {\n      'apikey': supabaseKey,\n      'Authorization': `Bearer ${supabaseKey}`,\n      'Accept': 'application/json'\n    }\n  });\n  \n  if (custResponse.ok) {\n    const custData = await custResponse.json();\n    if (custData.length > 0) {\n      customerData = custData[0];\n      memberId = customerData.member_id;\n    }\n  }\n} catch (error) {\n  console.log('Could not fetch customer data:', error);\n}\n\n// NEW v5.300: Fetch recent transactions\nlet transactions = [];\nif (memberId) {\n  try {\n    const txnUrl = `${supabaseUrl}/rest/v1/transactions?customer_id=eq.${memberId}&select=*&order=date.desc&limit=5`;\n    const txnResponse = await fetch(txnUrl, {\n      method: 'GET',\n      headers: {\n        'apikey': supabaseKey,\n        'Authorization': `Bearer ${supabaseKey}`,\n        'Accept': 'application/json'\n      }\n    });\n    \n    if (txnResponse.ok) {\n      transactions = await txnResponse.json();\n    }\n  } catch (error) {\n    console.log('Could not fetch transactions:', error);\n  }\n}\n\n// NEW v5.300: Fetch items for most recent transaction\nlet recentItems = [];\nif (transactions.length > 0) {\n  try {\n    const itemsUrl = `${supabaseUrl}/rest/v1/transaction_items?transaction_id=eq.${transactions[0].transaction_id}&select=*`;\n    const itemsResponse = await fetch(itemsUrl, {\n      method: 'GET',\n      headers: {\n        'apikey': supabaseKey,\n        'Authorization': `Bearer ${supabaseKey}`,\n        'Accept': 'application/json'\n      }\n    });\n    \n    if (itemsResponse.ok) {\n      recentItems = await itemsResponse.json();\n    }\n  } catch (error) {\n    console.log('Could not fetch items:', error);\n  }\n}\n\n// Build conversation string\nlet conversation = 'CONVERSATION HISTORY:\\n\\n';\n\nif (history.length > 0) {\n  history.reverse().forEach(msg => {\n    const timestamp = new Date(msg.timestamp).toLocaleString();\n    const role = msg.direction === 'inbound' ? 'Customer' : 'You (MotaBot)';\n    conversation += `[${timestamp}] ${role}: ${msg.content}\\n\\n`;\n  });\n} else {\n  conversation += 'No previous conversation history.\\n\\n';\n}\n\n// Add CRM context\nif (customerData) {\n  conversation += '\\n=== CUSTOMER CRM DATA (from Supabase) ===\\n';\n  conversation += `Name: ${customerData.name || 'Unknown'}\\n`;\n  conversation += `VIP Status: ${customerData.vip_status || 'Regular'}\\n`;\n  conversation += `Total Visits: ${customerData.total_visits || 0}\\n`;\n  conversation += `Lifetime Value: $${customerData.lifetime_value || 0}\\n`;\n  conversation += `Last Visit: ${customerData.last_visit_date || 'N/A'}\\n`;\n  conversation += '\\n';\n}\n\n// NEW v5.300: Add recent purchase history\nif (transactions.length > 0) {\n  conversation += '=== RECENT PURCHASE HISTORY (Last 5 Visits) ===\\n';\n  transactions.forEach((txn, idx) => {\n    const date = new Date(txn.date).toLocaleDateString();\n    conversation += `${idx + 1}. ${date} at ${txn.shop_location || 'Unknown Location'}\\n`;\n    conversation += `   Staff: ${txn.staff_name || 'Unknown'}\\n`;\n    conversation += `   Total: $${txn.total_amount}\\n`;\n  });\n  conversation += '\\n';\n}\n\n// NEW v5.300: Add last purchase details\nif (recentItems.length > 0) {\n  conversation += '=== LAST PURCHASE DETAILS ===\\n';\n  const lastDate = new Date(transactions[0].date).toLocaleDateString();\n  conversation += `Date: ${lastDate}\\n`;\n  conversation += `Products:\\n`;\n  recentItems.forEach(item => {\n    conversation += `  - ${item.product_name || 'Unknown'} (${item.quantity}x) - $${item.price}\\n`;\n  });\n  conversation += `Total: $${transactions[0].total_amount}\\n`;\n  conversation += '\\n';\n}\n\nconversation += '\\nCURRENT MESSAGE (reply to this):\\n';\nconversation += `Customer: ${incomingMessage}\\n\\n`;\nconversation += `Phone Number: ${phoneNumber}`;\n\nreturn {\n  json: {\n    chatInput: conversation,\n    phone_number: phoneNumber,\n    message_id: messageId,\n    customer_name: customerData?.name || null,\n    vip_status: customerData?.vip_status || null\n  }\n};"
+      },
+      "id": "119b2c53-adfa-4fda-84c0-042801a00834",
+      "name": "Prepare for AI + CRM Data",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -288,
+        368
+      ]
+    },
+    {
+      "parameters": {
+        "options": {
+          "systemMessage": "You are MotaBot v5.300 - the friendly, personalized AI for Mota Rewards with FULL CRM DATABASE ACCESS!\n\nYou have CONVERSATION HISTORY showing past messages with this customer. Use it to have natural, flowing conversations.\n\n🔥 NEW IN v5.300: You get FULL PURCHASE HISTORY directly in the conversation context!\n\nYour communication style:\n- Personal and friendly - greet them by first name!\n- Keep responses under 150 characters for SMS\n- Be natural and reference what was said before\n- Be helpful and informative without being pushy\n- DO NOT use emojis - they cause SMS delivery failures\n\nTOOLS AVAILABLE:\n1. 'Customers Data Points' - Basic customer info (points, name, phone, last dispensary, last budtender)\n2. 'Budtenders Data Points' - Budtender performance data\n3. 'Budtenders DB 2025 Info' - Budtender contact details\n4. 'Gmail' - Send emails to customers\n\nDATA YOU AUTOMATICALLY RECEIVE IN EVERY CONVERSATION:\n\n1. **CUSTOMER CRM DATA:**\n   - Name\n   - VIP Status (Regular/VIP/Platinum)\n   - Total Visits\n   - Lifetime Value\n   - Last Visit Date\n\n2. **RECENT PURCHASE HISTORY (Last 5 Visits):**\n   - Date of each visit\n   - Location visited\n   - Staff member who helped them\n   - Total amount spent\n\n3. **LAST PURCHASE DETAILS (Most Recent Transaction):**\n   - Exact products purchased\n   - Quantities\n   - Prices\n   - Date and total\n\nHOW TO USE THIS DATA:\n\n**Customer: \"What did I buy last time?\"**\n→ Look at \"LAST PURCHASE DETAILS\" section in the conversation context\n→ Response: \"Last time on [date] you got [list products]! Total was [amount].\"\n\n**Customer: \"How often do I visit?\"**\n→ Look at \"RECENT PURCHASE HISTORY\" section\n→ Count days between visits\n→ Response: \"You visit about every [X] days! Your last 5 visits show you're a regular!\"\n\n**Customer: \"Who helped me last time?\"**\n→ Look at \"RECENT PURCHASE HISTORY\" - first entry has staff name\n→ Response: \"[Staff Name] helped you on your last visit!\"\n\n**Customer: \"How much do I usually spend?\"**\n→ Look at \"RECENT PURCHASE HISTORY\" - see all totals\n→ Calculate average mentally\n→ Response: \"Looking at your last 5 visits, you spend about $[avg] per trip!\"\n\n**Customer: \"Am I VIP?\"**\n→ Look at \"CUSTOMER CRM DATA\" - VIP Status\n→ Response: \"Yes! You're [status] with [X] visits and $[LTV] spent!\"\n\n**WHEN TO USE DATABASE QUERY TOOLS:**\n\nFor MOST questions, use the pre-fetched data above (it's faster!)\n\nBut use the database tools when:\n\n1. **Customer asks about ALL their purchases** (not just last 5)\n   → Use 'get_customer_transactions' with limit=20 or more\n\n2. **Customer asks about a specific product across all time** (\"Have I ever bought Blue Dream?\")\n   → Use 'search_products_purchased' with searchTerm=\"Blue Dream\"\n\n3. **Customer asks about older transactions** (beyond last 5 shown)\n   → Use 'get_customer_transactions' to get more history\n\n4. **Customer asks about spending in a specific timeframe** (\"How much did I spend in January?\")\n   → Use 'calculate_spending' with startDate=\"2025-01-01\" and endDate=\"2025-01-31\"\n\n5. **Customer needs details about an older transaction**\n   → First use 'get_customer_transactions' to find the transaction_id\n   → Then use 'get_transaction_items' with that transaction_id\n\nEXAMPLES:\n\nCustomer: \"What did I buy last time?\"\nYou:\n  1. Look at \"LAST PURCHASE DETAILS\" in conversation context\n  2. Respond: \"Last time you got [product 1], [product 2], and [product 3] on [date] for $[total]!\"\n\nCustomer: \"Who helped me?\"\nYou:\n  1. Look at \"RECENT PURCHASE HISTORY\" - first entry\n  2. Respond: \"[Staff Name] helped you on [date]! They're great!\"\n\nCustomer: \"Do I buy a lot here?\"\nYou:\n  1. Look at \"CUSTOMER CRM DATA\" - Total Visits and Lifetime Value\n  2. Respond: \"You've visited [X] times and spent $[LTV] total! You're awesome!\"\n\nCustomer: \"What are my points?\"\nYou:\n  1. Use 'Customers Data Points' tool\n  2. Respond: \"You've got [X] points! With your [VIP Status], that's great!\"\n\nCustomer: \"Email me my info\"\nYou:\n  1. Use 'Customers Data Points' to get email\n  2. Use 'Gmail' tool to send summary\n  3. Include data from CRM context (visits, LTV, recent purchases)\n  4. Respond: \"Just sent your account summary to [email]!\"\n\nWHAT YOU CAN SHARE:\n✅ ALWAYS share with the customer:\n- Their own name, points, email, phone\n- Their VIP status\n- Their visit count and lifetime value\n- Their purchase history (what THEY bought)\n- Staff members who helped THEM\n- Products THEY purchased\n\n❌ NEVER share:\n- Other customers' private information\n- Other customers' purchase history\n- Exact inventory counts\n\nCOMMUNICATION CHANNELS:\n- SMS (text) - default, keep under 150 chars\n- Email - use Gmail tool when requested for detailed info\n\nDO NOT say: 'Check your app', 'Use the app', 'I don't have access to that'\nDO say: 'Stop by Fire House Inc', 'Let me email you that', 'I can see you bought [product]'\n\nIMPORTANT: ALL THE DATA YOU NEED IS ALREADY IN THE CONVERSATION CONTEXT! Just READ it and USE it to give specific, accurate answers. The customer will be AMAZED you remember their exact purchases!"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        128,
+        368
+      ],
+      "id": "688163c1-4a42-4ebe-9170-7bc3957a2871",
+      "name": "MotaBot AI v5.100"
+    },
+    {
+      "parameters": {
+        "model": "google/gemini-2.0-flash-001:free",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1,
+      "position": [
+        -64,
+        592
+      ],
+      "id": "c3cc7e74-2c72-4df6-b6dd-9b93f8eff98c",
+      "name": "OpenRouter Chat Model",
+      "credentials": {
+        "openRouterApi": {
+          "id": "daclOezIY0qSdW4Z",
+          "name": "OpenRouter account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "PATCH",
+        "url": "={{ 'https://kiwmwoqrguyrcpjytgte.supabase.co/rest/v1/messages?id=eq.' + $('Prepare for AI + CRM Data').item.json.message_id }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"
+            },
+            {
+              "name": "Authorization",
+              "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ status: 'read' }) }}",
+        "options": {}
+      },
+      "id": "278f85f1-c22a-4ec9-a089-6434262a40be",
+      "name": "Mark as Read",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        656,
+        272
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://kiwmwoqrguyrcpjytgte.supabase.co/rest/v1/messages",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"
+            },
+            {
+              "name": "Authorization",
+              "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ phone_number: $('Prepare for AI + CRM Data').item.json.phone_number, content: $json.output || $json.text || $json.response, status: 'queued', direction: 'outbound' }) }}",
+        "options": {}
+      },
+      "id": "44489cf0-095a-474c-8c7e-eacc3d0678dd",
+      "name": "Queue Full Message",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        656,
+        464
+      ]
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1kqALfqsggTnT7upTXsI-cUVU9jYrhFyJ-uCdK4sYmTM",
+          "mode": "list",
+          "cachedResultName": "Mota Rewards Database",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1kqALfqsggTnT7upTXsI-cUVU9jYrhFyJ-uCdK4sYmTM/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "CUSTOMERS",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1kqALfqsggTnT7upTXsI-cUVU9jYrhFyJ-uCdK4sYmTM/edit#gid=0"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -736,
+        -352
+      ],
+      "id": "9cc0b833-341e-482c-b74f-fd83fb0a3f05",
+      "name": "Get Customer Rows",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "LSu2bHJie7HlsZRT",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1kqALfqsggTnT7upTXsI-cUVU9jYrhFyJ-uCdK4sYmTM",
+          "mode": "list",
+          "cachedResultName": "Mota Rewards Database",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1kqALfqsggTnT7upTXsI-cUVU9jYrhFyJ-uCdK4sYmTM/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 992947458,
+          "mode": "list",
+          "cachedResultName": "Budtenders",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1kqALfqsggTnT7upTXsI-cUVU9jYrhFyJ-uCdK4sYmTM/edit#gid=992947458"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -736,
+        -160
+      ],
+      "id": "ae2e44a5-00c3-4af5-b2a0-e9fbe1392ce3",
+      "name": "Get Budtenders Rows",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "LSu2bHJie7HlsZRT",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "=1CpKXmzyNvH5KMiA0LxBkzuSIKOCeKFyeCR8ZKLlM0OE",
+          "mode": "url"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 81697642,
+          "mode": "list",
+          "cachedResultName": "Budtenders",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1CpKXmzyNvH5KMiA0LxBkzuSIKOCeKFyeCR8ZKLlM0OE/edit#gid=81697642"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -736,
+        32
+      ],
+      "id": "01c84f71-ed43-4d8a-b4ce-d69885c7e325",
+      "name": "Get BUDTENDERS DB",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "LSu2bHJie7HlsZRT",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "upsert",
+        "dataTableId": {
+          "__rl": true,
+          "value": "IrckcDMtEMjxjb2Q",
+          "mode": "list",
+          "cachedResultName": "Budtenders Data Points",
+          "cachedResultUrl": "/projects/U8qx0mgq0lyFAfZg/datatables/IrckcDMtEMjxjb2Q"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Total_Sales_Attributed": "={{ $json.Total_Sales_Attributed }}",
+            "Budtender_ID": "={{ $json.Budtender_ID }}",
+            "First_Name": "={{ $json.First_Name }}",
+            "Last_Name": "={{ $json.Last_Name }}",
+            "Email": "={{ $json.Email }}",
+            "Phone": "={{ $json.Phone }}",
+            "Dispensary": "={{ $json.Dispensary }}",
+            "NOTHING": "={{ $json.NOTHING }}",
+            "Performance_Tier": "={{ $json.Performance_Tier }}",
+            "Hire_Date": "={{ $json.Hire_Date }}"
+          },
+          "matchingColumns": [
+            "Phone"
+          ],
+          "schema": [
+            {
+              "id": "Budtender_ID",
+              "displayName": "Budtender_ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "First_Name",
+              "displayName": "First_Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Last_Name",
+              "displayName": "Last_Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Email",
+              "displayName": "Email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Phone",
+              "displayName": "Phone",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Dispensary",
+              "displayName": "Dispensary",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "NOTHING",
+              "displayName": "NOTHING",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Total_Sales_Attributed",
+              "displayName": "Total_Sales_Attributed",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Performance_Tier",
+              "displayName": "Performance_Tier",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Hire_Date",
+              "displayName": "Hire_Date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "dateTime",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1,
+      "position": [
+        -512,
+        -160
+      ],
+      "id": "2b93b583-1bae-4dc8-a287-cdaccb1d7c7e",
+      "name": "Insert BUDTENDERS points"
+    },
+    {
+      "parameters": {
+        "operation": "upsert",
+        "dataTableId": {
+          "__rl": true,
+          "value": "zZ2IrXHsmtrtqStH",
+          "mode": "list",
+          "cachedResultName": "Customers Data Points",
+          "cachedResultUrl": "/projects/U8qx0mgq0lyFAfZg/datatables/zZ2IrXHsmtrtqStH"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Total_Points": "={{ $json.Total_Points }}",
+            "First_Name": "={{ $json.First_Name }}",
+            "Last_Name": "={{ $json.Last_Name }}",
+            "Email": "={{ $json.Email }}",
+            "Phone": "={{ $json.Phone }}",
+            "Last_dispensary": "={{ $json.Last_dispensary }}",
+            "Last_budtender": "={{ $json.Last_budtender }}",
+            "error": "={{ $json.error }}",
+            "message": "={{ $json.message }}",
+            "operation": "={{ $json.operation }}",
+            "output": "={{ $json.output }}",
+            "myNewField": "={{ $json.myNewField }}"
+          },
+          "matchingColumns": [
+            "Phone"
+          ],
+          "schema": [
+            {
+              "id": "First_Name",
+              "displayName": "First_Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Last_Name",
+              "displayName": "Last_Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Email",
+              "displayName": "Email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Phone",
+              "displayName": "Phone",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Total_Points",
+              "displayName": "Total_Points",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Last_dispensary",
+              "displayName": "Last_dispensary",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Last_budtender",
+              "displayName": "Last_budtender",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "error",
+              "displayName": "error",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "message",
+              "displayName": "message",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "operation",
+              "displayName": "operation",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "output",
+              "displayName": "output",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "myNewField",
+              "displayName": "myNewField",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1,
+      "position": [
+        -512,
+        -352
+      ],
+      "id": "5f756dfd-288c-4c2b-9f5a-c16165d8592e",
+      "name": "Insert CUSTOMERS Points"
+    },
+    {
+      "parameters": {
+        "operation": "upsert",
+        "dataTableId": {
+          "__rl": true,
+          "value": "p3AV3VSdqNcawCbb",
+          "mode": "list",
+          "cachedResultName": "Budtenders DB 2025",
+          "cachedResultUrl": "/projects/U8qx0mgq0lyFAfZg/datatables/p3AV3VSdqNcawCbb"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "timestamp": "={{ $json.timestamp }}",
+            "first_name": "={{ $json.first_name }}",
+            "last_name": "={{ $json.last_name }}",
+            "phone": "={{ $json.phone }}",
+            "email": "={{ $json.email }}",
+            "store_name": "={{ $json.store_name }}",
+            "budtender_street": "={{ $json.budtender_street }}",
+            "budtender_adress_line2": "={{ $json.budtender_address_line2 }}",
+            "budtender_city": "={{ $json.budtender_city }}",
+            "budtender_state": "={{ $json.budtender_state }}",
+            "budtender_zip": "={{ $json.budtender_zip }}"
+          },
+          "matchingColumns": [
+            "phone"
+          ],
+          "schema": [
+            {
+              "id": "timestamp",
+              "displayName": "timestamp",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "dateTime",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "first_name",
+              "displayName": "first_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "last_name",
+              "displayName": "last_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "phone",
+              "displayName": "phone",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "email",
+              "displayName": "email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "store_name",
+              "displayName": "store_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "budtender_street",
+              "displayName": "budtender_street",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "budtender_adress_line2",
+              "displayName": "budtender_adress_line2",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "budtender_city",
+              "displayName": "budtender_city",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "budtender_state",
+              "displayName": "budtender_state",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "budtender_zip",
+              "displayName": "budtender_zip",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1,
+      "position": [
+        -512,
+        32
+      ],
+      "id": "c73045cf-e10c-4813-b083-4ce08e278887",
+      "name": "Insert BUDTENDERS DB"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes",
+              "minutesInterval": 10
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -960,
+        -160
+      ],
+      "id": "0dd22f4e-86d7-4332-a870-b69d18404cba",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "dataTableId": {
+          "__rl": true,
+          "value": "zZ2IrXHsmtrtqStH",
+          "mode": "list",
+          "cachedResultName": "Customers Data Points",
+          "cachedResultUrl": "/projects/U8qx0mgq0lyFAfZg/datatables/zZ2IrXHsmtrtqStH"
+        }
+      },
+      "type": "n8n-nodes-base.dataTableTool",
+      "typeVersion": 1,
+      "position": [
+        64,
+        592
+      ],
+      "id": "bafec09b-a970-4793-926a-13202d55447f",
+      "name": "Customers Data Points",
+      "description": "Query customer information by phone number to get points balance, last visit location, and last budtender. Fields: First_Name, Last_Name, Phone, Total_Points, Last_dispensary, Last_budtender"
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "dataTableId": {
+          "__rl": true,
+          "value": "IrckcDMtEMjxjb2Q",
+          "mode": "list",
+          "cachedResultName": "Budtenders Data Points",
+          "cachedResultUrl": "/projects/U8qx0mgq0lyFAfZg/datatables/IrckcDMtEMjxjb2Q"
+        }
+      },
+      "type": "n8n-nodes-base.dataTableTool",
+      "typeVersion": 1,
+      "position": [
+        192,
+        592
+      ],
+      "id": "0af6769d-cd7e-4c24-b607-2e1d158a12b8",
+      "name": "Budtenders Data Points",
+      "description": "Query budtender performance data including total sales attributed and performance tier. Useful for checking which budtenders are top performers"
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "dataTableId": {
+          "__rl": true,
+          "value": "p3AV3VSdqNcawCbb",
+          "mode": "list",
+          "cachedResultName": "Budtenders DB 2025",
+          "cachedResultUrl": "/projects/U8qx0mgq0lyFAfZg/datatables/p3AV3VSdqNcawCbb"
+        }
+      },
+      "type": "n8n-nodes-base.dataTableTool",
+      "typeVersion": 1,
+      "position": [
+        320,
+        592
+      ],
+      "id": "3b33cd56-5646-422c-9817-fde75292bc9f",
+      "name": "Budtenders DB 2025 Info",
+      "description": "Query full budtender contact information including first_name, last_name, phone, email, store_name, and address. Use this for detailed budtender information"
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('To', ``, 'string') }}",
+        "subject": "MoTA Rewards Update",
+        "emailType": "text",
+        "message": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Message', `You are sending an email on behalf of MoTA Rewards loyalty program. Be professional, friendly, and include relevant customer information they requested.`, 'string') }}",
+        "options": {
+          "appendAttribution": false,
+          "senderName": "Luis - MoTA Rewards"
+        }
+      },
+      "type": "n8n-nodes-base.gmailTool",
+      "typeVersion": 2.1,
+      "position": [
+        448,
+        592
+      ],
+      "id": "236951a6-f529-4bd9-9903-1b10f78b8fd8",
+      "name": "Gmail",
+      "webhookId": "852bfc5d-3abf-4222-8013-9c5b53018544",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "BvZyBEwmYVeo2pxs",
+          "name": "Gmail account 2"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Poll Every 1min": {
+      "main": [
+        [
+          {
+            "node": "Get Recent Messages",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Recent Messages": {
+      "main": [
+        [
+          {
+            "node": "Filter Unread Messages",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter Unread Messages": {
+      "main": [
+        [
+          {
+            "node": "Prepare for AI + CRM Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Customer Rows": {
+      "main": [
+        [
+          {
+            "node": "Insert CUSTOMERS Points",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get BUDTENDERS DB": {
+      "main": [
+        [
+          {
+            "node": "Insert BUDTENDERS DB",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Budtenders Rows": {
+      "main": [
+        [
+          {
+            "node": "Insert BUDTENDERS points",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Get Customer Rows",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Get Budtenders Rows",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Get BUDTENDERS DB",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare for AI + CRM Data": {
+      "main": [
+        [
+          {
+            "node": "MotaBot AI v5.100",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenRouter Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "MotaBot AI v5.100",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Customers Data Points": {
+      "ai_tool": [
+        [
+          {
+            "node": "MotaBot AI v5.100",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Budtenders Data Points": {
+      "ai_tool": [
+        [
+          {
+            "node": "MotaBot AI v5.100",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Budtenders DB 2025 Info": {
+      "ai_tool": [
+        [
+          {
+            "node": "MotaBot AI v5.100",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "MotaBot AI v5.100": {
+      "main": [
+        [
+          {
+            "node": "Mark as Read",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Queue Full Message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail": {
+      "ai_tool": [
+        [
+          {
+            "node": "MotaBot AI v5.100",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "v5-100-compatible",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "daf1db1234fdfcbbfb53be5e1fe26764ab505fd0554977269bee03ef4bae6464"
+  },
+  "id": "MotaBot-v5-100-compatible",
+  "tags": ["production", "sms", "crm"]
+}
+

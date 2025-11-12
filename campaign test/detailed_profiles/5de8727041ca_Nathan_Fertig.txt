@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - NATHAN FERTIG
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5de8727041ca600828f7c593
+  Phone:          18479248811
+  Email:          Not provided
+  Tier:           Regular
+  Risk Status:    Dormant (94 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         5
+  Lifetime Value:       $190.05
+  Avg Transaction:      $38.01
+  Last Visit:           2025-07-20
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Monthly
+  Expected Annual Visits:   12
+  Potential Annual Value:   $456.12
+  
+  ROI Analysis:
+  - Discount Budget:        $7.60 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           6000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           2
+  Priority:       10
+  Send Timing:    Week 2
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS
+
+====================================================================================================

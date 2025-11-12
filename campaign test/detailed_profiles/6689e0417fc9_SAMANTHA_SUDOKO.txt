@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - SAMANTHA SUDOKO
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    6689e0417fc9a86dd77fb818
+  Phone:          16268728219
+  Email:          Not provided
+  Tier:           Regular
+  Risk Status:    Cooling (70 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         7
+  Lifetime Value:       $181.85
+  Avg Transaction:      $25.98
+  Last Visit:           2025-08-13
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Monthly
+  Expected Annual Visits:   12
+  Potential Annual Value:   $311.76
+  
+  ROI Analysis:
+  - Discount Budget:        $5.20 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           6000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           1
+  Priority:       9
+  Send Timing:    Week 1 - URGENT
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS
+
+====================================================================================================

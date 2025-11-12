@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - JOSEPH MILLER
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    65b4768f1e7b53189e7eb913
+  Phone:          19497013212
+  Email:          Not provided
+  Tier:           Regular
+  Risk Status:    Dormant (78 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    7
+  Total Revenue:         $428.47
+  Average Transaction:   $61.21
+  Median Transaction:    $71.47
+  Min Transaction:      $16.85
+  Max Transaction:      $108.00
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      92.7 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Saturday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Cash
+  Favorite Staff:        Jacob Vangellow
+
+  Payment Method Breakdown:
+    Cash              5 times ( 71.4%)
+    Credit            2 times ( 28.6%)
+
+  Staff Interaction Breakdown:
+    Jacob Vangellow        2 times ( 28.6%)
+    Devon Calonzo          2 times ( 28.6%)
+    Bob McGinn             2 times ( 28.6%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    18
+  Unique Products:       6
+  Avg Items/Visit:       2.6
+  Favorite Category:     Edibles
+  Favorite Brand:        Kiva
+  Avg Item Price:        $21.47
+  Price Range:           $9.00 - $54.14
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            Regular
+  Engagement Level:      Low
+  Loyalty Score:         Low
+  Price Sensitivity:     Premium
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              Win-Back Offer
+  Discount Level:        10-15%
+  Message Focus:         Edibles + Kiva
+  Channel:               SMS
+  Timing:                Saturday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi Joseph, we miss you! 🌿
+   
+   We just restocked edibles from Kiva - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME65B476
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  93 days between visits
+  Expected Annual Visits: 3
+  Potential Annual Value: $183.63
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $12.24 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        1500%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          10
+Wave:                    2
+Send Window:            Week 2
+Best Contact Time:      Saturday at 0:00
+Follow-up Schedule:     None
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $61.21 (first visit)
+  Annual Value:          $183.63
+
+NOTES:
+  - Customer has been gone for 78 days
+  - Historical pattern: 7 visits, $428.47 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+====================================================================================================

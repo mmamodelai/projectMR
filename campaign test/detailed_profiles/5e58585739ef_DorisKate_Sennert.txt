@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - DORIS(KATE) SENNERT
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5e58585739efc20836b6b43d
+  Phone:          13474091924
+  Email:          Not provided
+  Tier:           Super VIP
+  Risk Status:    At Risk (173 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         24
+  Lifetime Value:       $687.73
+  Avg Transaction:      $28.66
+  Last Visit:           2025-05-02
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Weekly
+  Expected Annual Visits:   52
+  Potential Annual Value:   $1,490.32
+  
+  ROI Analysis:
+  - Discount Budget:        $5.73 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           26000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           4
+  Priority:       4
+  Send Timing:    Week 4
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS+ Email + Call
+
+====================================================================================================

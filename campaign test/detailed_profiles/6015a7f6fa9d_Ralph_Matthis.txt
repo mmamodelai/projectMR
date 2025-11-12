@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - RALPH MATTHIS
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    6015a7f6fa9dc508d3c02a70
+  Phone:          13233007210
+  Email:          Not provided
+  Tier:           Super VIP
+  Risk Status:    Cooling (72 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         93
+  Lifetime Value:       $1,675.14
+  Avg Transaction:      $18.01
+  Last Visit:           2025-08-11
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Weekly
+  Expected Annual Visits:   52
+  Potential Annual Value:   $936.52
+  
+  ROI Analysis:
+  - Discount Budget:        $3.60 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           26000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           1
+  Priority:       1
+  Send Timing:    Week 1 - URGENT
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS+ Email + Call
+
+====================================================================================================

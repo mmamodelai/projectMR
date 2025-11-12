@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - ALAIN JEU
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5b20a56589fc9307fe1b22a5
+  Phone:          13233827190
+  Email:          Not provided
+  Tier:           Regular
+  Risk Status:    At Risk (171 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         6
+  Lifetime Value:       $394.76
+  Avg Transaction:      $65.79
+  Last Visit:           2025-05-04
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Monthly
+  Expected Annual Visits:   12
+  Potential Annual Value:   $789.48
+  
+  ROI Analysis:
+  - Discount Budget:        $13.16 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           6000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           4
+  Priority:       12
+  Send Timing:    Week 4
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS
+
+====================================================================================================

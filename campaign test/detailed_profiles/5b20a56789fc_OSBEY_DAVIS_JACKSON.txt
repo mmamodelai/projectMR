@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - OSBEY DAVIS JACKSON
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5b20a56789fc9307fe1b448c
+  Phone:          13233653040
+  Email:          Not provided
+  Tier:           Regular
+  Risk Status:    Inactive (119 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         7
+  Lifetime Value:       $308.60
+  Avg Transaction:      $44.09
+  Last Visit:           2025-06-25
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Monthly
+  Expected Annual Visits:   12
+  Potential Annual Value:   $529.08
+  
+  ROI Analysis:
+  - Discount Budget:        $8.82 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           6000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           3
+  Priority:       11
+  Send Timing:    Week 3
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS
+
+====================================================================================================

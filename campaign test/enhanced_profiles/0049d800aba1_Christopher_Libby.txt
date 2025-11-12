@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - CHRISTOPHER LIBBY
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    0049d800aba100687e0095b3
+  Phone:          13236337290
+  Email:          Not provided
+  Tier:           Regular
+  Risk Status:    Cooling (57 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    9
+  Total Revenue:         $501.67
+  Average Transaction:   $55.74
+  Median Transaction:    $25.86
+  Min Transaction:      $12.05
+  Max Transaction:      $144.45
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      61.2 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Tuesday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Cash
+  Favorite Staff:        Bob McGinn
+
+  Payment Method Breakdown:
+    Cash              6 times ( 66.7%)
+    Credit            3 times ( 33.3%)
+
+  Staff Interaction Breakdown:
+    Bob McGinn             2 times ( 22.2%)
+    Devon Calonzo          2 times ( 22.2%)
+    Jimmy Silks            2 times ( 22.2%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    29
+  Unique Products:       22
+  Avg Items/Visit:       3.2
+  Favorite Category:     Edibles
+  Favorite Brand:        MOTA
+  Avg Item Price:        $16.07
+  Price Range:           $0.00 - $39.71
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            Regular
+  Engagement Level:      Low
+  Loyalty Score:         Low
+  Price Sensitivity:     Moderate
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              Win-Back Offer
+  Discount Level:        10-15%
+  Message Focus:         Edibles + MOTA
+  Channel:               SMS
+  Timing:                Tuesday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi Christopher, we miss you! 🌿
+   
+   We just restocked edibles from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME0049D8
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  61 days between visits
+  Expected Annual Visits: 5
+  Potential Annual Value: $278.71
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $11.15 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        2500%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          9
+Wave:                    1
+Send Window:            Week 1 - URGENT
+Best Contact Time:      Tuesday at 0:00
+Follow-up Schedule:     None
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $55.74 (first visit)
+  Annual Value:          $278.71
+
+NOTES:
+  - Customer has been gone for 57 days
+  - Historical pattern: 9 visits, $501.67 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+====================================================================================================

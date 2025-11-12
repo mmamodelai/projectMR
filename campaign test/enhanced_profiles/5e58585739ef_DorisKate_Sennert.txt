@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - DORIS(KATE) SENNERT
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5e58585739efc20836b6b43d
+  Phone:          13474091924
+  Email:          Not provided
+  Tier:           Super VIP
+  Risk Status:    At Risk (173 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    24
+  Total Revenue:         $687.73
+  Average Transaction:   $28.66
+  Median Transaction:    $23.82
+  Min Transaction:      $19.00
+  Max Transaction:      $90.25
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      20.9 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Friday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Cash
+  Favorite Staff:        Jimmy Silks
+
+  Payment Method Breakdown:
+    Cash             13 times ( 54.2%)
+    Credit           11 times ( 45.8%)
+
+  Staff Interaction Breakdown:
+    Jimmy Silks            5 times ( 20.8%)
+    Bob McGinn             4 times ( 16.7%)
+    Jacob Vangellow        4 times ( 16.7%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    45
+  Unique Products:       29
+  Avg Items/Visit:       1.9
+  Favorite Category:     Edibles
+  Favorite Brand:        Lost Farm
+  Avg Item Price:        $14.47
+  Price Range:           $0.00 - $33.93
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            Super VIP
+  Engagement Level:      High
+  Loyalty Score:         Medium
+  Price Sensitivity:     Budget
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              VIP Treatment
+  Discount Level:        20-30%
+  Message Focus:         Edibles + Lost Farm
+  Channel:               SMS + Email + Call
+  Timing:                Friday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi Doris(Kate), we miss you! 🌿
+   
+   We just restocked edibles from Lost Farm - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME5E5858
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  21 days between visits
+  Expected Annual Visits: 17
+  Potential Annual Value: $487.14
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $5.73 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        8500%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          4
+Wave:                    4
+Send Window:            Week 4
+Best Contact Time:      Friday at 0:00
+Follow-up Schedule:     48 hours
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $28.66 (first visit)
+  Annual Value:          $487.14
+
+NOTES:
+  - Customer has been gone for 173 days
+  - Historical pattern: 24 visits, $687.73 total spent
+  - Standard campaign approach
+  - Consider phone call if SMS doesn't convert
+
+====================================================================================================

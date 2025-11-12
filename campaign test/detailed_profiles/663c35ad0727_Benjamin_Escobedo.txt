@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - BENJAMIN ESCOBEDO
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    663c35ad07272104ab5c27a1
+  Phone:          12134589500
+  Email:          Not provided
+  Tier:           Super VIP
+  Risk Status:    At Risk (191 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         28
+  Lifetime Value:       $2,552.93
+  Avg Transaction:      $91.18
+  Last Visit:           2025-04-14
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Weekly
+  Expected Annual Visits:   52
+  Potential Annual Value:   $4,741.36
+  
+  ROI Analysis:
+  - Discount Budget:        $18.24 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           26000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           4
+  Priority:       4
+  Send Timing:    Week 4
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS+ Email + Call
+
+====================================================================================================

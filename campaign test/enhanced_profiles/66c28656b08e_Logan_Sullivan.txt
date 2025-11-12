@@ -1,0 +1,111 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - LOGAN SULLIVAN
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    66c28656b08ee8710c3453fd
+  Phone:          15054701221
+  Email:          Not provided
+  Tier:           VIP
+  Risk Status:    Inactive (129 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    14
+  Total Revenue:         $826.59
+  Average Transaction:   $59.04
+  Median Transaction:    $44.80
+  Min Transaction:      $26.68
+  Max Transaction:      $107.47
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      23.2 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Sunday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Credit
+  Favorite Staff:        Jacob Vangellow
+
+  Payment Method Breakdown:
+    Credit           14 times (100.0%)
+
+  Staff Interaction Breakdown:
+    Jacob Vangellow        6 times ( 42.9%)
+    Bob McGinn             3 times ( 21.4%)
+    Leo Salguero           2 times ( 14.3%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    32
+  Unique Products:       19
+  Avg Items/Visit:       2.3
+  Favorite Category:     Flower PrePacks
+  Favorite Brand:        MOTA
+  Avg Item Price:        $24.60
+  Price Range:           $0.00 - $54.14
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            VIP
+  Engagement Level:      Medium
+  Loyalty Score:         Medium
+  Price Sensitivity:     Moderate
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              Valued Customer
+  Discount Level:        15-20%
+  Message Focus:         Flower PrePacks + MOTA
+  Channel:               SMS + Email
+  Timing:                Sunday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi Logan, we miss you! 🌿
+   
+   We just restocked flower prepacks from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME66C286
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  23 days between visits
+  Expected Annual Visits: 15
+  Potential Annual Value: $885.63
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $11.81 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        7500%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          7
+Wave:                    3
+Send Window:            Week 3
+Best Contact Time:      Sunday at 0:00
+Follow-up Schedule:     48 hours
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $59.04 (first visit)
+  Annual Value:          $885.63
+
+NOTES:
+  - Customer has been gone for 129 days
+  - Historical pattern: 14 visits, $826.59 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+====================================================================================================

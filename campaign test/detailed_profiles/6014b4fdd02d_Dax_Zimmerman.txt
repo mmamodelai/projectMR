@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - DAX ZIMMERMAN
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    6014b4fdd02d2008f1ae2bb4
+  Phone:          13234227745
+  Email:          Not provided
+  Tier:           Regular
+  Risk Status:    Cooling (57 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         9
+  Lifetime Value:       $292.67
+  Avg Transaction:      $32.52
+  Last Visit:           2025-08-26
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Monthly
+  Expected Annual Visits:   12
+  Potential Annual Value:   $390.24
+  
+  ROI Analysis:
+  - Discount Budget:        $6.50 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           6000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           1
+  Priority:       9
+  Send Timing:    Week 1 - URGENT
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS
+
+====================================================================================================

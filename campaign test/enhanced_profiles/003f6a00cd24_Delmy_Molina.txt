@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - DELMY MOLINA
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    003f6a00cd2400bbee0099d4
+  Phone:          18182207148
+  Email:          Not provided
+  Tier:           Super VIP
+  Risk Status:    Dormant (97 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    44
+  Total Revenue:         $2,207.50
+  Average Transaction:   $50.17
+  Median Transaction:    $27.00
+  Min Transaction:      $1.00
+  Max Transaction:      $215.00
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      13.0 days
+  Visit Frequency:       Bi-weekly
+  Preferred Day:         Monday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Credit
+  Favorite Staff:        Jimmy Silks
+
+  Payment Method Breakdown:
+    Credit           33 times ( 75.0%)
+    Cash             11 times ( 25.0%)
+
+  Staff Interaction Breakdown:
+    Jimmy Silks           11 times ( 25.0%)
+    Devon Calonzo         11 times ( 25.0%)
+    Bob McGinn             9 times ( 20.5%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    161
+  Unique Products:       86
+  Avg Items/Visit:       3.7
+  Favorite Category:     Flower PrePacks
+  Favorite Brand:        Wyld
+  Avg Item Price:        $13.59
+  Price Range:           $0.00 - $115.51
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            Super VIP
+  Engagement Level:      High
+  Loyalty Score:         High
+  Price Sensitivity:     Moderate
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              VIP Treatment
+  Discount Level:        20-30%
+  Message Focus:         Flower PrePacks + Wyld
+  Channel:               SMS + Email + Call
+  Timing:                Monday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi Delmy, we miss you! 🌿
+   
+   We just restocked flower prepacks from Wyld - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME003F6A
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  13 days between visits
+  Expected Annual Visits: 27
+  Potential Annual Value: $1,354.60
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $10.03 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        13500%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          2
+Wave:                    2
+Send Window:            Week 2
+Best Contact Time:      Monday at 0:00
+Follow-up Schedule:     48 hours
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $50.17 (first visit)
+  Annual Value:          $1,354.60
+
+NOTES:
+  - Customer has been gone for 97 days
+  - Historical pattern: 44 visits, $2,207.50 total spent
+  - HIGH VALUE - Personal follow-up recommended
+  - Consider phone call if SMS doesn't convert
+
+====================================================================================================

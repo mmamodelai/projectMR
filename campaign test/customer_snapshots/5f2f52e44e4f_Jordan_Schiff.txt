@@ -1,0 +1,55 @@
+
+================================================================================
+CUSTOMER SNAPSHOT - JORDAN SCHIFF
+================================================================================
+
+CONTACT INFORMATION:
+  Phone:          12132487316
+  Email:          Not provided
+  Customer ID:    5f2f52e44e4fed08e78aa18b
+
+TIER & STATUS:
+  Tier:           Regular
+  Risk Status:    Dormant
+  Campaign Wave:  Wave 2 Priority
+
+ENGAGEMENT METRICS:
+  Last Visit:           2025-07-09
+  Days Since Last:      105 days
+  Total Visits:         9
+  Visit Frequency:      Monthly (when active)
+  
+VALUE METRICS:
+  Lifetime Value:       $367.23
+  Average Transaction:  $40.80
+  Estimated Annual:     $489.60 (if reactivated)
+
+URGENCY ASSESSMENT:
+  Level:          URGENT - Nearly Lost
+  Recommended:    Premium offer, call if possible
+
+REACTIVATION STRATEGY:
+
+  Approach:       Win-Back Offer
+  Offer:          10-15% off on next visit
+  Message:        "Come back and see what's new! Special offer just for you..."
+  Channel:        SMS
+  Budget:         Up to $6.12 discount value
+
+CAMPAIGN TIMING:
+  Send Window:    Week 1-2 - High priority
+  Best Time:      Afternoon (2-5 PM) based on customer tier
+  Follow-up:      None scheduled
+
+SUCCESS METRICS:
+  Target ROI:     200%
+  Break-even:     1 visit at $40.80
+  Goal:           Restore to Monthly visits
+
+NOTES:
+  - Customer has been gone for 105 days
+  - Historical pattern: 9 visits, $367.23 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+================================================================================

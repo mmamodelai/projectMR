@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - KARINA POLANCO
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5d2bd06824c62a080ad5d741
+  Phone:          13233810781
+  Email:          Not provided
+  Tier:           VIP
+  Risk Status:    Inactive (110 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         11
+  Lifetime Value:       $326.48
+  Avg Transaction:      $29.68
+  Last Visit:           2025-07-04
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Bi-weekly
+  Expected Annual Visits:   26
+  Potential Annual Value:   $771.68
+  
+  ROI Analysis:
+  - Discount Budget:        $5.94 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           13000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           3
+  Priority:       7
+  Send Timing:    Week 3
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS + Email
+
+====================================================================================================

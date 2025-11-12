@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - OMAR MAKHLUF
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5b20a56789fc9307fe1b4474
+  Phone:          18182434512
+  Email:          Not provided
+  Tier:           Super VIP
+  Risk Status:    Cooling (62 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         27
+  Lifetime Value:       $1,328.19
+  Avg Transaction:      $49.19
+  Last Visit:           2025-08-21
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Weekly
+  Expected Annual Visits:   52
+  Potential Annual Value:   $2,557.88
+  
+  ROI Analysis:
+  - Discount Budget:        $9.84 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           26000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           1
+  Priority:       1
+  Send Timing:    Week 1 - URGENT
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS+ Email + Call
+
+====================================================================================================

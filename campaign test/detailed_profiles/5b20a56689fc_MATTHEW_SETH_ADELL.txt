@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - MATTHEW SETH ADELL
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5b20a56689fc9307fe1b40c0
+  Phone:          13129253043
+  Email:          Not provided
+  Tier:           Super VIP
+  Risk Status:    At Risk (187 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         49
+  Lifetime Value:       $1,698.38
+  Avg Transaction:      $34.66
+  Last Visit:           2025-04-18
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Weekly
+  Expected Annual Visits:   52
+  Potential Annual Value:   $1,802.32
+  
+  ROI Analysis:
+  - Discount Budget:        $6.93 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           26000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           4
+  Priority:       4
+  Send Timing:    Week 4
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS+ Email + Call
+
+====================================================================================================

@@ -1,0 +1,55 @@
+
+================================================================================
+CUSTOMER SNAPSHOT - JORDAN BEEKS
+================================================================================
+
+CONTACT INFORMATION:
+  Phone:          12069198741
+  Email:          Not provided
+  Customer ID:    60ae9d526de19f30a238aeff
+
+TIER & STATUS:
+  Tier:           Regular
+  Risk Status:    Dormant
+  Campaign Wave:  Wave 2 Priority
+
+ENGAGEMENT METRICS:
+  Last Visit:           2025-08-04
+  Days Since Last:      79 days
+  Total Visits:         6
+  Visit Frequency:      Monthly (when active)
+  
+VALUE METRICS:
+  Lifetime Value:       $282.18
+  Average Transaction:  $47.03
+  Estimated Annual:     $564.36 (if reactivated)
+
+URGENCY ASSESSMENT:
+  Level:          HIGH - Going Dormant
+  Recommended:    Strong offer, personal message
+
+REACTIVATION STRATEGY:
+
+  Approach:       Win-Back Offer
+  Offer:          10-15% off on next visit
+  Message:        "Come back and see what's new! Special offer just for you..."
+  Channel:        SMS
+  Budget:         Up to $7.05 discount value
+
+CAMPAIGN TIMING:
+  Send Window:    Week 1-2 - High priority
+  Best Time:      Afternoon (2-5 PM) based on customer tier
+  Follow-up:      None scheduled
+
+SUCCESS METRICS:
+  Target ROI:     200%
+  Break-even:     1 visit at $47.03
+  Goal:           Restore to Monthly visits
+
+NOTES:
+  - Customer has been gone for 79 days
+  - Historical pattern: 6 visits, $282.18 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+================================================================================

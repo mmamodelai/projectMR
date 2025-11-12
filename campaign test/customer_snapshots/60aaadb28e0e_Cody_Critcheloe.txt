@@ -1,0 +1,55 @@
+
+================================================================================
+CUSTOMER SNAPSHOT - CODY CRITCHELOE
+================================================================================
+
+CONTACT INFORMATION:
+  Phone:          18168050904
+  Email:          Not provided
+  Customer ID:    60aaadb28e0e3944ff75d6ee
+
+TIER & STATUS:
+  Tier:           Regular
+  Risk Status:    Cooling
+  Campaign Wave:  Wave 1 Priority
+
+ENGAGEMENT METRICS:
+  Last Visit:           2025-08-12
+  Days Since Last:      71 days
+  Total Visits:         6
+  Visit Frequency:      Monthly (when active)
+  
+VALUE METRICS:
+  Lifetime Value:       $144.62
+  Average Transaction:  $24.10
+  Estimated Annual:     $289.20 (if reactivated)
+
+URGENCY ASSESSMENT:
+  Level:          MEDIUM - Cooling Off
+  Recommended:    Light touch, promotional offer
+
+REACTIVATION STRATEGY:
+
+  Approach:       Win-Back Offer
+  Offer:          10-15% off on next visit
+  Message:        "Come back and see what's new! Special offer just for you..."
+  Channel:        SMS
+  Budget:         Up to $3.62 discount value
+
+CAMPAIGN TIMING:
+  Send Window:    Week 1 - Send immediately
+  Best Time:      Afternoon (2-5 PM) based on customer tier
+  Follow-up:      None scheduled
+
+SUCCESS METRICS:
+  Target ROI:     200%
+  Break-even:     1 visit at $24.10
+  Goal:           Restore to Monthly visits
+
+NOTES:
+  - Customer has been gone for 71 days
+  - Historical pattern: 6 visits, $144.62 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+================================================================================

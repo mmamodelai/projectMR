@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - SEBASTIAN BARRY
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    6158e557934d8220186602bd
+  Phone:          14154200016
+  Email:          Not provided
+  Tier:           VIP
+  Risk Status:    At Risk (159 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    15
+  Total Revenue:         $788.60
+  Average Transaction:   $52.57
+  Median Transaction:    $44.39
+  Min Transaction:      $23.76
+  Max Transaction:      $120.22
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      33.3 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Monday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Credit
+  Favorite Staff:        Jimmy Silks
+
+  Payment Method Breakdown:
+    Credit           14 times ( 93.3%)
+    Cash              1 times (  6.7%)
+
+  Staff Interaction Breakdown:
+    Jimmy Silks            4 times ( 26.7%)
+    Jacob Vangellow        4 times ( 26.7%)
+    Bob McGinn             3 times ( 20.0%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    39
+  Unique Products:       24
+  Avg Items/Visit:       2.6
+  Favorite Category:     Flower PrePacks
+  Favorite Brand:        MOTA
+  Avg Item Price:        $19.50
+  Price Range:           $0.00 - $38.26
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            VIP
+  Engagement Level:      Medium
+  Loyalty Score:         Low
+  Price Sensitivity:     Moderate
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              Valued Customer
+  Discount Level:        15-20%
+  Message Focus:         Flower PrePacks + MOTA
+  Channel:               SMS + Email
+  Timing:                Monday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi Sebastian, we miss you! 🌿
+   
+   We just restocked flower prepacks from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME6158E5
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  33 days between visits
+  Expected Annual Visits: 10
+  Potential Annual Value: $525.73
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $10.51 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        5000%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          8
+Wave:                    4
+Send Window:            Week 4
+Best Contact Time:      Monday at 0:00
+Follow-up Schedule:     48 hours
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $52.57 (first visit)
+  Annual Value:          $525.73
+
+NOTES:
+  - Customer has been gone for 159 days
+  - Historical pattern: 15 visits, $788.60 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+====================================================================================================

@@ -1,0 +1,89 @@
+# Leafly Expansion Priority List
+# Next 24 Strains to Scrape
+# Potential: +5,179 products (nearly DOUBLE current coverage!)
+
+## PHASE 1: HIGH IMPACT (Top 7 strains = 3,715 products)
+
+1. OG Kush          - 1,079 products (🔥 BIGGEST OPPORTUNITY)
+2. Blue Dream       - 969 products (🔥 SECOND BIGGEST)
+3. Cookies          - 439 products (various GSC variants)
+4. Sour Diesel      - 372 products
+5. Lemon Haze       - 364 products
+6. Pineapple Express - 271 products
+7. Wedding Cake     - 221 products
+
+## PHASE 2: MEDIUM IMPACT (Next 7 strains = 757 products)
+
+8. Strawberry Cough - 180 products
+9. Gorilla Glue (GG4) - 153 products
+10. Mimosa          - 147 products
+11. Northern Lights - 129 products
+12. Sherbet         - 123 products
+13. Tangie          - 120 products
+14. Do-Si-Dos       - 104 products
+
+## PHASE 3: SMALLER IMPACT (Next 10 strains = 707 products)
+
+15. Cherry Pie      - 90 products
+16. Girl Scout Cookies - 82 products
+17. Granddaddy Purple - 76 products
+18. Durban Poison   - 71 products
+19. Trainwreck      - 53 products
+20. Chemdawg        - 52 products
+21. Skywalker OG    - 42 products
+22. Zkittlez        - 20 products
+23. White Widow     - 18 products
+24. Fire OG         - 4 products
+
+## TOTAL POTENTIAL
+Current: 5,782 products (24 strains)
++ Phase 1: 3,715 products → 9,497 total (24.0% coverage)
++ Phase 2: 757 products → 10,254 total (25.9% coverage)
++ Phase 3: 707 products → 10,961 total (27.7% coverage)
+
+## RECOMMENDED APPROACH
+
+**Quick Win (Phase 1 only)**:
+- Scrape top 7 strains
+- Add 3,715 products
+- Get to 24% coverage
+- Time: ~1 hour
+
+**Maximum Impact (All 3 phases)**:
+- Scrape all 24 strains
+- Add 5,179 products
+- Get to 27.7% coverage
+- Time: ~2-3 hours
+
+## HOW TO EXECUTE
+
+1. Create strain list file:
+   ```
+   OG Kush
+   Blue Dream
+   Cookies
+   Sour Diesel
+   ... (etc)
+   ```
+
+2. Run batch scraper:
+   ```bash
+   cd leafly
+   python leafly_scraper.py --batch expansion_strains.txt --output expansion_data.json
+   ```
+
+3. Run import to Supabase:
+   ```bash
+   cd supabase-integration
+   python import_leafly_to_supabase.py
+   ```
+
+## NOTES
+
+- OG Kush will match many variants (Fire OG, Skywalker OG, etc.)
+- Cookies will match GSC, Thin Mint, etc.
+- Some overlap possible but worth it for coverage
+- All these strains are on Leafly (very popular)
+
+
+

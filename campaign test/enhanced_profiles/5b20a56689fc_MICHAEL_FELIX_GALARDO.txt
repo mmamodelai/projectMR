@@ -1,0 +1,111 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - MICHAEL FELIX GALARDO
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5b20a56689fc9307fe1b41b8
+  Phone:          12133279158
+  Email:          Not provided
+  Tier:           Regular
+  Risk Status:    Cooling (74 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    7
+  Total Revenue:         $203.82
+  Average Transaction:   $29.12
+  Median Transaction:    $26.99
+  Min Transaction:      $19.20
+  Max Transaction:      $46.43
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      87.0 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Saturday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Credit
+  Favorite Staff:        Jimmy Silks
+
+  Payment Method Breakdown:
+    Credit            7 times (100.0%)
+
+  Staff Interaction Breakdown:
+    Jimmy Silks            3 times ( 42.9%)
+    Devon Calonzo          2 times ( 28.6%)
+    Leo Salguero           2 times ( 28.6%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    14
+  Unique Products:       12
+  Avg Items/Visit:       2.0
+  Favorite Category:     Edibles
+  Favorite Brand:        MOTA
+  Avg Item Price:        $9.93
+  Price Range:           $0.01 - $19.20
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            Regular
+  Engagement Level:      Low
+  Loyalty Score:         Low
+  Price Sensitivity:     Budget
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              Win-Back Offer
+  Discount Level:        10-15%
+  Message Focus:         Edibles + MOTA
+  Channel:               SMS
+  Timing:                Saturday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi MICHAEL, we miss you! 🌿
+   
+   We just restocked edibles from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME5B20A5
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  87 days between visits
+  Expected Annual Visits: 4
+  Potential Annual Value: $116.47
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $5.82 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        2000%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          9
+Wave:                    1
+Send Window:            Week 1 - URGENT
+Best Contact Time:      Saturday at 0:00
+Follow-up Schedule:     None
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $29.12 (first visit)
+  Annual Value:          $116.47
+
+NOTES:
+  - Customer has been gone for 74 days
+  - Historical pattern: 7 visits, $203.82 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+====================================================================================================

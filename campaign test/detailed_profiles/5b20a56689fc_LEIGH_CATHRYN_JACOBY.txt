@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - LEIGH CATHRYN JACOBY
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5b20a56689fc9307fe1b3da8
+  Phone:          12134221921
+  Email:          Not provided
+  Tier:           VIP
+  Risk Status:    Dormant (78 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         10
+  Lifetime Value:       $348.00
+  Avg Transaction:      $34.80
+  Last Visit:           2025-08-05
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Monthly
+  Expected Annual Visits:   12
+  Potential Annual Value:   $417.60
+  
+  ROI Analysis:
+  - Discount Budget:        $6.96 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           6000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           2
+  Priority:       6
+  Send Timing:    Week 2
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS + Email
+
+====================================================================================================

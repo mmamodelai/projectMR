@@ -1,0 +1,496 @@
+{
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes"
+            }
+          ]
+        }
+      },
+      "id": "poll-trigger",
+      "name": "Poll Every 30s",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -1952,
+        272
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://kiwmwoqrguyrcpjytgte.supabase.co/rest/v1/messages?select=*&order=timestamp.desc&limit=50",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"
+            },
+            {
+              "name": "Authorization",
+              "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"
+            },
+            {
+              "name": "Accept",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "get-messages",
+      "name": "Get Recent Messages",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -1728,
+        272
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Filter for XC customers - external customers who buy Mota products at 3rd party stores\nconst messages = $input.all().map(item => item.json);\nconst unreadInbound = messages.filter(msg => \n  msg.direction === 'inbound' && msg.status === 'unread'\n);\n\n// Only run workflow if there's at least one unread message\nif (unreadInbound.length === 0) { \n  return []; \n}\n\n// Find the most recent unread message\nconst latestUnread = unreadInbound.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp))[0];\nconst targetPhoneNumber = latestUnread.phone_number;\n\n// Filter messages to ONLY include conversation with this specific phone number\nconst phoneConversation = messages.filter(msg => \n  msg.phone_number === targetPhoneNumber\n);\n\n// Sort conversation chronologically (oldest first)\nconst sortedConversation = phoneConversation.sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));\n\n// Check if this is an XC customer (external customer)\n// For now, we'll assume all new conversations are XC until we have proper segmentation\n// TODO: Add proper XC customer identification logic\n\nreturn [{\n  json: {\n    message_id: latestUnread.id,\n    phone_number: targetPhoneNumber,\n    incoming_message: latestUnread.content,\n    timestamp: latestUnread.timestamp,\n    conversation_messages: sortedConversation,\n    customer_type: 'XC', // External Customer\n    discovery_stage: 'initial' // Track where we are in the discovery process\n  }\n}];"
+      },
+      "id": "filter-xc-messages",
+      "name": "Filter XC Messages",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1504,
+        272
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Prepare conversation context for XC customer discovery\nconst currentMessage = $input.item.json;\nconst phoneNumber = currentMessage.phone_number;\nconst incomingMessage = currentMessage.incoming_message;\nconst messageId = currentMessage.message_id;\nconst timestamp = currentMessage.timestamp;\nconst conversationMessages = currentMessage.conversation_messages || [];\nconst customerType = currentMessage.customer_type;\nconst discoveryStage = currentMessage.discovery_stage;\n\n// Build conversation history\nlet conversationHistory = '';\nif (conversationMessages.length > 0) {\n  for (const msg of conversationMessages) {\n    const direction = msg.direction === 'inbound' ? 'Customer' : 'Luis';\n    const content = msg.content;\n    const time = new Date(msg.timestamp).toLocaleString();\n    conversationHistory += `[${time}] ${direction}: ${content}\\n`;\n  }\n} else {\n  conversationHistory = '(No previous conversation - this is the first message)';\n}\n\nreturn {\n  json: {\n    phone_number: phoneNumber,\n    incoming_message: incomingMessage,\n    message_id: messageId,\n    timestamp: timestamp,\n    conversation_history: conversationHistory,\n    customer_type: customerType,\n    discovery_stage: discoveryStage,\n    conversation_messages: conversationMessages\n  }\n};"
+      },
+      "id": "prepare-xc-context",
+      "name": "Prepare XC Context",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1280,
+        272
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Format conversation context specifically for XC customer discovery\nconst currentMessage = $input.item.json;\nconst phoneNumber = currentMessage.phone_number || '';\nconst incomingMessage = currentMessage.incoming_message || '';\nconst messageId = currentMessage.message_id || '';\nconst conversationHistory = currentMessage.conversation_history || '';\nconst customerType = currentMessage.customer_type || 'XC';\nconst discoveryStage = currentMessage.discovery_stage || 'initial';\n\n// Create enhanced prompt for XC customer discovery\nconst prompt = `You are Luis from Mota - the friendly cannabis expert who helps external customers discover the perfect products for their lifestyle.\n\nCUSTOMER TYPE: ${customerType} (External Customer - buys Mota products at 3rd party stores)\nDISCOVERY STAGE: ${discoveryStage}\n\nCONVERSATION HISTORY:\n${conversationHistory}\n\nCURRENT MESSAGE:\nCustomer: ${incomingMessage}\n\nYOUR MISSION: Get to know this external customer through focused discovery questions. We already have their account info and dispensary location, so focus on:\n\n1. CONSUMPTION METHODS - Ask about their preferences:\n   - \"How do you like to consume cannabis?\"\n   - \"Do you prefer edibles, vapes, flower, or other methods?\"\n   - \"What's your favorite way to enjoy cannabis?\"\n\n2. USE CASES - Understand why they use cannabis:\n   - \"What do you use cannabis for?\"\n   - \"Do you use it to be creative, relax, work out, socialize, or sleep?\"\n   - \"What's your ideal cannabis experience?\"\n   - \"When do you typically use cannabis?\"\n\n3. DEAL NOTIFICATIONS - After learning their preferences:\n   - \"I'll notify you of deals at your dispensary for Mota products that match your preferences\"\n   - \"I'll send you personalized deals for [their preferred consumption method]\"\n   - \"I'll keep you updated on Mota deals at your store\"\n\nUse the customer data tools to get their account info and dispensary location. Be friendly, ask one question at a time, and genuinely listen to their answers.\n\nKeep responses under 150 characters for SMS. No emojis.`;\n\nreturn {\n  json: {\n    chatInput: prompt,\n    phone_number: phoneNumber,\n    message_id: messageId,\n    conversation_history: conversationHistory,\n    customer_type: customerType,\n    discovery_stage: discoveryStage\n  }\n};"
+      },
+      "id": "format-xc-prompt",
+      "name": "Format XC Discovery Prompt",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1056,
+        272
+      ]
+    },
+    {
+      "parameters": {
+        "options": {
+          "systemMessage": "You are Luis from Mota - the friendly cannabis expert who helps external customers discover the perfect products for their lifestyle.\n\nYOUR ROLE:\n- Cannabis sommelier who gets to know each customer personally\n- Patient teacher who explains products and effects\n- Genuinely curious about their cannabis journey\n- Non-judgmental and accepting of all use cases\n\nDISCOVERY PROCESS - Focus on these key areas (we already have their account info and dispensary location):\n\n1. CONSUMPTION METHODS:\n   - \"How do you like to consume cannabis?\"\n   - \"Do you prefer edibles, vapes, flower, or other methods?\"\n   - \"What's your favorite way to enjoy cannabis?\"\n   - \"Have you tried different consumption methods?\"\n\n2. USE CASES - Understand why they use cannabis:\n   - \"What do you use cannabis for?\"\n   - \"Do you use it to be creative, relax, work out, socialize, or sleep?\"\n   - \"What's your ideal cannabis experience?\"\n   - \"When do you typically use cannabis?\"\n   - \"What effects are you looking for?\"\n\n3. DEAL NOTIFICATIONS - After learning their preferences:\n   - \"I'll notify you of deals at your dispensary for Mota products that match your preferences\"\n   - \"I'll send you personalized deals for [their preferred consumption method]\"\n   - \"I'll keep you updated on Mota deals at your store\"\n\nRESPONSE STYLE:\n- Friendly and conversational\n- Under 150 characters for SMS\n- No emojis (SMS delivery issues)\n- Ask one question at a time\n- Be genuinely interested in their answers\n- Use their name when possible\n\nPRODUCT KNOWLEDGE:\nUse your tools to search Mota's 11,515+ products with Leafly data:\n- Effects: Relaxed, Euphoric, Creative, Energetic, Happy, Uplifted\n- Medical uses: Anxiety, Pain, Insomnia, Stress, Depression\n- Flavors: Pine, Citrus, Diesel, Berry, Earthy\n- Strain types: Indica, Sativa, Hybrid\n- Consumption methods: Flower, Edibles, Vapes, Concentrates\n\nCUSTOMER DATA:\nUse the customer tools to get their account info, dispensary location, and purchase history. We already know where they shop, so focus on understanding their preferences.\n\nGOAL: Convert external customers into loyal Mota customers through personalized discovery, product education, and dispensary-specific deal notifications."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        -832,
+        272
+      ],
+      "id": "xc-discovery-agent",
+      "name": "XC Discovery Agent"
+    },
+    {
+      "parameters": {
+        "model": "google/gemini-2.5-flash",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1,
+      "position": [
+        -1200,
+        496
+      ],
+      "id": "openrouter-model",
+      "name": "OpenRouter Chat Model",
+      "credentials": {
+        "openRouterApi": {
+          "id": "daclOezIY0qSdW4Z",
+          "name": "OpenRouter account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "PATCH",
+        "url": "={{ 'https://kiwmwoqrguyrcpjytgte.supabase.co/rest/v1/messages?phone_number=eq.' + $('Format XC Discovery Prompt').item.json.phone_number + '&status=eq.unread' }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"
+            },
+            {
+              "name": "Authorization",
+              "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ status: 'read' }) }}",
+        "options": {}
+      },
+      "id": "mark-as-read",
+      "name": "Mark as Read",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -224,
+        224
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://kiwmwoqrguyrcpjytgte.supabase.co/rest/v1/messages",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"
+            },
+            {
+              "name": "Authorization",
+              "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ phone_number: $('Format XC Discovery Prompt').item.json.phone_number, content: $json.output || $json.text || $json.response, status: 'queued', direction: 'outbound', timestamp: new Date().toISOString() }) }}",
+        "options": {}
+      },
+      "id": "queue-response",
+      "name": "Queue XC Response",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -224,
+        32
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "tableId": "products"
+      },
+      "type": "n8n-nodes-base.supabaseTool",
+      "typeVersion": 1,
+      "position": [
+        -160,
+        496
+      ],
+      "id": "products-tool",
+      "name": "Get Mota Products",
+      "description": "Search Mota's 11,515+ products with Leafly data for effects, medical uses, flavors, and ratings. Use this to recommend products based on customer preferences.",
+      "credentials": {
+        "supabaseApi": {
+          "id": "hwJ1to3Ot0D92Bo5",
+          "name": "Supabase account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "tableId": "products",
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "ilike",
+              "keyValue": "={{ $json.search_term }}"
+            },
+            {
+              "keyName": "is not",
+              "keyValue": "leafly_description"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.supabaseTool",
+      "typeVersion": 1,
+      "position": [
+        -32,
+        496
+      ],
+      "id": "search-products",
+      "name": "Search Products with Leafly Data",
+      "description": "Search products with Leafly data by name, strain, effects, or medical uses. Only returns products with rich Leafly descriptions.",
+      "credentials": {
+        "supabaseApi": {
+          "id": "hwJ1to3Ot0D92Bo5",
+          "name": "Supabase account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "tableId": "customers",
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "=phone",
+              "keyValue": "={{ $json.phone_number }}"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.supabaseTool",
+      "typeVersion": 1,
+      "position": [
+        -288,
+        496
+      ],
+      "id": "get-customer",
+      "name": "Get Customer Profile",
+      "description": "Find customer by phone number to get their profile and preferences. Use this to track discovery progress and store customer preferences.",
+      "credentials": {
+        "supabaseApi": {
+          "id": "hwJ1to3Ot0D92Bo5",
+          "name": "Supabase account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "tableId": "customers"
+      },
+      "type": "n8n-nodes-base.supabaseTool",
+      "typeVersion": 1,
+      "position": [
+        -416,
+        496
+      ],
+      "id": "all-customers",
+      "name": "Get All Customers",
+      "description": "Get all customer records for analysis and segmentation.",
+      "credentials": {
+        "supabaseApi": {
+          "id": "hwJ1to3Ot0D92Bo5",
+          "name": "Supabase account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://kiwmwoqrguyrcpjytgte.supabase.co/rest/v1/customer_preferences",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"
+            },
+            {
+              "name": "Authorization",
+              "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ phone_number: $('Format XC Discovery Prompt').item.json.phone_number, customer_type: 'XC', preferred_consumption_method: $json.preferred_method || 'unknown', use_cases: $json.use_cases || 'unknown', dispensary_location: $json.dispensary || 'from_customer_data', discovery_completed: true, last_updated: new Date().toISOString() }) }}",
+        "options": {}
+      },
+      "id": "store-preferences",
+      "name": "Store Customer Preferences",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        96,
+        32
+      ]
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.toolCalculator",
+      "typeVersion": 1,
+      "position": [
+        224,
+        496
+      ],
+      "id": "calculator",
+      "name": "Calculator"
+    }
+  ],
+  "connections": {
+    "Poll Every 30s": {
+      "main": [
+        [
+          {
+            "node": "Get Recent Messages",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Recent Messages": {
+      "main": [
+        [
+          {
+            "node": "Filter XC Messages",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter XC Messages": {
+      "main": [
+        [
+          {
+            "node": "Prepare XC Context",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare XC Context": {
+      "main": [
+        [
+          {
+            "node": "Format XC Discovery Prompt",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format XC Discovery Prompt": {
+      "main": [
+        [
+          {
+            "node": "XC Discovery Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "XC Discovery Agent": {
+      "main": [
+        [
+          {
+            "node": "Queue XC Response",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Mark as Read",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Store Customer Preferences",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenRouter Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "XC Discovery Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Mota Products": {
+      "ai_tool": [
+        [
+          {
+            "node": "XC Discovery Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Search Products with Leafly Data": {
+      "ai_tool": [
+        [
+          {
+            "node": "XC Discovery Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Customer Profile": {
+      "ai_tool": [
+        [
+          {
+            "node": "XC Discovery Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get All Customers": {
+      "ai_tool": [
+        [
+          {
+            "node": "XC Discovery Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Calculator": {
+      "ai_tool": [
+        [
+          {
+            "node": "XC Discovery Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "instanceId": "xc-discovery-bot-workflow"
+  }
+}

@@ -1,0 +1,55 @@
+
+================================================================================
+CUSTOMER SNAPSHOT - CLEMENT "RICK" BARDA
+================================================================================
+
+CONTACT INFORMATION:
+  Phone:          13103703789
+  Email:          Not provided
+  Customer ID:    6159f53c69f11239a9ff7bc3
+
+TIER & STATUS:
+  Tier:           VIP
+  Risk Status:    At Risk
+  Campaign Wave:  Wave 4 Priority
+
+ENGAGEMENT METRICS:
+  Last Visit:           2025-05-02
+  Days Since Last:      173 days
+  Total Visits:         11
+  Visit Frequency:      Bi-weekly (when active)
+  
+VALUE METRICS:
+  Lifetime Value:       $485.00
+  Average Transaction:  $44.09
+  Estimated Annual:     $1,146.34 (if reactivated)
+
+URGENCY ASSESSMENT:
+  Level:          CRITICAL - At Risk of Lost Forever
+  Recommended:    Maximum effort, best offer
+
+REACTIVATION STRATEGY:
+
+  Approach:       Valued Customer
+  Offer:          15-20% off + loyalty bonus
+  Message:        "It's been a while! We have some new products you'd love..."
+  Channel:        SMS + Email (if available)
+  Budget:         Up to $8.82 discount value
+
+CAMPAIGN TIMING:
+  Send Window:    Week 1 - CRITICAL, send ASAP
+  Best Time:      Afternoon (2-5 PM) based on customer tier
+  Follow-up:      48 hours if no response
+
+SUCCESS METRICS:
+  Target ROI:     200%
+  Break-even:     1 visit at $44.09
+  Goal:           Restore to Bi-weekly visits
+
+NOTES:
+  - Customer has been gone for 173 days
+  - Historical pattern: 11 visits, $485.00 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+================================================================================

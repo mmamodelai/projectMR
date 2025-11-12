@@ -1,0 +1,55 @@
+
+================================================================================
+CUSTOMER SNAPSHOT - ANGELICA PEREZAGUIRRE
+================================================================================
+
+CONTACT INFORMATION:
+  Phone:          17148333003
+  Email:          Not provided
+  Customer ID:    5f559c48b111ce08d2b61a9a
+
+TIER & STATUS:
+  Tier:           Regular
+  Risk Status:    Cooling
+  Campaign Wave:  Wave 1 Priority
+
+ENGAGEMENT METRICS:
+  Last Visit:           2025-08-10
+  Days Since Last:      73 days
+  Total Visits:         6
+  Visit Frequency:      Monthly (when active)
+  
+VALUE METRICS:
+  Lifetime Value:       $117.17
+  Average Transaction:  $19.53
+  Estimated Annual:     $234.36 (if reactivated)
+
+URGENCY ASSESSMENT:
+  Level:          MEDIUM - Cooling Off
+  Recommended:    Light touch, promotional offer
+
+REACTIVATION STRATEGY:
+
+  Approach:       Win-Back Offer
+  Offer:          10-15% off on next visit
+  Message:        "Come back and see what's new! Special offer just for you..."
+  Channel:        SMS
+  Budget:         Up to $2.93 discount value
+
+CAMPAIGN TIMING:
+  Send Window:    Week 1 - Send immediately
+  Best Time:      Afternoon (2-5 PM) based on customer tier
+  Follow-up:      None scheduled
+
+SUCCESS METRICS:
+  Target ROI:     200%
+  Break-even:     1 visit at $19.53
+  Goal:           Restore to Monthly visits
+
+NOTES:
+  - Customer has been gone for 73 days
+  - Historical pattern: 6 visits, $117.17 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+================================================================================

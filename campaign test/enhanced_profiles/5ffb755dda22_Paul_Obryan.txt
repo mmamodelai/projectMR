@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - PAUL OBRYAN
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5ffb755dda229a08e24d8362
+  Phone:          14154077083
+  Email:          Not provided
+  Tier:           Regular
+  Risk Status:    Cooling (65 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    8
+  Total Revenue:         $409.19
+  Average Transaction:   $51.15
+  Median Transaction:    $35.33
+  Min Transaction:      $19.20
+  Max Transaction:      $112.28
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      41.6 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Thursday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Cash
+  Favorite Staff:        Jimmy Silks
+
+  Payment Method Breakdown:
+    Cash              5 times ( 62.5%)
+    Credit            3 times ( 37.5%)
+
+  Staff Interaction Breakdown:
+    Jimmy Silks            3 times ( 37.5%)
+    Jacob Vangellow        2 times ( 25.0%)
+    Bob McGinn             1 times ( 12.5%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    28
+  Unique Products:       17
+  Avg Items/Visit:       3.5
+  Favorite Category:     Edibles
+  Favorite Brand:        MOTA
+  Avg Item Price:        $18.58
+  Price Range:           $0.00 - $53.33
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            Regular
+  Engagement Level:      Low
+  Loyalty Score:         Low
+  Price Sensitivity:     Moderate
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              Win-Back Offer
+  Discount Level:        10-15%
+  Message Focus:         Edibles + MOTA
+  Channel:               SMS
+  Timing:                Thursday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi Paul, we miss you! 🌿
+   
+   We just restocked edibles from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME5FFB75
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  42 days between visits
+  Expected Annual Visits: 8
+  Potential Annual Value: $409.19
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $10.23 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        4000%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          9
+Wave:                    1
+Send Window:            Week 1 - URGENT
+Best Contact Time:      Thursday at 0:00
+Follow-up Schedule:     None
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $51.15 (first visit)
+  Annual Value:          $409.19
+
+NOTES:
+  - Customer has been gone for 65 days
+  - Historical pattern: 8 visits, $409.19 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+====================================================================================================

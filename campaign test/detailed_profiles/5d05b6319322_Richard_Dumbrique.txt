@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - RICHARD DUMBRIQUE
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5d05b63193229107fb545d73
+  Phone:          15628105388
+  Email:          Not provided
+  Tier:           Regular
+  Risk Status:    Cooling (56 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         5
+  Lifetime Value:       $59.85
+  Avg Transaction:      $11.97
+  Last Visit:           2025-08-27
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Monthly
+  Expected Annual Visits:   12
+  Potential Annual Value:   $143.64
+  
+  ROI Analysis:
+  - Discount Budget:        $2.39 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           6000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           1
+  Priority:       9
+  Send Timing:    Week 1 - URGENT
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS
+
+====================================================================================================

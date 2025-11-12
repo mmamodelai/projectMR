@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - ARPINE TEVANYAN
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    003bdb005a900050b200b42e
+  Phone:          13234223770
+  Email:          Not provided
+  Tier:           Super VIP
+  Risk Status:    Inactive (110 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    50
+  Total Revenue:         $1,016.79
+  Average Transaction:   $20.34
+  Median Transaction:    $15.97
+  Min Transaction:      $0.71
+  Max Transaction:      $65.88
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      11.2 days
+  Visit Frequency:       Bi-weekly
+  Preferred Day:         Monday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Cash
+  Favorite Staff:        Bob McGinn
+
+  Payment Method Breakdown:
+    Cash             30 times ( 60.0%)
+    Credit           20 times ( 40.0%)
+
+  Staff Interaction Breakdown:
+    Bob McGinn            14 times ( 28.0%)
+    Jacob Vangellow        9 times ( 18.0%)
+    Michael Preziosi       8 times ( 16.0%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    139
+  Unique Products:       81
+  Avg Items/Visit:       2.8
+  Favorite Category:     Flower PrePacks
+  Favorite Brand:        MOTA
+  Avg Item Price:        $7.85
+  Price Range:           $0.00 - $41.77
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            Super VIP
+  Engagement Level:      High
+  Loyalty Score:         High
+  Price Sensitivity:     Budget
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              VIP Treatment
+  Discount Level:        20-30%
+  Message Focus:         Flower PrePacks + MOTA
+  Channel:               SMS + Email + Call
+  Timing:                Monday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi Arpine, we miss you! 🌿
+   
+   We just restocked flower prepacks from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME003BDB
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  11 days between visits
+  Expected Annual Visits: 32
+  Potential Annual Value: $650.75
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $4.07 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        16000%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          3
+Wave:                    3
+Send Window:            Week 3
+Best Contact Time:      Monday at 0:00
+Follow-up Schedule:     48 hours
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $20.34 (first visit)
+  Annual Value:          $650.75
+
+NOTES:
+  - Customer has been gone for 110 days
+  - Historical pattern: 50 visits, $1,016.79 total spent
+  - HIGH VALUE - Personal follow-up recommended
+  - Consider phone call if SMS doesn't convert
+
+====================================================================================================

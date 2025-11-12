@@ -1,0 +1,638 @@
+{
+  "name": "supabaseimport",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes"
+            }
+          ]
+        }
+      },
+      "id": "1c02436c-9097-491d-bdcd-795e5340f535",
+      "name": "Poll Every 30s",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -2464,
+        320
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://kiwmwoqrguyrcpjytgte.supabase.co/rest/v1/messages?select=*&order=timestamp.desc&limit=50",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"
+            },
+            {
+              "name": "Authorization",
+              "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"
+            },
+            {
+              "name": "Accept",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "21285b5e-5210-4cb1-a354-dd54f77055da",
+      "name": "Get Recent Messages",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -2240,
+        320
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Filter for unread inbound messages only\nconst messages = $input.all().map(item => item.json);\nconst unreadInbound = messages.filter(msg => \n  msg.direction === 'inbound' && msg.status === 'unread'\n);\n\nif (unreadInbound.length === 0) { \n  return []; \n}\n\nreturn unreadInbound.map(msg => ({\n  json: {\n    message_id: msg.id,\n    phone_number: msg.phone_number,\n    incoming_message: msg.content,\n    timestamp: msg.timestamp\n  }\n}));"
+      },
+      "id": "a2b708fb-0081-4175-9c87-813cc7887181",
+      "name": "Filter Unread Messages",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -2016,
+        320
+      ]
+    },
+    {
+      "parameters": {
+        "options": {
+          "systemMessage": "You are MotaBot - friendly AI for Mota Rewards.\n\nYou receive 3 data sources merged together:\n1. Conversation History (messages table) - past SMS with this customer\n2. Transaction History (transactions table) - their purchases  \n3. Product Affinity (customer_product_affinity table) - their favorite products\n\nYour job: Read the incoming data, find the LATEST customer message (direction='inbound', status='unread'), and respond to it.\n\nCommunication style:\n- Friendly, under 150 chars for SMS\n- NO emojis (causes delivery failures!)\n- Use their name if available\n\nTOOLS (use sparingly):\n1. 'Customers Data Points' - Rewards points only\n2. 'Gmail' - Send emails\n3. Budtender tools - Staff info\n\nFor purchase history questions: Use the transaction data in your input!\n\nEXAMPLES:\n\nCustomer: \"What have I bought lately?\"\nYou: Look at transactions data → \"Hey! Your last visit was [date] - you spent $[amount]. Want more details?\"\n\nCustomer: \"What's my favorite product?\"\nYou: Look at customer_product_affinity → \"You love [product_id] - bought it [count] times!\"\n\nIMPORTANT: All the data you need is ALREADY in your input - use it!"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        -712,
+        320
+      ],
+      "id": "ae87dc2b-8e03-48f2-a75f-1a17d004db75",
+      "name": "MotaBot AI"
+    },
+    {
+      "parameters": {
+        "model": "google/gemini-2.5-flash",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1,
+      "position": [
+        -896,
+        544
+      ],
+      "id": "e1579cbd-8fa2-4ca8-af0a-4053cf37a5c1",
+      "name": "OpenRouter Chat Model",
+      "credentials": {
+        "openRouterApi": {
+          "id": "daclOezIY0qSdW4Z",
+          "name": "OpenRouter account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "PATCH",
+        "url": "={{ 'https://kiwmwoqrguyrcpjytgte.supabase.co/rest/v1/messages?id=eq.' + $('Filter Unread Messages').item.json.message_id }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"
+            },
+            {
+              "name": "Authorization",
+              "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ status: 'read' }) }}",
+        "options": {}
+      },
+      "id": "87ed04ca-bc00-4d6e-a516-4442dfb2fae9",
+      "name": "Mark as Read",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -176,
+        224
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://kiwmwoqrguyrcpjytgte.supabase.co/rest/v1/messages",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"
+            },
+            {
+              "name": "Authorization",
+              "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ phone_number: $('Filter Unread Messages').item.json.phone_number, content: $json.output || $json.text || $json.response, status: 'queued', direction: 'outbound' }) }}",
+        "options": {}
+      },
+      "id": "9ac58da8-e04d-4ea7-9e5f-04af1b17e9de",
+      "name": "Queue Full Message",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -176,
+        416
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "dataTableId": {
+          "__rl": true,
+          "value": "zZ2IrXHsmtrtqStH",
+          "mode": "list",
+          "cachedResultName": "Customers Data Points",
+          "cachedResultUrl": "/projects/U8qx0mgq0lyFAfZg/datatables/zZ2IrXHsmtrtqStH"
+        }
+      },
+      "type": "n8n-nodes-base.dataTableTool",
+      "typeVersion": 1,
+      "position": [
+        -768,
+        544
+      ],
+      "id": "e5b5b446-7e78-40aa-aeb7-cfd535da6ee7",
+      "name": "Customers Data Points",
+      "description": "Query customer information by phone number to get points balance, last visit location, and last budtender. Fields: First_Name, Last_Name, Phone, Total_Points, Last_dispensary, Last_budtender"
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "dataTableId": {
+          "__rl": true,
+          "value": "IrckcDMtEMjxjb2Q",
+          "mode": "list",
+          "cachedResultName": "Budtenders Data Points",
+          "cachedResultUrl": "/projects/U8qx0mgq0lyFAfZg/datatables/IrckcDMtEMjxjb2Q"
+        }
+      },
+      "type": "n8n-nodes-base.dataTableTool",
+      "typeVersion": 1,
+      "position": [
+        -640,
+        544
+      ],
+      "id": "a43337f3-f908-4816-9dc6-e26d036372e7",
+      "name": "Budtenders Data Points",
+      "description": "Query budtender performance data including total sales attributed and performance tier. Useful for checking which budtenders are top performers"
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "dataTableId": {
+          "__rl": true,
+          "value": "p3AV3VSdqNcawCbb",
+          "mode": "list",
+          "cachedResultName": "Budtenders DB 2025",
+          "cachedResultUrl": "/projects/U8qx0mgq0lyFAfZg/datatables/p3AV3VSdqNcawCbb"
+        }
+      },
+      "type": "n8n-nodes-base.dataTableTool",
+      "typeVersion": 1,
+      "position": [
+        -512,
+        544
+      ],
+      "id": "74578d75-ea1e-419c-8503-58cde03a8cc1",
+      "name": "Budtenders DB 2025 Info",
+      "description": "Query full budtender contact information including first_name, last_name, phone, email, store_name, and address. Use this for detailed budtender information"
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('To', ``, 'string') }}",
+        "subject": "MoTA Rewards Points Earned!",
+        "emailType": "text",
+        "message": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Message', `this is an update for a rewards program the customer has joined, we are Mota, the customer has purchased our products and sent in a photo of the receipt. We want to make sure this doesn't get stuck in a spam filter so no emojis etc, act as Luis head of rewards program for Mota\n\nHello (customername) ! Great news!\n\nYou've earned MoTa Rewards points from your recent purchase at (Last_dispensary)\n\nMoTa Products Purchased:- Total MoTa spent: $XX- Mota Points earned: 65 points, your balance is XX Points, \nYour budtender (budtenders name here) helped you with this purchase. \nThanks for choosing MoTa! Luis - MoTa Rewards Team`, 'string') }}",
+        "options": {
+          "appendAttribution": false,
+          "senderName": "Luis - MoTA Rewards"
+        }
+      },
+      "type": "n8n-nodes-base.gmailTool",
+      "typeVersion": 2.1,
+      "position": [
+        -384,
+        544
+      ],
+      "id": "4d88af17-ef22-4dc6-96d4-e7cea0d6117d",
+      "name": "Gmail",
+      "webhookId": "883b3d0b-7efa-4fdf-abba-f8e325970503",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "BvZyBEwmYVeo2pxs",
+          "name": "Gmail account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "={{ 'https://kiwmwoqrguyrcpjytgte.supabase.co/rest/v1/messages?select=*&phone_number=eq.' + encodeURIComponent($json.phone_number) + '&order=timestamp.desc&limit=50' }}",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "supabaseApi",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"
+            },
+            {
+              "name": "Authorization",
+              "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"
+            },
+            {
+              "name": "Accept",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -1568,
+        128
+      ],
+      "id": "929af8cc-e4a5-4a2f-97e4-97e7687f2b6d",
+      "name": "Get Conversation History",
+      "credentials": {
+        "supabaseApi": {
+          "id": "hwJ1to3Ot0D92Bo5",
+          "name": "Supabase account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "={{ 'https://kiwmwoqrguyrcpjytgte.supabase.co/rest/v1/customers?select=*&phone=eq.' + encodeURIComponent($json.phone_number) + '&limit=1' }}",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "supabaseApi",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"
+            },
+            {
+              "name": "Authorization",
+              "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"
+            },
+            {
+              "name": "Accept",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -1792,
+        320
+      ],
+      "id": "39e5bc48-f20b-4d18-8aff-80e696e6c17f",
+      "name": "Get Customer Profile",
+      "credentials": {
+        "supabaseApi": {
+          "id": "hwJ1to3Ot0D92Bo5",
+          "name": "Supabase account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "={{ 'https://kiwmwoqrguyrcpjytgte.supabase.co/rest/v1/transactions?select=*&customer_id=eq.' + $json.member_id + '&order=date.desc&limit=10' }}",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "supabaseApi",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"
+            },
+            {
+              "name": "Authorization",
+              "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"
+            },
+            {
+              "name": "Accept",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -1568,
+        320
+      ],
+      "id": "c7579c99-22a2-41b4-9849-739d7ae46dcb",
+      "name": "Get Transaction History",
+      "credentials": {
+        "supabaseApi": {
+          "id": "hwJ1to3Ot0D92Bo5",
+          "name": "Supabase account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "={{ 'https://kiwmwoqrguyrcpjytgte.supabase.co/rest/v1/customer_product_affinity?select=product_sku,product_name,category,brand,purchase_count,total_spent&customer_id=eq.' + $json.member_id + '&order=purchase_count.desc&limit=10' }}",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "supabaseApi",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"
+            },
+            {
+              "name": "Authorization",
+              "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"
+            },
+            {
+              "name": "Accept",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -1568,
+        512
+      ],
+      "id": "20153ce4-851b-4d95-9182-bc8457d9a288",
+      "name": "Get Top Products",
+      "credentials": {
+        "supabaseApi": {
+          "id": "hwJ1to3Ot0D92Bo5",
+          "name": "Supabase account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "numberInputs": 3
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        -1344,
+        304
+      ],
+      "id": "f1976aa2-3b25-499f-bad0-385b2274ccb0",
+      "name": "Merge"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Get the current message from Filter Unread Messages\nconst currentMessage = $('Filter Unread Messages').item.json;\nconst phoneNumber = currentMessage.phone_number;\nconst incomingMessage = currentMessage.incoming_message;\n\n// Get all merged data\nconst allData = $input.all().map(item => item.json);\n\n// Build prompt for AI\nconst prompt = `You have ${allData.length} data records about this customer.\n\nCustomer Phone: ${phoneNumber}\nCustomer Question: ${incomingMessage}\n\nUse the data provided to answer their question. Be friendly and helpful!`;\n\nreturn {\n  json: {\n    chatInput: prompt,\n    phone_number: phoneNumber,\n    message_id: currentMessage.message_id,\n    allData: allData\n  }\n};"
+      },
+      "id": "bb12cc34-dd56-4e89-af90-12b34cd56ef0",
+      "name": "Build Chat Input",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1120,
+        304
+      ]
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Poll Every 30s": {
+      "main": [
+        [
+          {
+            "node": "Get Recent Messages",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Recent Messages": {
+      "main": [
+        [
+          {
+            "node": "Filter Unread Messages",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter Unread Messages": {
+      "main": [
+        [
+          {
+            "node": "Get Customer Profile",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Conversation History": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "MotaBot AI": {
+      "main": [
+        [
+          {
+            "node": "Mark as Read",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Queue Full Message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenRouter Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "MotaBot AI",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Customers Data Points": {
+      "ai_tool": [
+        [
+          {
+            "node": "MotaBot AI",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Budtenders Data Points": {
+      "ai_tool": [
+        [
+          {
+            "node": "MotaBot AI",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Budtenders DB 2025 Info": {
+      "ai_tool": [
+        [
+          {
+            "node": "MotaBot AI",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail": {
+      "ai_tool": [
+        [
+          {
+            "node": "MotaBot AI",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Customer Profile": {
+      "main": [
+        [
+          {
+            "node": "Get Transaction History",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Get Conversation History",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Get Top Products",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Transaction History": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Get Top Products": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 2
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Build Chat Input",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Build Chat Input": {
+      "main": [
+        [
+          {
+            "node": "MotaBot AI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "e53120b2-eaba-4058-bbd7-6541f962aba1",
+  "meta": {
+    "instanceId": "daf1db1234fdfcbbfb53be5e1fe26764ab505fd0554977269bee03ef4bae6464"
+  },
+  "id": "yM600qUJaRYoKUjq",
+  "tags": []
+}

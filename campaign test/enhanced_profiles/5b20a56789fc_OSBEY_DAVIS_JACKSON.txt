@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - OSBEY DAVIS JACKSON
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5b20a56789fc9307fe1b448c
+  Phone:          13233653040
+  Email:          Not provided
+  Tier:           Regular
+  Risk Status:    Inactive (119 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    7
+  Total Revenue:         $308.60
+  Average Transaction:   $44.09
+  Median Transaction:    $44.28
+  Min Transaction:      $3.30
+  Max Transaction:      $113.31
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      87.7 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Saturday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Credit
+  Favorite Staff:        Jimmy Silks
+
+  Payment Method Breakdown:
+    Credit            4 times ( 57.1%)
+    Cash              3 times ( 42.9%)
+
+  Staff Interaction Breakdown:
+    Jimmy Silks            4 times ( 57.1%)
+    Bob McGinn             1 times ( 14.3%)
+    Jacob Vangellow        1 times ( 14.3%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    29
+  Unique Products:       27
+  Avg Items/Visit:       4.1
+  Favorite Category:     Vapes
+  Favorite Brand:        MOTA
+  Avg Item Price:        $10.42
+  Price Range:           $0.00 - $29.87
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            Regular
+  Engagement Level:      Low
+  Loyalty Score:         Low
+  Price Sensitivity:     Moderate
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              Win-Back Offer
+  Discount Level:        10-15%
+  Message Focus:         Vapes + MOTA
+  Channel:               SMS
+  Timing:                Saturday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi OSBEY, we miss you! 🌿
+   
+   We just restocked vapes from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME5B20A5
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  88 days between visits
+  Expected Annual Visits: 4
+  Potential Annual Value: $176.34
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $8.82 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        2000%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          11
+Wave:                    3
+Send Window:            Week 3
+Best Contact Time:      Saturday at 0:00
+Follow-up Schedule:     None
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $44.09 (first visit)
+  Annual Value:          $176.34
+
+NOTES:
+  - Customer has been gone for 119 days
+  - Historical pattern: 7 visits, $308.60 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+====================================================================================================

@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - JULIO ORTIZ
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5d770009334df1081b6c4084
+  Phone:          12132194353
+  Email:          Not provided
+  Tier:           Super VIP
+  Risk Status:    Cooling (72 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    29
+  Total Revenue:         $690.97
+  Average Transaction:   $23.83
+  Median Transaction:    $15.37
+  Min Transaction:      $6.00
+  Max Transaction:      $72.23
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      19.5 days
+  Visit Frequency:       Bi-weekly
+  Preferred Day:         Thursday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Cash
+  Favorite Staff:        Jimmy Silks
+
+  Payment Method Breakdown:
+    Cash             15 times ( 51.7%)
+    Credit           14 times ( 48.3%)
+
+  Staff Interaction Breakdown:
+    Jimmy Silks            9 times ( 31.0%)
+    Bob McGinn             7 times ( 24.1%)
+    Jacob Vangellow        4 times ( 13.8%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    84
+  Unique Products:       59
+  Avg Items/Visit:       2.9
+  Favorite Category:     Vapes
+  Favorite Brand:        MOTA
+  Avg Item Price:        $10.00
+  Price Range:           $0.00 - $32.49
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            Super VIP
+  Engagement Level:      High
+  Loyalty Score:         Medium
+  Price Sensitivity:     Budget
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              VIP Treatment
+  Discount Level:        20-30%
+  Message Focus:         Vapes + MOTA
+  Channel:               SMS + Email + Call
+  Timing:                Thursday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi Julio, we miss you! 🌿
+   
+   We just restocked vapes from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME5D7700
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  20 days between visits
+  Expected Annual Visits: 18
+  Potential Annual Value: $428.88
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $4.77 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        9000%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          1
+Wave:                    1
+Send Window:            Week 1 - URGENT
+Best Contact Time:      Thursday at 0:00
+Follow-up Schedule:     48 hours
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $23.83 (first visit)
+  Annual Value:          $428.88
+
+NOTES:
+  - Customer has been gone for 72 days
+  - Historical pattern: 29 visits, $690.97 total spent
+  - Standard campaign approach
+  - Consider phone call if SMS doesn't convert
+
+====================================================================================================

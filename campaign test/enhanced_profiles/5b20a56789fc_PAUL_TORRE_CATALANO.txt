@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - PAUL TORRE CATALANO
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5b20a56789fc9307fe1b4551
+  Phone:          16462757701
+  Email:          Not provided
+  Tier:           Regular
+  Risk Status:    At Risk (169 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    6
+  Total Revenue:         $302.11
+  Average Transaction:   $50.35
+  Median Transaction:    $39.48
+  Min Transaction:      $31.31
+  Max Transaction:      $97.00
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      73.4 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Friday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Cash
+  Favorite Staff:        Bob McGinn
+
+  Payment Method Breakdown:
+    Cash              4 times ( 66.7%)
+    Credit            2 times ( 33.3%)
+
+  Staff Interaction Breakdown:
+    Bob McGinn             3 times ( 50.0%)
+    Devon Calonzo          1 times ( 16.7%)
+    Jimmy Silks            1 times ( 16.7%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    16
+  Unique Products:       12
+  Avg Items/Visit:       2.7
+  Favorite Category:     Vapes
+  Favorite Brand:        Bloom
+  Avg Item Price:        $21.27
+  Price Range:           $1.83 - $34.19
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            Regular
+  Engagement Level:      Low
+  Loyalty Score:         Low
+  Price Sensitivity:     Moderate
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              Win-Back Offer
+  Discount Level:        10-15%
+  Message Focus:         Vapes + Bloom
+  Channel:               SMS
+  Timing:                Friday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi PAUL, we miss you! 🌿
+   
+   We just restocked vapes from Bloom - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME5B20A5
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  73 days between visits
+  Expected Annual Visits: 4
+  Potential Annual Value: $201.41
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $10.07 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        2000%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          12
+Wave:                    4
+Send Window:            Week 4
+Best Contact Time:      Friday at 0:00
+Follow-up Schedule:     None
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $50.35 (first visit)
+  Annual Value:          $201.41
+
+NOTES:
+  - Customer has been gone for 169 days
+  - Historical pattern: 6 visits, $302.11 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+====================================================================================================

@@ -1,0 +1,83 @@
+{
+  "name": "Tool: Calculate Spending",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "workflow-trigger",
+      "name": "Execute Workflow Trigger",
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1,
+      "position": [380, 400]
+    },
+    {
+      "parameters": {
+        "jsCode": "const phoneNumber = $input.item.json.phoneNumber || $input.item.json.phone_number || $input.item.json.query;\nconst startDate = $input.item.json.startDate || $input.item.json.start_date || '2000-01-01';\nconst endDate = $input.item.json.endDate || $input.item.json.end_date || '2099-12-31';\n\nreturn {\n  json: {\n    phoneNumber: phoneNumber,\n    startDate: startDate,\n    endDate: endDate\n  }\n};"
+      },
+      "id": "extract-params",
+      "name": "Extract Parameters",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [600, 400]
+    },
+    {
+      "parameters": {
+        "url": "=https://kiwmwoqrguyrcpjytgte.supabase.co/rest/v1/customers?phone=eq.{{ $json.phoneNumber }}&select=member_id,name,lifetime_value,total_visits&limit=1",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {"name": "apikey", "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"},
+            {"name": "Authorization", "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"}
+          ]
+        },
+        "options": {}
+      },
+      "id": "get-customer",
+      "name": "Get Customer",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [820, 400]
+    },
+    {
+      "parameters": {
+        "url": "=https://kiwmwoqrguyrcpjytgte.supabase.co/rest/v1/transactions?customer_id=eq.{{ $json[0].member_id }}&date=gte.{{ $('Extract Parameters').item.json.startDate }}&date=lte.{{ $('Extract Parameters').item.json.endDate }}&select=total_amount,date,shop_location",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {"name": "apikey", "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"},
+            {"name": "Authorization", "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"}
+          ]
+        },
+        "options": {}
+      },
+      "id": "get-transactions",
+      "name": "Get Transactions",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1040, 400]
+    },
+    {
+      "parameters": {
+        "jsCode": "const customer = $('Get Customer').item.json[0];\nconst params = $('Extract Parameters').item.json;\nconst transactions = $input.all().map(item => item.json);\n\nconst totalSpent = transactions.reduce((sum, t) => sum + parseFloat(t.total_amount || 0), 0);\nconst avgTransaction = transactions.length > 0 ? totalSpent / transactions.length : 0;\n\nconst byLocation = {};\nfor (const txn of transactions) {\n  const loc = txn.shop_location || 'Unknown';\n  if (!byLocation[loc]) {\n    byLocation[loc] = { location: loc, visits: 0, spent: 0 };\n  }\n  byLocation[loc].visits += 1;\n  byLocation[loc].spent += parseFloat(txn.total_amount || 0);\n}\n\nconst result = {\n  customer_name: customer?.name || 'Unknown',\n  date_range: { \n    start: params.startDate, \n    end: params.endDate \n  },\n  transactions_in_period: transactions.length,\n  total_spent_in_period: Math.round(totalSpent * 100) / 100,\n  average_transaction: Math.round(avgTransaction * 100) / 100,\n  lifetime_total: customer?.lifetime_value || 0,\n  lifetime_visits: customer?.total_visits || 0,\n  spending_by_location: Object.values(byLocation)\n};\n\nreturn { json: { response: JSON.stringify(result) } };"
+      },
+      "id": "format-response",
+      "name": "Format Response",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1260, 400]
+    }
+  ],
+  "connections": {
+    "Execute Workflow Trigger": {"main": [[{"node": "Extract Parameters", "type": "main", "index": 0}]]},
+    "Extract Parameters": {"main": [[{"node": "Get Customer", "type": "main", "index": 0}]]},
+    "Get Customer": {"main": [[{"node": "Get Transactions", "type": "main", "index": 0}]]},
+    "Get Transactions": {"main": [[{"node": "Format Response", "type": "main", "index": 0}]]}
+  },
+  "pinData": {},
+  "settings": {"executionOrder": "v1"},
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-10-13T00:00:00.000Z",
+  "versionId": "v3-fixed-response-format"
+}
+

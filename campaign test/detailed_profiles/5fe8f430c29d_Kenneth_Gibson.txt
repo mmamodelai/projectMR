@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - KENNETH GIBSON
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5fe8f430c29df008f107d157
+  Phone:          13238681132
+  Email:          Not provided
+  Tier:           VIP
+  Risk Status:    Inactive (110 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         12
+  Lifetime Value:       $411.23
+  Avg Transaction:      $34.27
+  Last Visit:           2025-07-04
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Bi-weekly
+  Expected Annual Visits:   26
+  Potential Annual Value:   $891.02
+  
+  ROI Analysis:
+  - Discount Budget:        $6.85 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           13000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           3
+  Priority:       7
+  Send Timing:    Week 3
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS + Email
+
+====================================================================================================

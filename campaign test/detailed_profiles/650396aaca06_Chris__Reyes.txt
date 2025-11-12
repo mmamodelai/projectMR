@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - CHRIS  REYES
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    650396aaca0609268d560128
+  Phone:          12139488071
+  Email:          Not provided
+  Tier:           VIP
+  Risk Status:    Cooling (69 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         18
+  Lifetime Value:       $944.83
+  Avg Transaction:      $52.49
+  Last Visit:           2025-08-14
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Bi-weekly
+  Expected Annual Visits:   26
+  Potential Annual Value:   $1,364.74
+  
+  ROI Analysis:
+  - Discount Budget:        $10.50 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           13000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           1
+  Priority:       5
+  Send Timing:    Week 1 - URGENT
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS + Email
+
+====================================================================================================

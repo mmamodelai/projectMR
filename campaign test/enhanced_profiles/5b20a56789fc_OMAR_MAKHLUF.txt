@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - OMAR MAKHLUF
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5b20a56789fc9307fe1b4474
+  Phone:          18182434512
+  Email:          Not provided
+  Tier:           Super VIP
+  Risk Status:    Cooling (62 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    27
+  Total Revenue:         $1,328.19
+  Average Transaction:   $49.19
+  Median Transaction:    $38.97
+  Min Transaction:      $0.91
+  Max Transaction:      $133.13
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      22.9 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Thursday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Cash
+  Favorite Staff:        Jimmy Silks
+
+  Payment Method Breakdown:
+    Cash             26 times ( 96.3%)
+    Credit            1 times (  3.7%)
+
+  Staff Interaction Breakdown:
+    Jimmy Silks            8 times ( 29.6%)
+    Jacob Vangellow        6 times ( 22.2%)
+    Bob McGinn             5 times ( 18.5%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    184
+  Unique Products:       39
+  Avg Items/Visit:       6.8
+  Favorite Category:     Flower PrePacks
+  Favorite Brand:        Cannabiotix
+  Avg Item Price:        $17.80
+  Price Range:           $0.00 - $41.77
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            Super VIP
+  Engagement Level:      High
+  Loyalty Score:         Medium
+  Price Sensitivity:     Moderate
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              VIP Treatment
+  Discount Level:        20-30%
+  Message Focus:         Flower PrePacks + Cannabiotix
+  Channel:               SMS + Email + Call
+  Timing:                Thursday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi OMAR, we miss you! 🌿
+   
+   We just restocked flower prepacks from Cannabiotix - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME5B20A5
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  23 days between visits
+  Expected Annual Visits: 15
+  Potential Annual Value: $737.88
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $9.84 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        7500%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          1
+Wave:                    1
+Send Window:            Week 1 - URGENT
+Best Contact Time:      Thursday at 0:00
+Follow-up Schedule:     48 hours
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $49.19 (first visit)
+  Annual Value:          $737.88
+
+NOTES:
+  - Customer has been gone for 62 days
+  - Historical pattern: 27 visits, $1,328.19 total spent
+  - HIGH VALUE - Personal follow-up recommended
+  - Consider phone call if SMS doesn't convert
+
+====================================================================================================

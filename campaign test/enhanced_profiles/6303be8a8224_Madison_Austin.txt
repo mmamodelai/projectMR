@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - MADISON AUSTIN
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    6303be8a8224b03f0c807f02
+  Phone:          19365374229
+  Email:          Not provided
+  Tier:           Super VIP
+  Risk Status:    At Risk (147 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    36
+  Total Revenue:         $972.36
+  Average Transaction:   $27.01
+  Median Transaction:    $19.79
+  Min Transaction:      $0.01
+  Max Transaction:      $84.80
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      13.3 days
+  Visit Frequency:       Bi-weekly
+  Preferred Day:         Tuesday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Credit
+  Favorite Staff:        Bob McGinn
+
+  Payment Method Breakdown:
+    Credit           25 times ( 69.4%)
+    Cash             11 times ( 30.6%)
+
+  Staff Interaction Breakdown:
+    Bob McGinn            13 times ( 36.1%)
+    Jimmy Silks            8 times ( 22.2%)
+    Devon Calonzo          7 times ( 19.4%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    103
+  Unique Products:       76
+  Avg Items/Visit:       2.9
+  Favorite Category:     Flower PrePacks
+  Favorite Brand:        MOTA
+  Avg Item Price:        $9.66
+  Price Range:           $0.00 - $54.98
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            Super VIP
+  Engagement Level:      High
+  Loyalty Score:         High
+  Price Sensitivity:     Budget
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              VIP Treatment
+  Discount Level:        20-30%
+  Message Focus:         Flower PrePacks + MOTA
+  Channel:               SMS + Email + Call
+  Timing:                Tuesday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi Madison, we miss you! 🌿
+   
+   We just restocked flower prepacks from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME6303BE
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  13 days between visits
+  Expected Annual Visits: 27
+  Potential Annual Value: $729.27
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $5.40 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        13500%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          4
+Wave:                    4
+Send Window:            Week 4
+Best Contact Time:      Tuesday at 0:00
+Follow-up Schedule:     48 hours
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $27.01 (first visit)
+  Annual Value:          $729.27
+
+NOTES:
+  - Customer has been gone for 147 days
+  - Historical pattern: 36 visits, $972.36 total spent
+  - Standard campaign approach
+  - Consider phone call if SMS doesn't convert
+
+====================================================================================================

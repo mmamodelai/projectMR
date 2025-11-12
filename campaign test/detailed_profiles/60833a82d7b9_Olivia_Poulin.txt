@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - OLIVIA POULIN
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    60833a82d7b9d208d1144737
+  Phone:          12077109107
+  Email:          Not provided
+  Tier:           Super VIP
+  Risk Status:    Inactive (129 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         20
+  Lifetime Value:       $949.97
+  Avg Transaction:      $47.50
+  Last Visit:           2025-06-15
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Bi-weekly
+  Expected Annual Visits:   26
+  Potential Annual Value:   $1,235.00
+  
+  ROI Analysis:
+  - Discount Budget:        $9.50 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           13000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           3
+  Priority:       3
+  Send Timing:    Week 3
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS+ Email + Call
+
+====================================================================================================

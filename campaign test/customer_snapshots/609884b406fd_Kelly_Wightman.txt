@@ -1,0 +1,56 @@
+
+================================================================================
+CUSTOMER SNAPSHOT - KELLY WIGHTMAN
+================================================================================
+
+CONTACT INFORMATION:
+  Phone:          18187990482
+  Email:          Not provided
+  Customer ID:    609884b406fddc283d884ad4
+
+TIER & STATUS:
+  Tier:           Super VIP
+  Risk Status:    Dormant
+  Campaign Wave:  Wave 2 Priority
+
+ENGAGEMENT METRICS:
+  Last Visit:           2025-07-27
+  Days Since Last:      87 days
+  Total Visits:         23
+  Visit Frequency:      Weekly (when active)
+  
+VALUE METRICS:
+  Lifetime Value:       $575.09
+  Average Transaction:  $25.00
+  Estimated Annual:     $1,300.00 (if reactivated)
+
+URGENCY ASSESSMENT:
+  Level:          HIGH - Going Dormant
+  Recommended:    Strong offer, personal message
+
+REACTIVATION STRATEGY:
+
+  Approach:       VIP Treatment
+  Offer:          20-30% off + exclusive product access
+  Message:        "We miss you! As one of our top customers, we'd love to 
+                  welcome you back with a special VIP offer..."
+  Channel:        SMS + Email (if available) + Follow-up call
+  Budget:         Up to $7.50 discount value
+
+CAMPAIGN TIMING:
+  Send Window:    Week 1-2 - High priority
+  Best Time:      Afternoon (2-5 PM) based on customer tier
+  Follow-up:      48 hours if no response
+
+SUCCESS METRICS:
+  Target ROI:     300%
+  Break-even:     1 visit at $25.00
+  Goal:           Restore to Weekly visits
+
+NOTES:
+  - Customer has been gone for 87 days
+  - Historical pattern: 23 visits, $575.09 total spent
+  - Standard campaign approach
+  - Consider phone call if SMS doesn't convert
+
+================================================================================

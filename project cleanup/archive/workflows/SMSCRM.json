@@ -1,0 +1,200 @@
+{
+  "name": "SMS CRM",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## 📱 SMS CRM System\n\n**Setup Instructions:**\n1. Keep localtunnel running: `lt --port 5001`\n2. URL is: https://poor-sloths-trade.loca.lt\n3. Click 'Test workflow' on Manual Test to send SMS\n4. Activate workflow to enable auto-polling",
+        "height": 380,
+        "width": 480,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        240,
+        200
+      ],
+      "id": "sticky-instructions",
+      "name": "Setup Instructions"
+    },
+    {
+      "parameters": {},
+      "id": "manual-test-trigger",
+      "name": "Manual Test",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        780,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://poor-sloths-trade.loca.lt/api/messages/send",
+        "authentication": "none",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"phone_number\": \"+16199773020\",\n  \"message\": \"SMS CRM Test {{ $now.format('HH:mm:ss') }} - System Live!\"\n}",
+        "options": {}
+      },
+      "id": "send-test-sms",
+      "name": "Send Test SMS",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1000,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## 🔄 Auto-Reply System\n\nPolls every 30 seconds\nReplies to new messages automatically",
+        "height": 280,
+        "width": 380,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        740,
+        480
+      ],
+      "id": "sticky-autoreply",
+      "name": "Auto-Reply Info"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "seconds",
+              "secondsInterval": 30
+            }
+          ]
+        }
+      },
+      "id": "schedule-trigger",
+      "name": "Poll Every 30s",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        780,
+        600
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://poor-sloths-trade.loca.lt/api/messages/recent?limit=10",
+        "authentication": "none",
+        "options": {}
+      },
+      "id": "get-recent-sms",
+      "name": "Get Recent SMS",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1000,
+        600
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Check if we got any messages and filter for unread inbound\nconst response = $input.item.json;\n\nif (!response.messages || !Array.isArray(response.messages)) {\n  return [];\n}\n\n// Filter for unread inbound messages only\nconst unreadInbound = response.messages.filter(msg => \n  msg.direction === 'inbound' && msg.status === 'unread'\n);\n\nif (unreadInbound.length === 0) {\n  return [];\n}\n\n// Return each message as a separate item\nreturn unreadInbound.map(msg => ({\n  json: {\n    message_id: msg.id,\n    phone_number: msg.phone_number,\n    content: msg.content,\n    timestamp: msg.timestamp,\n    reply_text: `Thanks for your message! Received: \"${msg.content.substring(0, 40)}${msg.content.length > 40 ? '...' : ''}\"`\n  }\n}));"
+      },
+      "id": "filter-unread",
+      "name": "Filter Unread Messages",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1220,
+        600
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://poor-sloths-trade.loca.lt/api/messages/send",
+        "authentication": "none",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ phone_number: $json.phone_number, message: $json.reply_text }) }}",
+        "options": {
+          "headers": {
+            "entries": [
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ]
+          }
+        }
+      },
+      "id": "send-auto-reply",
+      "name": "Send Auto-Reply",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1440,
+        600
+      ]
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Manual Test": {
+      "main": [
+        [
+          {
+            "node": "Send Test SMS",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Poll Every 30s": {
+      "main": [
+        [
+          {
+            "node": "Get Recent SMS",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Recent SMS": {
+      "main": [
+        [
+          {
+            "node": "Filter Unread Messages",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter Unread Messages": {
+      "main": [
+        [
+          {
+            "node": "Send Auto-Reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "sms-crm-v1",
+  "meta": {
+    "instanceId": "sms-crm-system"
+  },
+  "tags": []
+}
+

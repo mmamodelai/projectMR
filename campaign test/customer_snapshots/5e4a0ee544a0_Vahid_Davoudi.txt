@@ -1,0 +1,55 @@
+
+================================================================================
+CUSTOMER SNAPSHOT - VAHID DAVOUDI
+================================================================================
+
+CONTACT INFORMATION:
+  Phone:          13109268443
+  Email:          Not provided
+  Customer ID:    5e4a0ee544a0a6082dcb7648
+
+TIER & STATUS:
+  Tier:           Regular
+  Risk Status:    Dormant
+  Campaign Wave:  Wave 2 Priority
+
+ENGAGEMENT METRICS:
+  Last Visit:           2025-08-03
+  Days Since Last:      80 days
+  Total Visits:         7
+  Visit Frequency:      Monthly (when active)
+  
+VALUE METRICS:
+  Lifetime Value:       $213.69
+  Average Transaction:  $30.53
+  Estimated Annual:     $366.36 (if reactivated)
+
+URGENCY ASSESSMENT:
+  Level:          HIGH - Going Dormant
+  Recommended:    Strong offer, personal message
+
+REACTIVATION STRATEGY:
+
+  Approach:       Win-Back Offer
+  Offer:          10-15% off on next visit
+  Message:        "Come back and see what's new! Special offer just for you..."
+  Channel:        SMS
+  Budget:         Up to $4.58 discount value
+
+CAMPAIGN TIMING:
+  Send Window:    Week 1-2 - High priority
+  Best Time:      Afternoon (2-5 PM) based on customer tier
+  Follow-up:      None scheduled
+
+SUCCESS METRICS:
+  Target ROI:     200%
+  Break-even:     1 visit at $30.53
+  Goal:           Restore to Monthly visits
+
+NOTES:
+  - Customer has been gone for 80 days
+  - Historical pattern: 7 visits, $213.69 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+================================================================================

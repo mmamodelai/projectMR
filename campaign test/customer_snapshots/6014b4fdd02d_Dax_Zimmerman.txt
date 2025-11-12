@@ -1,0 +1,55 @@
+
+================================================================================
+CUSTOMER SNAPSHOT - DAX ZIMMERMAN
+================================================================================
+
+CONTACT INFORMATION:
+  Phone:          13234227745
+  Email:          Not provided
+  Customer ID:    6014b4fdd02d2008f1ae2bb4
+
+TIER & STATUS:
+  Tier:           Regular
+  Risk Status:    Cooling
+  Campaign Wave:  Wave 1 Priority
+
+ENGAGEMENT METRICS:
+  Last Visit:           2025-08-26
+  Days Since Last:      57 days
+  Total Visits:         9
+  Visit Frequency:      Monthly (when active)
+  
+VALUE METRICS:
+  Lifetime Value:       $292.67
+  Average Transaction:  $32.52
+  Estimated Annual:     $390.24 (if reactivated)
+
+URGENCY ASSESSMENT:
+  Level:          MEDIUM - Cooling Off
+  Recommended:    Light touch, promotional offer
+
+REACTIVATION STRATEGY:
+
+  Approach:       Win-Back Offer
+  Offer:          10-15% off on next visit
+  Message:        "Come back and see what's new! Special offer just for you..."
+  Channel:        SMS
+  Budget:         Up to $4.88 discount value
+
+CAMPAIGN TIMING:
+  Send Window:    Week 1 - Send immediately
+  Best Time:      Afternoon (2-5 PM) based on customer tier
+  Follow-up:      None scheduled
+
+SUCCESS METRICS:
+  Target ROI:     200%
+  Break-even:     1 visit at $32.52
+  Goal:           Restore to Monthly visits
+
+NOTES:
+  - Customer has been gone for 57 days
+  - Historical pattern: 9 visits, $292.67 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+================================================================================

@@ -1,0 +1,52 @@
+{
+  "filters": {
+    "has_email": false,
+    "has_phone": false,
+    "last_visited": false,
+    "days": 90
+  },
+  "visible_columns": {
+    "customers": [
+      "FirstName",
+      "LastName",
+      "DOB",
+      "Phone",
+      "Email",
+      "TextOptIn",
+      "EmailOptIn",
+      "Visits",
+      "Lifetime",
+      "VIP",
+      "LastVisit",
+      "City"
+    ],
+    "transactions": [
+      "Date",
+      "Amount",
+      "Payment",
+      "Budtender",
+      "Status"
+    ],
+    "items": [
+      "Product",
+      "Brand",
+      "Qty",
+      "TotalPrice"
+    ]
+  },
+  "column_widths": {
+    "customers": {
+      "FirstName": 100,
+      "LastName": 120,
+      "DOB": 90,
+      "Phone": 110,
+      "Email": 150,
+      "TextOptIn": 70,
+      "Loyalty": 80,
+      "Visits": 50,
+      "Lifetime": 80,
+      "VIP": 70,
+      "LastVisit": 100
+    }
+  }
+}

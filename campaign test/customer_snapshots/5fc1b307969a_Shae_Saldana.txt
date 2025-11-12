@@ -1,0 +1,55 @@
+
+================================================================================
+CUSTOMER SNAPSHOT - SHAE SALDANA
+================================================================================
+
+CONTACT INFORMATION:
+  Phone:          17143336743
+  Email:          Not provided
+  Customer ID:    5fc1b307969aa608e5ab187e
+
+TIER & STATUS:
+  Tier:           VIP
+  Risk Status:    Inactive
+  Campaign Wave:  Wave 3 Priority
+
+ENGAGEMENT METRICS:
+  Last Visit:           2025-07-03
+  Days Since Last:      111 days
+  Total Visits:         11
+  Visit Frequency:      Bi-weekly (when active)
+  
+VALUE METRICS:
+  Lifetime Value:       $512.55
+  Average Transaction:  $46.60
+  Estimated Annual:     $1,211.60 (if reactivated)
+
+URGENCY ASSESSMENT:
+  Level:          URGENT - Nearly Lost
+  Recommended:    Premium offer, call if possible
+
+REACTIVATION STRATEGY:
+
+  Approach:       Valued Customer
+  Offer:          15-20% off + loyalty bonus
+  Message:        "It's been a while! We have some new products you'd love..."
+  Channel:        SMS + Email (if available)
+  Budget:         Up to $9.32 discount value
+
+CAMPAIGN TIMING:
+  Send Window:    Week 2-3 - Urgent
+  Best Time:      Afternoon (2-5 PM) based on customer tier
+  Follow-up:      48 hours if no response
+
+SUCCESS METRICS:
+  Target ROI:     200%
+  Break-even:     1 visit at $46.60
+  Goal:           Restore to Bi-weekly visits
+
+NOTES:
+  - Customer has been gone for 111 days
+  - Historical pattern: 11 visits, $512.55 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+================================================================================

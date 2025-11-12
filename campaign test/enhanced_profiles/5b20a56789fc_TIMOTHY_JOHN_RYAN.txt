@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - TIMOTHY JOHN RYAN
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5b20a56789fc9307fe1b4cf5
+  Phone:          13238286014
+  Email:          Not provided
+  Tier:           Regular
+  Risk Status:    At Risk (179 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    8
+  Total Revenue:         $192.57
+  Average Transaction:   $24.07
+  Median Transaction:    $23.34
+  Min Transaction:      $8.53
+  Max Transaction:      $44.28
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      67.0 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Saturday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Credit
+  Favorite Staff:        Bob McGinn
+
+  Payment Method Breakdown:
+    Credit            4 times ( 50.0%)
+    Cash              4 times ( 50.0%)
+
+  Staff Interaction Breakdown:
+    Bob McGinn             4 times ( 50.0%)
+    Devon Calonzo          2 times ( 25.0%)
+    Jacob Vangellow        1 times ( 12.5%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    21
+  Unique Products:       16
+  Avg Items/Visit:       2.6
+  Favorite Category:     Edibles
+  Favorite Brand:        It's All About Choices
+  Avg Item Price:        $7.49
+  Price Range:           $0.00 - $21.02
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            Regular
+  Engagement Level:      Low
+  Loyalty Score:         Low
+  Price Sensitivity:     Budget
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              Win-Back Offer
+  Discount Level:        10-15%
+  Message Focus:         Edibles + It's All About Choices
+  Channel:               SMS
+  Timing:                Saturday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi TIMOTHY, we miss you! 🌿
+   
+   We just restocked edibles from It's All About Choices - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME5B20A5
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  67 days between visits
+  Expected Annual Visits: 5
+  Potential Annual Value: $120.36
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $4.81 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        2500%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          12
+Wave:                    4
+Send Window:            Week 4
+Best Contact Time:      Saturday at 0:00
+Follow-up Schedule:     None
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $24.07 (first visit)
+  Annual Value:          $120.36
+
+NOTES:
+  - Customer has been gone for 179 days
+  - Historical pattern: 8 visits, $192.57 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+====================================================================================================

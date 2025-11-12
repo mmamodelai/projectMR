@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - ALLISON LEBER
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5e7bb58df8ae1a08e448b763
+  Phone:          17735051198
+  Email:          Not provided
+  Tier:           Regular
+  Risk Status:    Cooling (73 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         5
+  Lifetime Value:       $126.05
+  Avg Transaction:      $25.21
+  Last Visit:           2025-08-10
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Monthly
+  Expected Annual Visits:   12
+  Potential Annual Value:   $302.52
+  
+  ROI Analysis:
+  - Discount Budget:        $5.04 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           6000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           1
+  Priority:       9
+  Send Timing:    Week 1 - URGENT
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS
+
+====================================================================================================

@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - COLIN HARDING DUFFY
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5b20a56689fc9307fe1b2b02
+  Phone:          15134784052
+  Email:          Not provided
+  Tier:           VIP
+  Risk Status:    Cooling (53 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    13
+  Total Revenue:         $451.76
+  Average Transaction:   $34.75
+  Median Transaction:    $24.00
+  Min Transaction:      $7.00
+  Max Transaction:      $182.71
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      49.5 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Saturday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Cash
+  Favorite Staff:        Jacob Vangellow
+
+  Payment Method Breakdown:
+    Cash              9 times ( 69.2%)
+    Credit            4 times ( 30.8%)
+
+  Staff Interaction Breakdown:
+    Jacob Vangellow        4 times ( 30.8%)
+    Bob McGinn             2 times ( 15.4%)
+    Lizbeth Garcia         2 times ( 15.4%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    36
+  Unique Products:       29
+  Avg Items/Visit:       2.8
+  Favorite Category:     Flower PrePacks
+  Favorite Brand:        MOTA
+  Avg Item Price:        $13.18
+  Price Range:           $0.00 - $115.24
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            VIP
+  Engagement Level:      Medium
+  Loyalty Score:         Low
+  Price Sensitivity:     Moderate
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              Valued Customer
+  Discount Level:        15-20%
+  Message Focus:         Flower PrePacks + MOTA
+  Channel:               SMS + Email
+  Timing:                Saturday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi COLIN, we miss you! 🌿
+   
+   We just restocked flower prepacks from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME5B20A5
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  50 days between visits
+  Expected Annual Visits: 7
+  Potential Annual Value: $243.26
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $6.95 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        3500%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          5
+Wave:                    1
+Send Window:            Week 1 - URGENT
+Best Contact Time:      Saturday at 0:00
+Follow-up Schedule:     48 hours
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $34.75 (first visit)
+  Annual Value:          $243.26
+
+NOTES:
+  - Customer has been gone for 53 days
+  - Historical pattern: 13 visits, $451.76 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+====================================================================================================

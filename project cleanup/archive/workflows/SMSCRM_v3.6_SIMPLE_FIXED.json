@@ -1,0 +1,307 @@
+{
+  "name": "SMSCRM v3.6 - Simple Fixed",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## 🤖 SMS AI System v3.6 - Simple & Fixed\n\n**What's Fixed:**\n- ✅ Correct URL encoding for mark-read\n- ✅ Consistent 30-second polling\n- ✅ Added error handling\n- ✅ Simplified flow (removed extra steps)\n- ✅ Better timeout settings\n\n**How it works:**\n- Polls every 30 seconds\n- Only responds to NEW unread inbound messages\n- Marks message as read BEFORE sending reply\n- AI generates SHORT, contextual replies\n- Simple, reliable flow",
+        "height": 500,
+        "width": 600,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -1000,
+        -200
+      ],
+      "id": "workflow-info",
+      "name": "Workflow Information"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "seconds",
+              "secondsInterval": 30
+            }
+          ]
+        }
+      },
+      "id": "poll-trigger",
+      "name": "Poll Every 30s",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -800,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://smsn8n.marketsuite.co/api/messages/recent?limit=50",
+        "options": {
+          "timeout": 10000
+        }
+      },
+      "id": "get-messages",
+      "name": "Get Recent Messages",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -600,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Simple message filtering - only process NEW unread inbound messages\nconst response = $input.item.json;\n\nif (!response.messages || !Array.isArray(response.messages)) {\n  console.log('No messages array found');\n  return [];\n}\n\nif (response.messages.length === 0) {\n  console.log('No messages to process');\n  return [];\n}\n\n// Group messages by phone number\nconst messagesByPhone = {};\nresponse.messages.forEach(msg => {\n  if (!messagesByPhone[msg.phone_number]) {\n    messagesByPhone[msg.phone_number] = [];\n  }\n  messagesByPhone[msg.phone_number].push(msg);\n});\n\nconst messagesToProcess = [];\n\n// For each phone number, check if we need to respond\nObject.keys(messagesByPhone).forEach(phoneNumber => {\n  const messages = messagesByPhone[phoneNumber]\n    .sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));\n  \n  if (messages.length === 0) return;\n  \n  const lastMessage = messages[messages.length - 1];\n  \n  // Only process if the last message is inbound AND unread\n  if (lastMessage.direction === 'inbound' && lastMessage.status === 'unread') {\n    messagesToProcess.push({\n      phoneNumber,\n      lastMessage,\n      conversationHistory: messages\n    });\n  }\n});\n\nif (messagesToProcess.length === 0) {\n  console.log('No new unread messages to process');\n  return [];\n}\n\nconsole.log(`Processing ${messagesToProcess.length} conversations`);\n\n// Format conversation history for AI context\nreturn messagesToProcess.map(({ phoneNumber, lastMessage, conversationHistory }) => {\n  const formattedHistory = conversationHistory.slice(-5).map(h => {\n    const timestamp = new Date(h.timestamp).toLocaleString();\n    const sender = h.direction === 'inbound' ? 'User' : 'AI';\n    return `[${timestamp}] ${sender}: ${h.content}`;\n  }).join('\\n');\n  \n  return {\n    json: {\n      message_id: lastMessage.id,\n      phone_number: phoneNumber,\n      incoming_message: lastMessage.content,\n      timestamp: lastMessage.timestamp,\n      conversation_history: formattedHistory,\n      total_messages: conversationHistory.length\n    }\n  };\n});"
+      },
+      "id": "filter-messages",
+      "name": "Filter New Messages",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -400,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "chat-input",
+              "name": "chatInput",
+              "value": "={{ $json.conversation_history }}\\n\\n[{{ $json.timestamp }}] User: {{ $json.incoming_message }}\\n\\nContext: {{ $json.total_messages }} messages in conversation",
+              "type": "string"
+            },
+            {
+              "id": "phone-number",
+              "name": "phone_number",
+              "value": "={{ $json.phone_number }}",
+              "type": "string"
+            },
+            {
+              "id": "message-id",
+              "name": "message_id",
+              "value": "={{ $json.message_id }}",
+              "type": "number"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "prepare-ai",
+      "name": "Prepare for AI",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -200,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "options": {
+          "systemMessage": "You are a friendly AI assistant that communicates via SMS text messages.\n\n**SMS CONSTRAINTS:**\n- Keep responses SHORT (1-2 sentences max)\n- This is SMS - people expect brief, quick replies\n- Get straight to the point immediately\n- Maximum 160 characters when possible\n\n**Your Capabilities:**\n- Answer questions briefly and helpfully\n- Tell jokes when asked\n- Be conversational and natural\n- Remember conversation context\n\n**Communication Style:**\n- Be friendly but CONCISE\n- Use simple, clear language\n- No emojis unless user uses them first\n- One idea per message\n\n**Example Interactions:**\n- \"tell me a joke\" → One short joke\n- \"what's the weather?\" → \"I can't check weather, but try your weather app!\"\n- \"hello\" → \"Hey! How can I help?\"\n- Complex topics → Brief answer + \"Want more details?\"\n\n**CRITICAL:**\n- BREVITY IS KEY - this is SMS, not email\n- If your response is longer than 2 sentences, it's TOO LONG\n- Keep it short and helpful!"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        0,
+        200
+      ],
+      "id": "ai-agent",
+      "name": "SMS AI Agent"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Extract AI response and prepare for sending\nlet aiResponse;\nif ($input.item.json.output) {\n  aiResponse = $input.item.json.output;\n} else if ($input.item.json.text) {\n  aiResponse = $input.item.json.text;\n} else {\n  aiResponse = $input.item.json.response || 'Hello! How can I help you?';\n}\n\n// Get message data from previous node\nconst prepareData = $('Prepare for AI').item.json;\nconst phoneNumber = prepareData.phone_number;\nconst messageId = prepareData.message_id;\n\n// Log for debugging\nconsole.log('=== Processing AI Response ===');\nconsole.log('Phone:', phoneNumber);\nconsole.log('Message ID:', messageId);\nconsole.log('AI Response length:', aiResponse?.length);\n\nif (!messageId) {\n  throw new Error('Message ID is missing!');\n}\n\nreturn {\n  json: {\n    phone_number: phoneNumber,\n    message_id: messageId,\n    message: aiResponse\n  }\n};"
+      },
+      "id": "process-response",
+      "name": "Process AI Response",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        200,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ 'https://smsn8n.marketsuite.co/api/messages/' + $json.message_id + '/mark-read' }}",
+        "options": {
+          "timeout": 5000
+        }
+      },
+      "id": "mark-read",
+      "name": "Mark Message Read",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        400,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://smsn8n.marketsuite.co/api/messages/send",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ phone_number: $json.phone_number, message: $json.message }) }}",
+        "options": {
+          "timeout": 10000
+        }
+      },
+      "id": "send-reply",
+      "name": "Send AI Reply",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        600,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "model": "google/gemini-2.5-flash",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1,
+      "position": [
+        -100,
+        600
+      ],
+      "id": "gemini-model",
+      "name": "Gemini 2.5 Flash",
+      "credentials": {
+        "openRouterApi": {
+          "id": "daclOezIY0qSdW4Z",
+          "name": "OpenRouter account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## 🔧 Simple & Reliable Flow\n\n**Improvements Made:**\n- Fixed URL encoding issue\n- Consistent 30-second polling\n- Added timeout settings\n- Simplified message flow\n- Better error handling\n- Removed unnecessary steps\n\n**Flow:**\n1. Poll every 30s\n2. Get recent messages\n3. Filter new unread inbound\n4. Prepare for AI\n5. Generate response\n6. Mark as read\n7. Send reply\n\n**Why This Works:**\n- Simple, linear flow\n- Fewer failure points\n- Consistent timing\n- Proper error handling",
+        "height": 300,
+        "width": 400,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        400,
+        400
+      ],
+      "id": "flow-info",
+      "name": "Flow Information"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Poll Every 30s": {
+      "main": [
+        [
+          {
+            "node": "Get Recent Messages",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Recent Messages": {
+      "main": [
+        [
+          {
+            "node": "Filter New Messages",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter New Messages": {
+      "main": [
+        [
+          {
+            "node": "Prepare for AI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare for AI": {
+      "main": [
+        [
+          {
+            "node": "SMS AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "SMS AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Process AI Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Process AI Response": {
+      "main": [
+        [
+          {
+            "node": "Mark Message Read",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mark Message Read": {
+      "main": [
+        [
+          {
+            "node": "Send AI Reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gemini 2.5 Flash": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "SMS AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "sms-v3-6-simple-fixed",
+  "meta": {
+    "instanceId": "daf1db1234fdfcbbfb53be5e1fe26764ab505fd0554977269bee03ef4bae6464"
+  },
+  "id": "SMSCRM_v3_6_SIMPLE_FIXED",
+  "tags": ["sms", "ai", "simple", "fixed"]
+}

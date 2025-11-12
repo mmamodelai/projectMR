@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - SHAE SALDANA
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5fc1b307969aa608e5ab187e
+  Phone:          17143336743
+  Email:          Not provided
+  Tier:           VIP
+  Risk Status:    Inactive (111 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         11
+  Lifetime Value:       $512.55
+  Avg Transaction:      $46.60
+  Last Visit:           2025-07-03
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Bi-weekly
+  Expected Annual Visits:   26
+  Potential Annual Value:   $1,211.60
+  
+  ROI Analysis:
+  - Discount Budget:        $9.32 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           13000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           3
+  Priority:       7
+  Send Timing:    Week 3
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS + Email
+
+====================================================================================================

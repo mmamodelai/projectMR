@@ -1,0 +1,55 @@
+
+================================================================================
+CUSTOMER SNAPSHOT - JACOB ROWE
+================================================================================
+
+CONTACT INFORMATION:
+  Phone:          16825524379
+  Email:          Not provided
+  Customer ID:    67476a96a7dbb57153c1d287
+
+TIER & STATUS:
+  Tier:           Regular
+  Risk Status:    Dormant
+  Campaign Wave:  Wave 2 Priority
+
+ENGAGEMENT METRICS:
+  Last Visit:           2025-07-26
+  Days Since Last:      88 days
+  Total Visits:         6
+  Visit Frequency:      Monthly (when active)
+  
+VALUE METRICS:
+  Lifetime Value:       $375.63
+  Average Transaction:  $62.61
+  Estimated Annual:     $751.32 (if reactivated)
+
+URGENCY ASSESSMENT:
+  Level:          HIGH - Going Dormant
+  Recommended:    Strong offer, personal message
+
+REACTIVATION STRATEGY:
+
+  Approach:       Win-Back Offer
+  Offer:          10-15% off on next visit
+  Message:        "Come back and see what's new! Special offer just for you..."
+  Channel:        SMS
+  Budget:         Up to $9.39 discount value
+
+CAMPAIGN TIMING:
+  Send Window:    Week 1-2 - High priority
+  Best Time:      Afternoon (2-5 PM) based on customer tier
+  Follow-up:      None scheduled
+
+SUCCESS METRICS:
+  Target ROI:     200%
+  Break-even:     1 visit at $62.61
+  Goal:           Restore to Monthly visits
+
+NOTES:
+  - Customer has been gone for 88 days
+  - Historical pattern: 6 visits, $375.63 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+================================================================================

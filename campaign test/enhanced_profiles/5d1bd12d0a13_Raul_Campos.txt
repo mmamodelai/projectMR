@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - RAUL CAMPOS
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5d1bd12d0a137d0828ffd483
+  Phone:          13237129084
+  Email:          Not provided
+  Tier:           Regular
+  Risk Status:    At Risk (158 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    5
+  Total Revenue:         $132.12
+  Average Transaction:   $26.42
+  Median Transaction:    $13.83
+  Min Transaction:      $6.16
+  Max Transaction:      $65.88
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      41.0 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Saturday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Credit
+  Favorite Staff:        Jimmy Silks
+
+  Payment Method Breakdown:
+    Credit            3 times ( 60.0%)
+    Cash              2 times ( 40.0%)
+
+  Staff Interaction Breakdown:
+    Jimmy Silks            2 times ( 40.0%)
+    Bob McGinn             2 times ( 40.0%)
+    Leo Salguero           1 times ( 20.0%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    12
+  Unique Products:       11
+  Avg Items/Visit:       2.4
+  Favorite Category:     Flower PrePacks
+  Favorite Brand:        MOTA
+  Avg Item Price:        $11.94
+  Price Range:           $0.00 - $34.19
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            Regular
+  Engagement Level:      Low
+  Loyalty Score:         Low
+  Price Sensitivity:     Budget
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              Win-Back Offer
+  Discount Level:        10-15%
+  Message Focus:         Flower PrePacks + MOTA
+  Channel:               SMS
+  Timing:                Saturday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi Raul, we miss you! 🌿
+   
+   We just restocked flower prepacks from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME5D1BD1
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  41 days between visits
+  Expected Annual Visits: 8
+  Potential Annual Value: $211.39
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $5.28 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        4000%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          12
+Wave:                    4
+Send Window:            Week 4
+Best Contact Time:      Saturday at 0:00
+Follow-up Schedule:     None
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $26.42 (first visit)
+  Annual Value:          $211.39
+
+NOTES:
+  - Customer has been gone for 158 days
+  - Historical pattern: 5 visits, $132.12 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+====================================================================================================

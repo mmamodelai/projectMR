@@ -1,0 +1,55 @@
+
+================================================================================
+CUSTOMER SNAPSHOT - JESSE HAMMER
+================================================================================
+
+CONTACT INFORMATION:
+  Phone:          19044728566
+  Email:          Not provided
+  Customer ID:    5b20a56689fc9307fe1b3703
+
+TIER & STATUS:
+  Tier:           Regular
+  Risk Status:    Cooling
+  Campaign Wave:  Wave 1 Priority
+
+ENGAGEMENT METRICS:
+  Last Visit:           2025-08-17
+  Days Since Last:      66 days
+  Total Visits:         9
+  Visit Frequency:      Monthly (when active)
+  
+VALUE METRICS:
+  Lifetime Value:       $265.89
+  Average Transaction:  $29.54
+  Estimated Annual:     $354.48 (if reactivated)
+
+URGENCY ASSESSMENT:
+  Level:          MEDIUM - Cooling Off
+  Recommended:    Light touch, promotional offer
+
+REACTIVATION STRATEGY:
+
+  Approach:       Win-Back Offer
+  Offer:          10-15% off on next visit
+  Message:        "Come back and see what's new! Special offer just for you..."
+  Channel:        SMS
+  Budget:         Up to $4.43 discount value
+
+CAMPAIGN TIMING:
+  Send Window:    Week 1 - Send immediately
+  Best Time:      Afternoon (2-5 PM) based on customer tier
+  Follow-up:      None scheduled
+
+SUCCESS METRICS:
+  Target ROI:     200%
+  Break-even:     1 visit at $29.54
+  Goal:           Restore to Monthly visits
+
+NOTES:
+  - Customer has been gone for 66 days
+  - Historical pattern: 9 visits, $265.89 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+================================================================================

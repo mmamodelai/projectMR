@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - MEGAN OCONNOR
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5e8f757175d37a08d8729925
+  Phone:          15376548976
+  Email:          Not provided
+  Tier:           Super VIP
+  Risk Status:    Inactive (106 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         20
+  Lifetime Value:       $819.47
+  Avg Transaction:      $40.97
+  Last Visit:           2025-07-08
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Bi-weekly
+  Expected Annual Visits:   26
+  Potential Annual Value:   $1,065.22
+  
+  ROI Analysis:
+  - Discount Budget:        $8.19 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           13000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           3
+  Priority:       3
+  Send Timing:    Week 3
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS+ Email + Call
+
+====================================================================================================

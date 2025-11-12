@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - KATHERINE KNUDSON
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    62116a616f7b0233e6d2af23
+  Phone:          12138402884
+  Email:          Not provided
+  Tier:           Regular
+  Risk Status:    At Risk (147 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         5
+  Lifetime Value:       $169.76
+  Avg Transaction:      $33.95
+  Last Visit:           2025-05-28
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Monthly
+  Expected Annual Visits:   12
+  Potential Annual Value:   $407.40
+  
+  ROI Analysis:
+  - Discount Budget:        $6.79 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           6000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           4
+  Priority:       12
+  Send Timing:    Week 4
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS
+
+====================================================================================================

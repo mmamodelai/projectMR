@@ -1,0 +1,35 @@
+{
+  "filters": {
+    "has_email": false,
+    "has_phone": true,
+    "last_visited": false,
+    "days": 365
+  },
+  "visible_columns": {
+    "customers": [
+      "FirstName",
+      "LastName",
+      "Phone",
+      "Visits",
+      "Lifetime",
+      "VIP",
+      "LastVisit",
+      "LastBudtender",
+      "DOB"
+    ],
+    "transactions": [
+      "Date",
+      "Amount",
+      "Payment",
+      "Budtender",
+      "MOTAPercent"
+    ],
+    "items": [
+      "Product",
+      "Brand",
+      "Qty",
+      "TotalPrice"
+    ]
+  },
+  "column_widths": {}
+}

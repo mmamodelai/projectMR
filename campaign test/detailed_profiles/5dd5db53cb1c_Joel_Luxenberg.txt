@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - JOEL LUXENBERG
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5dd5db53cb1c2e08675f17c7
+  Phone:          15037801121
+  Email:          Not provided
+  Tier:           VIP
+  Risk Status:    Inactive (107 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         17
+  Lifetime Value:       $608.80
+  Avg Transaction:      $35.81
+  Last Visit:           2025-07-07
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Bi-weekly
+  Expected Annual Visits:   26
+  Potential Annual Value:   $931.06
+  
+  ROI Analysis:
+  - Discount Budget:        $7.16 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           13000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           3
+  Priority:       7
+  Send Timing:    Week 3
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS + Email
+
+====================================================================================================

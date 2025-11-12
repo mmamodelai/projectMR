@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - LAURA CRAWFORD
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5f8cd85bcd98be08d12196ee
+  Phone:          19876042278
+  Email:          Not provided
+  Tier:           Super VIP
+  Risk Status:    Cooling (74 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    106
+  Total Revenue:         $2,413.08
+  Average Transaction:   $22.76
+  Median Transaction:    $22.05
+  Min Transaction:      $1.00
+  Max Transaction:      $122.97
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      5.6 days
+  Visit Frequency:       Weekly
+  Preferred Day:         Sunday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Credit
+  Favorite Staff:        Bob McGinn
+
+  Payment Method Breakdown:
+    Credit           73 times ( 68.9%)
+    Cash             33 times ( 31.1%)
+
+  Staff Interaction Breakdown:
+    Bob McGinn            27 times ( 25.5%)
+    Jacob Vangellow       22 times ( 20.8%)
+    Devon Calonzo         19 times ( 17.9%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    259
+  Unique Products:       143
+  Avg Items/Visit:       2.4
+  Favorite Category:     Flower PrePacks
+  Favorite Brand:        MOTA
+  Avg Item Price:        $8.98
+  Price Range:           $0.00 - $38.17
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            Super VIP
+  Engagement Level:      High
+  Loyalty Score:         High
+  Price Sensitivity:     Budget
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              VIP Treatment
+  Discount Level:        20-30%
+  Message Focus:         Flower PrePacks + MOTA
+  Channel:               SMS + Email + Call
+  Timing:                Sunday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi Laura, we miss you! 🌿
+   
+   We just restocked flower prepacks from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME5F8CD8
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  6 days between visits
+  Expected Annual Visits: 65
+  Potential Annual Value: $1,479.72
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $4.55 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        32500%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          1
+Wave:                    1
+Send Window:            Week 1 - URGENT
+Best Contact Time:      Sunday at 0:00
+Follow-up Schedule:     48 hours
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $22.76 (first visit)
+  Annual Value:          $1,479.72
+
+NOTES:
+  - Customer has been gone for 74 days
+  - Historical pattern: 106 visits, $2,413.08 total spent
+  - HIGH VALUE - Personal follow-up recommended
+  - Consider phone call if SMS doesn't convert
+
+====================================================================================================

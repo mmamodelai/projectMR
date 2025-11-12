@@ -1,0 +1,55 @@
+
+================================================================================
+CUSTOMER SNAPSHOT - ALBERT ALFRED ELZAS
+================================================================================
+
+CONTACT INFORMATION:
+  Phone:          11310968546
+  Email:          Not provided
+  Customer ID:    5b20a56589fc9307fe1b22cd
+
+TIER & STATUS:
+  Tier:           VIP
+  Risk Status:    At Risk
+  Campaign Wave:  Wave 4 Priority
+
+ENGAGEMENT METRICS:
+  Last Visit:           2025-04-29
+  Days Since Last:      176 days
+  Total Visits:         12
+  Visit Frequency:      Bi-weekly (when active)
+  
+VALUE METRICS:
+  Lifetime Value:       $760.84
+  Average Transaction:  $63.40
+  Estimated Annual:     $1,648.40 (if reactivated)
+
+URGENCY ASSESSMENT:
+  Level:          CRITICAL - At Risk of Lost Forever
+  Recommended:    Maximum effort, best offer
+
+REACTIVATION STRATEGY:
+
+  Approach:       Valued Customer
+  Offer:          15-20% off + loyalty bonus
+  Message:        "It's been a while! We have some new products you'd love..."
+  Channel:        SMS + Email (if available)
+  Budget:         Up to $12.68 discount value
+
+CAMPAIGN TIMING:
+  Send Window:    Week 1 - CRITICAL, send ASAP
+  Best Time:      Afternoon (2-5 PM) based on customer tier
+  Follow-up:      48 hours if no response
+
+SUCCESS METRICS:
+  Target ROI:     200%
+  Break-even:     1 visit at $63.40
+  Goal:           Restore to Bi-weekly visits
+
+NOTES:
+  - Customer has been gone for 176 days
+  - Historical pattern: 12 visits, $760.84 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+================================================================================

@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - ANGELICA PEREZAGUIRRE
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5f559c48b111ce08d2b61a9a
+  Phone:          17148333003
+  Email:          Not provided
+  Tier:           Regular
+  Risk Status:    Cooling (73 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    6
+  Total Revenue:         $117.17
+  Average Transaction:   $19.53
+  Median Transaction:    $20.57
+  Min Transaction:      $5.41
+  Max Transaction:      $28.04
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      106.4 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Sunday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Credit
+  Favorite Staff:        Jacob Vangellow
+
+  Payment Method Breakdown:
+    Credit            5 times ( 83.3%)
+    Cash              1 times ( 16.7%)
+
+  Staff Interaction Breakdown:
+    Jacob Vangellow        3 times ( 50.0%)
+    Leo Salguero           2 times ( 33.3%)
+    Lizbeth Garcia         1 times ( 16.7%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    11
+  Unique Products:       11
+  Avg Items/Visit:       1.8
+  Favorite Category:     Flower PrePacks
+  Favorite Brand:        MOTA
+  Avg Item Price:        $8.92
+  Price Range:           $0.00 - $27.43
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            Regular
+  Engagement Level:      Low
+  Loyalty Score:         Low
+  Price Sensitivity:     Budget
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              Win-Back Offer
+  Discount Level:        10-15%
+  Message Focus:         Flower PrePacks + MOTA
+  Channel:               SMS
+  Timing:                Sunday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi Angelica, we miss you! 🌿
+   
+   We just restocked flower prepacks from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME5F559C
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  106 days between visits
+  Expected Annual Visits: 3
+  Potential Annual Value: $58.58
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $3.91 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        1500%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          9
+Wave:                    1
+Send Window:            Week 1 - URGENT
+Best Contact Time:      Sunday at 0:00
+Follow-up Schedule:     None
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $19.53 (first visit)
+  Annual Value:          $58.58
+
+NOTES:
+  - Customer has been gone for 73 days
+  - Historical pattern: 6 visits, $117.17 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+====================================================================================================

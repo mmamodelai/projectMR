@@ -1,0 +1,55 @@
+
+================================================================================
+CUSTOMER SNAPSHOT - MICHAEL FELIX GALARDO
+================================================================================
+
+CONTACT INFORMATION:
+  Phone:          12133279158
+  Email:          Not provided
+  Customer ID:    5b20a56689fc9307fe1b41b8
+
+TIER & STATUS:
+  Tier:           Regular
+  Risk Status:    Cooling
+  Campaign Wave:  Wave 1 Priority
+
+ENGAGEMENT METRICS:
+  Last Visit:           2025-08-09
+  Days Since Last:      74 days
+  Total Visits:         7
+  Visit Frequency:      Monthly (when active)
+  
+VALUE METRICS:
+  Lifetime Value:       $203.82
+  Average Transaction:  $29.12
+  Estimated Annual:     $349.44 (if reactivated)
+
+URGENCY ASSESSMENT:
+  Level:          MEDIUM - Cooling Off
+  Recommended:    Light touch, promotional offer
+
+REACTIVATION STRATEGY:
+
+  Approach:       Win-Back Offer
+  Offer:          10-15% off on next visit
+  Message:        "Come back and see what's new! Special offer just for you..."
+  Channel:        SMS
+  Budget:         Up to $4.37 discount value
+
+CAMPAIGN TIMING:
+  Send Window:    Week 1 - Send immediately
+  Best Time:      Afternoon (2-5 PM) based on customer tier
+  Follow-up:      None scheduled
+
+SUCCESS METRICS:
+  Target ROI:     200%
+  Break-even:     1 visit at $29.12
+  Goal:           Restore to Monthly visits
+
+NOTES:
+  - Customer has been gone for 74 days
+  - Historical pattern: 7 visits, $203.82 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+================================================================================

@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - ALFREDO MACDONALD
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5b20a56589fc9307fe1b23a9
+  Phone:          13233374211
+  Email:          Not provided
+  Tier:           Regular
+  Risk Status:    At Risk (139 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    9
+  Total Revenue:         $225.12
+  Average Transaction:   $25.01
+  Median Transaction:    $13.22
+  Min Transaction:      $4.40
+  Max Transaction:      $88.13
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      63.2 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Tuesday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Credit
+  Favorite Staff:        Jacob Vangellow
+
+  Payment Method Breakdown:
+    Credit            5 times ( 55.6%)
+    Cash              4 times ( 44.4%)
+
+  Staff Interaction Breakdown:
+    Jacob Vangellow        2 times ( 22.2%)
+    Jimmy Silks            2 times ( 22.2%)
+    Lizbeth Garcia         2 times ( 22.2%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    23
+  Unique Products:       21
+  Avg Items/Visit:       2.6
+  Favorite Category:     Flower PrePacks
+  Favorite Brand:        MOTA
+  Avg Item Price:        $9.90
+  Price Range:           $0.00 - $30.25
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            Regular
+  Engagement Level:      Low
+  Loyalty Score:         Low
+  Price Sensitivity:     Budget
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              Win-Back Offer
+  Discount Level:        10-15%
+  Message Focus:         Flower PrePacks + MOTA
+  Channel:               SMS
+  Timing:                Tuesday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi ALFREDO, we miss you! 🌿
+   
+   We just restocked flower prepacks from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME5B20A5
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  63 days between visits
+  Expected Annual Visits: 5
+  Potential Annual Value: $125.07
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $5.00 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        2500%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          12
+Wave:                    4
+Send Window:            Week 4
+Best Contact Time:      Tuesday at 0:00
+Follow-up Schedule:     None
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $25.01 (first visit)
+  Annual Value:          $125.07
+
+NOTES:
+  - Customer has been gone for 139 days
+  - Historical pattern: 9 visits, $225.12 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+====================================================================================================

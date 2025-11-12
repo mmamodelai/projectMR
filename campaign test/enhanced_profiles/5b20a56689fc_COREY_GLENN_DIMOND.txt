@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - COREY GLENN DIMOND
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5b20a56689fc9307fe1b2b29
+  Phone:          13103839326
+  Email:          Not provided
+  Tier:           Super VIP
+  Risk Status:    Inactive (126 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    33
+  Total Revenue:         $1,585.44
+  Average Transaction:   $48.04
+  Median Transaction:    $28.16
+  Min Transaction:      $3.99
+  Max Transaction:      $210.66
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      16.2 days
+  Visit Frequency:       Bi-weekly
+  Preferred Day:         Friday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Cash
+  Favorite Staff:        Jimmy Silks
+
+  Payment Method Breakdown:
+    Cash             28 times ( 84.8%)
+    Credit            5 times ( 15.2%)
+
+  Staff Interaction Breakdown:
+    Jimmy Silks           14 times ( 42.4%)
+    Bob McGinn            10 times ( 30.3%)
+    Devon Calonzo          4 times ( 12.1%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    152
+  Unique Products:       56
+  Avg Items/Visit:       4.6
+  Favorite Category:     Vapes
+  Favorite Brand:        MOTA
+  Avg Item Price:        $12.54
+  Price Range:           $0.00 - $32.41
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            Super VIP
+  Engagement Level:      High
+  Loyalty Score:         Medium
+  Price Sensitivity:     Moderate
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              VIP Treatment
+  Discount Level:        20-30%
+  Message Focus:         Vapes + MOTA
+  Channel:               SMS + Email + Call
+  Timing:                Friday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi COREY, we miss you! 🌿
+   
+   We just restocked vapes from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME5B20A5
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  16 days between visits
+  Expected Annual Visits: 22
+  Potential Annual Value: $1,056.96
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $9.61 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        11000%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          3
+Wave:                    3
+Send Window:            Week 3
+Best Contact Time:      Friday at 0:00
+Follow-up Schedule:     48 hours
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $48.04 (first visit)
+  Annual Value:          $1,056.96
+
+NOTES:
+  - Customer has been gone for 126 days
+  - Historical pattern: 33 visits, $1,585.44 total spent
+  - HIGH VALUE - Personal follow-up recommended
+  - Consider phone call if SMS doesn't convert
+
+====================================================================================================

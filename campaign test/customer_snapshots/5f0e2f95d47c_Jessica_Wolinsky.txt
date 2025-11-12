@@ -1,0 +1,55 @@
+
+================================================================================
+CUSTOMER SNAPSHOT - JESSICA WOLINSKY
+================================================================================
+
+CONTACT INFORMATION:
+  Phone:          12818715553
+  Email:          Not provided
+  Customer ID:    5f0e2f95d47c9108c9c745b3
+
+TIER & STATUS:
+  Tier:           Regular
+  Risk Status:    Cooling
+  Campaign Wave:  Wave 1 Priority
+
+ENGAGEMENT METRICS:
+  Last Visit:           2025-08-08
+  Days Since Last:      75 days
+  Total Visits:         6
+  Visit Frequency:      Monthly (when active)
+  
+VALUE METRICS:
+  Lifetime Value:       $595.56
+  Average Transaction:  $99.26
+  Estimated Annual:     $1,191.12 (if reactivated)
+
+URGENCY ASSESSMENT:
+  Level:          HIGH - Going Dormant
+  Recommended:    Strong offer, personal message
+
+REACTIVATION STRATEGY:
+
+  Approach:       Win-Back Offer
+  Offer:          10-15% off on next visit
+  Message:        "Come back and see what's new! Special offer just for you..."
+  Channel:        SMS
+  Budget:         Up to $14.89 discount value
+
+CAMPAIGN TIMING:
+  Send Window:    Week 1 - Send immediately
+  Best Time:      Afternoon (2-5 PM) based on customer tier
+  Follow-up:      None scheduled
+
+SUCCESS METRICS:
+  Target ROI:     200%
+  Break-even:     1 visit at $99.26
+  Goal:           Restore to Monthly visits
+
+NOTES:
+  - Customer has been gone for 75 days
+  - Historical pattern: 6 visits, $595.56 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+================================================================================

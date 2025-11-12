@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - EMERY LOMBARD
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    6158e7484e8acf304e535c0c
+  Phone:          12087728655
+  Email:          Not provided
+  Tier:           Regular
+  Risk Status:    At Risk (191 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    5
+  Total Revenue:         $117.97
+  Average Transaction:   $23.59
+  Median Transaction:    $14.40
+  Min Transaction:      $3.00
+  Max Transaction:      $57.04
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      115.8 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Friday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Cash
+  Favorite Staff:        Bob McGinn
+
+  Payment Method Breakdown:
+    Cash              3 times ( 60.0%)
+    Credit            2 times ( 40.0%)
+
+  Staff Interaction Breakdown:
+    Bob McGinn             2 times ( 40.0%)
+    Jacob Vangellow        2 times ( 40.0%)
+    Devon Calonzo          1 times ( 20.0%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    13
+  Unique Products:       12
+  Avg Items/Visit:       2.6
+  Favorite Category:     FEES
+  Favorite Brand:        MOTA
+  Avg Item Price:        $11.25
+  Price Range:           $0.00 - $30.25
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            Regular
+  Engagement Level:      Low
+  Loyalty Score:         Low
+  Price Sensitivity:     Budget
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              Win-Back Offer
+  Discount Level:        10-15%
+  Message Focus:         FEES + MOTA
+  Channel:               SMS
+  Timing:                Friday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi Emery, we miss you! 🌿
+   
+   We just restocked fees from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME6158E7
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  116 days between visits
+  Expected Annual Visits: 3
+  Potential Annual Value: $70.78
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $4.72 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        1500%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          12
+Wave:                    4
+Send Window:            Week 4
+Best Contact Time:      Friday at 0:00
+Follow-up Schedule:     None
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $23.59 (first visit)
+  Annual Value:          $70.78
+
+NOTES:
+  - Customer has been gone for 191 days
+  - Historical pattern: 5 visits, $117.97 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+====================================================================================================

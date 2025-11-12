@@ -1,0 +1,204 @@
+{
+  "name": "SMSCRM v4.0 - Test Basic",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## 🧪 SMS Test System v4.0 - Basic Test\n\n**Purpose:**\n- ✅ Test basic workflow without AI\n- ✅ Verify API endpoints work\n- ✅ Simple auto-reply\n- ✅ Easy to debug\n\n**How it works:**\n- Polls every 30 seconds\n- Gets recent messages\n- Filters for unread inbound\n- Sends simple auto-reply\n- Marks as read",
+        "height": 500,
+        "width": 600,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -1000,
+        -200
+      ],
+      "id": "workflow-info",
+      "name": "Workflow Information"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "seconds",
+              "secondsInterval": 30
+            }
+          ]
+        }
+      },
+      "id": "poll-trigger",
+      "name": "Poll Every 30s",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -800,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://smsn8n.marketsuite.co/api/messages/recent?limit=50",
+        "options": {
+          "timeout": 10000
+        }
+      },
+      "id": "get-messages",
+      "name": "Get Recent Messages",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -600,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Filter for unread inbound messages\nconst messages = $input.all();\nconst unreadMessages = [];\n\nfor (const message of messages) {\n  if (message.json.direction === 'inbound' && message.json.status === 'unread') {\n    unreadMessages.push(message.json);\n  }\n}\n\nreturn unreadMessages.map(msg => ({ json: msg }));"
+      },
+      "id": "filter-unread",
+      "name": "Filter Unread Messages",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -400,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "reply_message",
+              "value": "Thanks for your message! This is an automated reply from the SMS system. Your message was: {{ $json.content }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "prepare-reply",
+      "name": "Prepare Auto Reply",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -200,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://smsn8n.marketsuite.co/api/messages/{{ $json.id }}/mark-read",
+        "options": {
+          "timeout": 5000
+        }
+      },
+      "id": "mark-read",
+      "name": "Mark Message Read",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        0,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://smsn8n.marketsuite.co/api/messages/send",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "phone_number",
+              "value": "={{ $json.phone_number }}"
+            },
+            {
+              "name": "message",
+              "value": "={{ $json.reply_message }}"
+            }
+          ]
+        },
+        "options": {
+          "timeout": 10000
+        }
+      },
+      "id": "send-reply",
+      "name": "Send Auto Reply",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        200,
+        200
+      ]
+    }
+  ],
+  "connections": {
+    "Poll Every 30s": {
+      "main": [
+        [
+          {
+            "node": "Get Recent Messages",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Recent Messages": {
+      "main": [
+        [
+          {
+            "node": "Filter Unread Messages",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter Unread Messages": {
+      "main": [
+        [
+          {
+            "node": "Prepare Auto Reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Auto Reply": {
+      "main": [
+        [
+          {
+            "node": "Mark Message Read",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mark Message Read": {
+      "main": [
+        [
+          {
+            "node": "Send Auto Reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-10-07T05:50:00.000Z",
+  "versionId": "1"
+}

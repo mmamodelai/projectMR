@@ -1,0 +1,56 @@
+
+================================================================================
+CUSTOMER SNAPSHOT - MADISON AUSTIN
+================================================================================
+
+CONTACT INFORMATION:
+  Phone:          19365374229
+  Email:          Not provided
+  Customer ID:    6303be8a8224b03f0c807f02
+
+TIER & STATUS:
+  Tier:           Super VIP
+  Risk Status:    At Risk
+  Campaign Wave:  Wave 4 Priority
+
+ENGAGEMENT METRICS:
+  Last Visit:           2025-05-28
+  Days Since Last:      147 days
+  Total Visits:         36
+  Visit Frequency:      Weekly (when active)
+  
+VALUE METRICS:
+  Lifetime Value:       $972.36
+  Average Transaction:  $27.01
+  Estimated Annual:     $1,404.52 (if reactivated)
+
+URGENCY ASSESSMENT:
+  Level:          CRITICAL - At Risk of Lost Forever
+  Recommended:    Maximum effort, best offer
+
+REACTIVATION STRATEGY:
+
+  Approach:       VIP Treatment
+  Offer:          20-30% off + exclusive product access
+  Message:        "We miss you! As one of our top customers, we'd love to 
+                  welcome you back with a special VIP offer..."
+  Channel:        SMS + Email (if available) + Follow-up call
+  Budget:         Up to $8.10 discount value
+
+CAMPAIGN TIMING:
+  Send Window:    Week 1 - CRITICAL, send ASAP
+  Best Time:      Afternoon (2-5 PM) based on customer tier
+  Follow-up:      48 hours if no response
+
+SUCCESS METRICS:
+  Target ROI:     300%
+  Break-even:     1 visit at $27.01
+  Goal:           Restore to Weekly visits
+
+NOTES:
+  - Customer has been gone for 147 days
+  - Historical pattern: 36 visits, $972.36 total spent
+  - Standard campaign approach
+  - Consider phone call if SMS doesn't convert
+
+================================================================================

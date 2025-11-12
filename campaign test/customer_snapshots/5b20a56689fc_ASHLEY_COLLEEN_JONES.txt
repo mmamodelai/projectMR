@@ -1,0 +1,55 @@
+
+================================================================================
+CUSTOMER SNAPSHOT - ASHLEY COLLEEN JONES
+================================================================================
+
+CONTACT INFORMATION:
+  Phone:          18186026560
+  Email:          Not provided
+  Customer ID:    5b20a56689fc9307fe1b262f
+
+TIER & STATUS:
+  Tier:           Regular
+  Risk Status:    Cooling
+  Campaign Wave:  Wave 1 Priority
+
+ENGAGEMENT METRICS:
+  Last Visit:           2025-09-01
+  Days Since Last:      51 days
+  Total Visits:         8
+  Visit Frequency:      Monthly (when active)
+  
+VALUE METRICS:
+  Lifetime Value:       $421.99
+  Average Transaction:  $52.75
+  Estimated Annual:     $633.00 (if reactivated)
+
+URGENCY ASSESSMENT:
+  Level:          MEDIUM - Cooling Off
+  Recommended:    Light touch, promotional offer
+
+REACTIVATION STRATEGY:
+
+  Approach:       Win-Back Offer
+  Offer:          10-15% off on next visit
+  Message:        "Come back and see what's new! Special offer just for you..."
+  Channel:        SMS
+  Budget:         Up to $7.91 discount value
+
+CAMPAIGN TIMING:
+  Send Window:    Week 1 - Send immediately
+  Best Time:      Afternoon (2-5 PM) based on customer tier
+  Follow-up:      None scheduled
+
+SUCCESS METRICS:
+  Target ROI:     200%
+  Break-even:     1 visit at $52.75
+  Goal:           Restore to Monthly visits
+
+NOTES:
+  - Customer has been gone for 51 days
+  - Historical pattern: 8 visits, $421.99 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+================================================================================

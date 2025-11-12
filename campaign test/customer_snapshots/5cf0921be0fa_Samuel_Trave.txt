@@ -1,0 +1,55 @@
+
+================================================================================
+CUSTOMER SNAPSHOT - SAMUEL TRAVE
+================================================================================
+
+CONTACT INFORMATION:
+  Phone:          18162554118
+  Email:          Not provided
+  Customer ID:    5cf0921be0faca07c3014a73
+
+TIER & STATUS:
+  Tier:           Regular
+  Risk Status:    Dormant
+  Campaign Wave:  Wave 2 Priority
+
+ENGAGEMENT METRICS:
+  Last Visit:           2025-08-02
+  Days Since Last:      81 days
+  Total Visits:         5
+  Visit Frequency:      Monthly (when active)
+  
+VALUE METRICS:
+  Lifetime Value:       $156.20
+  Average Transaction:  $31.24
+  Estimated Annual:     $374.88 (if reactivated)
+
+URGENCY ASSESSMENT:
+  Level:          HIGH - Going Dormant
+  Recommended:    Strong offer, personal message
+
+REACTIVATION STRATEGY:
+
+  Approach:       Win-Back Offer
+  Offer:          10-15% off on next visit
+  Message:        "Come back and see what's new! Special offer just for you..."
+  Channel:        SMS
+  Budget:         Up to $4.69 discount value
+
+CAMPAIGN TIMING:
+  Send Window:    Week 1-2 - High priority
+  Best Time:      Afternoon (2-5 PM) based on customer tier
+  Follow-up:      None scheduled
+
+SUCCESS METRICS:
+  Target ROI:     200%
+  Break-even:     1 visit at $31.24
+  Goal:           Restore to Monthly visits
+
+NOTES:
+  - Customer has been gone for 81 days
+  - Historical pattern: 5 visits, $156.20 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+================================================================================

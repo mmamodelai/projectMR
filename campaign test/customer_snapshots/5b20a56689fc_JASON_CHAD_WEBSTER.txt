@@ -1,0 +1,55 @@
+
+================================================================================
+CUSTOMER SNAPSHOT - JASON CHAD WEBSTER
+================================================================================
+
+CONTACT INFORMATION:
+  Phone:          13234451127
+  Email:          Not provided
+  Customer ID:    5b20a56689fc9307fe1b35b5
+
+TIER & STATUS:
+  Tier:           Regular
+  Risk Status:    Inactive
+  Campaign Wave:  Wave 3 Priority
+
+ENGAGEMENT METRICS:
+  Last Visit:           2025-07-06
+  Days Since Last:      108 days
+  Total Visits:         7
+  Visit Frequency:      Monthly (when active)
+  
+VALUE METRICS:
+  Lifetime Value:       $208.56
+  Average Transaction:  $29.79
+  Estimated Annual:     $357.48 (if reactivated)
+
+URGENCY ASSESSMENT:
+  Level:          URGENT - Nearly Lost
+  Recommended:    Premium offer, call if possible
+
+REACTIVATION STRATEGY:
+
+  Approach:       Win-Back Offer
+  Offer:          10-15% off on next visit
+  Message:        "Come back and see what's new! Special offer just for you..."
+  Channel:        SMS
+  Budget:         Up to $4.47 discount value
+
+CAMPAIGN TIMING:
+  Send Window:    Week 2-3 - Urgent
+  Best Time:      Afternoon (2-5 PM) based on customer tier
+  Follow-up:      None scheduled
+
+SUCCESS METRICS:
+  Target ROI:     200%
+  Break-even:     1 visit at $29.79
+  Goal:           Restore to Monthly visits
+
+NOTES:
+  - Customer has been gone for 108 days
+  - Historical pattern: 7 visits, $208.56 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+================================================================================

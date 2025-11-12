@@ -1,0 +1,55 @@
+
+================================================================================
+CUSTOMER SNAPSHOT - SEAN BERMAN
+================================================================================
+
+CONTACT INFORMATION:
+  Phone:          13102109249
+  Email:          Not provided
+  Customer ID:    640a62c8456d7e74bcb9b52b
+
+TIER & STATUS:
+  Tier:           Regular
+  Risk Status:    At Risk
+  Campaign Wave:  Wave 4 Priority
+
+ENGAGEMENT METRICS:
+  Last Visit:           2025-05-07
+  Days Since Last:      168 days
+  Total Visits:         5
+  Visit Frequency:      Monthly (when active)
+  
+VALUE METRICS:
+  Lifetime Value:       $76.17
+  Average Transaction:  $15.23
+  Estimated Annual:     $182.76 (if reactivated)
+
+URGENCY ASSESSMENT:
+  Level:          CRITICAL - At Risk of Lost Forever
+  Recommended:    Maximum effort, best offer
+
+REACTIVATION STRATEGY:
+
+  Approach:       Win-Back Offer
+  Offer:          10-15% off on next visit
+  Message:        "Come back and see what's new! Special offer just for you..."
+  Channel:        SMS
+  Budget:         Up to $2.28 discount value
+
+CAMPAIGN TIMING:
+  Send Window:    Week 1 - CRITICAL, send ASAP
+  Best Time:      Afternoon (2-5 PM) based on customer tier
+  Follow-up:      None scheduled
+
+SUCCESS METRICS:
+  Target ROI:     200%
+  Break-even:     1 visit at $15.23
+  Goal:           Restore to Monthly visits
+
+NOTES:
+  - Customer has been gone for 168 days
+  - Historical pattern: 5 visits, $76.17 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+================================================================================

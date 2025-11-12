@@ -1,0 +1,111 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - ILYA ABULKHANOV
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    009d8100c81a0041d9002e8f
+  Phone:          13107406253
+  Email:          Not provided
+  Tier:           VIP
+  Risk Status:    Cooling (65 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    11
+  Total Revenue:         $382.71
+  Average Transaction:   $34.79
+  Median Transaction:    $20.52
+  Min Transaction:      $1.08
+  Max Transaction:      $92.86
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      58.3 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Saturday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Credit
+  Favorite Staff:        Jacob Vangellow
+
+  Payment Method Breakdown:
+    Credit           11 times (100.0%)
+
+  Staff Interaction Breakdown:
+    Jacob Vangellow        2 times ( 18.2%)
+    Leo Salguero           2 times ( 18.2%)
+    Devon Calonzo          2 times ( 18.2%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    36
+  Unique Products:       14
+  Avg Items/Visit:       3.3
+  Favorite Category:     Flower PrePacks
+  Favorite Brand:        Pure Beauty
+  Avg Item Price:        $13.93
+  Price Range:           $0.01 - $39.71
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            VIP
+  Engagement Level:      Medium
+  Loyalty Score:         Low
+  Price Sensitivity:     Moderate
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              Valued Customer
+  Discount Level:        15-20%
+  Message Focus:         Flower PrePacks + Pure Beauty
+  Channel:               SMS + Email
+  Timing:                Saturday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi Ilya, we miss you! 🌿
+   
+   We just restocked flower prepacks from Pure Beauty - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME009D81
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  58 days between visits
+  Expected Annual Visits: 6
+  Potential Annual Value: $208.75
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $6.96 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        3000%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          5
+Wave:                    1
+Send Window:            Week 1 - URGENT
+Best Contact Time:      Saturday at 0:00
+Follow-up Schedule:     48 hours
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $34.79 (first visit)
+  Annual Value:          $208.75
+
+NOTES:
+  - Customer has been gone for 65 days
+  - Historical pattern: 11 visits, $382.71 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+====================================================================================================

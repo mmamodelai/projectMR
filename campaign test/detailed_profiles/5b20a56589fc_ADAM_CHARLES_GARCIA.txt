@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - ADAM CHARLES GARCIA
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5b20a56589fc9307fe1b2225
+  Phone:          13104274287
+  Email:          Not provided
+  Tier:           Regular
+  Risk Status:    Cooling (60 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         8
+  Lifetime Value:       $198.69
+  Avg Transaction:      $24.84
+  Last Visit:           2025-08-23
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Monthly
+  Expected Annual Visits:   12
+  Potential Annual Value:   $298.08
+  
+  ROI Analysis:
+  - Discount Budget:        $4.97 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           6000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           1
+  Priority:       9
+  Send Timing:    Week 1 - URGENT
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS
+
+====================================================================================================

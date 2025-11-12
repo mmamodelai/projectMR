@@ -1,0 +1,111 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - LUIS BOBADILLA
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5b78a490062bd807d595fb86
+  Phone:          16193683370
+  Email:          Not provided
+  Tier:           VIP
+  Risk Status:    Inactive (113 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    13
+  Total Revenue:         $499.16
+  Average Transaction:   $38.40
+  Median Transaction:    $7.22
+  Min Transaction:      $0.00
+  Max Transaction:      $169.55
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      44.2 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Thursday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Cash
+  Favorite Staff:        Devon Calonzo
+
+  Payment Method Breakdown:
+    Cash              7 times ( 53.8%)
+
+  Staff Interaction Breakdown:
+    Devon Calonzo          7 times ( 53.8%)
+    Jimmy Silks            4 times ( 30.8%)
+    Luis Bobadilla         1 times (  7.7%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    135
+  Unique Products:       52
+  Avg Items/Visit:       10.4
+  Favorite Category:     Flower PrePacks
+  Favorite Brand:        MOTA
+  Avg Item Price:        $9.12
+  Price Range:           $0.00 - $33.93
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            VIP
+  Engagement Level:      Medium
+  Loyalty Score:         Low
+  Price Sensitivity:     Moderate
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              Valued Customer
+  Discount Level:        15-20%
+  Message Focus:         Flower PrePacks + MOTA
+  Channel:               SMS + Email
+  Timing:                Thursday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi Luis, we miss you! 🌿
+   
+   We just restocked flower prepacks from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME5B78A4
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  44 days between visits
+  Expected Annual Visits: 8
+  Potential Annual Value: $307.18
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $7.68 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        4000%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          7
+Wave:                    3
+Send Window:            Week 3
+Best Contact Time:      Thursday at 0:00
+Follow-up Schedule:     48 hours
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $38.40 (first visit)
+  Annual Value:          $307.18
+
+NOTES:
+  - Customer has been gone for 113 days
+  - Historical pattern: 13 visits, $499.16 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+====================================================================================================

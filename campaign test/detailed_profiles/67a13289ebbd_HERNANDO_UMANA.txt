@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - HERNANDO UMANA
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    67a13289ebbd807aed8064b7
+  Phone:          17863149092
+  Email:          Not provided
+  Tier:           Regular
+  Risk Status:    At Risk (167 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         6
+  Lifetime Value:       $276.53
+  Avg Transaction:      $46.09
+  Last Visit:           2025-05-08
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Monthly
+  Expected Annual Visits:   12
+  Potential Annual Value:   $553.08
+  
+  ROI Analysis:
+  - Discount Budget:        $9.22 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           6000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           4
+  Priority:       12
+  Send Timing:    Week 4
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS
+
+====================================================================================================

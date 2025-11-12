@@ -1,0 +1,55 @@
+
+================================================================================
+CUSTOMER SNAPSHOT - JON IMPARATO
+================================================================================
+
+CONTACT INFORMATION:
+  Phone:          13238046065
+  Email:          Not provided
+  Customer ID:    00a0b900c08e00052a007201
+
+TIER & STATUS:
+  Tier:           Regular
+  Risk Status:    Dormant
+  Campaign Wave:  Wave 2 Priority
+
+ENGAGEMENT METRICS:
+  Last Visit:           2025-07-25
+  Days Since Last:      89 days
+  Total Visits:         6
+  Visit Frequency:      Monthly (when active)
+  
+VALUE METRICS:
+  Lifetime Value:       $215.04
+  Average Transaction:  $35.84
+  Estimated Annual:     $430.08 (if reactivated)
+
+URGENCY ASSESSMENT:
+  Level:          HIGH - Going Dormant
+  Recommended:    Strong offer, personal message
+
+REACTIVATION STRATEGY:
+
+  Approach:       Win-Back Offer
+  Offer:          10-15% off on next visit
+  Message:        "Come back and see what's new! Special offer just for you..."
+  Channel:        SMS
+  Budget:         Up to $5.38 discount value
+
+CAMPAIGN TIMING:
+  Send Window:    Week 1-2 - High priority
+  Best Time:      Afternoon (2-5 PM) based on customer tier
+  Follow-up:      None scheduled
+
+SUCCESS METRICS:
+  Target ROI:     200%
+  Break-even:     1 visit at $35.84
+  Goal:           Restore to Monthly visits
+
+NOTES:
+  - Customer has been gone for 89 days
+  - Historical pattern: 6 visits, $215.04 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+================================================================================

@@ -1,0 +1,55 @@
+
+================================================================================
+CUSTOMER SNAPSHOT - CARISSA LANDIS
+================================================================================
+
+CONTACT INFORMATION:
+  Phone:          19176264390
+  Email:          Not provided
+  Customer ID:    60272fecc2d4e108f3c64441
+
+TIER & STATUS:
+  Tier:           VIP
+  Risk Status:    Cooling
+  Campaign Wave:  Wave 1 Priority
+
+ENGAGEMENT METRICS:
+  Last Visit:           2025-08-16
+  Days Since Last:      67 days
+  Total Visits:         13
+  Visit Frequency:      Bi-weekly (when active)
+  
+VALUE METRICS:
+  Lifetime Value:       $516.34
+  Average Transaction:  $39.72
+  Estimated Annual:     $1,032.72 (if reactivated)
+
+URGENCY ASSESSMENT:
+  Level:          MEDIUM - Cooling Off
+  Recommended:    Light touch, promotional offer
+
+REACTIVATION STRATEGY:
+
+  Approach:       Valued Customer
+  Offer:          15-20% off + loyalty bonus
+  Message:        "It's been a while! We have some new products you'd love..."
+  Channel:        SMS + Email (if available)
+  Budget:         Up to $7.94 discount value
+
+CAMPAIGN TIMING:
+  Send Window:    Week 1 - Send immediately
+  Best Time:      Afternoon (2-5 PM) based on customer tier
+  Follow-up:      48 hours if no response
+
+SUCCESS METRICS:
+  Target ROI:     200%
+  Break-even:     1 visit at $39.72
+  Goal:           Restore to Bi-weekly visits
+
+NOTES:
+  - Customer has been gone for 67 days
+  - Historical pattern: 13 visits, $516.34 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+================================================================================

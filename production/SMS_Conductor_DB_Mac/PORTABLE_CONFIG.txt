@@ -1,0 +1,6 @@
+# SMS Conductor Database Viewer - Portable Configuration
+# Save this as .env in the same folder as SMSconductor_DB.py
+
+SUPABASE_URL=https://kiwmwoqrguyrcpjytgte.supabase.co
+SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0
+

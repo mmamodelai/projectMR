@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - OWEN SCARLETT
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5fa0af30eb446c08e1ab683a
+  Phone:          16316450060
+  Email:          Not provided
+  Tier:           VIP
+  Risk Status:    Dormant (84 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         12
+  Lifetime Value:       $224.14
+  Avg Transaction:      $18.68
+  Last Visit:           2025-07-30
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Bi-weekly
+  Expected Annual Visits:   26
+  Potential Annual Value:   $485.68
+  
+  ROI Analysis:
+  - Discount Budget:        $3.74 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           13000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           2
+  Priority:       6
+  Send Timing:    Week 2
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS + Email
+
+====================================================================================================

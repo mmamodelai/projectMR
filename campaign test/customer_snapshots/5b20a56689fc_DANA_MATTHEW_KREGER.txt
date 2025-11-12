@@ -1,0 +1,55 @@
+
+================================================================================
+CUSTOMER SNAPSHOT - DANA MATTHEW KREGER
+================================================================================
+
+CONTACT INFORMATION:
+  Phone:          18056302568
+  Email:          Not provided
+  Customer ID:    5b20a56689fc9307fe1b2bc2
+
+TIER & STATUS:
+  Tier:           VIP
+  Risk Status:    Dormant
+  Campaign Wave:  Wave 2 Priority
+
+ENGAGEMENT METRICS:
+  Last Visit:           2025-07-22
+  Days Since Last:      92 days
+  Total Visits:         13
+  Visit Frequency:      Bi-weekly (when active)
+  
+VALUE METRICS:
+  Lifetime Value:       $699.47
+  Average Transaction:  $53.81
+  Estimated Annual:     $1,399.06 (if reactivated)
+
+URGENCY ASSESSMENT:
+  Level:          HIGH - Going Dormant
+  Recommended:    Strong offer, personal message
+
+REACTIVATION STRATEGY:
+
+  Approach:       Valued Customer
+  Offer:          15-20% off + loyalty bonus
+  Message:        "It's been a while! We have some new products you'd love..."
+  Channel:        SMS + Email (if available)
+  Budget:         Up to $10.76 discount value
+
+CAMPAIGN TIMING:
+  Send Window:    Week 1-2 - High priority
+  Best Time:      Afternoon (2-5 PM) based on customer tier
+  Follow-up:      48 hours if no response
+
+SUCCESS METRICS:
+  Target ROI:     200%
+  Break-even:     1 visit at $53.81
+  Goal:           Restore to Bi-weekly visits
+
+NOTES:
+  - Customer has been gone for 92 days
+  - Historical pattern: 13 visits, $699.47 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+================================================================================

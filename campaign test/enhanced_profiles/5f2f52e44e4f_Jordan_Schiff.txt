@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - JORDAN SCHIFF
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5f2f52e44e4fed08e78aa18b
+  Phone:          12132487316
+  Email:          Not provided
+  Tier:           Regular
+  Risk Status:    Dormant (105 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    9
+  Total Revenue:         $367.23
+  Average Transaction:   $40.80
+  Median Transaction:    $47.48
+  Min Transaction:      $2.21
+  Max Transaction:      $96.83
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      67.0 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Friday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Credit
+  Favorite Staff:        Jimmy Silks
+
+  Payment Method Breakdown:
+    Credit            8 times ( 88.9%)
+    Cash              1 times ( 11.1%)
+
+  Staff Interaction Breakdown:
+    Jimmy Silks            3 times ( 33.3%)
+    Jacob Vangellow        2 times ( 22.2%)
+    Bob McGinn             1 times ( 11.1%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    24
+  Unique Products:       17
+  Avg Items/Visit:       2.7
+  Favorite Category:     Flower PrePacks
+  Favorite Brand:        MOTA
+  Avg Item Price:        $15.13
+  Price Range:           $0.00 - $34.00
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            Regular
+  Engagement Level:      Low
+  Loyalty Score:         Low
+  Price Sensitivity:     Moderate
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              Win-Back Offer
+  Discount Level:        10-15%
+  Message Focus:         Flower PrePacks + MOTA
+  Channel:               SMS
+  Timing:                Friday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi Jordan, we miss you! 🌿
+   
+   We just restocked flower prepacks from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME5F2F52
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  67 days between visits
+  Expected Annual Visits: 5
+  Potential Annual Value: $204.02
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $8.16 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        2500%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          10
+Wave:                    2
+Send Window:            Week 2
+Best Contact Time:      Friday at 0:00
+Follow-up Schedule:     None
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $40.80 (first visit)
+  Annual Value:          $204.02
+
+NOTES:
+  - Customer has been gone for 105 days
+  - Historical pattern: 9 visits, $367.23 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+====================================================================================================

@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - FRANCISCO VELOZ
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    62a786c3941b5243902f2c0d
+  Phone:          12019277094
+  Email:          Not provided
+  Tier:           Super VIP
+  Risk Status:    Dormant (80 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         25
+  Lifetime Value:       $1,458.20
+  Avg Transaction:      $58.33
+  Last Visit:           2025-08-03
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Weekly
+  Expected Annual Visits:   52
+  Potential Annual Value:   $3,033.16
+  
+  ROI Analysis:
+  - Discount Budget:        $11.67 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           26000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           2
+  Priority:       2
+  Send Timing:    Week 2
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS+ Email + Call
+
+====================================================================================================

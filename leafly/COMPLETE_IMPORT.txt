@@ -1,0 +1,22 @@
+# Import Status - All 33 Strains
+
+## ✅ COMPLETED (15 strains)
+- Batch 1: OG Kush, Blue Dream, Maui Wowie, GSC, Sour Diesel
+- Batch 2: Lemon Haze, Pineapple Express, Wedding Cake, Strawberry Cough, Mimosa  
+- Batch 3: Northern Lights, Acapulco Gold, Tangie, Do-Si-Dos, Master Kush
+
+## ⏳ REMAINING (18 strains)
+The SQL files are ready in leafly/ folder:
+- expansion_import_batch4.sql (5 strains)
+- expansion_import_batch5.sql (5 strains)
+- expansion_import_batch6.sql (5 strains)  
+- expansion_import_batch7.sql (3 strains)
+
+## To Complete
+Execute each SQL file using MCP Supabase or run them manually.
+
+Current impact: ~5,050 products enhanced
+Expected final: ~11,969 products (30.3% coverage)
+
+
+

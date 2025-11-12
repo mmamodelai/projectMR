@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - JAMES TURNER
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    60a6c99581b8eb1f840e0076
+  Phone:          16307407664
+  Email:          Not provided
+  Tier:           Regular
+  Risk Status:    Dormant (77 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    8
+  Total Revenue:         $202.46
+  Average Transaction:   $25.31
+  Median Transaction:    $23.76
+  Min Transaction:      $12.96
+  Max Transaction:      $46.44
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      83.0 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Friday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Credit
+  Favorite Staff:        Jimmy Silks
+
+  Payment Method Breakdown:
+    Credit            7 times ( 87.5%)
+    Cash              1 times ( 12.5%)
+
+  Staff Interaction Breakdown:
+    Jimmy Silks            3 times ( 37.5%)
+    Bob McGinn             2 times ( 25.0%)
+    Lizbeth Garcia         2 times ( 25.0%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    10
+  Unique Products:       6
+  Avg Items/Visit:       1.2
+  Favorite Category:     Edibles
+  Favorite Brand:        Wyld
+  Avg Item Price:        $8.26
+  Price Range:           $0.01 - $20.62
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            Regular
+  Engagement Level:      Low
+  Loyalty Score:         Low
+  Price Sensitivity:     Budget
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              Win-Back Offer
+  Discount Level:        10-15%
+  Message Focus:         Edibles + Wyld
+  Channel:               SMS
+  Timing:                Friday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi James, we miss you! 🌿
+   
+   We just restocked edibles from Wyld - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME60A6C9
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  83 days between visits
+  Expected Annual Visits: 4
+  Potential Annual Value: $101.23
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $5.06 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        2000%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          10
+Wave:                    2
+Send Window:            Week 2
+Best Contact Time:      Friday at 0:00
+Follow-up Schedule:     None
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $25.31 (first visit)
+  Annual Value:          $101.23
+
+NOTES:
+  - Customer has been gone for 77 days
+  - Historical pattern: 8 visits, $202.46 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+====================================================================================================

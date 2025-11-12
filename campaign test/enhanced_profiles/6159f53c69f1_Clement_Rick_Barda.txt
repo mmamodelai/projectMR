@@ -1,0 +1,111 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - CLEMENT "RICK" BARDA
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    6159f53c69f11239a9ff7bc3
+  Phone:          13103703789
+  Email:          Not provided
+  Tier:           VIP
+  Risk Status:    At Risk (173 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    11
+  Total Revenue:         $485.00
+  Average Transaction:   $44.09
+  Median Transaction:    $38.00
+  Min Transaction:      $21.77
+  Max Transaction:      $74.18
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      45.9 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Friday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Cash
+  Favorite Staff:        Devon Calonzo
+
+  Payment Method Breakdown:
+    Cash             11 times (100.0%)
+
+  Staff Interaction Breakdown:
+    Devon Calonzo          5 times ( 45.5%)
+    Bob McGinn             2 times ( 18.2%)
+    Jimmy Silks            2 times ( 18.2%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    45
+  Unique Products:       13
+  Avg Items/Visit:       4.1
+  Favorite Category:     Vapes
+  Favorite Brand:        Stiiizy
+  Avg Item Price:        $15.79
+  Price Range:           $0.01 - $24.55
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            VIP
+  Engagement Level:      Medium
+  Loyalty Score:         Low
+  Price Sensitivity:     Moderate
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              Valued Customer
+  Discount Level:        15-20%
+  Message Focus:         Vapes + Stiiizy
+  Channel:               SMS + Email
+  Timing:                Friday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi Clement, we miss you! 🌿
+   
+   We just restocked vapes from Stiiizy - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME6159F5
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  46 days between visits
+  Expected Annual Visits: 7
+  Potential Annual Value: $308.64
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $8.82 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        3500%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          8
+Wave:                    4
+Send Window:            Week 4
+Best Contact Time:      Friday at 0:00
+Follow-up Schedule:     48 hours
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $44.09 (first visit)
+  Annual Value:          $308.64
+
+NOTES:
+  - Customer has been gone for 173 days
+  - Historical pattern: 11 visits, $485.00 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+====================================================================================================

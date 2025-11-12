@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - MICHAEL LEMMO
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5b20a56589fc9307fe1b21b9
+  Phone:          12155707259
+  Email:          Not provided
+  Tier:           Super VIP
+  Risk Status:    Inactive (128 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         45
+  Lifetime Value:       $2,043.00
+  Avg Transaction:      $45.40
+  Last Visit:           2025-06-16
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Weekly
+  Expected Annual Visits:   52
+  Potential Annual Value:   $2,360.80
+  
+  ROI Analysis:
+  - Discount Budget:        $9.08 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           26000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           3
+  Priority:       3
+  Send Timing:    Week 3
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS+ Email + Call
+
+====================================================================================================

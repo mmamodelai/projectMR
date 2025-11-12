@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - JASON ROSEN
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    00ab9d00201500c24c00dbb0
+  Phone:          13108714467
+  Email:          Not provided
+  Tier:           Super VIP
+  Risk Status:    Cooling (63 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         29
+  Lifetime Value:       $767.96
+  Avg Transaction:      $26.48
+  Last Visit:           2025-08-20
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Weekly
+  Expected Annual Visits:   52
+  Potential Annual Value:   $1,376.96
+  
+  ROI Analysis:
+  - Discount Budget:        $5.30 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           26000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           1
+  Priority:       1
+  Send Timing:    Week 1 - URGENT
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS+ Email + Call
+
+====================================================================================================

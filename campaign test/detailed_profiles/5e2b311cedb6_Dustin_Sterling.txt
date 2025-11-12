@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - DUSTIN STERLING
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5e2b311cedb659084cbba0e1
+  Phone:          18187492729
+  Email:          Not provided
+  Tier:           VIP
+  Risk Status:    Cooling (54 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         10
+  Lifetime Value:       $259.89
+  Avg Transaction:      $25.99
+  Last Visit:           2025-08-29
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Monthly
+  Expected Annual Visits:   12
+  Potential Annual Value:   $311.88
+  
+  ROI Analysis:
+  - Discount Budget:        $5.20 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           6000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           1
+  Priority:       5
+  Send Timing:    Week 1 - URGENT
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS + Email
+
+====================================================================================================

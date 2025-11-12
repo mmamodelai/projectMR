@@ -1,0 +1,404 @@
+{
+  "name": "SMSCRM Supabase v4.001",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## 🤖 AI-Powered SMS System v4.001 (Supabase Direct)\n\n**Setup:**\n1. Supabase Database: Direct connection ✅ LIVE\n2. URL: https://kiwmwoqrguyrcpjytgte.supabase.co\n3. Activate workflow for auto-responses\n4. AI keeps responses SHORT (SMS-optimized)\n\n**How it works:**\n- Polls every 1 minute\n- Reads directly from Supabase messages table\n- Only responds to NEW inbound messages\n- Skips if last message is outbound (prevents loops)\n- AI generates SHORT, contextual replies",
+        "height": 460,
+        "width": 500,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -912,
+        -304
+      ],
+      "id": "2b5ed39b-8509-4f1a-b457-adc2e24321f2",
+      "name": "AI SMS Instructions"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://kiwmwoqrguyrcpjytgte.supabase.co/rest/v1/messages",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"
+            },
+            {
+              "name": "Authorization",
+              "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "Prefer",
+              "value": "return=representation"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ phone_number: $json.phone_number, content: $json.message, status: 'queued', direction: 'outbound' }) }}",
+        "options": {}
+      },
+      "id": "18476ca1-c99e-46b0-8233-c4c4ffabb966",
+      "name": "Send AI Reply to Supabase",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        640,
+        144
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## 🧠 AI Auto-Reply System (Supabase Direct)\n\nPolls every 1 minute\nAI generates smart responses\nHandles jokes, questions, commands\nDirect Supabase connection",
+        "height": 300,
+        "width": 420,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -880,
+        240
+      ],
+      "id": "de2d9bb6-7a9c-45f5-8419-7a3ed78e846e",
+      "name": "AI Info"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "seconds"
+            }
+          ]
+        }
+      },
+      "id": "87b40cf6-4008-40dc-a330-883cd5c6147a",
+      "name": "Poll Every 30s",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -848,
+        368
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://kiwmwoqrguyrcpjytgte.supabase.co/rest/v1/messages?select=*&order=timestamp.desc&limit=100",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"
+            },
+            {
+              "name": "Authorization",
+              "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"
+            },
+            {
+              "name": "Accept",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "c635bb90-e032-482a-821c-2a0a69eb0119",
+      "name": "Get Recent SMS from Supabase",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -624,
+        368
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Fixed filter for Supabase array response\nconsole.log('=== Filter Debug v4.001 ===');\nconsole.log('Input items:', $input.all().length);\nconsole.log('First item:', $input.first().json);\n\n// Get all messages from Supabase response\nconst messages = $input.all().map(item => item.json);\nconsole.log('Messages array:', messages.length);\nconsole.log('First message:', messages[0]);\n\n// Filter for unread inbound messages\nconst unreadInbound = messages.filter(msg => {\n  console.log(`Checking message ${msg.id}: direction=${msg.direction}, status=${msg.status}`);\n  return msg.direction === 'inbound' && msg.status === 'unread';\n});\n\nconsole.log('Unread inbound messages:', unreadInbound.length);\n\nif (unreadInbound.length === 0) {\n  console.log('No unread inbound messages to process');\n  return [];\n}\n\n// Process each unread inbound message\nreturn unreadInbound.map(msg => {\n  console.log(`Processing message ID ${msg.id} from ${msg.phone_number}`);\n  return {\n    json: {\n      message_id: msg.id,\n      phone_number: msg.phone_number,\n      incoming_message: msg.content,\n      timestamp: msg.timestamp,\n      conversation_history: `[${new Date(msg.timestamp).toLocaleString()}] User: ${msg.content}`,\n      total_messages: 1,\n      conversation_start: msg.timestamp,\n      conversation_duration: 'New conversation'\n    }\n  };\n});"
+      },
+      "id": "9861ba3f-a539-4ed9-b994-0d3c6a9cd441",
+      "name": "Filter Unread Messages",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -400,
+        368
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "user-message",
+              "name": "chatInput",
+              "value": "={{ $json.conversation_history }}\\n\\n[{{ $json.timestamp }}] User: {{ $json.incoming_message }}\\n\\nConversation context: {{ $json.total_messages }} messages, {{ $json.conversation_duration }}",
+              "type": "string"
+            },
+            {
+              "id": "phone-number",
+              "name": "phone_number",
+              "value": "={{ $json.phone_number }}",
+              "type": "string"
+            },
+            {
+              "id": "message-id",
+              "name": "message_id",
+              "value": "={{ $json.message_id }}",
+              "type": "number"
+            },
+            {
+              "id": "conversation-history",
+              "name": "conversation_history",
+              "value": "={{ $json.conversation_history }}",
+              "type": "string"
+            },
+            {
+              "id": "total-messages",
+              "name": "total_messages",
+              "value": "={{ $json.total_messages }}",
+              "type": "number"
+            },
+            {
+              "id": "conversation-duration",
+              "name": "conversation_duration",
+              "value": "={{ $json.conversation_duration }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "27fa4efe-f139-4f5e-a581-b9e0281cc754",
+      "name": "Prepare for AI",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -192,
+        368
+      ]
+    },
+    {
+      "parameters": {
+        "options": {
+          "systemMessage": "You are a friendly AI assistant that communicates via SMS text messages.\n\n**CRITICAL: SMS CONSTRAINTS**\n- Keep responses SHORT (1-2 sentences max)\n- This is SMS - people expect brief, quick replies\n- Get straight to the point immediately\n- Save detailed explanations for when explicitly asked\n\n**Your Capabilities:**\n- Answer questions briefly and helpfully\n- Tell jokes when asked\n- Be conversational and natural\n- Remember conversation context\n\n**Communication Style:**\n- Be friendly but CONCISE\n- Use simple, clear language\n- No emojis unless user uses them first\n- Maximum 160 characters when possible\n- If you must go longer, keep it under 300 characters\n\n**Example Interactions:**\n- \"tell me a joke\" → One short joke, that's it\n- \"what's the weather?\" → \"I can't check weather, but you can try your weather app!\"\n- \"hello\" → \"Hey! How can I help?\"\n- Complex topics → Give a brief answer, then ask \"Want more details?\"\n\n**CRITICAL RULES:**\n- BREVITY IS KEY - this is SMS, not email\n- One idea per message\n- If your response is longer than 2 sentences, it's TOO LONG\n- The system splits long messages but they're annoying - KEEP IT SHORT!"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        48,
+        368
+      ],
+      "id": "3fca2ab0-6a62-49ae-ac64-0419f7acb8f3",
+      "name": "SMS AI Agent"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Extract AI response and prepare for SMS sending\nlet aiResponse;\nif ($input.item.json.output) {\n  aiResponse = $input.item.json.output;\n} else if ($input.item.json.text) {\n  aiResponse = $input.item.json.text;\n} else {\n  aiResponse = $input.item.json.response || 'Hello! How can I help you?';\n}\n\n// CRITICAL: Get message_id from 'Prepare for AI' node - AI agent doesn't preserve it\nconst prepareNode = $('Prepare for AI').item.json;\nconst phoneNumber = prepareNode.phone_number;\nconst messageId = prepareNode.message_id;\n\n// Log for debugging\nconsole.log('=== Prepare SMS Response Debug ===');\nconsole.log('Phone:', phoneNumber);\nconsole.log('Message ID:', messageId, 'Type:', typeof messageId);\nconsole.log('AI Response length:', aiResponse?.length);\n\nif (!messageId) {\n  throw new Error('Message ID is missing from Prepare for AI node!');\n}\n\nreturn {\n  json: {\n    phone_number: phoneNumber,\n    message_id: messageId,\n    message: aiResponse,\n    original_message_id: messageId,\n    ai_full_response: aiResponse\n  }\n};"
+      },
+      "id": "d8af6b9b-b981-468b-a203-caa66a1f9bae",
+      "name": "Prepare SMS Response",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        400,
+        368
+      ]
+    },
+    {
+      "parameters": {
+        "method": "PATCH",
+        "url": "={{ 'https://kiwmwoqrguyrcpjytgte.supabase.co/rest/v1/messages?id=eq.' + $json.message_id }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"
+            },
+            {
+              "name": "Authorization",
+              "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "Prefer",
+              "value": "return=representation"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ status: 'read', updated_at: new Date().toISOString() }) }}",
+        "options": {}
+      },
+      "id": "de80edc4-c52b-425c-926d-b8e38c222684",
+      "name": "Mark Message as Read in Supabase",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        576,
+        368
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Get the original data from Prepare SMS Response node\nconst prepareData = $('Prepare SMS Response').item.json;\n\nreturn {\n  json: {\n    phone_number: prepareData.phone_number,\n    message: prepareData.message\n  }\n};"
+      },
+      "id": "d76aa509-a5bf-4d13-a2e9-0bede0163529",
+      "name": "Restore Data for Send",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        752,
+        368
+      ]
+    },
+    {
+      "parameters": {
+        "model": "google/gemini-2.5-flash",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1,
+      "position": [
+        -48,
+        704
+      ],
+      "id": "4861d839-9477-42bb-8d3d-969b3bd5f7db",
+      "name": "OpenRouter Chat Model",
+      "credentials": {
+        "openRouterApi": {
+          "id": "daclOezIY0qSdW4Z",
+          "name": "OpenRouter account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Poll Every 30s": {
+      "main": [
+        [
+          {
+            "node": "Get Recent SMS from Supabase",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Recent SMS from Supabase": {
+      "main": [
+        [
+          {
+            "node": "Filter Unread Messages",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter Unread Messages": {
+      "main": [
+        [
+          {
+            "node": "Prepare for AI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare for AI": {
+      "main": [
+        [
+          {
+            "node": "SMS AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "SMS AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Prepare SMS Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare SMS Response": {
+      "main": [
+        [
+          {
+            "node": "Mark Message as Read in Supabase",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mark Message as Read in Supabase": {
+      "main": [
+        [
+          {
+            "node": "Restore Data for Send",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Restore Data for Send": {
+      "main": [
+        [
+          {
+            "node": "Send AI Reply to Supabase",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenRouter Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "SMS AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "38baf563-bea0-4473-8b5f-10ed89fdec50",
+  "meta": {
+    "instanceId": "daf1db1234fdfcbbfb53be5e1fe26764ab505fd0554977269bee03ef4bae6464"
+  },
+  "id": "V4sTGGjSW9rHC8vb",
+  "tags": []
+}

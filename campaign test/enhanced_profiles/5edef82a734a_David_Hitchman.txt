@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - DAVID HITCHMAN
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5edef82a734ab808d18da061
+  Phone:          19172167047
+  Email:          Not provided
+  Tier:           VIP
+  Risk Status:    Dormant (101 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    13
+  Total Revenue:         $537.68
+  Average Transaction:   $41.36
+  Median Transaction:    $28.00
+  Min Transaction:      $2.00
+  Max Transaction:      $108.00
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      44.9 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Sunday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Cash
+  Favorite Staff:        Jacob Vangellow
+
+  Payment Method Breakdown:
+    Cash             11 times ( 84.6%)
+    Credit            2 times ( 15.4%)
+
+  Staff Interaction Breakdown:
+    Jacob Vangellow        4 times ( 30.8%)
+    Jimmy Silks            4 times ( 30.8%)
+    Michael Preziosi       2 times ( 15.4%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    51
+  Unique Products:       34
+  Avg Items/Visit:       3.9
+  Favorite Category:     Flower PrePacks
+  Favorite Brand:        MOTA
+  Avg Item Price:        $10.48
+  Price Range:           $0.00 - $30.25
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            VIP
+  Engagement Level:      Medium
+  Loyalty Score:         Low
+  Price Sensitivity:     Moderate
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              Valued Customer
+  Discount Level:        15-20%
+  Message Focus:         Flower PrePacks + MOTA
+  Channel:               SMS + Email
+  Timing:                Sunday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi David, we miss you! 🌿
+   
+   We just restocked flower prepacks from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME5EDEF8
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  45 days between visits
+  Expected Annual Visits: 8
+  Potential Annual Value: $330.88
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $8.27 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        4000%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          6
+Wave:                    2
+Send Window:            Week 2
+Best Contact Time:      Sunday at 0:00
+Follow-up Schedule:     48 hours
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $41.36 (first visit)
+  Annual Value:          $330.88
+
+NOTES:
+  - Customer has been gone for 101 days
+  - Historical pattern: 13 visits, $537.68 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+====================================================================================================

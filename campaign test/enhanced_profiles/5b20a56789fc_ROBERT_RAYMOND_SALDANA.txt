@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - ROBERT RAYMOND SALDANA
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5b20a56789fc9307fe1b479b
+  Phone:          13230000000
+  Email:          Not provided
+  Tier:           VIP
+  Risk Status:    Cooling (55 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    17
+  Total Revenue:         $511.37
+  Average Transaction:   $30.08
+  Median Transaction:    $18.77
+  Min Transaction:      $7.50
+  Max Transaction:      $102.75
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      37.1 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Friday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Cash
+  Favorite Staff:        Bob McGinn
+
+  Payment Method Breakdown:
+    Cash             13 times ( 76.5%)
+    Credit            4 times ( 23.5%)
+
+  Staff Interaction Breakdown:
+    Bob McGinn             6 times ( 35.3%)
+    Jacob Vangellow        3 times ( 17.6%)
+    Devon Calonzo          3 times ( 17.6%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    64
+  Unique Products:       39
+  Avg Items/Visit:       3.8
+  Favorite Category:     Flower PrePacks
+  Favorite Brand:        MOTA
+  Avg Item Price:        $9.69
+  Price Range:           $0.00 - $38.17
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            VIP
+  Engagement Level:      Medium
+  Loyalty Score:         Low
+  Price Sensitivity:     Moderate
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              Valued Customer
+  Discount Level:        15-20%
+  Message Focus:         Flower PrePacks + MOTA
+  Channel:               SMS + Email
+  Timing:                Friday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi ROBERT, we miss you! 🌿
+   
+   We just restocked flower prepacks from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME5B20A5
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  37 days between visits
+  Expected Annual Visits: 9
+  Potential Annual Value: $270.73
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $6.02 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        4500%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          5
+Wave:                    1
+Send Window:            Week 1 - URGENT
+Best Contact Time:      Friday at 0:00
+Follow-up Schedule:     48 hours
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $30.08 (first visit)
+  Annual Value:          $270.73
+
+NOTES:
+  - Customer has been gone for 55 days
+  - Historical pattern: 17 visits, $511.37 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+====================================================================================================

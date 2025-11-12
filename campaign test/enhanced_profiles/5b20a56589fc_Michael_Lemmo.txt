@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - MICHAEL LEMMO
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5b20a56589fc9307fe1b21b9
+  Phone:          12155707259
+  Email:          Not provided
+  Tier:           Super VIP
+  Risk Status:    Inactive (128 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    45
+  Total Revenue:         $2,043.00
+  Average Transaction:   $45.40
+  Median Transaction:    $35.34
+  Min Transaction:      $0.01
+  Max Transaction:      $178.42
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      11.9 days
+  Visit Frequency:       Bi-weekly
+  Preferred Day:         Wednesday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Cash
+  Favorite Staff:        Bob McGinn
+
+  Payment Method Breakdown:
+    Cash             29 times ( 64.4%)
+    Credit           15 times ( 33.3%)
+
+  Staff Interaction Breakdown:
+    Bob McGinn            14 times ( 31.1%)
+    Jimmy Silks            9 times ( 20.0%)
+    Devon Calonzo          8 times ( 17.8%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    173
+  Unique Products:       87
+  Avg Items/Visit:       3.8
+  Favorite Category:     Flower PrePacks
+  Favorite Brand:        MOTA
+  Avg Item Price:        $15.59
+  Price Range:           $0.00 - $115.24
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            Super VIP
+  Engagement Level:      High
+  Loyalty Score:         High
+  Price Sensitivity:     Moderate
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              VIP Treatment
+  Discount Level:        20-30%
+  Message Focus:         Flower PrePacks + MOTA
+  Channel:               SMS + Email + Call
+  Timing:                Wednesday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi Michael, we miss you! 🌿
+   
+   We just restocked flower prepacks from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME5B20A5
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  12 days between visits
+  Expected Annual Visits: 30
+  Potential Annual Value: $1,362.00
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $9.08 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        15000%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          3
+Wave:                    3
+Send Window:            Week 3
+Best Contact Time:      Wednesday at 0:00
+Follow-up Schedule:     48 hours
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $45.40 (first visit)
+  Annual Value:          $1,362.00
+
+NOTES:
+  - Customer has been gone for 128 days
+  - Historical pattern: 45 visits, $2,043.00 total spent
+  - HIGH VALUE - Personal follow-up recommended
+  - Consider phone call if SMS doesn't convert
+
+====================================================================================================

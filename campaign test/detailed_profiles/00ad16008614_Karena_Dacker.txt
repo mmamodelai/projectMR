@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - KARENA DACKER
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    00ad16008614004cf600c258
+  Phone:          13233277333
+  Email:          Not provided
+  Tier:           Regular
+  Risk Status:    Inactive (120 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         5
+  Lifetime Value:       $218.04
+  Avg Transaction:      $43.61
+  Last Visit:           2025-06-24
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Monthly
+  Expected Annual Visits:   12
+  Potential Annual Value:   $523.32
+  
+  ROI Analysis:
+  - Discount Budget:        $8.72 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           6000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           3
+  Priority:       11
+  Send Timing:    Week 3
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS
+
+====================================================================================================

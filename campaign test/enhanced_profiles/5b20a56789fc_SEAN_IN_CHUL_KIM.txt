@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - SEAN IN CHUL KIM
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5b20a56789fc9307fe1b49f4
+  Phone:          19256406870
+  Email:          Not provided
+  Tier:           VIP
+  Risk Status:    Cooling (58 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    17
+  Total Revenue:         $863.59
+  Average Transaction:   $50.80
+  Median Transaction:    $63.19
+  Min Transaction:      $1.00
+  Max Transaction:      $110.26
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      28.6 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Monday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Cash
+  Favorite Staff:        Bob McGinn
+
+  Payment Method Breakdown:
+    Cash             11 times ( 64.7%)
+    Credit            6 times ( 35.3%)
+
+  Staff Interaction Breakdown:
+    Bob McGinn             4 times ( 23.5%)
+    Devon Calonzo          4 times ( 23.5%)
+    Lizbeth Garcia         3 times ( 17.6%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    52
+  Unique Products:       38
+  Avg Items/Visit:       3.1
+  Favorite Category:     Flower PrePacks
+  Favorite Brand:        MOTA
+  Avg Item Price:        $19.10
+  Price Range:           $0.00 - $39.07
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            VIP
+  Engagement Level:      Medium
+  Loyalty Score:         Medium
+  Price Sensitivity:     Moderate
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              Valued Customer
+  Discount Level:        15-20%
+  Message Focus:         Flower PrePacks + MOTA
+  Channel:               SMS + Email
+  Timing:                Monday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi SEAN, we miss you! 🌿
+   
+   We just restocked flower prepacks from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME5B20A5
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  29 days between visits
+  Expected Annual Visits: 12
+  Potential Annual Value: $609.59
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $10.16 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        6000%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          5
+Wave:                    1
+Send Window:            Week 1 - URGENT
+Best Contact Time:      Monday at 0:00
+Follow-up Schedule:     48 hours
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $50.80 (first visit)
+  Annual Value:          $609.59
+
+NOTES:
+  - Customer has been gone for 58 days
+  - Historical pattern: 17 visits, $863.59 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+====================================================================================================

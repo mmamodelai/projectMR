@@ -1,0 +1,18 @@
+{
+  "timestamp": "20251023_113553",
+  "results": {
+    "Authentication": false,
+    "Rate Limits": false,
+    "Data Endpoints": {
+      "partner/store/user": false,
+      "partner/transactions": false,
+      "partner/products": false
+    },
+    "Pagination": false
+  },
+  "config": {
+    "base_url": "https://api.partners.blaze.me",
+    "api_version": "v1",
+    "partner_key": "30117b29..."
+  }
+}

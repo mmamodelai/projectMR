@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - JEFFREY IORILLO
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5b20a56689fc9307fe1b3671
+  Phone:          13233604343
+  Email:          Not provided
+  Tier:           VIP
+  Risk Status:    Dormant (92 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         14
+  Lifetime Value:       $709.46
+  Avg Transaction:      $50.68
+  Last Visit:           2025-07-22
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Bi-weekly
+  Expected Annual Visits:   26
+  Potential Annual Value:   $1,317.68
+  
+  ROI Analysis:
+  - Discount Budget:        $10.14 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           13000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           2
+  Priority:       6
+  Send Timing:    Week 2
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS + Email
+
+====================================================================================================

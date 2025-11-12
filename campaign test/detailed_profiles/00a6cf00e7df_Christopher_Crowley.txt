@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - CHRISTOPHER CROWLEY
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    00a6cf00e7df001969004746
+  Phone:          17734191027
+  Email:          Not provided
+  Tier:           Regular
+  Risk Status:    Cooling (63 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         7
+  Lifetime Value:       $288.92
+  Avg Transaction:      $41.27
+  Last Visit:           2025-08-20
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Monthly
+  Expected Annual Visits:   12
+  Potential Annual Value:   $495.24
+  
+  ROI Analysis:
+  - Discount Budget:        $8.25 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           6000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           1
+  Priority:       9
+  Send Timing:    Week 1 - URGENT
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS
+
+====================================================================================================

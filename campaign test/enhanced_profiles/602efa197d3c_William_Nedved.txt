@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - WILLIAM NEDVED
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    602efa197d3c9b08f56bb4de
+  Phone:          17736773497
+  Email:          Not provided
+  Tier:           VIP
+  Risk Status:    At Risk (168 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    19
+  Total Revenue:         $508.08
+  Average Transaction:   $26.74
+  Median Transaction:    $27.00
+  Min Transaction:      $1.00
+  Max Transaction:      $75.00
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      25.1 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Friday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Cash
+  Favorite Staff:        Bob McGinn
+
+  Payment Method Breakdown:
+    Cash             15 times ( 78.9%)
+    Credit            4 times ( 21.1%)
+
+  Staff Interaction Breakdown:
+    Bob McGinn             6 times ( 31.6%)
+    Devon Calonzo          6 times ( 31.6%)
+    Jimmy Silks            3 times ( 15.8%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    85
+  Unique Products:       66
+  Avg Items/Visit:       4.5
+  Favorite Category:     Flower PrePacks
+  Favorite Brand:        MOTA
+  Avg Item Price:        $8.94
+  Price Range:           $0.00 - $30.00
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            VIP
+  Engagement Level:      Medium
+  Loyalty Score:         Medium
+  Price Sensitivity:     Budget
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              Valued Customer
+  Discount Level:        15-20%
+  Message Focus:         Flower PrePacks + MOTA
+  Channel:               SMS + Email
+  Timing:                Friday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi William, we miss you! 🌿
+   
+   We just restocked flower prepacks from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME602EFA
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  25 days between visits
+  Expected Annual Visits: 14
+  Potential Annual Value: $374.37
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $5.35 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        7000%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          8
+Wave:                    4
+Send Window:            Week 4
+Best Contact Time:      Friday at 0:00
+Follow-up Schedule:     48 hours
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $26.74 (first visit)
+  Annual Value:          $374.37
+
+NOTES:
+  - Customer has been gone for 168 days
+  - Historical pattern: 19 visits, $508.08 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+====================================================================================================

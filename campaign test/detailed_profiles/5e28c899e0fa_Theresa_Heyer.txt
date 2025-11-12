@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - THERESA HEYER
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5e28c899e0faca07cceb779b
+  Phone:          13475960556
+  Email:          Not provided
+  Tier:           Regular
+  Risk Status:    Inactive (116 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         5
+  Lifetime Value:       $413.72
+  Avg Transaction:      $82.74
+  Last Visit:           2025-06-28
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Monthly
+  Expected Annual Visits:   12
+  Potential Annual Value:   $992.88
+  
+  ROI Analysis:
+  - Discount Budget:        $16.55 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           6000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           3
+  Priority:       11
+  Send Timing:    Week 3
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS
+
+====================================================================================================

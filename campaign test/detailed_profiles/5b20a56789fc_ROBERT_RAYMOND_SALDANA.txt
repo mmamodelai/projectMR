@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - ROBERT RAYMOND SALDANA
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5b20a56789fc9307fe1b479b
+  Phone:          13230000000
+  Email:          Not provided
+  Tier:           VIP
+  Risk Status:    Cooling (55 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         17
+  Lifetime Value:       $511.37
+  Avg Transaction:      $30.08
+  Last Visit:           2025-08-28
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Bi-weekly
+  Expected Annual Visits:   26
+  Potential Annual Value:   $782.08
+  
+  ROI Analysis:
+  - Discount Budget:        $6.02 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           13000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           1
+  Priority:       5
+  Send Timing:    Week 1 - URGENT
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS + Email
+
+====================================================================================================

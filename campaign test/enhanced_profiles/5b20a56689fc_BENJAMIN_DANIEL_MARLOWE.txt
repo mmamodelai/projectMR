@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - BENJAMIN DANIEL MARLOWE
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5b20a56689fc9307fe1b26cc
+  Phone:          15056906551
+  Email:          Not provided
+  Tier:           Super VIP
+  Risk Status:    At Risk (164 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    22
+  Total Revenue:         $802.04
+  Average Transaction:   $36.46
+  Median Transaction:    $26.46
+  Min Transaction:      $2.00
+  Max Transaction:      $102.21
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      23.0 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Wednesday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Cash
+  Favorite Staff:        Devon Calonzo
+
+  Payment Method Breakdown:
+    Cash             16 times ( 72.7%)
+    Credit            6 times ( 27.3%)
+
+  Staff Interaction Breakdown:
+    Devon Calonzo          7 times ( 31.8%)
+    Jimmy Silks            5 times ( 22.7%)
+    Bob McGinn             3 times ( 13.6%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    75
+  Unique Products:       44
+  Avg Items/Visit:       3.4
+  Favorite Category:     Flower PrePacks
+  Favorite Brand:        MOTA
+  Avg Item Price:        $13.56
+  Price Range:           $0.00 - $54.00
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            Super VIP
+  Engagement Level:      High
+  Loyalty Score:         Medium
+  Price Sensitivity:     Moderate
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              VIP Treatment
+  Discount Level:        20-30%
+  Message Focus:         Flower PrePacks + MOTA
+  Channel:               SMS + Email + Call
+  Timing:                Wednesday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi BENJAMIN, we miss you! 🌿
+   
+   We just restocked flower prepacks from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME5B20A5
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  23 days between visits
+  Expected Annual Visits: 15
+  Potential Annual Value: $546.85
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $7.29 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        7500%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          4
+Wave:                    4
+Send Window:            Week 4
+Best Contact Time:      Wednesday at 0:00
+Follow-up Schedule:     48 hours
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $36.46 (first visit)
+  Annual Value:          $546.85
+
+NOTES:
+  - Customer has been gone for 164 days
+  - Historical pattern: 22 visits, $802.04 total spent
+  - Standard campaign approach
+  - Consider phone call if SMS doesn't convert
+
+====================================================================================================

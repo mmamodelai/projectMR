@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - WARREN G SCHUMMER
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5b20a56789fc9307fe1b4e68
+  Phone:          18186204082
+  Email:          Not provided
+  Tier:           Regular
+  Risk Status:    Cooling (54 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    5
+  Total Revenue:         $521.98
+  Average Transaction:   $104.40
+  Median Transaction:    $99.78
+  Min Transaction:      $39.93
+  Max Transaction:      $182.71
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      11.0 days
+  Visit Frequency:       Bi-weekly
+  Preferred Day:         Friday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Cash
+  Favorite Staff:        Jimmy Silks
+
+  Payment Method Breakdown:
+    Cash              4 times ( 80.0%)
+    Credit            1 times ( 20.0%)
+
+  Staff Interaction Breakdown:
+    Jimmy Silks            2 times ( 40.0%)
+    Lizbeth Garcia         2 times ( 40.0%)
+    Luis Bobadilla         1 times ( 20.0%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    17
+  Unique Products:       9
+  Avg Items/Visit:       3.4
+  Favorite Category:     Flower PrePacks
+  Favorite Brand:        MOTA
+  Avg Item Price:        $36.06
+  Price Range:           $7.50 - $115.24
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            Regular
+  Engagement Level:      Low
+  Loyalty Score:         High
+  Price Sensitivity:     Premium
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              Win-Back Offer
+  Discount Level:        10-15%
+  Message Focus:         Flower PrePacks + MOTA
+  Channel:               SMS
+  Timing:                Friday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi WARREN, we miss you! 🌿
+   
+   We just restocked flower prepacks from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME5B20A5
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  11 days between visits
+  Expected Annual Visits: 33
+  Potential Annual Value: $3,445.07
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $20.88 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        16500%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          9
+Wave:                    1
+Send Window:            Week 1 - URGENT
+Best Contact Time:      Friday at 0:00
+Follow-up Schedule:     None
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $104.40 (first visit)
+  Annual Value:          $3,445.07
+
+NOTES:
+  - Customer has been gone for 54 days
+  - Historical pattern: 5 visits, $521.98 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+====================================================================================================

@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - ADAM LAZARUS
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5e13e85e1386fd082900ed5e
+  Phone:          13104848637
+  Email:          Not provided
+  Tier:           Regular
+  Risk Status:    At Risk (170 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    6
+  Total Revenue:         $187.32
+  Average Transaction:   $31.22
+  Median Transaction:    $23.22
+  Min Transaction:      $13.51
+  Max Transaction:      $81.36
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      94.6 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Thursday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Credit
+  Favorite Staff:        Jacob Vangellow
+
+  Payment Method Breakdown:
+    Credit            3 times ( 50.0%)
+    Cash              3 times ( 50.0%)
+
+  Staff Interaction Breakdown:
+    Jacob Vangellow        2 times ( 33.3%)
+    Devon Calonzo          1 times ( 16.7%)
+    Jimmy Silks            1 times ( 16.7%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    18
+  Unique Products:       13
+  Avg Items/Visit:       3.0
+  Favorite Category:     FEES
+  Favorite Brand:        MOTA
+  Avg Item Price:        $11.88
+  Price Range:           $0.00 - $38.17
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            Regular
+  Engagement Level:      Low
+  Loyalty Score:         Low
+  Price Sensitivity:     Moderate
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              Win-Back Offer
+  Discount Level:        10-15%
+  Message Focus:         FEES + MOTA
+  Channel:               SMS
+  Timing:                Thursday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi Adam, we miss you! 🌿
+   
+   We just restocked fees from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME5E13E8
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  95 days between visits
+  Expected Annual Visits: 3
+  Potential Annual Value: $93.66
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $6.24 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        1500%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          12
+Wave:                    4
+Send Window:            Week 4
+Best Contact Time:      Thursday at 0:00
+Follow-up Schedule:     None
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $31.22 (first visit)
+  Annual Value:          $93.66
+
+NOTES:
+  - Customer has been gone for 170 days
+  - Historical pattern: 6 visits, $187.32 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+====================================================================================================

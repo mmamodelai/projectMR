@@ -1,0 +1,111 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - RACHAEL WILLIAMS
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    60399041978a1808cba4a976
+  Phone:          13108828256
+  Email:          Not provided
+  Tier:           Regular
+  Risk Status:    Dormant (91 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    8
+  Total Revenue:         $275.74
+  Average Transaction:   $34.47
+  Median Transaction:    $36.98
+  Min Transaction:      $10.72
+  Max Transaction:      $52.76
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      78.6 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Sunday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Credit
+  Favorite Staff:        Jimmy Silks
+
+  Payment Method Breakdown:
+    Credit            8 times (100.0%)
+
+  Staff Interaction Breakdown:
+    Jimmy Silks            2 times ( 25.0%)
+    Jacob Vangellow        2 times ( 25.0%)
+    Leo Salguero           1 times ( 12.5%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    20
+  Unique Products:       14
+  Avg Items/Visit:       2.5
+  Favorite Category:     FEES
+  Favorite Brand:        MOTA
+  Avg Item Price:        $56.34
+  Price Range:           $0.00 - $765.00
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            Regular
+  Engagement Level:      Low
+  Loyalty Score:         Low
+  Price Sensitivity:     Moderate
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              Win-Back Offer
+  Discount Level:        10-15%
+  Message Focus:         FEES + MOTA
+  Channel:               SMS
+  Timing:                Sunday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi Rachael, we miss you! 🌿
+   
+   We just restocked fees from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME603990
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  79 days between visits
+  Expected Annual Visits: 4
+  Potential Annual Value: $137.87
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $6.89 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        2000%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          10
+Wave:                    2
+Send Window:            Week 2
+Best Contact Time:      Sunday at 0:00
+Follow-up Schedule:     None
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $34.47 (first visit)
+  Annual Value:          $137.87
+
+NOTES:
+  - Customer has been gone for 91 days
+  - Historical pattern: 8 visits, $275.74 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+====================================================================================================

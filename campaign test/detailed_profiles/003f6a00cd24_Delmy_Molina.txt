@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - DELMY MOLINA
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    003f6a00cd2400bbee0099d4
+  Phone:          18182207148
+  Email:          Not provided
+  Tier:           Super VIP
+  Risk Status:    Dormant (97 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         44
+  Lifetime Value:       $2,207.50
+  Avg Transaction:      $50.17
+  Last Visit:           2025-07-17
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Weekly
+  Expected Annual Visits:   52
+  Potential Annual Value:   $2,608.84
+  
+  ROI Analysis:
+  - Discount Budget:        $10.03 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           26000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           2
+  Priority:       2
+  Send Timing:    Week 2
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS+ Email + Call
+
+====================================================================================================

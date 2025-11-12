@@ -1,0 +1,55 @@
+
+================================================================================
+CUSTOMER SNAPSHOT - SEBASTIAN BARRY
+================================================================================
+
+CONTACT INFORMATION:
+  Phone:          14154200016
+  Email:          Not provided
+  Customer ID:    6158e557934d8220186602bd
+
+TIER & STATUS:
+  Tier:           VIP
+  Risk Status:    At Risk
+  Campaign Wave:  Wave 4 Priority
+
+ENGAGEMENT METRICS:
+  Last Visit:           2025-05-16
+  Days Since Last:      159 days
+  Total Visits:         15
+  Visit Frequency:      Bi-weekly (when active)
+  
+VALUE METRICS:
+  Lifetime Value:       $788.60
+  Average Transaction:  $52.57
+  Estimated Annual:     $1,366.82 (if reactivated)
+
+URGENCY ASSESSMENT:
+  Level:          CRITICAL - At Risk of Lost Forever
+  Recommended:    Maximum effort, best offer
+
+REACTIVATION STRATEGY:
+
+  Approach:       Valued Customer
+  Offer:          15-20% off + loyalty bonus
+  Message:        "It's been a while! We have some new products you'd love..."
+  Channel:        SMS + Email (if available)
+  Budget:         Up to $10.51 discount value
+
+CAMPAIGN TIMING:
+  Send Window:    Week 1 - CRITICAL, send ASAP
+  Best Time:      Afternoon (2-5 PM) based on customer tier
+  Follow-up:      48 hours if no response
+
+SUCCESS METRICS:
+  Target ROI:     200%
+  Break-even:     1 visit at $52.57
+  Goal:           Restore to Bi-weekly visits
+
+NOTES:
+  - Customer has been gone for 159 days
+  - Historical pattern: 15 visits, $788.60 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+================================================================================

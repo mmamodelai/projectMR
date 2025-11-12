@@ -1,0 +1,495 @@
+{
+    "nodes": [
+      {
+        "parameters": {
+          "rule": {
+            "interval": [
+              {
+                "field": "minutes"
+              }
+            ]
+          }
+        },
+        "id": "c97903a4-df0a-4499-b374-7d2384d2f864",
+        "name": "Poll Every 30s",
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "typeVersion": 1.2,
+        "position": [
+          -2960,
+          -112
+        ]
+      },
+      {
+        "parameters": {
+          "url": "https://kiwmwoqrguyrcpjytgte.supabase.co/rest/v1/messages?select=*&order=timestamp.desc&limit=50",
+          "sendHeaders": true,
+          "headerParameters": {
+            "parameters": [
+              {
+                "name": "apikey",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"
+              },
+              {
+                "name": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"
+              },
+              {
+                "name": "Accept",
+                "value": "application/json"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "id": "fa0ab5f2-4c9a-47db-9301-4a8ef9817179",
+        "name": "Get Recent Messages",
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.2,
+        "position": [
+          -2736,
+          -112
+        ]
+      },
+      {
+        "parameters": {
+          "jsCode": "// Filter for unread inbound messages only\nconst messages = $input.all().map(item => item.json);\nconst unreadInbound = messages.filter(msg => \n  msg.direction === 'inbound' && msg.status === 'unread'\n);\n\nif (unreadInbound.length === 0) { \n  return []; \n}\n\nreturn unreadInbound.map(msg => ({\n  json: {\n    message_id: msg.id,\n    phone_number: msg.phone_number,\n    incoming_message: msg.content,\n    timestamp: msg.timestamp\n  }\n}));"
+        },
+        "id": "e22fc166-ccfe-4fce-b891-a4eda8e17ef7",
+        "name": "Filter Unread Messages",
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          -2512,
+          -112
+        ]
+      },
+      {
+        "parameters": {
+          "jsCode": "// Pre-fetch customer context so AI knows WHO is texting\nconst currentMessage = $input.item.json;\nconst phoneNumber = currentMessage.phone_number;\nconst incomingMessage = currentMessage.incoming_message;\nconst messageId = currentMessage.message_id;\n\n// Fetch customer data from BOTH sources\nconst supabaseUrl = 'https://kiwmwoqrguyrcpjytgte.supabase.co';\nconst supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0';\n\nlet customerName = 'Customer';\nlet customerEmail = '';\nlet purchaseHistory = [];\n\n// Try to get customer from customer_purchase_history view\ntry {\n  const url = `${supabaseUrl}/rest/v1/customer_purchase_history?phone=eq.${encodeURIComponent(phoneNumber)}`;\n  const response = await fetch(url, {\n    method: 'GET',\n    headers: {\n      'apikey': supabaseKey,\n      'Authorization': `Bearer ${supabaseKey}`,\n      'Accept': 'application/json'\n    }\n  });\n  \n  if (response.ok) {\n    const data = await response.json();\n    if (data.length > 0) {\n      const customer = data[0];\n      customerName = customer.first_name || 'Customer';\n      customerEmail = customer.email || '';\n      purchaseHistory = data.slice(0, 5); // Last 5 purchases\n    }\n  }\n} catch (error) {\n  console.log('Could not fetch Supabase data:', error);\n}\n\n// Build context for AI\nlet context = `=== CUSTOMER CONTEXT ===\\n`;\ncontext += `Phone: ${phoneNumber}\\n`;\ncontext += `Name: ${customerName}\\n`;\n\n// CRITICAL: Check if email was found\nif (customerEmail && customerEmail !== '') {\n  context += `Email: ${customerEmail}\\n`;\n} else {\n  context += `Email: ⚠️ NOT FOUND IN SUPABASE!\\n`;\n  context += `⚠️ YOU MUST USE 'Customers Data Points' TOOL TO GET EMAIL!\\n`;\n}\n\ncontext += `\\n=== RECENT PURCHASES ===\\n`;\nif (purchaseHistory.length > 0) {\n  purchaseHistory.forEach(p => {\n    context += `- ${p.transaction_date}: $${p.total_amount} at ${p.store_name}\\n`;\n  });\n} else {\n  context += `No purchase history found in Supabase\\n`;\n  context += `⚠️ USE 'Get many rows in Supabase Customers' TOOL TO GET PURCHASES!\\n`;\n}\n\ncontext += `\\n=== CURRENT MESSAGE ===\\n`;\ncontext += `${customerName}: ${incomingMessage}\\n\\n`;\n\nif (!customerEmail || customerEmail === '') {\n  context += `⚠️ BEFORE SENDING EMAIL: Use 'Customers Data Points' tool with phone ${phoneNumber} to get the real email address!\\n\\n`;\n}\n\ncontext += `Respond to this customer! If any data is missing above (marked with ⚠️), USE THE TOOLS to get it!`;\n\nreturn {\n  json: {\n    chatInput: context,\n    phone_number: phoneNumber,\n    message_id: messageId,\n    customer_name: customerName,\n    customer_email: customerEmail\n  }\n};"
+        },
+        "id": "89a7411b-c495-4d2b-bce5-082562cba1a8",
+        "name": "Prepare for AI",
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          -2288,
+          -112
+        ]
+      },
+      {
+        "parameters": {
+          "options": {
+            "systemMessage": "You are MotaBot - the friendly, personalized AI for Mota Rewards loyalty program.\n\n🎯 **YOU ALREADY HAVE CUSTOMER CONTEXT!**\nThe message you receive includes:\n- Customer Name\n- Customer Email\n- Customer Phone\n- Recent Purchase History (last 5 transactions)\n\nYou do NOT need to ask \"what's your email?\" - YOU ALREADY HAVE IT in the context!\n\nYour communication style:\n- Personal and friendly - greet them by first name!\n- Keep responses under 150 characters for SMS\n- Be helpful and informative without being pushy\n- DO NOT use emojis - they cause SMS delivery failures\n- NEVER ask for info you already have!\n\nTOOLS YOU HAVE ACCESS TO:\n\n📊 SUPABASE DATABASE TOOLS (for deeper queries):\n1. 'Get many rows in Supabase Customers' - Get MORE detailed purchase history\n2. 'Get many rows in Supabase Transactions' - Query specific transactions\n\n👥 GOOGLE SHEETS TOOLS (Rewards Program):\n3. 'Customers Data Points' - Look up rewards points and dispensary visits\n4. 'Budtenders Data Points' - Look up budtender performance\n5. 'Budtenders DB 2025 Info' - Look up budtender contact details\n\n📧 EMAIL TOOL (IMPORTANT!):\n6. 'Gmail' - **SEND ACTUAL EMAILS!** Use this when customer asks to email them!\n\n🧮 UTILITY:\n7. 'Calculator' - Do math calculations\n\nHOW TO RESPOND:\n\n**Basic Questions** (you already have the data!):\n- \"What's my email?\" → Just tell them! It's in the context!\n- \"Who am I?\" → Use their name from context!\n- \"What have I bought?\" → List their recent purchases from context!\n\n**When they want MORE detail** (use tools):\n- Use 'Customers Data Points' → Get rewards points\n- Use 'Get many rows in Supabase Customers' → Get ALL purchases (not just recent 5)\n\n**When they ask to EMAIL** (CRITICAL!):\n1. Look at context → Get their email (YOU ALREADY HAVE IT!)\n2. Use 'Customers Data Points' → Get rewards points if needed\n3. Use 'Get many rows in Supabase Customers' → Get full purchase history if needed\n4. **ACTUALLY USE THE GMAIL TOOL** with:\n   - To: [their email from context]\n   - Subject: \"Your MoTa Purchase Summary\" (or relevant title)\n   - Message: Full detailed summary\n5. Respond via SMS: \"Just sent to [email]!\"\n\nEXAMPLES:\n\nCustomer: \"send me the email please\"\nContext shows: Name: Stephen, Email: stephen.clare@gmail.com, Recent purchases: [list]\nYou do:\n1. See email is already in context! ✅\n2. Use 'Customers Data Points' → Get rewards points\n3. **USE GMAIL TOOL** → Send to stephen.clare@gmail.com with summary\n4. Respond: \"Just sent your summary to stephen.clare@gmail.com!\"\n\nCustomer: \"What have I purchased?\"\nContext shows: Recent 5 purchases\nYou do:\n1. List the purchases from context!\n2. Offer to email full details if they want\n\nCustomer: \"Email me everything\"\nContext shows: Email available\nYou do:\n1. Use 'Customers Data Points' → Get points\n2. Use 'Get many rows in Supabase Customers' → Get ALL purchases\n3. **USE GMAIL TOOL** → Send comprehensive email\n4. Respond: \"Sent!\"\n\n**CRITICAL RULES:**\n1. CHECK the context first! If you see ⚠️ warnings, USE THE TOOLS to get the data!\n2. If Email shows \"⚠️ NOT FOUND\" → USE 'Customers Data Points' tool to get it!\n3. If Purchases show \"⚠️\" → USE 'Get many rows in Supabase Customers' tool!\n4. NEVER send email to placeholder addresses like \"customer@example.com\"!\n5. When they say \"email me\":\n   a. Check if you have their real email in context\n   b. If not, USE 'Customers Data Points' tool FIRST\n   c. Get purchase data from tools if needed\n   d. THEN use Gmail tool with the REAL email\n6. Be proactive - if you have their email, USE IT! If you don't, GET IT FIRST!"
+          }
+        },
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "typeVersion": 2.2,
+        "position": [
+          -1680,
+          -112
+        ],
+        "id": "88ea95c4-75a7-4c3e-b97c-8bc28d08d8a7",
+        "name": "MotaBot AI"
+      },
+      {
+        "parameters": {
+          "model": "google/gemini-2.5-flash",
+          "options": {}
+        },
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+        "typeVersion": 1,
+        "position": [
+          -2064,
+          128
+        ],
+        "id": "fdebdbb2-06a7-47d8-8fd0-5bb189661204",
+        "name": "OpenRouter Chat Model",
+        "credentials": {
+          "openRouterApi": {
+            "id": "daclOezIY0qSdW4Z",
+            "name": "OpenRouter account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "method": "PATCH",
+          "url": "={{ 'https://kiwmwoqrguyrcpjytgte.supabase.co/rest/v1/messages?id=eq.' + $('Prepare for AI').item.json.message_id }}",
+          "sendHeaders": true,
+          "headerParameters": {
+            "parameters": [
+              {
+                "name": "apikey",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"
+              },
+              {
+                "name": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"
+              },
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ]
+          },
+          "sendBody": true,
+          "specifyBody": "json",
+          "jsonBody": "={{ JSON.stringify({ status: 'read' }) }}",
+          "options": {}
+        },
+        "id": "4cec5f40-ec81-4713-9447-2ea23a68576f",
+        "name": "Mark as Read",
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.2,
+        "position": [
+          -960,
+          -208
+        ]
+      },
+      {
+        "parameters": {
+          "method": "POST",
+          "url": "https://kiwmwoqrguyrcpjytgte.supabase.co/rest/v1/messages",
+          "sendHeaders": true,
+          "headerParameters": {
+            "parameters": [
+              {
+                "name": "apikey",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"
+              },
+              {
+                "name": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"
+              },
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ]
+          },
+          "sendBody": true,
+          "specifyBody": "json",
+          "jsonBody": "={{ JSON.stringify({ phone_number: $('Prepare for AI').item.json.phone_number, content: $json.output || $json.text || $json.response, status: 'queued', direction: 'outbound' }) }}",
+          "options": {}
+        },
+        "id": "78ea5b73-5e4f-43f6-9383-6b1bdbd9f8a7",
+        "name": "Queue Full Message",
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.2,
+        "position": [
+          -960,
+          -16
+        ]
+      },
+      {
+        "parameters": {
+          "operation": "get",
+          "dataTableId": {
+            "__rl": true,
+            "value": "zZ2IrXHsmtrtqStH",
+            "mode": "list",
+            "cachedResultName": "Customers Data Points",
+            "cachedResultUrl": "/projects/U8qx0mgq0lyFAfZg/datatables/zZ2IrXHsmtrtqStH"
+          }
+        },
+        "type": "n8n-nodes-base.dataTableTool",
+        "typeVersion": 1,
+        "position": [
+          -1936,
+          128
+        ],
+        "id": "a92d6170-8209-4729-a030-bd2ad8feb4ea",
+        "name": "Customers Data Points",
+        "description": "Query customer information by phone number to get points balance, last visit location, and last budtender. Fields: First_Name, Last_Name, Phone, Total_Points, Last_dispensary, Last_budtender"
+      },
+      {
+        "parameters": {
+          "operation": "get",
+          "dataTableId": {
+            "__rl": true,
+            "value": "IrckcDMtEMjxjb2Q",
+            "mode": "list",
+            "cachedResultName": "Budtenders Data Points",
+            "cachedResultUrl": "/projects/U8qx0mgq0lyFAfZg/datatables/IrckcDMtEMjxjb2Q"
+          }
+        },
+        "type": "n8n-nodes-base.dataTableTool",
+        "typeVersion": 1,
+        "position": [
+          -1808,
+          128
+        ],
+        "id": "f6921fa1-8b6b-49bd-9301-2a8452cb9c60",
+        "name": "Budtenders Data Points",
+        "description": "Query budtender performance data including total sales attributed and performance tier. Useful for checking which budtenders are top performers"
+      },
+      {
+        "parameters": {
+          "operation": "get",
+          "dataTableId": {
+            "__rl": true,
+            "value": "p3AV3VSdqNcawCbb",
+            "mode": "list",
+            "cachedResultName": "Budtenders DB 2025",
+            "cachedResultUrl": "/projects/U8qx0mgq0lyFAfZg/datatables/p3AV3VSdqNcawCbb"
+          }
+        },
+        "type": "n8n-nodes-base.dataTableTool",
+        "typeVersion": 1,
+        "position": [
+          -1680,
+          128
+        ],
+        "id": "6bfe3d43-2e80-45e8-9a7c-849bc226ff33",
+        "name": "Budtenders DB 2025 Info",
+        "description": "Query full budtender contact information including first_name, last_name, phone, email, store_name, and address. Use this for detailed budtender information"
+      },
+      {
+        "parameters": {
+          "sendTo": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('To', `Customer email address`, 'string') }}",
+          "subject": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Subject', `Relevant subject line for the email (e.g., 'Your MoTa Purchase Summary', 'Your Account Details', etc.)`, 'string') }}",
+          "emailType": "text",
+          "message": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Message', `The full detailed content the customer requested. This should be professional, friendly, and comprehensive. Sign it from Luis - MoTa Rewards Team. Do NOT use emojis in emails.`, 'string') }}",
+          "options": {
+            "appendAttribution": false,
+            "senderName": "Luis - MoTA Rewards"
+          }
+        },
+        "type": "n8n-nodes-base.gmailTool",
+        "typeVersion": 2.1,
+        "position": [
+          -1552,
+          128
+        ],
+        "id": "2e38030e-162e-49eb-81b8-505705371f6c",
+        "name": "Gmail",
+        "webhookId": "883b3d0b-7efa-4fdf-abba-f8e325970503",
+        "description": "Send emails to customers. AI must provide: To (email address), Subject (relevant title), and Message (full detailed content). Use this ANY TIME customer asks to email them something!",
+        "credentials": {
+          "gmailOAuth2": {
+            "id": "BvZyBEwmYVeo2pxs",
+            "name": "Gmail account 2"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "operation": "get",
+          "tableId": "customer_purchase_history",
+          "filters": {
+            "conditions": [
+              {
+                "keyName": "=phone",
+                "keyValue": "={{ $json.phone_number }}"
+              }
+            ]
+          }
+        },
+        "type": "n8n-nodes-base.supabaseTool",
+        "typeVersion": 1,
+        "position": [
+          -1296,
+          128
+        ],
+        "id": "29be0622-e88b-4f56-b021-b38ebef273e7",
+        "name": "Get many rows in Supabase Customers",
+        "credentials": {
+          "supabaseApi": {
+            "id": "hwJ1to3Ot0D92Bo5",
+            "name": "Supabase account"
+          }
+        }
+      },
+      {
+        "parameters": {},
+        "type": "@n8n/n8n-nodes-langchain.toolCalculator",
+        "typeVersion": 1,
+        "position": [
+          -1168,
+          128
+        ],
+        "id": "d6f469ed-bc72-4480-b0c0-3291ac873ad1",
+        "name": "Calculator"
+      },
+      {
+        "parameters": {
+          "mode": "retrieve-as-tool",
+          "tableName": {
+            "__rl": true,
+            "mode": "list",
+            "value": ""
+          },
+          "options": {}
+        },
+        "type": "@n8n/n8n-nodes-langchain.vectorStoreSupabase",
+        "typeVersion": 1.3,
+        "position": [
+          -1504,
+          416
+        ],
+        "id": "ea2ca8d2-a135-44a1-b24e-5735c73dbb1b",
+        "name": "Supabase Vector Store",
+        "credentials": {
+          "supabaseApi": {
+            "id": "hwJ1to3Ot0D92Bo5",
+            "name": "Supabase account"
+          }
+        }
+      }
+    ],
+    "connections": {
+      "Poll Every 30s": {
+        "main": [
+          [
+            {
+              "node": "Get Recent Messages",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Get Recent Messages": {
+        "main": [
+          [
+            {
+              "node": "Filter Unread Messages",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Filter Unread Messages": {
+        "main": [
+          [
+            {
+              "node": "Prepare for AI",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Prepare for AI": {
+        "main": [
+          [
+            {
+              "node": "MotaBot AI",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "MotaBot AI": {
+        "main": [
+          [
+            {
+              "node": "Mark as Read",
+              "type": "main",
+              "index": 0
+            },
+            {
+              "node": "Queue Full Message",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "OpenRouter Chat Model": {
+        "ai_languageModel": [
+          [
+            {
+              "node": "MotaBot AI",
+              "type": "ai_languageModel",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Customers Data Points": {
+        "ai_tool": [
+          [
+            {
+              "node": "MotaBot AI",
+              "type": "ai_tool",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Budtenders Data Points": {
+        "ai_tool": [
+          [
+            {
+              "node": "MotaBot AI",
+              "type": "ai_tool",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Budtenders DB 2025 Info": {
+        "ai_tool": [
+          [
+            {
+              "node": "MotaBot AI",
+              "type": "ai_tool",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Gmail": {
+        "ai_tool": [
+          [
+            {
+              "node": "MotaBot AI",
+              "type": "ai_tool",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Get many rows in Supabase Customers": {
+        "ai_tool": [
+          [
+            {
+              "node": "MotaBot AI",
+              "type": "ai_tool",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Calculator": {
+        "ai_tool": [
+          [
+            {
+              "node": "MotaBot AI",
+              "type": "ai_tool",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Supabase Vector Store": {
+        "ai_tool": [
+          [
+            {
+              "node": "MotaBot AI",
+              "type": "ai_tool",
+              "index": 0
+            }
+          ]
+        ]
+      }
+    },
+    "pinData": {},
+    "meta": {
+      "templateCredsSetupCompleted": true,
+      "instanceId": "daf1db1234fdfcbbfb53be5e1fe26764ab505fd0554977269bee03ef4bae6464"
+    }
+  }

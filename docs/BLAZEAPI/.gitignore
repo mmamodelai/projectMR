@@ -1,0 +1,32 @@
+# Blaze API Configuration - DO NOT COMMIT
+blaze_config.py
+
+# Test Results
+blaze_api_test_results_*.json
+
+# API Keys and Secrets
+*.key
+*.secret
+*.env
+config.py
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db

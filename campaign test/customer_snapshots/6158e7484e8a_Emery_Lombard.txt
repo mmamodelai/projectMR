@@ -1,0 +1,55 @@
+
+================================================================================
+CUSTOMER SNAPSHOT - EMERY LOMBARD
+================================================================================
+
+CONTACT INFORMATION:
+  Phone:          12087728655
+  Email:          Not provided
+  Customer ID:    6158e7484e8acf304e535c0c
+
+TIER & STATUS:
+  Tier:           Regular
+  Risk Status:    At Risk
+  Campaign Wave:  Wave 4 Priority
+
+ENGAGEMENT METRICS:
+  Last Visit:           2025-04-14
+  Days Since Last:      191 days
+  Total Visits:         5
+  Visit Frequency:      Monthly (when active)
+  
+VALUE METRICS:
+  Lifetime Value:       $117.97
+  Average Transaction:  $23.59
+  Estimated Annual:     $283.08 (if reactivated)
+
+URGENCY ASSESSMENT:
+  Level:          CRITICAL - At Risk of Lost Forever
+  Recommended:    Maximum effort, best offer
+
+REACTIVATION STRATEGY:
+
+  Approach:       Win-Back Offer
+  Offer:          10-15% off on next visit
+  Message:        "Come back and see what's new! Special offer just for you..."
+  Channel:        SMS
+  Budget:         Up to $3.54 discount value
+
+CAMPAIGN TIMING:
+  Send Window:    Week 1 - CRITICAL, send ASAP
+  Best Time:      Afternoon (2-5 PM) based on customer tier
+  Follow-up:      None scheduled
+
+SUCCESS METRICS:
+  Target ROI:     200%
+  Break-even:     1 visit at $23.59
+  Goal:           Restore to Monthly visits
+
+NOTES:
+  - Customer has been gone for 191 days
+  - Historical pattern: 5 visits, $117.97 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+================================================================================

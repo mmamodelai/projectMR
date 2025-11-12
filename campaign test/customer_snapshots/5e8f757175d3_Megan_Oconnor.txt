@@ -1,0 +1,56 @@
+
+================================================================================
+CUSTOMER SNAPSHOT - MEGAN OCONNOR
+================================================================================
+
+CONTACT INFORMATION:
+  Phone:          15376548976
+  Email:          Not provided
+  Customer ID:    5e8f757175d37a08d8729925
+
+TIER & STATUS:
+  Tier:           Super VIP
+  Risk Status:    Inactive
+  Campaign Wave:  Wave 3 Priority
+
+ENGAGEMENT METRICS:
+  Last Visit:           2025-07-08
+  Days Since Last:      106 days
+  Total Visits:         20
+  Visit Frequency:      Bi-weekly (when active)
+  
+VALUE METRICS:
+  Lifetime Value:       $819.47
+  Average Transaction:  $40.97
+  Estimated Annual:     $1,065.22 (if reactivated)
+
+URGENCY ASSESSMENT:
+  Level:          URGENT - Nearly Lost
+  Recommended:    Premium offer, call if possible
+
+REACTIVATION STRATEGY:
+
+  Approach:       VIP Treatment
+  Offer:          20-30% off + exclusive product access
+  Message:        "We miss you! As one of our top customers, we'd love to 
+                  welcome you back with a special VIP offer..."
+  Channel:        SMS + Email (if available) + Follow-up call
+  Budget:         Up to $12.29 discount value
+
+CAMPAIGN TIMING:
+  Send Window:    Week 2-3 - Urgent
+  Best Time:      Afternoon (2-5 PM) based on customer tier
+  Follow-up:      48 hours if no response
+
+SUCCESS METRICS:
+  Target ROI:     300%
+  Break-even:     1 visit at $40.97
+  Goal:           Restore to Bi-weekly visits
+
+NOTES:
+  - Customer has been gone for 106 days
+  - Historical pattern: 20 visits, $819.47 total spent
+  - Standard campaign approach
+  - Consider phone call if SMS doesn't convert
+
+================================================================================

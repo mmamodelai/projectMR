@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - LAURA ESPINOZA
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    604978333af9ee08dc43ca1e
+  Phone:          18188447699
+  Email:          Not provided
+  Tier:           VIP
+  Risk Status:    Dormant (82 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         12
+  Lifetime Value:       $219.92
+  Avg Transaction:      $18.33
+  Last Visit:           2025-08-01
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Bi-weekly
+  Expected Annual Visits:   26
+  Potential Annual Value:   $476.58
+  
+  ROI Analysis:
+  - Discount Budget:        $3.67 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           13000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           2
+  Priority:       6
+  Send Timing:    Week 2
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS + Email
+
+====================================================================================================

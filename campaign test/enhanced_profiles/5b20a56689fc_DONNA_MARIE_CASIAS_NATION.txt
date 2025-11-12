@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - DONNA MARIE CASIAS NATION
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5b20a56689fc9307fe1b2e7c
+  Phone:          13236691450
+  Email:          Not provided
+  Tier:           VIP
+  Risk Status:    Dormant (99 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    18
+  Total Revenue:         $486.67
+  Average Transaction:   $27.04
+  Median Transaction:    $17.64
+  Min Transaction:      $8.53
+  Max Transaction:      $74.74
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      32.2 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Saturday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Cash
+  Favorite Staff:        Bob McGinn
+
+  Payment Method Breakdown:
+    Cash             13 times ( 72.2%)
+    Credit            5 times ( 27.8%)
+
+  Staff Interaction Breakdown:
+    Bob McGinn             6 times ( 33.3%)
+    Jimmy Silks            6 times ( 33.3%)
+    Devon Calonzo          3 times ( 16.7%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    58
+  Unique Products:       38
+  Avg Items/Visit:       3.2
+  Favorite Category:     Edibles
+  Favorite Brand:        MOTA
+  Avg Item Price:        $9.89
+  Price Range:           $0.00 - $32.09
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            VIP
+  Engagement Level:      Medium
+  Loyalty Score:         Low
+  Price Sensitivity:     Budget
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              Valued Customer
+  Discount Level:        15-20%
+  Message Focus:         Edibles + MOTA
+  Channel:               SMS + Email
+  Timing:                Saturday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi DONNA, we miss you! 🌿
+   
+   We just restocked edibles from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME5B20A5
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  32 days between visits
+  Expected Annual Visits: 11
+  Potential Annual Value: $297.41
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $5.41 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        5500%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          6
+Wave:                    2
+Send Window:            Week 2
+Best Contact Time:      Saturday at 0:00
+Follow-up Schedule:     48 hours
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $27.04 (first visit)
+  Annual Value:          $297.41
+
+NOTES:
+  - Customer has been gone for 99 days
+  - Historical pattern: 18 visits, $486.67 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+====================================================================================================

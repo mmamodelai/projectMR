@@ -1,0 +1,478 @@
+{
+  "name": "MarketSuite Salesbot v4.106",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## 🚀 MarketSuite Salesbot v4.106\n\n**Purpose:** Persistent AI sales conversations for dispensary owners\n**Target:** Cannabis dispensaries seeking compliant SMS marketing\n**AI Persona:** MarketBot - Expert in cannabis compliance & SMS marketing\n\n**Key Features:**\n- Persistent conversation memory\n- Lead qualification & tracking\n- Compliance-focused messaging\n- POS integration capabilities\n- Event & inventory-based campaigns\n\n**Sales Flow:**\n1. Discovery → Pain points → Solution → Demo booking\n2. Focus on compliance, read rates, ROI\n3. Offer: AI-powered SMS system with human oversight",
+        "height": 500,
+        "width": 500,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1184,
+        192
+      ],
+      "id": "327e2e1c-c13a-415b-9851-49d12dd45c6f",
+      "name": "Salesbot Instructions"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "seconds"
+            }
+          ]
+        }
+      },
+      "id": "2d0aa6a1-31e4-4b6e-8ad6-2f2e7ef9dd90",
+      "name": "Poll Every 30s",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        1472,
+        944
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://kiwmwoqrguyrcpjytgte.supabase.co/rest/v1/messages?select=*&order=timestamp.desc&limit=50",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"
+            },
+            {
+              "name": "Authorization",
+              "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"
+            },
+            {
+              "name": "Accept",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a4a49551-ebde-4372-9f6d-dc6c0cd2430b",
+      "name": "Get Recent Messages",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1696,
+        944
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Fixed filter for Supabase array response\nconst messages = $input.all().map(item => item.json);\nconst unreadInbound = messages.filter(msg => msg.direction === 'inbound' && msg.status === 'unread');\nif (unreadInbound.length === 0) { return []; }\nreturn unreadInbound.map(msg => ({\n  json: {\n    message_id: msg.id,\n    phone_number: msg.phone_number,\n    incoming_message: msg.content,\n    timestamp: msg.timestamp,\n    conversation_history: `[${new Date(msg.timestamp).toLocaleString()}] User: ${msg.content}`,\n    total_messages: 1,\n    conversation_start: msg.timestamp,\n    conversation_duration: 'New conversation'\n  }\n}));"
+      },
+      "id": "8b4e2be3-b50a-4634-8156-30e1c20c4e08",
+      "name": "Filter Unread Messages",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1920,
+        944
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "user-message",
+              "name": "chatInput",
+              "value": "={{ $json.conversation_history }}\\n\\n[{{ $json.timestamp }}] Prospect: {{ $json.incoming_message }}\\n\\nConversation Stage: {{ $json.conversation_stage }}\\nMessage Count: {{ $json.message_count }}\\nIs New: {{ $json.is_new_conversation }}",
+              "type": "string"
+            },
+            {
+              "id": "phone-number",
+              "name": "phone_number",
+              "value": "={{ $json.phone_number }}",
+              "type": "string"
+            },
+            {
+              "id": "message-id",
+              "name": "message_id",
+              "value": "={{ $json.message_id }}",
+              "type": "number"
+            },
+            {
+              "id": "conversation-history",
+              "name": "conversation_history",
+              "value": "={{ $json.conversation_history }}",
+              "type": "string"
+            },
+            {
+              "id": "conversation-stage",
+              "name": "conversation_stage",
+              "value": "={{ $json.conversation_stage || 'discovery' }}",
+              "type": "string"
+            },
+            {
+              "id": "message-count",
+              "name": "message_count",
+              "value": "={{ $json.message_count }}",
+              "type": "number"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "08a4e6c3-d128-4171-bb69-90cbee848024",
+      "name": "Prepare for AI",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        2144,
+        944
+      ]
+    },
+    {
+      "parameters": {
+        "options": {
+          "systemMessage": "You are MarketBot — a SALES AGENT for MarketSuite. Audience: dispensary owners/GMs/marketing leads. Your job is to generate interest and BOOK A DEMO for MarketSuite's compliant, human‑sent 1:1 texting.\n\nPositioning (do not mention tools, hardware, or AI):\n- Most platforms now push link‑blasts that get ~30% reads.\n- MarketSuite delivers human‑sent, one‑to‑one texts customers actually open (near 100% reads).\n- Personalization uses the shop's data (purchases, favorites, inventory, events). We work with any POS.\n- Only contact opted‑in adults; honor STOP; no medical claims.\n- Human‑in‑the‑loop is on OUR side: MarketSuite reviews/approves outbound to keep quality and compliance tight.\n\nObjectives (always drive toward the next step):\n1) Discovery: understand goals (drive visits, move inventory, VIP/events), current results, and pain (low engagement, generic blasts).\n2) Value: explain read‑rate + revenue impact of human‑sent, data‑driven texts.\n3) Qualification: role and timeline.\n4) Conversion: propose a quick demo; offer examples if asked.\n\nSMS Style:\n- SHORT and punchy (TARGET ≤160 chars; NEVER exceed 300).\n- One idea per message; end with a single question/CTA.\n- No emojis unless user uses them first. No links unless requested.\n\nTalking points (pick 1–2 per reply):\n- Human‑sent 1:1 gets opened; link‑blasts don't.\n- Personalization from store data: back‑in‑stock, last‑purchase, VIP/event.\n- Compliance: opt‑in adults, respectful tone, easy opt‑out.\n- Outcomes: higher engagement, repeat visits, targeted promos.\n\nMicro‑templates (adapt to context, ≤160 chars):\n- \"Most tools send link‑blasts (~30% reads). We send human 1:1 texts people open. Want a 15‑min demo?\"\n- \"What are you trying to boost—new visits, repeat buyers, or event turnout? We tailor 1:1 texts. Quick walkthrough?\"\n- \"Back‑in‑stock or VIP invites perform great with human 1:1 texts. Want examples?\"\n\nDefault behavior: if unsure, ask about their goal (visits, inventory turns, events) and current read rates; always close with a clear CTA (e.g., \"Book a 15‑min demo this week?\")."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        2368,
+        944
+      ],
+      "id": "04a5aa72-e29e-4033-ba68-80ba762740f1",
+      "name": "MarketBot AI Agent"
+    },
+    {
+      "parameters": {
+        "model": "google/gemini-2.5-flash",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1,
+      "position": [
+        2288,
+        1168
+      ],
+      "id": "b4b074e2-b8e4-4823-9c12-e9fc8c5658f7",
+      "name": "OpenRouter Chat Model",
+      "credentials": {
+        "openRouterApi": {
+          "id": "daclOezIY0qSdW4Z",
+          "name": "OpenRouter account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Extract AI response and prepare for SMS sending\nlet aiResponse;\nif ($input.item.json.output) {\n  aiResponse = $input.item.json.output;\n} else if ($input.item.json.text) {\n  aiResponse = $input.item.json.text;\n} else {\n  aiResponse = $input.item.json.response || 'Hello! How can I help you with your dispensary SMS marketing?';\n}\n\n// CRITICAL: Get message_id from 'Prepare for AI' node - AI agent doesn't preserve it\nconst prepareNode = $('Prepare for AI').item.json;\nconst phoneNumber = prepareNode.phone_number;\nconst messageId = prepareNode.message_id;\nconst conversationStage = prepareNode.conversation_stage;\n\n// Log for debugging\nconsole.log('=== MarketBot Response Debug ===');\nconsole.log('Phone:', phoneNumber);\nconsole.log('Message ID:', messageId, 'Type:', typeof messageId);\nconsole.log('Stage:', conversationStage);\nconsole.log('AI Response length:', aiResponse?.length);\n\nif (!messageId) {\n  throw new Error('Message ID is missing from Prepare for AI node!');\n}\n\n// Track lead qualification\nlet leadStatus = 'new';\nif (conversationStage === 'qualification') {\n  leadStatus = 'qualified';\n} else if (conversationStage === 'demo') {\n  leadStatus = 'demo_scheduled';\n}\n\nreturn {\n  json: {\n    phone_number: phoneNumber,\n    message_id: messageId,\n    message: aiResponse,\n    original_message_id: messageId,\n    ai_full_response: aiResponse,\n    conversation_stage: conversationStage,\n    lead_status: leadStatus\n  }\n};"
+      },
+      "id": "e64ecbee-433b-43b3-9264-3dd81c44d0fb",
+      "name": "Prepare SMS Response",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2720,
+        944
+      ]
+    },
+    {
+      "parameters": {
+        "method": "PATCH",
+        "url": "={{ 'https://kiwmwoqrguyrcpjytgte.supabase.co/rest/v1/messages?id=eq.' + $json.message_id }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"
+            },
+            {
+              "name": "Authorization",
+              "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "Prefer",
+              "value": "return=representation"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ status: 'read', updated_at: new Date().toISOString() }) }}",
+        "options": {}
+      },
+      "id": "ea7d7f86-a3fe-4877-bf04-3fa69c444020",
+      "name": "Mark Message as Read",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2944,
+        944
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://kiwmwoqrguyrcpjytgte.supabase.co/rest/v1/leads",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"
+            },
+            {
+              "name": "Authorization",
+              "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "Prefer",
+              "value": "return=representation"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ phone_number: $('Prepare SMS Response').item.json.phone_number, lead_status: $('Prepare SMS Response').item.json.lead_status, conversation_stage: $('Prepare SMS Response').item.json.conversation_stage, last_message: $('Prepare SMS Response').item.json.message, created_at: new Date().toISOString() }) }}",
+        "options": {}
+      },
+      "id": "ca1e6b19-349b-4531-82e7-d29c49f9ac8e",
+      "name": "Track Lead",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2944,
+        1136
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Sanitize and split into chunks\nconst prepare = $('Prepare SMS Response').item.json;\nlet text = (prepare.message || '')\n  .replace(/[\\r\\n]+/g, ' ')\n  .replace(/[\"\"]/g, '\"')\n  .replace(/['']/g, \"'\")\n  .replace(/[–—]/g, '-')\n  .replace(/…/g, '...')\n  .replace(/[^\\x20-\\x7E]/g, '')\n  .replace(/\\s+/g, ' ')\n  .trim();\n\n// Split into chunks of 150 chars max\nconst limit = 150;\nconst chunks = [];\nwhile (text.length > 0) {\n  if (text.length <= limit) { \n    chunks.push(text); \n    break; \n  }\n  let i = text.lastIndexOf(' ', limit);\n  if (i === -1) i = limit;\n  chunks.push(text.slice(0, i).trim());\n  text = text.slice(i).trim();\n}\n\n// Create separate items for each chunk with index\nconst result = [];\nfor (let i = 0; i < chunks.length; i++) {\n  result.push({\n    json: {\n      phone_number: prepare.phone_number,\n      content: chunks[i],\n      chunk_index: i,\n      total_chunks: chunks.length\n    }\n  });\n}\n\nconsole.log(`Split into ${result.length} chunks`);\nreturn result;"
+      },
+      "id": "ae58bcd1-39ed-4523-9fbf-d939b2628a6d",
+      "name": "Split Into Chunks",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2944,
+        752
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Add delay based on chunk index\nconst chunkIndex = $input.item.json.chunk_index;\nconst delayMs = chunkIndex * 750; // 750ms between chunks\n\nconsole.log(`Delaying chunk ${chunkIndex + 1}/${$input.item.json.total_chunks} for ${delayMs}ms`);\nawait new Promise(r => setTimeout(r, delayMs));\n\nreturn $input.item;"
+      },
+      "id": "delay-by-index",
+      "name": "Delay By Index",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        3168,
+        752
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://kiwmwoqrguyrcpjytgte.supabase.co/rest/v1/messages",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"
+            },
+            {
+              "name": "Authorization",
+              "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "Prefer",
+              "value": "return=representation"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ phone_number: $json.phone_number, content: $json.content, status: 'queued', direction: 'outbound' }) }}",
+        "options": {}
+      },
+      "id": "998c88cb-16e1-47e3-b927-97bdc9fa3ca8",
+      "name": "Send Chunk",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        3392,
+        752
+      ]
+    },
+    {
+      "parameters": {
+        "contextWindowLength": 10
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        2464,
+        1184
+      ],
+      "id": "edb3b26a-7304-45fd-b5ea-b02bdf890359",
+      "name": "Simple Memory"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Poll Every 30s": {
+      "main": [
+        [
+          {
+            "node": "Get Recent Messages",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Recent Messages": {
+      "main": [
+        [
+          {
+            "node": "Filter Unread Messages",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter Unread Messages": {
+      "main": [
+        [
+          {
+            "node": "Prepare for AI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare for AI": {
+      "main": [
+        [
+          {
+            "node": "MarketBot AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "MarketBot AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Prepare SMS Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenRouter Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "MarketBot AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare SMS Response": {
+      "main": [
+        [
+          {
+            "node": "Mark Message as Read",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Split Into Chunks",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mark Message as Read": {
+      "main": [
+        [
+          {
+            "node": "Track Lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Into Chunks": {
+      "main": [
+        [
+          {
+            "node": "Delay By Index",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Delay By Index": {
+      "main": [
+        [
+          {
+            "node": "Send Chunk",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "MarketBot AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "meta": {
+    "instanceId": "daf1db1234fdfcbbfb53be5e1fe26764ab505fd0554977269bee03ef4bae6464"
+  },
+  "tags": []
+}

@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - MATTHEW BARNES
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5e76770775276d08c6b3c538
+  Phone:          14013006248
+  Email:          Not provided
+  Tier:           Super VIP
+  Risk Status:    Cooling (53 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         28
+  Lifetime Value:       $626.05
+  Avg Transaction:      $22.36
+  Last Visit:           2025-08-30
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Weekly
+  Expected Annual Visits:   52
+  Potential Annual Value:   $1,162.72
+  
+  ROI Analysis:
+  - Discount Budget:        $4.47 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           26000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           1
+  Priority:       1
+  Send Timing:    Week 1 - URGENT
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS+ Email + Call
+
+====================================================================================================

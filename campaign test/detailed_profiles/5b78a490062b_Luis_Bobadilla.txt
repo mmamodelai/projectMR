@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - LUIS BOBADILLA
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5b78a490062bd807d595fb86
+  Phone:          16193683370
+  Email:          Not provided
+  Tier:           VIP
+  Risk Status:    Inactive (113 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         13
+  Lifetime Value:       $499.16
+  Avg Transaction:      $38.40
+  Last Visit:           2025-07-01
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Bi-weekly
+  Expected Annual Visits:   26
+  Potential Annual Value:   $998.40
+  
+  ROI Analysis:
+  - Discount Budget:        $7.68 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           13000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           3
+  Priority:       7
+  Send Timing:    Week 3
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS + Email
+
+====================================================================================================

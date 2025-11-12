@@ -1,0 +1,56 @@
+
+================================================================================
+CUSTOMER SNAPSHOT - WILLIAM MOTA FORGEY
+================================================================================
+
+CONTACT INFORMATION:
+  Phone:          18185184574
+  Email:          Not provided
+  Customer ID:    5d3a6f40af3f5807f18cdb8c
+
+TIER & STATUS:
+  Tier:           Super VIP
+  Risk Status:    Cooling
+  Campaign Wave:  Wave 1 Priority
+
+ENGAGEMENT METRICS:
+  Last Visit:           2025-08-21
+  Days Since Last:      62 days
+  Total Visits:         42
+  Visit Frequency:      Weekly (when active)
+  
+VALUE METRICS:
+  Lifetime Value:       $889.56
+  Average Transaction:  $21.18
+  Estimated Annual:     $1,101.36 (if reactivated)
+
+URGENCY ASSESSMENT:
+  Level:          MEDIUM - Cooling Off
+  Recommended:    Light touch, promotional offer
+
+REACTIVATION STRATEGY:
+
+  Approach:       VIP Treatment
+  Offer:          20-30% off + exclusive product access
+  Message:        "We miss you! As one of our top customers, we'd love to 
+                  welcome you back with a special VIP offer..."
+  Channel:        SMS + Email (if available) + Follow-up call
+  Budget:         Up to $6.35 discount value
+
+CAMPAIGN TIMING:
+  Send Window:    Week 1 - Send immediately
+  Best Time:      Afternoon (2-5 PM) based on customer tier
+  Follow-up:      48 hours if no response
+
+SUCCESS METRICS:
+  Target ROI:     300%
+  Break-even:     1 visit at $21.18
+  Goal:           Restore to Weekly visits
+
+NOTES:
+  - Customer has been gone for 62 days
+  - Historical pattern: 42 visits, $889.56 total spent
+  - Standard campaign approach
+  - Consider phone call if SMS doesn't convert
+
+================================================================================

@@ -1,0 +1,55 @@
+
+================================================================================
+CUSTOMER SNAPSHOT - ALAN TEMAN
+================================================================================
+
+CONTACT INFORMATION:
+  Phone:          13238648582
+  Email:          Not provided
+  Customer ID:    5ea9e4391ba43208c7e3cbcf
+
+TIER & STATUS:
+  Tier:           VIP
+  Risk Status:    Inactive
+  Campaign Wave:  Wave 3 Priority
+
+ENGAGEMENT METRICS:
+  Last Visit:           2025-07-08
+  Days Since Last:      106 days
+  Total Visits:         14
+  Visit Frequency:      Bi-weekly (when active)
+  
+VALUE METRICS:
+  Lifetime Value:       $338.61
+  Average Transaction:  $24.19
+  Estimated Annual:     $628.94 (if reactivated)
+
+URGENCY ASSESSMENT:
+  Level:          URGENT - Nearly Lost
+  Recommended:    Premium offer, call if possible
+
+REACTIVATION STRATEGY:
+
+  Approach:       Valued Customer
+  Offer:          15-20% off + loyalty bonus
+  Message:        "It's been a while! We have some new products you'd love..."
+  Channel:        SMS + Email (if available)
+  Budget:         Up to $4.84 discount value
+
+CAMPAIGN TIMING:
+  Send Window:    Week 2-3 - Urgent
+  Best Time:      Afternoon (2-5 PM) based on customer tier
+  Follow-up:      48 hours if no response
+
+SUCCESS METRICS:
+  Target ROI:     200%
+  Break-even:     1 visit at $24.19
+  Goal:           Restore to Bi-weekly visits
+
+NOTES:
+  - Customer has been gone for 106 days
+  - Historical pattern: 14 visits, $338.61 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+================================================================================

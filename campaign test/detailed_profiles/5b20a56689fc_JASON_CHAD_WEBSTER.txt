@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - JASON CHAD WEBSTER
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5b20a56689fc9307fe1b35b5
+  Phone:          13234451127
+  Email:          Not provided
+  Tier:           Regular
+  Risk Status:    Inactive (108 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         7
+  Lifetime Value:       $208.56
+  Avg Transaction:      $29.79
+  Last Visit:           2025-07-06
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Monthly
+  Expected Annual Visits:   12
+  Potential Annual Value:   $357.48
+  
+  ROI Analysis:
+  - Discount Budget:        $5.96 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           6000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           3
+  Priority:       11
+  Send Timing:    Week 3
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS
+
+====================================================================================================

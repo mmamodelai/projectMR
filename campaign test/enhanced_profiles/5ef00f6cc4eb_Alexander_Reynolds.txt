@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - ALEXANDER REYNOLDS
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5ef00f6cc4eb4d08d0c60242
+  Phone:          17472561992
+  Email:          Not provided
+  Tier:           Regular
+  Risk Status:    Dormant (80 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    6
+  Total Revenue:         $181.13
+  Average Transaction:   $30.19
+  Median Transaction:    $19.55
+  Min Transaction:      $4.00
+  Max Transaction:      $104.46
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      109.6 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Friday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Credit
+  Favorite Staff:        Jimmy Silks
+
+  Payment Method Breakdown:
+    Credit            5 times ( 83.3%)
+    Cash              1 times ( 16.7%)
+
+  Staff Interaction Breakdown:
+    Jimmy Silks            2 times ( 33.3%)
+    Leo Salguero           1 times ( 16.7%)
+    Jacob Vangellow        1 times ( 16.7%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    14
+  Unique Products:       11
+  Avg Items/Visit:       2.3
+  Favorite Category:     Flower PrePacks
+  Favorite Brand:        MOTA
+  Avg Item Price:        $15.69
+  Price Range:           $0.00 - $38.17
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            Regular
+  Engagement Level:      Low
+  Loyalty Score:         Low
+  Price Sensitivity:     Moderate
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              Win-Back Offer
+  Discount Level:        10-15%
+  Message Focus:         Flower PrePacks + MOTA
+  Channel:               SMS
+  Timing:                Friday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi Alexander, we miss you! 🌿
+   
+   We just restocked flower prepacks from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME5EF00F
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  110 days between visits
+  Expected Annual Visits: 3
+  Potential Annual Value: $90.56
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $6.04 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        1500%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          10
+Wave:                    2
+Send Window:            Week 2
+Best Contact Time:      Friday at 0:00
+Follow-up Schedule:     None
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $30.19 (first visit)
+  Annual Value:          $90.56
+
+NOTES:
+  - Customer has been gone for 80 days
+  - Historical pattern: 6 visits, $181.13 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+====================================================================================================

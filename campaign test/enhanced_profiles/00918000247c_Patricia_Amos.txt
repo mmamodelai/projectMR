@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - PATRICIA AMOS
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    00918000247c009030006015
+  Phone:          13235221357
+  Email:          Not provided
+  Tier:           VIP
+  Risk Status:    At Risk (162 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    13
+  Total Revenue:         $168.83
+  Average Transaction:   $12.99
+  Median Transaction:    $4.00
+  Min Transaction:      $1.00
+  Max Transaction:      $45.00
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      40.8 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Tuesday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Cash
+  Favorite Staff:        Bob McGinn
+
+  Payment Method Breakdown:
+    Cash             11 times ( 84.6%)
+    Credit            2 times ( 15.4%)
+
+  Staff Interaction Breakdown:
+    Bob McGinn             4 times ( 30.8%)
+    Devon Calonzo          3 times ( 23.1%)
+    Jimmy Silks            3 times ( 23.1%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    52
+  Unique Products:       25
+  Avg Items/Visit:       4.0
+  Favorite Category:     Flower PrePacks
+  Favorite Brand:        MOTA
+  Avg Item Price:        $5.96
+  Price Range:           $0.00 - $21.00
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            VIP
+  Engagement Level:      Medium
+  Loyalty Score:         Low
+  Price Sensitivity:     Budget
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              Valued Customer
+  Discount Level:        15-20%
+  Message Focus:         Flower PrePacks + MOTA
+  Channel:               SMS + Email
+  Timing:                Tuesday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi Patricia, we miss you! 🌿
+   
+   We just restocked flower prepacks from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME009180
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  41 days between visits
+  Expected Annual Visits: 8
+  Potential Annual Value: $103.90
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $2.60 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        4000%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          8
+Wave:                    4
+Send Window:            Week 4
+Best Contact Time:      Tuesday at 0:00
+Follow-up Schedule:     48 hours
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $12.99 (first visit)
+  Annual Value:          $103.90
+
+NOTES:
+  - Customer has been gone for 162 days
+  - Historical pattern: 13 visits, $168.83 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+====================================================================================================

@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - JENNIFER MALONE
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    60ce7c2c71c80f3efbe15cfe
+  Phone:          16179438290
+  Email:          Not provided
+  Tier:           VIP
+  Risk Status:    At Risk (136 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         11
+  Lifetime Value:       $321.82
+  Avg Transaction:      $29.26
+  Last Visit:           2025-06-08
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Bi-weekly
+  Expected Annual Visits:   26
+  Potential Annual Value:   $760.76
+  
+  ROI Analysis:
+  - Discount Budget:        $5.85 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           13000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           4
+  Priority:       8
+  Send Timing:    Week 4
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS + Email
+
+====================================================================================================

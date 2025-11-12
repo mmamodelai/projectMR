@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - ADRIAN JAVIER UBENCE
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5b20a56589fc9307fe1b2275
+  Phone:          19098355209
+  Email:          Not provided
+  Tier:           VIP
+  Risk Status:    Cooling (62 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    10
+  Total Revenue:         $324.04
+  Average Transaction:   $32.40
+  Median Transaction:    $23.00
+  Min Transaction:      $7.50
+  Max Transaction:      $122.93
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      51.7 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Monday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Cash
+  Favorite Staff:        Jimmy Silks
+
+  Payment Method Breakdown:
+    Cash              6 times ( 60.0%)
+    Credit            4 times ( 40.0%)
+
+  Staff Interaction Breakdown:
+    Jimmy Silks            3 times ( 30.0%)
+    Jacob Vangellow        3 times ( 30.0%)
+    Bob McGinn             2 times ( 20.0%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    40
+  Unique Products:       27
+  Avg Items/Visit:       4.0
+  Favorite Category:     Edibles
+  Favorite Brand:        MOTA
+  Avg Item Price:        $9.46
+  Price Range:           $0.00 - $38.17
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            VIP
+  Engagement Level:      Low
+  Loyalty Score:         Low
+  Price Sensitivity:     Moderate
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              Valued Customer
+  Discount Level:        15-20%
+  Message Focus:         Edibles + MOTA
+  Channel:               SMS + Email
+  Timing:                Monday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi ADRIAN, we miss you! 🌿
+   
+   We just restocked edibles from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME5B20A5
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  52 days between visits
+  Expected Annual Visits: 7
+  Potential Annual Value: $226.83
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $6.48 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        3500%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          5
+Wave:                    1
+Send Window:            Week 1 - URGENT
+Best Contact Time:      Monday at 0:00
+Follow-up Schedule:     48 hours
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $32.40 (first visit)
+  Annual Value:          $226.83
+
+NOTES:
+  - Customer has been gone for 62 days
+  - Historical pattern: 10 visits, $324.04 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+====================================================================================================

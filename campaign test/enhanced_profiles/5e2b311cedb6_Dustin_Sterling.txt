@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - DUSTIN STERLING
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5e2b311cedb659084cbba0e1
+  Phone:          18187492729
+  Email:          Not provided
+  Tier:           VIP
+  Risk Status:    Cooling (54 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    10
+  Total Revenue:         $259.89
+  Average Transaction:   $25.99
+  Median Transaction:    $16.74
+  Min Transaction:      $8.50
+  Max Transaction:      $63.19
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      64.8 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Friday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Cash
+  Favorite Staff:        Jimmy Silks
+
+  Payment Method Breakdown:
+    Cash              5 times ( 50.0%)
+    Credit            5 times ( 50.0%)
+
+  Staff Interaction Breakdown:
+    Jimmy Silks            2 times ( 20.0%)
+    Lizbeth Garcia         2 times ( 20.0%)
+    Bob McGinn             2 times ( 20.0%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    32
+  Unique Products:       27
+  Avg Items/Visit:       3.2
+  Favorite Category:     Flower PrePacks
+  Favorite Brand:        MOTA
+  Avg Item Price:        $9.65
+  Price Range:           $0.00 - $38.17
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            VIP
+  Engagement Level:      Low
+  Loyalty Score:         Low
+  Price Sensitivity:     Budget
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              Valued Customer
+  Discount Level:        15-20%
+  Message Focus:         Flower PrePacks + MOTA
+  Channel:               SMS + Email
+  Timing:                Friday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi Dustin, we miss you! 🌿
+   
+   We just restocked flower prepacks from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME5E2B31
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  65 days between visits
+  Expected Annual Visits: 5
+  Potential Annual Value: $129.94
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $5.20 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        2500%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          5
+Wave:                    1
+Send Window:            Week 1 - URGENT
+Best Contact Time:      Friday at 0:00
+Follow-up Schedule:     48 hours
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $25.99 (first visit)
+  Annual Value:          $129.94
+
+NOTES:
+  - Customer has been gone for 54 days
+  - Historical pattern: 10 visits, $259.89 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+====================================================================================================

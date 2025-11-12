@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - ADRIAN VALENZUELA
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    626430bea31130531051a84d
+  Phone:          16263745616
+  Email:          Not provided
+  Tier:           Super VIP
+  Risk Status:    Dormant (84 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    21
+  Total Revenue:         $1,013.25
+  Average Transaction:   $48.25
+  Median Transaction:    $41.24
+  Min Transaction:      $11.56
+  Max Transaction:      $116.00
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      27.6 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Friday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Cash
+  Favorite Staff:        Bob McGinn
+
+  Payment Method Breakdown:
+    Cash             11 times ( 52.4%)
+    Credit           10 times ( 47.6%)
+
+  Staff Interaction Breakdown:
+    Bob McGinn            10 times ( 47.6%)
+    Devon Calonzo          5 times ( 23.8%)
+    Jimmy Silks            3 times ( 14.3%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    63
+  Unique Products:       19
+  Avg Items/Visit:       3.0
+  Favorite Category:     CBD & Topical
+  Favorite Brand:        Breez
+  Avg Item Price:        $13.44
+  Price Range:           $0.00 - $34.19
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            Super VIP
+  Engagement Level:      High
+  Loyalty Score:         Medium
+  Price Sensitivity:     Moderate
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              VIP Treatment
+  Discount Level:        20-30%
+  Message Focus:         CBD & Topical + Breez
+  Channel:               SMS + Email + Call
+  Timing:                Friday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi Adrian, we miss you! 🌿
+   
+   We just restocked cbd & topical from Breez - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME626430
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  28 days between visits
+  Expected Annual Visits: 13
+  Potential Annual Value: $627.25
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $9.65 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        6500%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          2
+Wave:                    2
+Send Window:            Week 2
+Best Contact Time:      Friday at 0:00
+Follow-up Schedule:     48 hours
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $48.25 (first visit)
+  Annual Value:          $627.25
+
+NOTES:
+  - Customer has been gone for 84 days
+  - Historical pattern: 21 visits, $1,013.25 total spent
+  - HIGH VALUE - Personal follow-up recommended
+  - Consider phone call if SMS doesn't convert
+
+====================================================================================================

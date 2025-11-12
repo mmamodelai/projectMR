@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - JENNIFER LECHEVALLIER
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    64a061bd194bb94cb2ca696a
+  Phone:          13236520432
+  Email:          Not provided
+  Tier:           Super VIP
+  Risk Status:    At Risk (156 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    21
+  Total Revenue:         $1,236.23
+  Average Transaction:   $58.87
+  Median Transaction:    $73.24
+  Min Transaction:      $9.14
+  Max Transaction:      $93.56
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      23.5 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Monday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Credit
+  Favorite Staff:        Jacob Vangellow
+
+  Payment Method Breakdown:
+    Credit           17 times ( 81.0%)
+    Cash              4 times ( 19.0%)
+
+  Staff Interaction Breakdown:
+    Jacob Vangellow       11 times ( 52.4%)
+    Devon Calonzo          5 times ( 23.8%)
+    Jimmy Silks            2 times (  9.5%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    65
+  Unique Products:       30
+  Avg Items/Visit:       3.1
+  Favorite Category:     Edibles
+  Favorite Brand:        Kiva
+  Avg Item Price:        $18.64
+  Price Range:           $0.00 - $53.33
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            Super VIP
+  Engagement Level:      High
+  Loyalty Score:         Medium
+  Price Sensitivity:     Moderate
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              VIP Treatment
+  Discount Level:        20-30%
+  Message Focus:         Edibles + Kiva
+  Channel:               SMS + Email + Call
+  Timing:                Monday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi Jennifer, we miss you! 🌿
+   
+   We just restocked edibles from Kiva - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME64A061
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  24 days between visits
+  Expected Annual Visits: 15
+  Potential Annual Value: $883.02
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $11.77 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        7500%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          4
+Wave:                    4
+Send Window:            Week 4
+Best Contact Time:      Monday at 0:00
+Follow-up Schedule:     48 hours
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $58.87 (first visit)
+  Annual Value:          $883.02
+
+NOTES:
+  - Customer has been gone for 156 days
+  - Historical pattern: 21 visits, $1,236.23 total spent
+  - HIGH VALUE - Personal follow-up recommended
+  - Consider phone call if SMS doesn't convert
+
+====================================================================================================

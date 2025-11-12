@@ -1,0 +1,56 @@
+
+================================================================================
+CUSTOMER SNAPSHOT - JULIO ORTIZ
+================================================================================
+
+CONTACT INFORMATION:
+  Phone:          12132194353
+  Email:          Not provided
+  Customer ID:    5d770009334df1081b6c4084
+
+TIER & STATUS:
+  Tier:           Super VIP
+  Risk Status:    Cooling
+  Campaign Wave:  Wave 1 Priority
+
+ENGAGEMENT METRICS:
+  Last Visit:           2025-08-11
+  Days Since Last:      72 days
+  Total Visits:         29
+  Visit Frequency:      Weekly (when active)
+  
+VALUE METRICS:
+  Lifetime Value:       $690.97
+  Average Transaction:  $23.83
+  Estimated Annual:     $1,239.16 (if reactivated)
+
+URGENCY ASSESSMENT:
+  Level:          MEDIUM - Cooling Off
+  Recommended:    Light touch, promotional offer
+
+REACTIVATION STRATEGY:
+
+  Approach:       VIP Treatment
+  Offer:          20-30% off + exclusive product access
+  Message:        "We miss you! As one of our top customers, we'd love to 
+                  welcome you back with a special VIP offer..."
+  Channel:        SMS + Email (if available) + Follow-up call
+  Budget:         Up to $7.15 discount value
+
+CAMPAIGN TIMING:
+  Send Window:    Week 1 - Send immediately
+  Best Time:      Afternoon (2-5 PM) based on customer tier
+  Follow-up:      48 hours if no response
+
+SUCCESS METRICS:
+  Target ROI:     300%
+  Break-even:     1 visit at $23.83
+  Goal:           Restore to Weekly visits
+
+NOTES:
+  - Customer has been gone for 72 days
+  - Historical pattern: 29 visits, $690.97 total spent
+  - Standard campaign approach
+  - Consider phone call if SMS doesn't convert
+
+================================================================================

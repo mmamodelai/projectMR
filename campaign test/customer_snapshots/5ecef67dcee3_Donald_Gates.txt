@@ -1,0 +1,55 @@
+
+================================================================================
+CUSTOMER SNAPSHOT - DONALD GATES
+================================================================================
+
+CONTACT INFORMATION:
+  Phone:          13237179550
+  Email:          Not provided
+  Customer ID:    5ecef67dcee3d308dec752dc
+
+TIER & STATUS:
+  Tier:           VIP
+  Risk Status:    At Risk
+  Campaign Wave:  Wave 4 Priority
+
+ENGAGEMENT METRICS:
+  Last Visit:           2025-05-16
+  Days Since Last:      159 days
+  Total Visits:         10
+  Visit Frequency:      Monthly (when active)
+  
+VALUE METRICS:
+  Lifetime Value:       $292.41
+  Average Transaction:  $29.24
+  Estimated Annual:     $350.88 (if reactivated)
+
+URGENCY ASSESSMENT:
+  Level:          CRITICAL - At Risk of Lost Forever
+  Recommended:    Maximum effort, best offer
+
+REACTIVATION STRATEGY:
+
+  Approach:       Valued Customer
+  Offer:          15-20% off + loyalty bonus
+  Message:        "It's been a while! We have some new products you'd love..."
+  Channel:        SMS + Email (if available)
+  Budget:         Up to $5.85 discount value
+
+CAMPAIGN TIMING:
+  Send Window:    Week 1 - CRITICAL, send ASAP
+  Best Time:      Afternoon (2-5 PM) based on customer tier
+  Follow-up:      48 hours if no response
+
+SUCCESS METRICS:
+  Target ROI:     200%
+  Break-even:     1 visit at $29.24
+  Goal:           Restore to Monthly visits
+
+NOTES:
+  - Customer has been gone for 159 days
+  - Historical pattern: 10 visits, $292.41 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+================================================================================

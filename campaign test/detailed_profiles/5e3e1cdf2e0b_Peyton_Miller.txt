@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - PEYTON MILLER
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5e3e1cdf2e0bdd083358dcd3
+  Phone:          16194384219
+  Email:          Not provided
+  Tier:           VIP
+  Risk Status:    Cooling (51 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         17
+  Lifetime Value:       $601.45
+  Avg Transaction:      $35.38
+  Last Visit:           2025-09-01
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Bi-weekly
+  Expected Annual Visits:   26
+  Potential Annual Value:   $919.88
+  
+  ROI Analysis:
+  - Discount Budget:        $7.08 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           13000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           1
+  Priority:       5
+  Send Timing:    Week 1 - URGENT
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS + Email
+
+====================================================================================================

@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - HEIDI BIVENS
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5e5c3214fac41f08585179c9
+  Phone:          16465220432
+  Email:          Not provided
+  Tier:           Regular
+  Risk Status:    Dormant (98 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    5
+  Total Revenue:         $502.63
+  Average Transaction:   $100.53
+  Median Transaction:    $80.13
+  Min Transaction:      $58.31
+  Max Transaction:      $199.75
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      46.2 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Wednesday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Cash
+  Favorite Staff:        Leo Salguero
+
+  Payment Method Breakdown:
+    Cash              3 times ( 60.0%)
+    Credit            2 times ( 40.0%)
+
+  Staff Interaction Breakdown:
+    Leo Salguero           1 times ( 20.0%)
+    Jimmy Silks            1 times ( 20.0%)
+    Bob McGinn             1 times ( 20.0%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    17
+  Unique Products:       13
+  Avg Items/Visit:       3.4
+  Favorite Category:     Flower PrePacks
+  Favorite Brand:        MOTA
+  Avg Item Price:        $33.69
+  Price Range:           $0.71 - $115.24
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            Regular
+  Engagement Level:      Low
+  Loyalty Score:         Low
+  Price Sensitivity:     Premium
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              Win-Back Offer
+  Discount Level:        10-15%
+  Message Focus:         Flower PrePacks + MOTA
+  Channel:               SMS
+  Timing:                Wednesday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi Heidi, we miss you! 🌿
+   
+   We just restocked flower prepacks from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME5E5C32
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  46 days between visits
+  Expected Annual Visits: 7
+  Potential Annual Value: $703.68
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $20.11 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        3500%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          10
+Wave:                    2
+Send Window:            Week 2
+Best Contact Time:      Wednesday at 0:00
+Follow-up Schedule:     None
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $100.53 (first visit)
+  Annual Value:          $703.68
+
+NOTES:
+  - Customer has been gone for 98 days
+  - Historical pattern: 5 visits, $502.63 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+====================================================================================================

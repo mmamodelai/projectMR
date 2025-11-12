@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - JAMES TURNER
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    60a6c99581b8eb1f840e0076
+  Phone:          16307407664
+  Email:          Not provided
+  Tier:           Regular
+  Risk Status:    Dormant (77 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         8
+  Lifetime Value:       $202.46
+  Avg Transaction:      $25.31
+  Last Visit:           2025-08-06
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Monthly
+  Expected Annual Visits:   12
+  Potential Annual Value:   $303.72
+  
+  ROI Analysis:
+  - Discount Budget:        $5.06 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           6000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           2
+  Priority:       10
+  Send Timing:    Week 2
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS
+
+====================================================================================================

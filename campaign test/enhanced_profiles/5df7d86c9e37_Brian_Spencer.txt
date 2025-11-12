@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - BRIAN SPENCER
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5df7d86c9e374108375a1795
+  Phone:          15172824314
+  Email:          Not provided
+  Tier:           VIP
+  Risk Status:    At Risk (186 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    11
+  Total Revenue:         $420.91
+  Average Transaction:   $38.26
+  Median Transaction:    $25.92
+  Min Transaction:      $4.40
+  Max Transaction:      $111.28
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      40.0 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Monday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Cash
+  Favorite Staff:        Devon Calonzo
+
+  Payment Method Breakdown:
+    Cash              7 times ( 63.6%)
+    Credit            4 times ( 36.4%)
+
+  Staff Interaction Breakdown:
+    Devon Calonzo          3 times ( 27.3%)
+    Jacob Vangellow        2 times ( 18.2%)
+    Jimmy Silks            2 times ( 18.2%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    31
+  Unique Products:       26
+  Avg Items/Visit:       2.8
+  Favorite Category:     Flower PrePacks
+  Favorite Brand:        MOTA
+  Avg Item Price:        $12.97
+  Price Range:           $0.00 - $39.07
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            VIP
+  Engagement Level:      Medium
+  Loyalty Score:         Low
+  Price Sensitivity:     Moderate
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              Valued Customer
+  Discount Level:        15-20%
+  Message Focus:         Flower PrePacks + MOTA
+  Channel:               SMS + Email
+  Timing:                Monday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi Brian, we miss you! 🌿
+   
+   We just restocked flower prepacks from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME5DF7D8
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  40 days between visits
+  Expected Annual Visits: 9
+  Potential Annual Value: $344.38
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $7.65 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        4500%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          8
+Wave:                    4
+Send Window:            Week 4
+Best Contact Time:      Monday at 0:00
+Follow-up Schedule:     48 hours
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $38.26 (first visit)
+  Annual Value:          $344.38
+
+NOTES:
+  - Customer has been gone for 186 days
+  - Historical pattern: 11 visits, $420.91 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+====================================================================================================

@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - MAMOUN (3 JARS  12 TUBES) CHRAIBI
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5b20a56689fc9307fe1b3ef0
+  Phone:          14074846665
+  Email:          Not provided
+  Tier:           VIP
+  Risk Status:    Dormant (92 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    11
+  Total Revenue:         $375.83
+  Average Transaction:   $34.17
+  Median Transaction:    $22.05
+  Min Transaction:      $18.84
+  Max Transaction:      $81.46
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      19.5 days
+  Visit Frequency:       Bi-weekly
+  Preferred Day:         Thursday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Cash
+  Favorite Staff:        Jimmy Silks
+
+  Payment Method Breakdown:
+    Cash             10 times ( 90.9%)
+    Credit            1 times (  9.1%)
+
+  Staff Interaction Breakdown:
+    Jimmy Silks            4 times ( 36.4%)
+    Bob McGinn             3 times ( 27.3%)
+    Jacob Vangellow        2 times ( 18.2%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    39
+  Unique Products:       13
+  Avg Items/Visit:       3.5
+  Favorite Category:     Flower PrePacks
+  Favorite Brand:        MOTA
+  Avg Item Price:        $11.82
+  Price Range:           $3.50 - $38.17
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            VIP
+  Engagement Level:      Medium
+  Loyalty Score:         Medium
+  Price Sensitivity:     Moderate
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              Valued Customer
+  Discount Level:        15-20%
+  Message Focus:         Flower PrePacks + MOTA
+  Channel:               SMS + Email
+  Timing:                Thursday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi MAMOUN, we miss you! 🌿
+   
+   We just restocked flower prepacks from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME5B20A5
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  20 days between visits
+  Expected Annual Visits: 18
+  Potential Annual Value: $614.99
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $6.83 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        9000%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          6
+Wave:                    2
+Send Window:            Week 2
+Best Contact Time:      Thursday at 0:00
+Follow-up Schedule:     48 hours
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $34.17 (first visit)
+  Annual Value:          $614.99
+
+NOTES:
+  - Customer has been gone for 92 days
+  - Historical pattern: 11 visits, $375.83 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+====================================================================================================

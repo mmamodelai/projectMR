@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - MATTHEW MESHER
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    623e140b1a913c2295b9ba2c
+  Phone:          18183174917
+  Email:          Not provided
+  Tier:           Super VIP
+  Risk Status:    Inactive (116 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         22
+  Lifetime Value:       $934.86
+  Avg Transaction:      $42.49
+  Last Visit:           2025-06-28
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Weekly
+  Expected Annual Visits:   52
+  Potential Annual Value:   $2,209.48
+  
+  ROI Analysis:
+  - Discount Budget:        $8.50 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           26000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           3
+  Priority:       3
+  Send Timing:    Week 3
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS+ Email + Call
+
+====================================================================================================

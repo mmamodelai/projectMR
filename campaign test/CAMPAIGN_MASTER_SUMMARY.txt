@@ -1,0 +1,77 @@
+
+================================================================================
+AT-RISK CUSTOMER REACTIVATION CAMPAIGN
+Master Summary Report
+Generated: 2025-10-22 22:10
+================================================================================
+
+CAMPAIGN OVERVIEW:
+  Total Customers:        239
+  Total At-Risk Value:    $142,092.95
+  Average Customer Value: $594.53
+
+BREAKDOWN BY TIER:
+  Super VIP      57 customers  $ 72,604.74 total value
+  VIP            81 customers  $ 40,240.24 total value
+  Regular       101 customers  $ 29,247.97 total value
+
+BREAKDOWN BY RISK STATUS:
+  Cooling        64 customers  $ 39,651.15 total value
+  Dormant        66 customers  $ 36,102.14 total value
+  Inactive       47 customers  $ 32,254.47 total value
+  At Risk        62 customers  $ 34,085.19 total value
+
+CAMPAIGN WAVES:
+  Wave 1:        64 customers  (avg 62 days gone)
+  Wave 2:        66 customers  (avg 89 days gone)
+  Wave 3:        47 customers  (avg 119 days gone)
+  Wave 4:        62 customers  (avg 166 days gone)
+
+TOP 20 PRIORITY CUSTOMERS (Highest LTV):
+================================================================================
+MAX DENISSEN                   | Super VIP  | At Risk    | 183d | $3,357.83 | 15128888485
+Jeff Haskell                   | Super VIP  | Inactive   | 124d | $3,194.64 | 17144730540
+DAVID BRANSON SMITH            | Super VIP  | Dormant    |  90d | $2,753.99 | 12028416776
+Benjamin Escobedo              | Super VIP  | At Risk    | 191d | $2,552.93 | 12134589500
+Laura Crawford                 | Super VIP  | Cooling    |  74d | $2,413.08 | 19876042278
+Kevin Deagueros                | Super VIP  | Cooling    |  51d | $2,266.92 | 13233779447
+Delmy Molina                   | Super VIP  | Dormant    |  97d | $2,207.50 | 18182207148
+Ivan Florescapistran           | Super VIP  | Dormant    |  96d | $2,078.32 | 17142305350
+Michael Lemmo                  | Super VIP  | Inactive   | 128d | $2,043.00 | 12155707259
+Katherine Wing                 | Super VIP  | Cooling    |  54d | $1,965.17 | 16024103328
+JOHN R SNEDDEN                 | Super VIP  | Cooling    |  71d | $1,906.77 | 13234974643
+Maurice Mayes                  | Super VIP  | Inactive   | 121d | $1,833.69 | 13104983583
+MATTHEW SETH ADELL             | Super VIP  | At Risk    | 187d | $1,698.38 | 13129253043
+Ralph Matthis                  | Super VIP  | Cooling    |  72d | $1,675.14 | 13233007210
+COREY GLENN DIMOND             | Super VIP  | Inactive   | 126d | $1,585.44 | 13103839326
+Francisco Veloz                | Super VIP  | Dormant    |  80d | $1,458.20 | 12019277094
+BRIGGS HUPPER                  | VIP        | At Risk    | 163d | $1,450.31 | 19785059700
+Henrik Rehbinder               | Super VIP  | Inactive   | 111d | $1,435.14 | 12138191314
+Kiara Moreno                   | Super VIP  | Dormant    | 105d | $1,371.52 | 19549930204
+Trevor Ames                    | Super VIP  | Dormant    |  82d | $1,340.42 | 18186359396
+
+================================================================================
+IMPLEMENTATION CHECKLIST:
+================================================================================
+
+[ ] Week 1: Send Wave 1 (Super VIP Cooling) - 64 customers
+[ ] Week 2: Send Wave 2 (Super VIP Dormant + VIP Cooling) - 66 customers  
+[ ] Week 3: Send Wave 3 (All Inactive + Regular Cooling) - 47 customers
+[ ] Week 4: Send Wave 4 (At Risk - Last chance) - 62 customers
+
+BUDGET ALLOCATION:
+  Wave 1 (High Value):    $629.82 (25% discount budget)
+  Wave 2 (Med-High):      $488.48 (20% discount budget)
+  Wave 3 (Medium):        $308.50 (15% discount budget)
+  Wave 4 (Last Chance):   $249.63 (10% discount budget)
+  ----------------------------------------
+  Total Campaign Budget:  $1,676.43
+
+EXPECTED RESULTS (Conservative 20% conversion):
+  Customers Reactivated:  47
+  Revenue Recovery:       $1,902.93 (first visit)
+  Annual Value:           $22,835.11 (estimated)
+
+================================================================================
+Individual customer snapshots saved to: campaign test/customer_snapshots/
+================================================================================

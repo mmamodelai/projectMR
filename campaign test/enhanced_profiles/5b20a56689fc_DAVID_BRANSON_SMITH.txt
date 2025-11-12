@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - DAVID BRANSON SMITH
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5b20a56689fc9307fe1b2ce4
+  Phone:          12028416776
+  Email:          Not provided
+  Tier:           Super VIP
+  Risk Status:    Dormant (90 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    75
+  Total Revenue:         $2,753.99
+  Average Transaction:   $36.72
+  Median Transaction:    $29.70
+  Min Transaction:      $0.10
+  Max Transaction:      $154.59
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      7.6 days
+  Visit Frequency:       Weekly
+  Preferred Day:         Tuesday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Cash
+  Favorite Staff:        Devon Calonzo
+
+  Payment Method Breakdown:
+    Cash             59 times ( 78.7%)
+    Credit           16 times ( 21.3%)
+
+  Staff Interaction Breakdown:
+    Devon Calonzo         20 times ( 26.7%)
+    Jimmy Silks           17 times ( 22.7%)
+    Jacob Vangellow       13 times ( 17.3%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    215
+  Unique Products:       88
+  Avg Items/Visit:       2.9
+  Favorite Category:     Vapes
+  Favorite Brand:        Jeeter
+  Avg Item Price:        $13.47
+  Price Range:           $0.00 - $39.07
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            Super VIP
+  Engagement Level:      High
+  Loyalty Score:         High
+  Price Sensitivity:     Moderate
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              VIP Treatment
+  Discount Level:        20-30%
+  Message Focus:         Vapes + Jeeter
+  Channel:               SMS + Email + Call
+  Timing:                Tuesday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi DAVID, we miss you! 🌿
+   
+   We just restocked vapes from Jeeter - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME5B20A5
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  8 days between visits
+  Expected Annual Visits: 47
+  Potential Annual Value: $1,725.83
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $7.34 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        23500%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          2
+Wave:                    2
+Send Window:            Week 2
+Best Contact Time:      Tuesday at 0:00
+Follow-up Schedule:     48 hours
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $36.72 (first visit)
+  Annual Value:          $1,725.83
+
+NOTES:
+  - Customer has been gone for 90 days
+  - Historical pattern: 75 visits, $2,753.99 total spent
+  - HIGH VALUE - Personal follow-up recommended
+  - Consider phone call if SMS doesn't convert
+
+====================================================================================================

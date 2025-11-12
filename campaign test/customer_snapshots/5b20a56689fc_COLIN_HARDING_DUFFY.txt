@@ -1,0 +1,55 @@
+
+================================================================================
+CUSTOMER SNAPSHOT - COLIN HARDING DUFFY
+================================================================================
+
+CONTACT INFORMATION:
+  Phone:          15134784052
+  Email:          Not provided
+  Customer ID:    5b20a56689fc9307fe1b2b02
+
+TIER & STATUS:
+  Tier:           VIP
+  Risk Status:    Cooling
+  Campaign Wave:  Wave 1 Priority
+
+ENGAGEMENT METRICS:
+  Last Visit:           2025-08-30
+  Days Since Last:      53 days
+  Total Visits:         13
+  Visit Frequency:      Bi-weekly (when active)
+  
+VALUE METRICS:
+  Lifetime Value:       $451.76
+  Average Transaction:  $34.75
+  Estimated Annual:     $903.50 (if reactivated)
+
+URGENCY ASSESSMENT:
+  Level:          MEDIUM - Cooling Off
+  Recommended:    Light touch, promotional offer
+
+REACTIVATION STRATEGY:
+
+  Approach:       Valued Customer
+  Offer:          15-20% off + loyalty bonus
+  Message:        "It's been a while! We have some new products you'd love..."
+  Channel:        SMS + Email (if available)
+  Budget:         Up to $6.95 discount value
+
+CAMPAIGN TIMING:
+  Send Window:    Week 1 - Send immediately
+  Best Time:      Afternoon (2-5 PM) based on customer tier
+  Follow-up:      48 hours if no response
+
+SUCCESS METRICS:
+  Target ROI:     200%
+  Break-even:     1 visit at $34.75
+  Goal:           Restore to Bi-weekly visits
+
+NOTES:
+  - Customer has been gone for 53 days
+  - Historical pattern: 13 visits, $451.76 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+================================================================================

@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - CORSICA WILSON
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    0046fd00b851001d1d00eda8
+  Phone:          16035022650
+  Email:          Not provided
+  Tier:           VIP
+  Risk Status:    Dormant (102 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    10
+  Total Revenue:         $219.96
+  Average Transaction:   $22.00
+  Median Transaction:    $13.38
+  Min Transaction:      $1.07
+  Max Transaction:      $58.66
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      59.8 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Saturday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Credit
+  Favorite Staff:        Jacob Vangellow
+
+  Payment Method Breakdown:
+    Credit            7 times ( 70.0%)
+    Cash              3 times ( 30.0%)
+
+  Staff Interaction Breakdown:
+    Jacob Vangellow        2 times ( 20.0%)
+    Lizbeth Garcia         2 times ( 20.0%)
+    Bob McGinn             2 times ( 20.0%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    34
+  Unique Products:       26
+  Avg Items/Visit:       3.4
+  Favorite Category:     Flower PrePacks
+  Favorite Brand:        MOTA
+  Avg Item Price:        $7.77
+  Price Range:           $0.01 - $39.11
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            VIP
+  Engagement Level:      Low
+  Loyalty Score:         Low
+  Price Sensitivity:     Budget
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              Valued Customer
+  Discount Level:        15-20%
+  Message Focus:         Flower PrePacks + MOTA
+  Channel:               SMS + Email
+  Timing:                Saturday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi Corsica, we miss you! 🌿
+   
+   We just restocked flower prepacks from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME0046FD
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  60 days between visits
+  Expected Annual Visits: 6
+  Potential Annual Value: $131.98
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $4.40 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        3000%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          6
+Wave:                    2
+Send Window:            Week 2
+Best Contact Time:      Saturday at 0:00
+Follow-up Schedule:     48 hours
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $22.00 (first visit)
+  Annual Value:          $131.98
+
+NOTES:
+  - Customer has been gone for 102 days
+  - Historical pattern: 10 visits, $219.96 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+====================================================================================================

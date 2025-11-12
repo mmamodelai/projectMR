@@ -1,0 +1,7 @@
+# SMS Conductor Database Viewer - Dependencies
+# Python 3.8+ required
+
+supabase>=2.0.0
+python-dateutil>=2.8.0
+pyserial>=3.5
+python-dotenv>=1.0.0

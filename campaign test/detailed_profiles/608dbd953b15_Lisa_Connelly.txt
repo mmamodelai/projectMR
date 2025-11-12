@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - LISA CONNELLY
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    608dbd953b152a4c33fb38bb
+  Phone:          13235474944
+  Email:          Not provided
+  Tier:           Regular
+  Risk Status:    Inactive (134 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         9
+  Lifetime Value:       $423.93
+  Avg Transaction:      $47.10
+  Last Visit:           2025-06-10
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Monthly
+  Expected Annual Visits:   12
+  Potential Annual Value:   $565.20
+  
+  ROI Analysis:
+  - Discount Budget:        $9.42 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           6000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           3
+  Priority:       11
+  Send Timing:    Week 3
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS
+
+====================================================================================================

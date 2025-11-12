@@ -1,0 +1,686 @@
+# Conductor SMS System - Cursor Rules
+
+## Project Overview
+Production-ready SMS system using polling architecture to avoid COM port conflicts.
+**Status**: Working system with 95 messages processed
+**Architecture**: Brief connect/disconnect cycles (never hold COM port > 3 seconds)
+
+## Quick Reference Guide
+1. **Architecture**: Polling (connect → read → disconnect → repeat)
+2. **Database**: Supabase cloud or local SQLite
+3. **Workflows**: n8n.io with message chunking and ordering
+4. **Documentation**: See `CONDUCTOR_ARCHITECTURE.md` for details
+
+## Core Principles
+
+### 🚨 CRITICAL: Architecture Rules
+1. **NEVER use continuous listening** - causes COM port locks
+2. **ALWAYS use polling** - connect → read → disconnect → repeat
+3. **NEVER hold COM port > 3 seconds** - allows other processes to access
+4. **ALWAYS disconnect between operations** - mandatory for bidirectional communication
+
+### Working System Location
+- **Primary System**: `Olive/conductor_system.py` (95 messages, verified working)
+- **Database**: `Olive/database/olive_sms.db` or Supabase cloud
+- **Architecture Document**: `CONDUCTOR_ARCHITECTURE.md` (complete reference)
+
+## File Organization Rules
+
+### ✅ Files to Keep (Production System)
+```
+Olive/
+├── conductor_system.py          # Main system - DO NOT MODIFY without backup
+├── database/olive_sms.db        # Local database (optional with Supabase)
+├── logs/conductor_system.log    # System logs
+├── db_viewer.py                 # Local database viewer
+├── db_manager_gui.py            # Supabase database manager
+├── supabase_ops.py              # Supabase operations CLI
+├── modem_probe.py               # Modem diagnostics tool
+├── start_conductor.bat          # Start system
+├── test_conductor.bat           # Send test messages
+├── conductor_status.bat         # Check status
+└── start_db_viewer.bat          # Launch viewer
+```
+
+### 🗑️ Files to Delete (Non-Working/Experimental)
+Before deleting ANY file, agent MUST:
+1. Check `WORKLOG.md` for delete approval
+2. Create backup in `archive/` folder
+3. Document deletion reason in `WORKLOG.md`
+
+**Deletion Candidates**:
+- `olive/telecom_manager/*` - Uses wrong architecture (30s continuous listening)
+- `**/test_*.py` - Temporary test scripts (archive first)
+- `**/debug_*.py` - Temporary debug scripts (archive first)
+- `**/*_backup_*.py` - Old backup files (move to archive/)
+- Duplicate batch files with similar names
+
+### 📁 Required Directory Structure
+```
+C:\Dev\conductor\
+├── .cursorrules                 # This file
+├── CONDUCTOR_ARCHITECTURE.md    # Complete architecture guide
+├── WORKLOG.md                   # Daily progress tracking (REQUIRED)
+├── Olive/                       # Production system
+│   ├── conductor_system.py
+│   ├── database/
+│   ├── logs/
+│   └── *.bat files
+├── n8nworkflows/                # n8n workflow JSON files
+│   ├── MarketSuite Salesbot v4.101-FIXED.json
+│   ├── MarketSuite Salesbot v4.107.json
+│   └── SMSCRM_Supabase_v4.001.json
+├── archive/                     # Deleted/old files (create if missing)
+└── docs/                        # Additional documentation
+```
+
+## Workspace Policing Rules
+
+### Daily Workspace Audit
+Agent MUST check daily:
+1. **Duplicate files**: Same functionality, different names
+2. **Orphaned scripts**: No batch file or README reference
+3. **Empty directories**: Delete if no files for > 7 days
+4. **Log files > 10MB**: Archive to `archive/logs/`
+5. **Test databases**: Delete `*_test.db`, `*_backup.db` older than 7 days
+
+### Before Creating New Files
+Agent MUST:
+1. Check if similar file already exists
+2. Document purpose in `WORKLOG.md`
+3. Create batch file if it's a Python script
+4. Add to this `.cursorrules` if it's permanent
+
+### Before Modifying Production Files
+Agent MUST:
+1. Create backup: `cp file.py archive/file_YYYYMMDD.py`
+2. Document change in `WORKLOG.md`
+3. Verify system still works after changes
+4. Update `CONDUCTOR_ARCHITECTURE.md` if architecture changes
+
+## WORKLOG.md Rules
+
+### Required Format
+```markdown
+# Conductor SMS System - Work Log
+
+## [YYYY-MM-DD] - Session Title
+
+### Goals
+- [ ] Goal 1
+- [ ] Goal 2
+
+### Changes Made
+- **Modified**: `filename.py` - Reason for change
+- **Created**: `newfile.py` - Purpose and rationale
+- **Deleted**: `oldfile.py` - Why it was removed (archived to...)
+
+### Testing Results
+- ✅ Test 1: Description and result
+- ❌ Test 2: Description and result
+- 🔄 Test 3: In progress
+
+### Database Status
+- Total messages: X
+- Inbound: X
+- Outbound: X
+- Last message: timestamp
+
+### Issues/Notes
+- Issue 1: Description and status
+- Note: Important observation
+
+### Next Session
+- [ ] Task 1
+- [ ] Task 2
+```
+
+### When to Update WORKLOG.md
+Agent MUST update after:
+1. Creating/modifying any file
+2. Running any test
+3. Deleting any file
+4. Discovering any issue
+5. Completing any task
+6. End of each session
+
+## Code Style & Standards
+
+### Python Scripts
+```python
+#!/usr/bin/env python3
+"""
+Script Title - Brief description
+Part of Conductor SMS System
+
+Usage:
+    python script.py [args]
+    
+Architecture:
+    Polling-based, connect/disconnect pattern
+"""
+
+import logging
+
+# Setup logging first
+logger = logging.getLogger(__name__)
+
+# Constants at top
+COM_PORT = "COM24"
+DB_PATH = "database/olive_sms.db"
+POLL_INTERVAL = 10
+
+# Main logic
+def main():
+    """Main function with clear docstring"""
+    pass
+
+if __name__ == "__main__":
+    main()
+```
+
+### Batch Files
+```batch
+@echo off
+REM Script: filename.bat
+REM Purpose: Brief description
+REM Part of: Conductor SMS System
+
+echo Starting [Component Name]...
+cd /d "%~dp0Olive"
+python script.py
+if %ERRORLEVEL% NEQ 0 (
+    echo ERROR: Script failed with code %ERRORLEVEL%
+    pause
+    exit /b %ERRORLEVEL%
+)
+pause
+```
+
+### Database Operations
+- **ALWAYS use context managers**: `with sqlite3.connect() as conn:`
+- **ALWAYS use parameterized queries**: `cursor.execute("SELECT * FROM messages WHERE id=?", (msg_id,))`
+- **NEVER use string formatting**: `f"SELECT * FROM messages WHERE id={msg_id}"` ❌
+- **ALWAYS commit explicitly**: `conn.commit()`
+
+## AT Command Best Practices
+
+### Command Structure
+```python
+# ✅ GOOD - Clear, with error handling
+def send_at_command(ser, command, timeout=5):
+    """Send AT command and return response"""
+    ser.write(f"{command}\r\n".encode())
+    time.sleep(timeout)
+    response = ser.read_all().decode('utf-8', errors='ignore')
+    
+    if "ERROR" in response:
+        logger.error(f"AT command failed: {command}")
+        return None
+    return response
+
+# ❌ BAD - No error handling, no logging
+def send_at(ser, cmd):
+    ser.write(cmd.encode())
+    return ser.read_all().decode()
+```
+
+### Connection Management
+```python
+# ✅ GOOD - Explicit connect/disconnect
+def poll_messages():
+    ser = serial.Serial(COM_PORT, 115200, timeout=5)
+    try:
+        # Do work (max 3 seconds)
+        messages = get_messages(ser)
+        return messages
+    finally:
+        ser.close()  # ALWAYS disconnect
+
+# ❌ BAD - Connection stays open
+def poll_messages():
+    ser = serial.Serial(COM_PORT, 115200, timeout=5)
+    messages = get_messages(ser)
+    return messages  # ser never closed!
+```
+
+## Testing Requirements
+
+### Before Committing Code
+Agent MUST verify:
+1. ✅ `conductor_system.py status` shows correct message count
+2. ✅ Send test message: `test_conductor.bat +1234567890 "Test"`
+3. ✅ Message appears in database within 10 seconds
+4. ✅ No errors in `logs/conductor_system.log`
+5. ✅ Database viewer shows message correctly
+
+### Test Script Template
+```python
+#!/usr/bin/env python3
+"""
+Test: [Test Name]
+Purpose: [What this tests]
+Expected: [Expected outcome]
+"""
+
+def test_feature():
+    """Test description"""
+    # Setup
+    
+    # Execute
+    
+    # Assert
+    
+    # Cleanup
+    
+if __name__ == "__main__":
+    test_feature()
+    print("✅ Test passed")
+```
+
+## Error Handling Rules
+
+### Required Error Handling
+```python
+# ✅ GOOD - Comprehensive error handling
+try:
+    ser = serial.Serial(COM_PORT, 115200, timeout=5)
+except serial.SerialException as e:
+    logger.error(f"COM port error: {e}")
+    logger.info(f"Available ports: {serial.tools.list_ports.comports()}")
+    return None
+except Exception as e:
+    logger.error(f"Unexpected error: {e}")
+    return None
+finally:
+    if 'ser' in locals() and ser.is_open:
+        ser.close()
+```
+
+### Logging Levels
+- `logger.debug()`: Detailed diagnostic info (AT commands, responses)
+- `logger.info()`: Normal operations (message sent, received)
+- `logger.warning()`: Unexpected but handled (retry attempts)
+- `logger.error()`: Errors that need attention (COM port busy, send failed)
+- `logger.critical()`: System failure (database corruption, modem disconnected)
+
+## Performance Rules
+
+### Timing Constraints
+- **Modem connection**: Max 3 seconds
+- **AT command timeout**: 5 seconds
+- **Poll interval**: 10 seconds (configurable, but not < 5 seconds)
+- **Database query**: Max 1 second
+- **Total cycle time**: 10-15 seconds
+
+### Resource Management
+```python
+# ✅ GOOD - Immediate cleanup
+def process_messages():
+    conn = sqlite3.connect(DB_PATH)
+    try:
+        cursor = conn.cursor()
+        messages = cursor.fetchall()
+        return messages
+    finally:
+        conn.close()
+
+# ❌ BAD - Resources held unnecessarily
+def process_messages():
+    conn = sqlite3.connect(DB_PATH)
+    cursor = conn.cursor()
+    messages = cursor.fetchall()
+    # More code...
+    return messages  # conn never closed
+```
+
+## Git & Version Control
+
+### Commit Message Format
+```
+[Type] Brief description
+
+Detailed explanation if needed
+
+Changes:
+- Modified: filename.py - what changed
+- Added: filename.py - why added
+- Deleted: filename.py - why removed (archived to...)
+
+Testing: Brief test results
+```
+
+**Types**: `feat`, `fix`, `docs`, `refactor`, `test`, `chore`
+
+### Files to NEVER Commit
+- `*.log` (logs)
+- `*.pyc` (compiled Python)
+- `__pycache__/` (Python cache)
+- `*.db-journal` (SQLite temp files)
+- `*.swp`, `*.swo` (editor temp files)
+- `archive/*` (archived files)
+
+### Files to ALWAYS Commit
+- `*.py` (Python scripts)
+- `*.bat` (Batch files)
+- `*.md` (Documentation)
+- `*.json` (Configuration)
+- `WORKLOG.md` (Progress tracking)
+- `CONDUCTOR_ARCHITECTURE.md` (Architecture)
+- `.cursorrules` (This file)
+
+## Problem Solving Protocol
+
+### When System Not Working
+1. **Check logs first**: `tail -f logs/conductor_system.log` or `Get-Content logs\conductor_system.log -Tail 20`
+2. **Verify COM port**: `python -c "import serial.tools.list_ports; print([p.device for p in serial.tools.list_ports.comports()])"`
+3. **Check database**: `python conductor_system.py status`
+4. **Test modem directly**: `python -c "import serial; s=serial.Serial('COM24',115200,timeout=5); s.write(b'AT\r\n'); print(s.read(100))"`
+5. **Review WORKLOG.md**: Check what changed recently
+
+### When Creating New Features
+1. **Consult CONDUCTOR_ARCHITECTURE.md** first
+2. **Create design doc in WORKLOG.md** before coding
+3. **Follow polling architecture** (no continuous listening)
+4. **Test in isolation** before integrating
+5. **Document in WORKLOG.md** after completion
+
+### When Debugging
+```python
+# ✅ GOOD - Informative debug logging
+logger.debug(f"AT Command: {command}")
+logger.debug(f"Response: {response[:100]}...")  # Truncate long responses
+logger.debug(f"Parsed data: {data}")
+
+# ❌ BAD - Useless debug info
+logger.debug("Here")
+logger.debug("Got response")
+```
+
+## Documentation Requirements
+
+### Code Comments
+```python
+# ✅ GOOD - Explains WHY, not WHAT
+# Use polling to avoid COM port conflicts with other processes
+for _ in range(max_retries):
+    # Wait 10 seconds between polls to allow other processes access
+    time.sleep(POLL_INTERVAL)
+
+# ❌ BAD - States obvious
+# Loop 3 times
+for _ in range(3):
+    # Sleep 10 seconds
+    time.sleep(10)
+```
+
+### Function Docstrings (Required)
+```python
+def send_sms(phone_number: str, message: str) -> bool:
+    """
+    Send SMS via modem using AT+CMGS command.
+    
+    Uses polling architecture: connects → sends → disconnects immediately
+    to avoid blocking other processes from accessing COM port.
+    
+    Args:
+        phone_number: E.164 format (e.g., +16199773020)
+        message: SMS content (max 160 chars)
+        
+    Returns:
+        True if sent successfully, False otherwise
+        
+    Raises:
+        serial.SerialException: If COM port unavailable
+    """
+    pass
+```
+
+## Security & Privacy
+
+### Phone Number Handling
+```python
+# ✅ GOOD - Mask in logs
+logger.info(f"Message to {phone_number[:3]}****{phone_number[-2:]}")
+
+# ❌ BAD - Full number in logs
+logger.info(f"Message to {phone_number}")
+```
+
+### Database Security
+- **NEVER commit production database** with real messages
+- **ALWAYS use test data** in examples
+- **MASK sensitive content** in logs and errors
+
+## AI Agent Instructions
+
+### When Asked to "Fix" or "Improve"
+1. Read `CONDUCTOR_ARCHITECTURE.md` first
+2. Check `WORKLOG.md` for context
+3. Verify what's actually broken (test first)
+4. Propose changes before implementing
+5. Document everything in `WORKLOG.md`
+
+### When Creating New Scripts
+1. Check if functionality already exists
+2. Follow polling architecture (connect/disconnect)
+3. Create batch file for easy execution
+4. Add to `WORKLOG.md`
+5. Update this `.cursorrules` if permanent
+
+### When User Says "It's Not Working"
+1. Ask for specific symptoms
+2. Check `logs/conductor_system.log`
+3. Verify `conductor_system.py status`
+4. Check `WORKLOG.md` for recent changes
+5. Test with `test_conductor.bat`
+6. Document findings in `WORKLOG.md`
+
+### Workspace Cleanup Protocol
+Agent should automatically:
+1. **On startup**: Check for files not in this config
+2. **Daily**: Run workspace audit (see above)
+3. **Before major changes**: Create full backup in `archive/backup_YYYYMMDD/`
+4. **After testing**: Remove `*_test_*.py` files older than 24 hours
+5. **Weekly**: Update `WORKLOG.md` summary
+
+## Quick Reference Commands
+
+### System Status
+```bash
+# Check system
+cd Olive && python conductor_system.py status
+
+# View logs
+Get-Content logs\conductor_system.log -Tail 20
+
+# Test send
+.\test_conductor.bat +16199773020 "Test message"
+
+# View database
+.\start_db_viewer.bat
+```
+
+### Development
+```bash
+# Backup before changes
+Copy-Item conductor_system.py archive\conductor_system_$(Get-Date -Format 'yyyyMMdd').py
+
+# Test modem
+python -c "import serial; s=serial.Serial('COM24',115200,timeout=5); s.write(b'AT\r\n'); print(s.read(100))"
+
+# Check COM ports
+python -c "import serial.tools.list_ports; print([p.device for p in serial.tools.list_ports.comports()])"
+```
+
+## Supabase Integration
+
+### Supabase Configuration
+```json
+{
+  "database": {
+    "path": "database/olive_sms.db",
+    "use_wal_mode": true,
+    "connection_timeout": 10,
+    "use_supabase": true,
+    "supabase_url": "https://kiwmwoqrguyrcpjytgte.supabase.co",
+    "supabase_key": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+  }
+}
+```
+
+### Supabase Operations
+```python
+# Initialize Supabase client
+from supabase import create_client, Client
+supabase: Client = create_client(supabase_url, supabase_key)
+
+# Insert message
+response = supabase.table("messages").insert({
+    "phone_number": phone_number,
+    "content": content,
+    "status": "unread",
+    "direction": "inbound",
+    "message_hash": message_hash
+}).execute()
+
+# Query messages
+response = supabase.table("messages").select("*").eq("status", "unread").execute()
+```
+
+### Supabase Tools
+- `db_manager_gui.py`: GUI for viewing/editing Supabase data
+- `supabase_ops.py`: CLI for bulk operations (delete, requeue)
+- `migrate_to_supabase.py`: Migration from SQLite to Supabase
+
+## n8n Workflow Standards
+
+### Message Chunking
+- Always split long messages (>150 chars) into chunks
+- Use word boundaries for natural splitting
+- Add progressive delays between chunks (500-750ms)
+- Process chunks in sequence to maintain order
+
+### Workflow Structure
+```
+Poll → Get Messages → Filter Unread → Prepare for AI → AI Agent → 
+Prepare Response → Mark Read → Split Chunks → Delay → Send
+```
+
+### Critical Nodes
+1. **Filter Unread Messages**: Must handle Supabase array response format
+2. **Prepare for AI**: Must preserve message_id for later use
+3. **Split Into Chunks**: Must create separate items for each chunk
+4. **Delay By Index**: Must add progressive delays based on chunk position
+5. **Mark Message as Read**: Must update status in Supabase
+
+### n8n Code Examples
+
+**Filter Unread Messages**:
+```javascript
+// Fixed filter for Supabase array response
+const messages = $input.all().map(item => item.json);
+const unreadInbound = messages.filter(msg => 
+  msg.direction === 'inbound' && msg.status === 'unread'
+);
+if (unreadInbound.length === 0) { return []; }
+return unreadInbound.map(msg => ({
+  json: {
+    message_id: msg.id,
+    phone_number: msg.phone_number,
+    incoming_message: msg.content,
+    timestamp: msg.timestamp,
+    conversation_history: `[${new Date(msg.timestamp).toLocaleString()}] User: ${msg.content}`,
+    total_messages: 1,
+    conversation_start: msg.timestamp,
+    conversation_duration: 'New conversation'
+  }
+}));
+```
+
+**Split Into Chunks**:
+```javascript
+// Sanitize to GSM/ASCII and CHUNK into <=150-char messages
+const prepare = $('Prepare SMS Response').item.json;
+let text = (prepare.message || '')
+  .replace(/[\r\n]+/g, ' ')
+  .replace(/[""]/g, '"')
+  .replace(/['']/g, "'")
+  .replace(/[–—]/g, '-')
+  .replace(/…/g, '...')
+  .replace(/[^\x20-\x7E]/g, '')
+  .replace(/\s+/g, ' ')
+  .trim();
+const limit = 150;
+const chunks = [];
+while (text.length > 0) {
+  if (text.length <= limit) { 
+    chunks.push(text); 
+    break; 
+  }
+  let i = text.lastIndexOf(' ', limit);
+  if (i === -1) i = limit;
+  chunks.push(text.slice(0, i).trim());
+  text = text.slice(i).trim();
+}
+return chunks.map((chunk, index) => ({ 
+  json: { 
+    phone_number: prepare.phone_number, 
+    content: chunk,
+    chunk_index: index,
+    total_chunks: chunks.length,
+    delay_ms: index * 750
+  } 
+}));
+```
+
+**Delay By Index**:
+```javascript
+// Wait based on chunk index
+const delayMs = $input.item.json.delay_ms || 0;
+await new Promise(r => setTimeout(r, delayMs));
+return $input.item;
+```
+
+## Success Metrics
+
+### System is "Working" When:
+- ✅ Messages detected within 10 seconds
+- ✅ Messages send successfully via `test_conductor.bat`
+- ✅ Database message count increasing
+- ✅ No errors in logs (last 100 lines)
+- ✅ `conductor_system.py status` returns correct count
+
+### Code is "Production Ready" When:
+- ✅ Documented in `WORKLOG.md`
+- ✅ Follows polling architecture
+- ✅ Has error handling
+- ✅ Has logging
+- ✅ Has batch file (if applicable)
+- ✅ Tested with real modem
+- ✅ Referenced in `CONDUCTOR_ARCHITECTURE.md`
+
+## Final Rules
+
+1. **Read first, code second**: Always read `CONDUCTOR_ARCHITECTURE.md` and `WORKLOG.md` before making changes
+2. **Test before commit**: Every change must pass the testing checklist
+3. **Document everything**: If it's not in `WORKLOG.md`, it didn't happen
+4. **Keep it simple**: Don't add complexity without justification
+5. **Respect the architecture**: Polling is mandatory, continuous listening is forbidden
+6. **Clean as you go**: Delete unused files, archive old versions
+7. **When in doubt, ask**: Better to confirm than break the working system
+
+## Emergency Contacts
+
+- **Architecture Reference**: `CONDUCTOR_ARCHITECTURE.md`
+- **Progress Log**: `WORKLOG.md`
+- **Working System**: `Olive/conductor_system.py`
+- **Database**: `Olive/database/olive_sms.db` or Supabase cloud
+
+---
+
+**Remember**: The system works (95+ messages processed). Don't fix what isn't broken. Consult `CONDUCTOR_ARCHITECTURE.md` for any architectural questions.
+
+Last Updated: 2025-10-08
+Version: 1.1
+Status: Production

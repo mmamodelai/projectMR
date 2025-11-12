@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - WILLIAM KANG
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    60dfcf3ee5aa280335ff0c3b
+  Phone:          12134229999
+  Email:          Not provided
+  Tier:           Regular
+  Risk Status:    Dormant (94 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         5
+  Lifetime Value:       $448.12
+  Avg Transaction:      $89.62
+  Last Visit:           2025-07-20
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Monthly
+  Expected Annual Visits:   12
+  Potential Annual Value:   $1,075.44
+  
+  ROI Analysis:
+  - Discount Budget:        $17.92 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           6000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           2
+  Priority:       10
+  Send Timing:    Week 2
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS
+
+====================================================================================================

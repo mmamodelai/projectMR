@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - JESSE TROUT
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5e8648bf4be60b08d75966b6
+  Phone:          17607043245
+  Email:          Not provided
+  Tier:           VIP
+  Risk Status:    Dormant (86 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         10
+  Lifetime Value:       $382.57
+  Avg Transaction:      $38.26
+  Last Visit:           2025-07-28
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Monthly
+  Expected Annual Visits:   12
+  Potential Annual Value:   $459.12
+  
+  ROI Analysis:
+  - Discount Budget:        $7.65 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           6000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           2
+  Priority:       6
+  Send Timing:    Week 2
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS + Email
+
+====================================================================================================

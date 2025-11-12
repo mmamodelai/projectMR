@@ -1,0 +1,56 @@
+
+================================================================================
+CUSTOMER SNAPSHOT - TREVOR AMES
+================================================================================
+
+CONTACT INFORMATION:
+  Phone:          18186359396
+  Email:          Not provided
+  Customer ID:    5e0f82b2d5e58d08245b3c4b
+
+TIER & STATUS:
+  Tier:           Super VIP
+  Risk Status:    Dormant
+  Campaign Wave:  Wave 2 Priority
+
+ENGAGEMENT METRICS:
+  Last Visit:           2025-08-01
+  Days Since Last:      82 days
+  Total Visits:         39
+  Visit Frequency:      Weekly (when active)
+  
+VALUE METRICS:
+  Lifetime Value:       $1,340.42
+  Average Transaction:  $34.37
+  Estimated Annual:     $1,787.24 (if reactivated)
+
+URGENCY ASSESSMENT:
+  Level:          HIGH - Going Dormant
+  Recommended:    Strong offer, personal message
+
+REACTIVATION STRATEGY:
+
+  Approach:       VIP Treatment
+  Offer:          20-30% off + exclusive product access
+  Message:        "We miss you! As one of our top customers, we'd love to 
+                  welcome you back with a special VIP offer..."
+  Channel:        SMS + Email (if available) + Follow-up call
+  Budget:         Up to $10.31 discount value
+
+CAMPAIGN TIMING:
+  Send Window:    Week 1-2 - High priority
+  Best Time:      Afternoon (2-5 PM) based on customer tier
+  Follow-up:      48 hours if no response
+
+SUCCESS METRICS:
+  Target ROI:     300%
+  Break-even:     1 visit at $34.37
+  Goal:           Restore to Weekly visits
+
+NOTES:
+  - Customer has been gone for 82 days
+  - Historical pattern: 39 visits, $1,340.42 total spent
+  - HIGH VALUE - Personal follow-up recommended
+  - Consider phone call if SMS doesn't convert
+
+================================================================================

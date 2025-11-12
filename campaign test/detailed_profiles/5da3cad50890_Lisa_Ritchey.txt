@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - LISA RITCHEY
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5da3cad5089078084221452b
+  Phone:          14074166820
+  Email:          Not provided
+  Tier:           Regular
+  Risk Status:    Cooling (55 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         6
+  Lifetime Value:       $230.74
+  Avg Transaction:      $38.46
+  Last Visit:           2025-08-28
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Monthly
+  Expected Annual Visits:   12
+  Potential Annual Value:   $461.52
+  
+  ROI Analysis:
+  - Discount Budget:        $7.69 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           6000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           1
+  Priority:       9
+  Send Timing:    Week 1 - URGENT
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS
+
+====================================================================================================

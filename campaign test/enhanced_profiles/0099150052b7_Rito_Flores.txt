@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - RITO FLORES
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    0099150052b700fc88002afa
+  Phone:          16264009231
+  Email:          Not provided
+  Tier:           VIP
+  Risk Status:    Inactive (109 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    13
+  Total Revenue:         $330.92
+  Average Transaction:   $25.46
+  Median Transaction:    $19.91
+  Min Transaction:      $9.72
+  Max Transaction:      $109.03
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      28.7 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Wednesday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Cash
+  Favorite Staff:        Jimmy Silks
+
+  Payment Method Breakdown:
+    Cash             10 times ( 76.9%)
+    Credit            3 times ( 23.1%)
+
+  Staff Interaction Breakdown:
+    Jimmy Silks            6 times ( 46.2%)
+    Devon Calonzo          4 times ( 30.8%)
+    Bob McGinn             1 times (  7.7%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    34
+  Unique Products:       27
+  Avg Items/Visit:       2.6
+  Favorite Category:     Flower PrePacks
+  Favorite Brand:        MOTA
+  Avg Item Price:        $12.55
+  Price Range:           $0.00 - $38.26
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            VIP
+  Engagement Level:      Medium
+  Loyalty Score:         Medium
+  Price Sensitivity:     Budget
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              Valued Customer
+  Discount Level:        15-20%
+  Message Focus:         Flower PrePacks + MOTA
+  Channel:               SMS + Email
+  Timing:                Wednesday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi Rito, we miss you! 🌿
+   
+   We just restocked flower prepacks from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME009915
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  29 days between visits
+  Expected Annual Visits: 12
+  Potential Annual Value: $305.46
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $5.09 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        6000%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          7
+Wave:                    3
+Send Window:            Week 3
+Best Contact Time:      Wednesday at 0:00
+Follow-up Schedule:     48 hours
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $25.46 (first visit)
+  Annual Value:          $305.46
+
+NOTES:
+  - Customer has been gone for 109 days
+  - Historical pattern: 13 visits, $330.92 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+====================================================================================================

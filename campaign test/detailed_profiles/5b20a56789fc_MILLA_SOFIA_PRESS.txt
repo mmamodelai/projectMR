@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - MILLA SOFIA PRESS
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5b20a56789fc9307fe1b42a6
+  Phone:          12133097464
+  Email:          Not provided
+  Tier:           VIP
+  Risk Status:    Inactive (118 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         17
+  Lifetime Value:       $1,031.46
+  Avg Transaction:      $60.67
+  Last Visit:           2025-06-26
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Bi-weekly
+  Expected Annual Visits:   26
+  Potential Annual Value:   $1,577.42
+  
+  ROI Analysis:
+  - Discount Budget:        $12.13 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           13000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           3
+  Priority:       7
+  Send Timing:    Week 3
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS + Email
+
+====================================================================================================

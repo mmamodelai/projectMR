@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - KEANU KLARE
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    67a1b2c3d4e5f6789012345a
+  Phone:          16198004766
+  Email:          stephen.clare+kk@gmail.com
+  Tier:           Regular
+  Risk Status:    Cooling (75 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         8
+  Lifetime Value:       $472.10
+  Avg Transaction:      $59.01
+  Last Visit:           2025-08-08
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Monthly
+  Expected Annual Visits:   12
+  Potential Annual Value:   $708.12
+  
+  ROI Analysis:
+  - Discount Budget:        $11.80 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           6000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           1
+  Priority:       9
+  Send Timing:    Week 1 - URGENT
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS
+
+====================================================================================================

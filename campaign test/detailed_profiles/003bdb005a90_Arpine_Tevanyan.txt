@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - ARPINE TEVANYAN
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    003bdb005a900050b200b42e
+  Phone:          13234223770
+  Email:          Not provided
+  Tier:           Super VIP
+  Risk Status:    Inactive (110 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         50
+  Lifetime Value:       $1,016.79
+  Avg Transaction:      $20.34
+  Last Visit:           2025-07-04
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Weekly
+  Expected Annual Visits:   52
+  Potential Annual Value:   $1,057.68
+  
+  ROI Analysis:
+  - Discount Budget:        $4.07 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           26000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           3
+  Priority:       3
+  Send Timing:    Week 3
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS+ Email + Call
+
+====================================================================================================

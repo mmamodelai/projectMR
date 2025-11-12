@@ -1,0 +1,342 @@
+{
+  "name": "SMSCRM v3.5",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## 🤖 AI-Powered SMS System v3.5\n\n**Setup:**\n1. Cloudflare Tunnel: smsn8n.marketsuite.co ✅ LIVE\n2. URL: https://smsn8n.marketsuite.co\n3. Activate workflow for auto-responses\n4. AI keeps responses SHORT (SMS-optimized)\n\n**How it works:**\n- Polls every 1 minute\n- Only responds to NEW inbound messages\n- Skips if last message is outbound (prevents loops)\n- AI generates SHORT, contextual replies",
+        "height": 460,
+        "width": 500,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -912,
+        -304
+      ],
+      "id": "2b5ed39b-8509-4f1a-b457-adc2e24321f2",
+      "name": "AI SMS Instructions"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://smsn8n.marketsuite.co/api/messages/send",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ phone_number: $json.phone_number, message: $json.message }) }}",
+        "options": {}
+      },
+      "id": "18476ca1-c99e-46b0-8233-c4c4ffabb966",
+      "name": "Send AI Reply",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        640,
+        144
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## 🧠 AI Auto-Reply System\n\nPolls every 1 minute\nAI generates smart responses\nHandles jokes, questions, commands",
+        "height": 300,
+        "width": 420,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -880,
+        240
+      ],
+      "id": "de2d9bb6-7a9c-45f5-8419-7a3ed78e846e",
+      "name": "AI Info"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "seconds"
+            }
+          ]
+        }
+      },
+      "id": "87b40cf6-4008-40dc-a330-883cd5c6147a",
+      "name": "Poll Every 30s",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -848,
+        368
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://smsn8n.marketsuite.co/api/messages/recent?limit=100",
+        "options": {}
+      },
+      "id": "c635bb90-e032-482a-821c-2a0a69eb0119",
+      "name": "Get Recent SMS",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -624,
+        368
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Smart conversation processing - only respond to NEW inbound messages\nconst response = $input.item.json;\n\nif (!response.messages || !Array.isArray(response.messages)) {\n  return [];\n}\n\n// Group messages by phone number\nconst messagesByPhone = {};\nresponse.messages.forEach(msg => {\n  if (!messagesByPhone[msg.phone_number]) {\n    messagesByPhone[msg.phone_number] = [];\n  }\n  messagesByPhone[msg.phone_number].push(msg);\n});\n\nconst messagesToProcess = [];\n\n// For each phone number, check if we need to respond\nObject.keys(messagesByPhone).forEach(phoneNumber => {\n  const messages = messagesByPhone[phoneNumber]\n    .sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp)); // Chronological order\n  \n  if (messages.length === 0) return;\n  \n  const lastMessage = messages[messages.length - 1];\n  \n  // Only process if the last message is inbound AND unread (user sent something new)\n  if (lastMessage.direction === 'inbound' && lastMessage.status === 'unread') {\n    messagesToProcess.push({\n      phoneNumber,\n      lastMessage,\n      conversationHistory: messages\n    });\n  }\n  // If last message is outbound, we already responded - no action needed\n});\n\nif (messagesToProcess.length === 0) {\n  return [];\n}\n\n// Format conversation history with timestamps for AI context\nreturn messagesToProcess.map(({ phoneNumber, lastMessage, conversationHistory }) => {\n  const formattedHistory = conversationHistory.map(h => {\n    const timestamp = new Date(h.timestamp).toLocaleString();\n    const sender = h.direction === 'inbound' ? 'User' : 'AI';\n    return `[${timestamp}] ${sender}: ${h.content}`;\n  }).join('\\n');\n  \n  return {\n    json: {\n      message_id: lastMessage.id,\n      phone_number: phoneNumber,\n      incoming_message: lastMessage.content,\n      timestamp: lastMessage.timestamp,\n      conversation_history: formattedHistory,\n      total_messages: conversationHistory.length,\n      conversation_start: conversationHistory[0]?.timestamp,\n      conversation_duration: conversationHistory.length > 1 ? \n        `${Math.round((new Date(conversationHistory[conversationHistory.length-1].timestamp) - new Date(conversationHistory[0].timestamp)) / (1000 * 60 * 60))} hours` : 'New conversation'\n    }\n  };\n});"
+      },
+      "id": "9861ba3f-a539-4ed9-b994-0d3c6a9cd441",
+      "name": "Filter Unread Messages",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -400,
+        368
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "user-message",
+              "name": "chatInput",
+              "value": "={{ $json.conversation_history }}\\n\\n[{{ $json.timestamp }}] User: {{ $json.incoming_message }}\\n\\nConversation context: {{ $json.total_messages }} messages, {{ $json.conversation_duration }}",
+              "type": "string"
+            },
+            {
+              "id": "phone-number",
+              "name": "phone_number",
+              "value": "={{ $json.phone_number }}",
+              "type": "string"
+            },
+            {
+              "id": "message-id",
+              "name": "message_id",
+              "value": "={{ $json.message_id }}",
+              "type": "number"
+            },
+            {
+              "id": "conversation-history",
+              "name": "conversation_history",
+              "value": "={{ $json.conversation_history }}",
+              "type": "string"
+            },
+            {
+              "id": "total-messages",
+              "name": "total_messages",
+              "value": "={{ $json.total_messages }}",
+              "type": "number"
+            },
+            {
+              "id": "conversation-duration",
+              "name": "conversation_duration",
+              "value": "={{ $json.conversation_duration }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "27fa4efe-f139-4f5e-a581-b9e0281cc754",
+      "name": "Prepare for AI",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -192,
+        368
+      ]
+    },
+    {
+      "parameters": {
+        "options": {
+          "systemMessage": "You are a friendly AI assistant that communicates via SMS text messages.\n\n**CRITICAL: SMS CONSTRAINTS**\n- Keep responses SHORT (1-2 sentences max)\n- This is SMS - people expect brief, quick replies\n- Get straight to the point immediately\n- Save detailed explanations for when explicitly asked\n\n**Your Capabilities:**\n- Answer questions briefly and helpfully\n- Tell jokes when asked\n- Be conversational and natural\n- Remember conversation context\n\n**Communication Style:**\n- Be friendly but CONCISE\n- Use simple, clear language\n- No emojis unless user uses them first\n- Maximum 160 characters when possible\n- If you must go longer, keep it under 300 characters\n\n**Example Interactions:**\n- \"tell me a joke\" → One short joke, that's it\n- \"what's the weather?\" → \"I can't check weather, but you can try your weather app!\"\n- \"hello\" → \"Hey! How can I help?\"\n- Complex topics → Give a brief answer, then ask \"Want more details?\"\n\n**CRITICAL RULES:**\n- BREVITY IS KEY - this is SMS, not email\n- One idea per message\n- If your response is longer than 2 sentences, it's TOO LONG\n- The system splits long messages but they're annoying - KEEP IT SHORT!"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        48,
+        368
+      ],
+      "id": "3fca2ab0-6a62-49ae-ac64-0419f7acb8f3",
+      "name": "SMS AI Agent"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Extract AI response and prepare for SMS sending\nlet aiResponse;\nif ($input.item.json.output) {\n  aiResponse = $input.item.json.output;\n} else if ($input.item.json.text) {\n  aiResponse = $input.item.json.text;\n} else {\n  aiResponse = $input.item.json.response || 'Hello! How can I help you?';\n}\n\n// CRITICAL: Get message_id from 'Prepare for AI' node - AI agent doesn't preserve it\nconst prepareNode = $('Prepare for AI').item.json;\nconst phoneNumber = prepareNode.phone_number;\nconst messageId = prepareNode.message_id;\n\n// Log for debugging\nconsole.log('=== Prepare SMS Response Debug ===');\nconsole.log('Phone:', phoneNumber);\nconsole.log('Message ID:', messageId, 'Type:', typeof messageId);\nconsole.log('AI Response length:', aiResponse?.length);\n\nif (!messageId) {\n  throw new Error('Message ID is missing from Prepare for AI node!');\n}\n\nreturn {\n  json: {\n    phone_number: phoneNumber,\n    message_id: messageId,\n    message: aiResponse,\n    original_message_id: messageId,\n    ai_full_response: aiResponse\n  }\n};"
+      },
+      "id": "d8af6b9b-b981-468b-a203-caa66a1f9bae",
+      "name": "Prepare SMS Response",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        400,
+        368
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ 'https://smsn8n.marketsuite.co/api/messages/' + $json.message_id + '/mark-read' }}",
+        "options": {}
+      },
+      "id": "de80edc4-c52b-425c-926d-b8e38c222684",
+      "name": "Mark Message as Read",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        576,
+        368
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Get the original data from Prepare SMS Response node\nconst prepareData = $('Prepare SMS Response').item.json;\n\nreturn {\n  json: {\n    phone_number: prepareData.phone_number,\n    message: prepareData.message\n  }\n};"
+      },
+      "id": "d76aa509-a5bf-4d13-a2e9-0bede0163529",
+      "name": "Restore Data for Send",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        752,
+        368
+      ]
+    },
+    {
+      "parameters": {
+        "model": "google/gemini-2.5-flash",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1,
+      "position": [
+        -48,
+        704
+      ],
+      "id": "4861d839-9477-42bb-8d3d-969b3bd5f7db",
+      "name": "OpenRouter Chat Model",
+      "credentials": {
+        "openRouterApi": {
+          "id": "daclOezIY0qSdW4Z",
+          "name": "OpenRouter account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Poll Every 30s": {
+      "main": [
+        [
+          {
+            "node": "Get Recent SMS",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Recent SMS": {
+      "main": [
+        [
+          {
+            "node": "Filter Unread Messages",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter Unread Messages": {
+      "main": [
+        [
+          {
+            "node": "Prepare for AI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare for AI": {
+      "main": [
+        [
+          {
+            "node": "SMS AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "SMS AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Prepare SMS Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare SMS Response": {
+      "main": [
+        [
+          {
+            "node": "Mark Message as Read",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mark Message as Read": {
+      "main": [
+        [
+          {
+            "node": "Restore Data for Send",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Restore Data for Send": {
+      "main": [
+        [
+          {
+            "node": "Send AI Reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenRouter Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "SMS AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "38baf563-bea0-4473-8b5f-10ed89fdec50",
+  "meta": {
+    "instanceId": "daf1db1234fdfcbbfb53be5e1fe26764ab505fd0554977269bee03ef4bae6464"
+  },
+  "id": "V4sTGGjSW9rHC8vb",
+  "tags": []
+}

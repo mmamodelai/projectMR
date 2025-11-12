@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - VAHID DAVOUDI
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5e4a0ee544a0a6082dcb7648
+  Phone:          13109268443
+  Email:          Not provided
+  Tier:           Regular
+  Risk Status:    Dormant (80 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         7
+  Lifetime Value:       $213.69
+  Avg Transaction:      $30.53
+  Last Visit:           2025-08-03
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Monthly
+  Expected Annual Visits:   12
+  Potential Annual Value:   $366.36
+  
+  ROI Analysis:
+  - Discount Budget:        $6.11 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           6000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           2
+  Priority:       10
+  Send Timing:    Week 2
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS
+
+====================================================================================================

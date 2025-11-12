@@ -1,0 +1,55 @@
+
+================================================================================
+CUSTOMER SNAPSHOT - CHRISTOPHER CHARLES AVITABILE
+================================================================================
+
+CONTACT INFORMATION:
+  Phone:          13107092369
+  Email:          Not provided
+  Customer ID:    5b20a56689fc9307fe1b2a3f
+
+TIER & STATUS:
+  Tier:           Regular
+  Risk Status:    At Risk
+  Campaign Wave:  Wave 4 Priority
+
+ENGAGEMENT METRICS:
+  Last Visit:           2025-06-08
+  Days Since Last:      136 days
+  Total Visits:         6
+  Visit Frequency:      Monthly (when active)
+  
+VALUE METRICS:
+  Lifetime Value:       $283.68
+  Average Transaction:  $47.28
+  Estimated Annual:     $567.36 (if reactivated)
+
+URGENCY ASSESSMENT:
+  Level:          CRITICAL - At Risk of Lost Forever
+  Recommended:    Maximum effort, best offer
+
+REACTIVATION STRATEGY:
+
+  Approach:       Win-Back Offer
+  Offer:          10-15% off on next visit
+  Message:        "Come back and see what's new! Special offer just for you..."
+  Channel:        SMS
+  Budget:         Up to $7.09 discount value
+
+CAMPAIGN TIMING:
+  Send Window:    Week 1 - CRITICAL, send ASAP
+  Best Time:      Afternoon (2-5 PM) based on customer tier
+  Follow-up:      None scheduled
+
+SUCCESS METRICS:
+  Target ROI:     200%
+  Break-even:     1 visit at $47.28
+  Goal:           Restore to Monthly visits
+
+NOTES:
+  - Customer has been gone for 136 days
+  - Historical pattern: 6 visits, $283.68 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+================================================================================

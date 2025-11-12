@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - CODY CRITCHELOE
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    60aaadb28e0e3944ff75d6ee
+  Phone:          18168050904
+  Email:          Not provided
+  Tier:           Regular
+  Risk Status:    Cooling (71 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         6
+  Lifetime Value:       $144.62
+  Avg Transaction:      $24.10
+  Last Visit:           2025-08-12
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Monthly
+  Expected Annual Visits:   12
+  Potential Annual Value:   $289.20
+  
+  ROI Analysis:
+  - Discount Budget:        $4.82 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           6000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           1
+  Priority:       9
+  Send Timing:    Week 1 - URGENT
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS
+
+====================================================================================================

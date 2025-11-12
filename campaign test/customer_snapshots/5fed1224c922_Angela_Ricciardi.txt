@@ -1,0 +1,55 @@
+
+================================================================================
+CUSTOMER SNAPSHOT - ANGELA RICCIARDI
+================================================================================
+
+CONTACT INFORMATION:
+  Phone:          14407591634
+  Email:          Not provided
+  Customer ID:    5fed1224c9221d08f0257085
+
+TIER & STATUS:
+  Tier:           Regular
+  Risk Status:    At Risk
+  Campaign Wave:  Wave 4 Priority
+
+ENGAGEMENT METRICS:
+  Last Visit:           2025-05-31
+  Days Since Last:      144 days
+  Total Visits:         7
+  Visit Frequency:      Monthly (when active)
+  
+VALUE METRICS:
+  Lifetime Value:       $147.66
+  Average Transaction:  $21.09
+  Estimated Annual:     $253.08 (if reactivated)
+
+URGENCY ASSESSMENT:
+  Level:          CRITICAL - At Risk of Lost Forever
+  Recommended:    Maximum effort, best offer
+
+REACTIVATION STRATEGY:
+
+  Approach:       Win-Back Offer
+  Offer:          10-15% off on next visit
+  Message:        "Come back and see what's new! Special offer just for you..."
+  Channel:        SMS
+  Budget:         Up to $3.16 discount value
+
+CAMPAIGN TIMING:
+  Send Window:    Week 1 - CRITICAL, send ASAP
+  Best Time:      Afternoon (2-5 PM) based on customer tier
+  Follow-up:      None scheduled
+
+SUCCESS METRICS:
+  Target ROI:     200%
+  Break-even:     1 visit at $21.09
+  Goal:           Restore to Monthly visits
+
+NOTES:
+  - Customer has been gone for 144 days
+  - Historical pattern: 7 visits, $147.66 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+================================================================================

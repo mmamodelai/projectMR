@@ -1,0 +1,55 @@
+
+================================================================================
+CUSTOMER SNAPSHOT - JONATHON ALAN FRANCIS
+================================================================================
+
+CONTACT INFORMATION:
+  Phone:          19499235532
+  Email:          Not provided
+  Customer ID:    003b2b002dc80041be00d08a
+
+TIER & STATUS:
+  Tier:           VIP
+  Risk Status:    Dormant
+  Campaign Wave:  Wave 2 Priority
+
+ENGAGEMENT METRICS:
+  Last Visit:           2025-07-30
+  Days Since Last:      84 days
+  Total Visits:         18
+  Visit Frequency:      Bi-weekly (when active)
+  
+VALUE METRICS:
+  Lifetime Value:       $752.93
+  Average Transaction:  $41.83
+  Estimated Annual:     $1,087.58 (if reactivated)
+
+URGENCY ASSESSMENT:
+  Level:          HIGH - Going Dormant
+  Recommended:    Strong offer, personal message
+
+REACTIVATION STRATEGY:
+
+  Approach:       Valued Customer
+  Offer:          15-20% off + loyalty bonus
+  Message:        "It's been a while! We have some new products you'd love..."
+  Channel:        SMS + Email (if available)
+  Budget:         Up to $8.37 discount value
+
+CAMPAIGN TIMING:
+  Send Window:    Week 1-2 - High priority
+  Best Time:      Afternoon (2-5 PM) based on customer tier
+  Follow-up:      48 hours if no response
+
+SUCCESS METRICS:
+  Target ROI:     200%
+  Break-even:     1 visit at $41.83
+  Goal:           Restore to Bi-weekly visits
+
+NOTES:
+  - Customer has been gone for 84 days
+  - Historical pattern: 18 visits, $752.93 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+================================================================================

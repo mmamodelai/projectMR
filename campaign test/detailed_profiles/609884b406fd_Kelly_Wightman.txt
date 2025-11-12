@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - KELLY WIGHTMAN
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    609884b406fddc283d884ad4
+  Phone:          18187990482
+  Email:          Not provided
+  Tier:           Super VIP
+  Risk Status:    Dormant (87 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         23
+  Lifetime Value:       $575.09
+  Avg Transaction:      $25.00
+  Last Visit:           2025-07-27
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Weekly
+  Expected Annual Visits:   52
+  Potential Annual Value:   $1,300.00
+  
+  ROI Analysis:
+  - Discount Budget:        $5.00 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           26000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           2
+  Priority:       2
+  Send Timing:    Week 2
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS+ Email + Call
+
+====================================================================================================

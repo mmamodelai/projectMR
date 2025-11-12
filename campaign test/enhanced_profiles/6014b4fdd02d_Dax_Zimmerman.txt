@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - DAX ZIMMERMAN
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    6014b4fdd02d2008f1ae2bb4
+  Phone:          13234227745
+  Email:          Not provided
+  Tier:           Regular
+  Risk Status:    Cooling (57 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    9
+  Total Revenue:         $292.67
+  Average Transaction:   $32.52
+  Median Transaction:    $20.00
+  Min Transaction:      $1.08
+  Max Transaction:      $150.00
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      74.6 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Sunday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Credit
+  Favorite Staff:        Devon Calonzo
+
+  Payment Method Breakdown:
+    Credit            5 times ( 55.6%)
+    Cash              4 times ( 44.4%)
+
+  Staff Interaction Breakdown:
+    Devon Calonzo          2 times ( 22.2%)
+    Bob McGinn             2 times ( 22.2%)
+    Jacob Vangellow        2 times ( 22.2%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    17
+  Unique Products:       11
+  Avg Items/Visit:       1.9
+  Favorite Category:     Accessories
+  Favorite Brand:        MOTA
+  Avg Item Price:        $10.17
+  Price Range:           $0.01 - $27.50
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            Regular
+  Engagement Level:      Low
+  Loyalty Score:         Low
+  Price Sensitivity:     Moderate
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              Win-Back Offer
+  Discount Level:        10-15%
+  Message Focus:         Accessories + MOTA
+  Channel:               SMS
+  Timing:                Sunday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi Dax, we miss you! 🌿
+   
+   We just restocked accessories from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME6014B4
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  75 days between visits
+  Expected Annual Visits: 4
+  Potential Annual Value: $130.08
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $6.50 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        2000%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          9
+Wave:                    1
+Send Window:            Week 1 - URGENT
+Best Contact Time:      Sunday at 0:00
+Follow-up Schedule:     None
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $32.52 (first visit)
+  Annual Value:          $130.08
+
+NOTES:
+  - Customer has been gone for 57 days
+  - Historical pattern: 9 visits, $292.67 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+====================================================================================================

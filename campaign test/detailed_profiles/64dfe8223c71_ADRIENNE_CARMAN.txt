@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - ADRIENNE CARMAN
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    64dfe8223c7103383587dda2
+  Phone:          13103418454
+  Email:          Not provided
+  Tier:           Super VIP
+  Risk Status:    Inactive (126 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         34
+  Lifetime Value:       $1,283.61
+  Avg Transaction:      $37.75
+  Last Visit:           2025-06-18
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Weekly
+  Expected Annual Visits:   52
+  Potential Annual Value:   $1,963.00
+  
+  ROI Analysis:
+  - Discount Budget:        $7.55 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           26000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           3
+  Priority:       3
+  Send Timing:    Week 3
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS+ Email + Call
+
+====================================================================================================

@@ -1,0 +1,55 @@
+
+================================================================================
+CUSTOMER SNAPSHOT - LAURA ESPINOZA
+================================================================================
+
+CONTACT INFORMATION:
+  Phone:          18188447699
+  Email:          Not provided
+  Customer ID:    604978333af9ee08dc43ca1e
+
+TIER & STATUS:
+  Tier:           VIP
+  Risk Status:    Dormant
+  Campaign Wave:  Wave 2 Priority
+
+ENGAGEMENT METRICS:
+  Last Visit:           2025-08-01
+  Days Since Last:      82 days
+  Total Visits:         12
+  Visit Frequency:      Bi-weekly (when active)
+  
+VALUE METRICS:
+  Lifetime Value:       $219.92
+  Average Transaction:  $18.33
+  Estimated Annual:     $476.58 (if reactivated)
+
+URGENCY ASSESSMENT:
+  Level:          HIGH - Going Dormant
+  Recommended:    Strong offer, personal message
+
+REACTIVATION STRATEGY:
+
+  Approach:       Valued Customer
+  Offer:          15-20% off + loyalty bonus
+  Message:        "It's been a while! We have some new products you'd love..."
+  Channel:        SMS + Email (if available)
+  Budget:         Up to $3.67 discount value
+
+CAMPAIGN TIMING:
+  Send Window:    Week 1-2 - High priority
+  Best Time:      Afternoon (2-5 PM) based on customer tier
+  Follow-up:      48 hours if no response
+
+SUCCESS METRICS:
+  Target ROI:     200%
+  Break-even:     1 visit at $18.33
+  Goal:           Restore to Bi-weekly visits
+
+NOTES:
+  - Customer has been gone for 82 days
+  - Historical pattern: 12 visits, $219.92 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+================================================================================

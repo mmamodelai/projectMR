@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - ANGELICA PEREZAGUIRRE
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5f559c48b111ce08d2b61a9a
+  Phone:          17148333003
+  Email:          Not provided
+  Tier:           Regular
+  Risk Status:    Cooling (73 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         6
+  Lifetime Value:       $117.17
+  Avg Transaction:      $19.53
+  Last Visit:           2025-08-10
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Monthly
+  Expected Annual Visits:   12
+  Potential Annual Value:   $234.36
+  
+  ROI Analysis:
+  - Discount Budget:        $3.91 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           6000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           1
+  Priority:       9
+  Send Timing:    Week 1 - URGENT
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS
+
+====================================================================================================

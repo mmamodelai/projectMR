@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - MARK CHRISTIE KINGSLEY
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5b20a56689fc9307fe1b3fd5
+  Phone:          16175042575
+  Email:          Not provided
+  Tier:           Regular
+  Risk Status:    At Risk (152 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    8
+  Total Revenue:         $186.84
+  Average Transaction:   $23.36
+  Median Transaction:    $18.41
+  Min Transaction:      $13.28
+  Max Transaction:      $55.00
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      68.6 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Friday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Credit
+  Favorite Staff:        Bob McGinn
+
+  Payment Method Breakdown:
+    Credit            4 times ( 50.0%)
+    Cash              4 times ( 50.0%)
+
+  Staff Interaction Breakdown:
+    Bob McGinn             2 times ( 25.0%)
+    Jacob Vangellow        2 times ( 25.0%)
+    Michael Preziosi       1 times ( 12.5%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    24
+  Unique Products:       18
+  Avg Items/Visit:       3.0
+  Favorite Category:     Flower PrePacks
+  Favorite Brand:        MOTA
+  Avg Item Price:        $8.51
+  Price Range:           $0.00 - $20.62
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            Regular
+  Engagement Level:      Low
+  Loyalty Score:         Low
+  Price Sensitivity:     Budget
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              Win-Back Offer
+  Discount Level:        10-15%
+  Message Focus:         Flower PrePacks + MOTA
+  Channel:               SMS
+  Timing:                Friday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi MARK, we miss you! 🌿
+   
+   We just restocked flower prepacks from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME5B20A5
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  69 days between visits
+  Expected Annual Visits: 5
+  Potential Annual Value: $116.78
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $4.67 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        2500%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          12
+Wave:                    4
+Send Window:            Week 4
+Best Contact Time:      Friday at 0:00
+Follow-up Schedule:     None
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $23.36 (first visit)
+  Annual Value:          $116.78
+
+NOTES:
+  - Customer has been gone for 152 days
+  - Historical pattern: 8 visits, $186.84 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+====================================================================================================

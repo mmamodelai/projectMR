@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - STEPHANIE TIRADO
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5ea0eba5ef601f08d4101d07
+  Phone:          12138806457
+  Email:          Not provided
+  Tier:           Super VIP
+  Risk Status:    Dormant (94 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    25
+  Total Revenue:         $892.57
+  Average Transaction:   $35.70
+  Median Transaction:    $28.17
+  Min Transaction:      $7.00
+  Max Transaction:      $65.88
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      23.1 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Friday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Credit
+  Favorite Staff:        Bob McGinn
+
+  Payment Method Breakdown:
+    Credit           16 times ( 64.0%)
+    Cash              9 times ( 36.0%)
+
+  Staff Interaction Breakdown:
+    Bob McGinn             7 times ( 28.0%)
+    Jacob Vangellow        5 times ( 20.0%)
+    Leo Salguero           4 times ( 16.0%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    91
+  Unique Products:       50
+  Avg Items/Visit:       3.6
+  Favorite Category:     Flower PrePacks
+  Favorite Brand:        MOTA
+  Avg Item Price:        $12.24
+  Price Range:           $0.00 - $31.39
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            Super VIP
+  Engagement Level:      High
+  Loyalty Score:         Medium
+  Price Sensitivity:     Moderate
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              VIP Treatment
+  Discount Level:        20-30%
+  Message Focus:         Flower PrePacks + MOTA
+  Channel:               SMS + Email + Call
+  Timing:                Friday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi Stephanie, we miss you! 🌿
+   
+   We just restocked flower prepacks from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME5EA0EB
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  23 days between visits
+  Expected Annual Visits: 15
+  Potential Annual Value: $535.54
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $7.14 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        7500%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          2
+Wave:                    2
+Send Window:            Week 2
+Best Contact Time:      Friday at 0:00
+Follow-up Schedule:     48 hours
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $35.70 (first visit)
+  Annual Value:          $535.54
+
+NOTES:
+  - Customer has been gone for 94 days
+  - Historical pattern: 25 visits, $892.57 total spent
+  - Standard campaign approach
+  - Consider phone call if SMS doesn't convert
+
+====================================================================================================

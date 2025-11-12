@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - MICHAEL WHITED
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    60b2c6d5c58b5c2f06b76015
+  Phone:          14159946896
+  Email:          Not provided
+  Tier:           VIP
+  Risk Status:    Dormant (97 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         17
+  Lifetime Value:       $586.58
+  Avg Transaction:      $34.50
+  Last Visit:           2025-07-17
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Bi-weekly
+  Expected Annual Visits:   26
+  Potential Annual Value:   $897.00
+  
+  ROI Analysis:
+  - Discount Budget:        $6.90 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           13000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           2
+  Priority:       6
+  Send Timing:    Week 2
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS + Email
+
+====================================================================================================

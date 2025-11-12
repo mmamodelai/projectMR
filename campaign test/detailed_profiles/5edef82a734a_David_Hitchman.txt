@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - DAVID HITCHMAN
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5edef82a734ab808d18da061
+  Phone:          19172167047
+  Email:          Not provided
+  Tier:           VIP
+  Risk Status:    Dormant (101 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         13
+  Lifetime Value:       $537.68
+  Avg Transaction:      $41.36
+  Last Visit:           2025-07-13
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Bi-weekly
+  Expected Annual Visits:   26
+  Potential Annual Value:   $1,075.36
+  
+  ROI Analysis:
+  - Discount Budget:        $8.27 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           13000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           2
+  Priority:       6
+  Send Timing:    Week 2
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS + Email
+
+====================================================================================================

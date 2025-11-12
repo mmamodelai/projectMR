@@ -1,0 +1,56 @@
+
+================================================================================
+CUSTOMER SNAPSHOT - LARRY BRAZZLE
+================================================================================
+
+CONTACT INFORMATION:
+  Phone:          15037571682
+  Email:          Not provided
+  Customer ID:    67a14fd0e4b03509a794e37c
+
+TIER & STATUS:
+  Tier:           Super VIP
+  Risk Status:    Cooling
+  Campaign Wave:  Wave 1 Priority
+
+ENGAGEMENT METRICS:
+  Last Visit:           2025-08-28
+  Days Since Last:      55 days
+  Total Visits:         23
+  Visit Frequency:      Weekly (when active)
+  
+VALUE METRICS:
+  Lifetime Value:       $808.12
+  Average Transaction:  $35.14
+  Estimated Annual:     $1,827.28 (if reactivated)
+
+URGENCY ASSESSMENT:
+  Level:          MEDIUM - Cooling Off
+  Recommended:    Light touch, promotional offer
+
+REACTIVATION STRATEGY:
+
+  Approach:       VIP Treatment
+  Offer:          20-30% off + exclusive product access
+  Message:        "We miss you! As one of our top customers, we'd love to 
+                  welcome you back with a special VIP offer..."
+  Channel:        SMS + Email (if available) + Follow-up call
+  Budget:         Up to $10.54 discount value
+
+CAMPAIGN TIMING:
+  Send Window:    Week 1 - Send immediately
+  Best Time:      Afternoon (2-5 PM) based on customer tier
+  Follow-up:      48 hours if no response
+
+SUCCESS METRICS:
+  Target ROI:     300%
+  Break-even:     1 visit at $35.14
+  Goal:           Restore to Weekly visits
+
+NOTES:
+  - Customer has been gone for 55 days
+  - Historical pattern: 23 visits, $808.12 total spent
+  - Standard campaign approach
+  - Consider phone call if SMS doesn't convert
+
+================================================================================

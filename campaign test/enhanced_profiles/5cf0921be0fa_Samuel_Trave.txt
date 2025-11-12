@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - SAMUEL TRAVE
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5cf0921be0faca07c3014a73
+  Phone:          18162554118
+  Email:          Not provided
+  Tier:           Regular
+  Risk Status:    Dormant (81 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    5
+  Total Revenue:         $156.20
+  Average Transaction:   $31.24
+  Median Transaction:    $30.30
+  Min Transaction:      $14.93
+  Max Transaction:      $49.55
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      10.5 days
+  Visit Frequency:       Bi-weekly
+  Preferred Day:         Saturday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Cash
+  Favorite Staff:        Jacob Vangellow
+
+  Payment Method Breakdown:
+    Cash              4 times ( 80.0%)
+    Credit            1 times ( 20.0%)
+
+  Staff Interaction Breakdown:
+    Jacob Vangellow        2 times ( 40.0%)
+    Luis Bobadilla         1 times ( 20.0%)
+    Jimmy Silks            1 times ( 20.0%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    14
+  Unique Products:       14
+  Avg Items/Visit:       2.8
+  Favorite Category:     Flower PrePacks
+  Favorite Brand:        MOTA
+  Avg Item Price:        $9.72
+  Price Range:           $1.83 - $14.93
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            Regular
+  Engagement Level:      Low
+  Loyalty Score:         High
+  Price Sensitivity:     Moderate
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              Win-Back Offer
+  Discount Level:        10-15%
+  Message Focus:         Flower PrePacks + MOTA
+  Channel:               SMS
+  Timing:                Saturday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi Samuel, we miss you! 🌿
+   
+   We just restocked flower prepacks from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME5CF092
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  10 days between visits
+  Expected Annual Visits: 34
+  Potential Annual Value: $1,062.16
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $6.25 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        17000%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          10
+Wave:                    2
+Send Window:            Week 2
+Best Contact Time:      Saturday at 0:00
+Follow-up Schedule:     None
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $31.24 (first visit)
+  Annual Value:          $1,062.16
+
+NOTES:
+  - Customer has been gone for 81 days
+  - Historical pattern: 5 visits, $156.20 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+====================================================================================================

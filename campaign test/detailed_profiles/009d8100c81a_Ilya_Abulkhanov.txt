@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - ILYA ABULKHANOV
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    009d8100c81a0041d9002e8f
+  Phone:          13107406253
+  Email:          Not provided
+  Tier:           VIP
+  Risk Status:    Cooling (65 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         11
+  Lifetime Value:       $382.71
+  Avg Transaction:      $34.79
+  Last Visit:           2025-08-18
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Bi-weekly
+  Expected Annual Visits:   26
+  Potential Annual Value:   $904.54
+  
+  ROI Analysis:
+  - Discount Budget:        $6.96 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           13000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           1
+  Priority:       5
+  Send Timing:    Week 1 - URGENT
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS + Email
+
+====================================================================================================

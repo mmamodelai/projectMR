@@ -1,0 +1,1309 @@
+{
+    "nodes": [
+      {
+        "parameters": {
+          "promptType": "define",
+          "text": "=You are **Rex**, the MoTA-brand loyalty agent.\n\nYou receive one JSON object per execution (it follows after this text).\n\n{{ JSON.stringify($json, null, 2) }}\n\n──────────────────────\n📋 Tasks\n──────────────────────\n1. Parse the JSON to get customer data and receipt scan data.  \n2. Extract cashierName from content.cashierName (e.g., \"Sophia\", \"Brooke W.\")  \n3. Extract every MoTA product -> productName, price, quantity from content.motaProducts  \n4. Calculate: totalMotaSpend = content.totalMotaSpend  \n5. Calculate: pointsEarned = totalMotaSpend × 1 (customer gets 1 point per dollar)  \n6. Calculate: budtenderPoints = pointsEarned × 10 (budtender gets 10x customer points)\n\n──────────────────────\n🔧 Tools you can call\n──────────────────────\n• **Search Customer**             (Email) - Search by email in Google Sheets\n• **Update Customer Points**      (id, firstName, lastName, email, phone, totalPoints, last_dispensary, last_budtender)\n• **Create New Customer**         (firstName, lastName, email, phone, totalPoints, last_dispensary, last_budtender)\n\n• **Get Budtender by Dispensary** (Supabase) - Search by dispensary_name AND first_name (from cashierName)\n• **Update Budtender Points**     (HTTP) - Increment budtender points by passing budtender_id and points_to_add\n\n• **Gmail**                       (send confirmation email)\n• **Send SMS**                    (Supabase) - Queue SMS to any phone number (phone_number, content)\n\n──────────────────────\n🧭 MANDATORY Flow\n──────────────────────\nA. **Customer** (Google Sheets):  \n   1. Search Customer by email  \n   2. If found → Update Customer Points (ADD pointsEarned to their existing Total_Points)  \n      - Set last_dispensary = store field (e.g., \"Green House\")  \n      - Set last_budtender = cashierName from receipt (e.g., \"Sophia\")\n   3. If NOT found → Create New Customer  \n      - Set totalPoints = pointsEarned  \n      - Set last_dispensary = store field  \n      - Set last_budtender = cashierName from receipt\n\nB. **Budtender** (Supabase - NEVER CREATE, ONLY UPDATE):  \n   1. Extract first name from cashierName (e.g., \"Brooke W.\" → \"Brooke\", \"Sophia\" → \"Sophia\")  \n   2. Use \"Get Budtender by Dispensary\" with EXACT values from input:  \n      - dispensary_name = store field EXACTLY as provided (e.g., \"Green House\")  \n      - first_name = extracted first name EXACTLY (e.g., \"Sophia\")  \n      - MUST be case-sensitive exact match  \n   3. If found → Use \"Update Budtender Points\":  \n      - Get Budtender returns: {id: 525, points: 0, first_name: \"Sophia\", ...}  \n      - Calculate: budtenderPoints = pointsEarned × 10 (e.g., 65 × 10 = 650)  \n      - Call Update Budtender Points with EXACTLY these values:  \n        * values0_Value = budtender.id (e.g., \"525\")  \n        * fieldValues0_Field_Value = budtenderPoints (e.g., \"650\")  \n      - These values are used in the HTTP request to increment points  \n   4. If NOT found → Skip budtender update (DO NOT CREATE - they must exist in database first)\n\nC. **Communication**:  \n   1. Gmail → Send confirmation email to CUSTOMER:  \n      - To: customer's email  \n      - Subject: \"MoTA Rewards: You earned [X] points!\"  \n      - Body: Include customer name, points earned, new balance, MoTA products purchased, total spent, and budtender who helped  \n   2. Send SMS → Send SMS to CUSTOMER:  \n      - phone_number: customer's formattedPhone from input  \n      - content: \"Hello [FirstName]! You earned [X] points. Your balance is [Total] points. Check email from Mota.la.rewards@gmail.com for details\"  \n      - Example: \"Hello Keanu! You earned 65 points. Your balance is 520 points. Check email from Mota.la.rewards@gmail.com for details\"  \n      - MUST be under 150 characters  \n   3. Gmail → If budtender was found, send confirmation email to BUDTENDER:  \n      - To: budtender's email from Get Budtender result  \n      - Subject: \"Great job! You earned [budtenderPoints] points\"  \n      - Body: Include budtender name, points earned, customer helped, store name, and new total  \n   4. Send SMS → If budtender has a phone number, send SMS to BUDTENDER:  \n      - phone_number: budtender's phone (format as +1XXXXXXXXXX if needed)  \n      - content: \"Great job [BudtenderFirstName]! You earned [budtenderPoints] points helping customers today. Keep up the great work!\"  \n      - Example: \"Great job Sophia! You earned 650 points helping customers today. Keep up the great work!\"  \n      - ONLY if budtender phone is not null/empty  \n   5. Do not add any final text response\n\n──────────────────────\n⚠️ CRITICAL NOTES\n──────────────────────\n• NEVER create a budtender - they must already exist in Supabase  \n• ALWAYS ADD points to existing totals (never replace)  \n• Extract first name only from cashierName for budtender lookup  \n• Use EXACT dispensary name from store field (\"Green House\" must match exactly)  \n• Use EXACT first name from cashierName (\"Sophia\" must match exactly)  \n• If Get Budtender returns empty, skip budtender update gracefully\n\n──────────────────────\n📱 FINAL NOTES\n──────────────────────\n• You MUST use the \"Send SMS\" tool to send messages (do NOT just respond with SMS text)\n• Send SMS to customer using their formattedPhone from input\n• Send SMS to budtender ONLY if they have a phone number in the database\n• After all tools succeed, do NOT add any final text response\n",
+          "options": {}
+        },
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "typeVersion": 1.6,
+        "position": [
+          1056,
+          -240
+        ],
+        "id": "222ad712-27c7-409d-8fd7-0fdc1a350418",
+        "name": "Rex AI Agent"
+      },
+      {
+        "parameters": {
+          "model": "anthropic/claude-3.5-haiku",
+          "options": {}
+        },
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+        "typeVersion": 1,
+        "position": [
+          656,
+          -16
+        ],
+        "id": "5e1df36f-3031-4772-8127-d3b1074d130f",
+        "name": "OpenRouter Chat Model",
+        "credentials": {
+          "openRouterApi": {
+            "id": "daclOezIY0qSdW4Z",
+            "name": "OpenRouter account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "sendTo": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('To', ``, 'string') }}",
+          "subject": "MoTA Rewards Points Earned!",
+          "emailType": "text",
+          "message": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Message', `this is an update for a rewards program the customer has joined, we are Mota, the customer has purchased our products and sent in a photo of the receipt. We want to make sure this doesn't get stuck in a spam filter so no emojis etc, act as Luis head of rewards program for Mota\n\nHello (customername) ! Great news!\n\nYou've earned MoTa Rewards points from your recent purchase at (Last_dispensary)\n\nMoTa Products Purchased:- Total MoTa spent: $XX- Mota Points earned: 65 points, your balance is XX Points, \nYour budtender (budtenders name here) helped you with this purchase. \nThanks for choosing MoTa! Luis - MoTa Rewards Team`, 'string') }}",
+          "options": {
+            "appendAttribution": false,
+            "senderName": "Luis - MoTA Rewards"
+          }
+        },
+        "type": "n8n-nodes-base.gmailTool",
+        "typeVersion": 2.1,
+        "position": [
+          864,
+          -16
+        ],
+        "id": "084aaed5-2662-4806-8667-05e27f8a3e20",
+        "name": "Gmail",
+        "webhookId": "db24d03d-5054-4c8c-84b2-465ee1907e90",
+        "credentials": {
+          "gmailOAuth2": {
+            "id": "BvZyBEwmYVeo2pxs",
+            "name": "Gmail account 2"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "descriptionType": "manual",
+          "toolDescription": "Search for existing customer by email in CUSTOMERS sheet. Use this FIRST to check if customer exists before creating or updating.",
+          "documentId": {
+            "__rl": true,
+            "value": "1kqALfqsggTnT7upTXsI-cUVU9jYrhFyJ-uCdK4sYmTM",
+            "mode": "list",
+            "cachedResultName": "Mota Rewards Database",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1kqALfqsggTnT7upTXsI-cUVU9jYrhFyJ-uCdK4sYmTM/edit?usp=drivesdk"
+          },
+          "sheetName": {
+            "__rl": true,
+            "value": "gid=0",
+            "mode": "list",
+            "cachedResultName": "CUSTOMERS",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1kqALfqsggTnT7upTXsI-cUVU9jYrhFyJ-uCdK4sYmTM/edit#gid=0"
+          },
+          "filtersUI": {
+            "values": [
+              {
+                "lookupColumn": "Email",
+                "lookupValue": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('values0_Value', ``, 'string') }}"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.googleSheetsTool",
+        "typeVersion": 4.6,
+        "position": [
+          1008,
+          -16
+        ],
+        "id": "2bc4d9c7-e594-4d04-8ee9-56d6e9accc11",
+        "name": "Search Customer",
+        "credentials": {
+          "googleSheetsOAuth2Api": {
+            "id": "LSu2bHJie7HlsZRT",
+            "name": "Google Sheets account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "descriptionType": "manual",
+          "toolDescription": "Update existing customer's points by finding them by email and updating their Total_Points with the new cumulative total.",
+          "operation": "update",
+          "documentId": {
+            "__rl": true,
+            "value": "1kqALfqsggTnT7upTXsI-cUVU9jYrhFyJ-uCdK4sYmTM",
+            "mode": "list",
+            "cachedResultName": "Mota Rewards Database",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1kqALfqsggTnT7upTXsI-cUVU9jYrhFyJ-uCdK4sYmTM/edit?usp=drivesdk"
+          },
+          "sheetName": {
+            "__rl": true,
+            "value": "gid=0",
+            "mode": "list",
+            "cachedResultName": "CUSTOMERS",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1kqALfqsggTnT7upTXsI-cUVU9jYrhFyJ-uCdK4sYmTM/edit#gid=0"
+          },
+          "columns": {
+            "mappingMode": "defineBelow",
+            "value": {
+              "First_Name": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('First_Name__using_to_match_', ``, 'string') }}",
+              "Last_Name": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Last_Name', ``, 'string') }}",
+              "Email": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Email', ``, 'string') }}",
+              "Phone": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Phone', ``, 'string') }}",
+              "Total_Points": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Total_Points', ``, 'string') }}",
+              "Last_dispensary": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Last_dispensary', ``, 'string') }}",
+              "Last_budtender": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Last_budtender', ``, 'string') }}"
+            },
+            "matchingColumns": [
+              "First_Name"
+            ],
+            "schema": [
+              {
+                "id": "First_Name",
+                "displayName": "First_Name",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "Last_Name",
+                "displayName": "Last_Name",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Email",
+                "displayName": "Email",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "Phone",
+                "displayName": "Phone",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Total_Points",
+                "displayName": "Total_Points",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Last_dispensary",
+                "displayName": "Last_dispensary",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Last_budtender",
+                "displayName": "Last_budtender",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "error",
+                "displayName": "error",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "message",
+                "displayName": "message",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "operation",
+                "displayName": "operation",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "output",
+                "displayName": "output",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "myNewField",
+                "displayName": "myNewField",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "row_number",
+                "displayName": "row_number",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "readOnly": true,
+                "removed": false
+              }
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.googleSheetsTool",
+        "typeVersion": 4.6,
+        "position": [
+          1152,
+          -16
+        ],
+        "id": "4eba638a-df70-4906-9464-f64fa4320cc4",
+        "name": "Update Customer Points",
+        "credentials": {
+          "googleSheetsOAuth2Api": {
+            "id": "LSu2bHJie7HlsZRT",
+            "name": "Google Sheets account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "descriptionType": "manual",
+          "toolDescription": "Create new customer in CUSTOMERS sheet. Use this ONLY when Search Customer tool finds no existing customer.",
+          "operation": "append",
+          "documentId": {
+            "__rl": true,
+            "value": "1kqALfqsggTnT7upTXsI-cUVU9jYrhFyJ-uCdK4sYmTM",
+            "mode": "list",
+            "cachedResultName": "Mota Rewards Database",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1kqALfqsggTnT7upTXsI-cUVU9jYrhFyJ-uCdK4sYmTM/edit?usp=drivesdk"
+          },
+          "sheetName": {
+            "__rl": true,
+            "value": "gid=0",
+            "mode": "list",
+            "cachedResultName": "CUSTOMERS",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1kqALfqsggTnT7upTXsI-cUVU9jYrhFyJ-uCdK4sYmTM/edit#gid=0"
+          },
+          "columns": {
+            "mappingMode": "defineBelow",
+            "value": {
+              "First_Name": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('First_Name', ``, 'string') }}",
+              "Last_Name": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Last_Name', ``, 'string') }}",
+              "Email": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Email', ``, 'string') }}",
+              "Phone": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Phone', ``, 'string') }}",
+              "Total_Points": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Total_Points', ``, 'string') }}",
+              "Last_dispensary": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Last_dispensary', ``, 'string') }}",
+              "Last_budtender": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Last_budtender', ``, 'string') }}"
+            },
+            "matchingColumns": [],
+            "schema": [
+              {
+                "id": "First_Name",
+                "displayName": "First_Name",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Last_Name",
+                "displayName": "Last_Name",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Email",
+                "displayName": "Email",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Phone",
+                "displayName": "Phone",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Total_Points",
+                "displayName": "Total_Points",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Last_dispensary",
+                "displayName": "Last_dispensary",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Last_budtender",
+                "displayName": "Last_budtender",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "error",
+                "displayName": "error",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "message",
+                "displayName": "message",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "operation",
+                "displayName": "operation",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "output",
+                "displayName": "output",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "myNewField",
+                "displayName": "myNewField",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              }
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.googleSheetsTool",
+        "typeVersion": 4.6,
+        "position": [
+          1280,
+          -16
+        ],
+        "id": "4dd27d7a-5185-4ddf-95c4-8184f8634b7b",
+        "name": "Create New Customer",
+        "credentials": {
+          "googleSheetsOAuth2Api": {
+            "id": "LSu2bHJie7HlsZRT",
+            "name": "Google Sheets account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "operation": "get",
+          "tableId": "budtenders",
+          "filters": {
+            "conditions": [
+              {
+                "keyName": "dispensary_name",
+                "keyValue": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('values0_Value', ``, 'string') }}"
+              },
+              {
+                "keyName": "first_name",
+                "keyValue": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('values1_Value', ``, 'string') }}"
+              }
+            ]
+          }
+        },
+        "type": "n8n-nodes-base.supabaseTool",
+        "typeVersion": 1,
+        "position": [
+          1456,
+          -16
+        ],
+        "id": "6cb77e69-dcf5-4be5-b317-d7b81cec858f",
+        "name": "Get Budtender by Dispensary",
+        "description": "Search for budtender in Supabase by exact dispensary_name AND first_name match. Case-sensitive search.",
+        "credentials": {
+          "supabaseApi": {
+            "id": "hwJ1to3Ot0D92Bo5",
+            "name": "Supabase account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "method": "POST",
+          "url": "=https://kiwmwoqrguyrcpjytgte.supabase.co/rest/v1/rpc/increment_budtender_points",
+          "sendHeaders": true,
+          "headerParameters": {
+            "parameters": [
+              {
+                "name": "apikey",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"
+              },
+              {
+                "name": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtpd213b3FyZ3V5cmNwanl0Z3RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDUwNTEsImV4cCI6MjA3NTQyMTA1MX0.3YhobdFv0ZV6PzExcr88l-zNN3vZeEsM_Du9kVEmdV0"
+              },
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ]
+          },
+          "sendBody": true,
+          "specifyBody": "json",
+          "jsonBody": "={{ (function() { const budtender = $input.item.json.response && $input.item.json.response[0] ? $input.item.json.response[0] : null; const content = $input.item.json.content || {}; const totalSpend = content.totalMotaSpend || 65; const pointsToAdd = totalSpend * 10; return JSON.stringify({ budtender_id: budtender ? budtender.id : 525, points_to_add: pointsToAdd }); })() }}",
+          "options": {}
+        },
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.2,
+        "position": [
+          1536,
+          -240
+        ],
+        "id": "82f6eaee-75fd-4ec8-9bdb-6a51316b5e25",
+        "name": "Update Budtender Points",
+        "description": "Increment budtender's points using Supabase RPC function."
+      },
+      {
+        "parameters": {
+          "pollTimes": {
+            "item": [
+              {
+                "mode": "everyMinute"
+              }
+            ]
+          },
+          "documentId": {
+            "__rl": true,
+            "value": "1_nHi6Ewc6PaJ1i2erja411kEXm1k-EtSrsrrKtMchE4",
+            "mode": "list",
+            "cachedResultName": "Customer Rewards ",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1_nHi6Ewc6PaJ1i2erja411kEXm1k-EtSrsrrKtMchE4/edit?usp=drivesdk"
+          },
+          "sheetName": {
+            "__rl": true,
+            "value": 1735141678,
+            "mode": "list",
+            "cachedResultName": "Form responses",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1_nHi6Ewc6PaJ1i2erja411kEXm1k-EtSrsrrKtMchE4/edit#gid=1735141678"
+          },
+          "event": "rowAdded",
+          "options": {}
+        },
+        "type": "n8n-nodes-base.googleSheetsTrigger",
+        "typeVersion": 1,
+        "position": [
+          -816,
+          -240
+        ],
+        "id": "16cd06c9-279d-471b-a501-eec86bf22a07",
+        "name": "Google Sheets Trigger",
+        "credentials": {
+          "googleSheetsTriggerOAuth2Api": {
+            "id": "0Qkts3KNsqNFs46d",
+            "name": "Google Sheets Trigger account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "url": "={{ $json['File Upload'] }}",
+          "options": {
+            "response": {
+              "response": {
+                "responseFormat": "file"
+              }
+            }
+          }
+        },
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.2,
+        "position": [
+          -224,
+          -240
+        ],
+        "id": "b5a095aa-90bd-4189-a6ca-eef0d4a6dc4e",
+        "name": "Download Receipt Image"
+      },
+      {
+        "parameters": {
+          "jsCode": "if (!items[0].binary?.data) {\n  throw new Error('No llega binary.data desde el nodo anterior');\n}\nitems[0].binary.data.mimeType = 'image/jpeg';\nitems[0].binary.data.fileName = 'receipt.jpg';\nreturn items;"
+        },
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          -16,
+          -240
+        ],
+        "id": "5eb6af21-aca0-4e30-ab9f-233535d01926",
+        "name": "Fix MIME Type"
+      },
+      {
+        "parameters": {
+          "resource": "image",
+          "operation": "analyze",
+          "modelId": {
+            "__rl": true,
+            "value": "chatgpt-4o-latest",
+            "mode": "list",
+            "cachedResultName": "CHATGPT-4O-LATEST"
+          },
+          "text": "You are an expert OCR + receipt parser.\n\nTASK\nExtract MoTA-brand purchases from a dispensary receipt image and return ONE JSON\nobject (no markdown) in EXACTLY this format:\n\n{\n  \"cashierName\":      string,   // full text after “Cashier” / “Cashier Name:”\n  \"motaProducts\": [\n    {\n      \"productName\": string,    // description as printed\n      \"unitPrice\":   number,    // Unit-Price value\n      \"quantity\":    number,    // numeric; if blank, use 1\n      \"totalPrice\":  number     // Amount / Total value\n    }\n  ],\n  \"totalMotaSpend\":  number     // sum of totalPrice\n}\n\nEXTRACTION RULES\n• A line belongs in motaProducts if its text contains the substring “mota”\n  (case-insensitive).  \n• Read **totalPrice** from the Amount / Total column **exactly as printed**.  \n• Read **quantity** exactly as printed, default 1 if the column is blank.  \n• Read **unitPrice** from the Unit-Price column **if present**; otherwise derive it\n  as totalPrice ÷ quantity (rounded to two decimals).  \n• Verify unitPrice × quantity ≈ totalPrice (±0.01). If the check fails,\n  recompute **unitPrice** with the formula above.  \n• Ignore all non-MoTA items (batteries, accessories, taxes, etc.).  \n• **cashierName** = everything after the first “:” on the line that starts with\n  “Cashier” or “Cashier Name” (trim spaces).  \n• After building motaProducts, compute totalMotaSpend = Σ totalPrice.  \n• Reply **ONLY** with the JSON object—no extra text, no markdown, no quotes.\n",
+          "inputType": "base64",
+          "options": {}
+        },
+        "type": "@n8n/n8n-nodes-langchain.openAi",
+        "typeVersion": 1.8,
+        "position": [
+          208,
+          -240
+        ],
+        "id": "62b9045e-8fb5-4b9d-90b7-00cc5a6b7a9e",
+        "name": "Scan Receipt",
+        "credentials": {
+          "openAiApi": {
+            "id": "QSZCyq3k9BQaHRuo",
+            "name": "Openai - CNG"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "mode": "combine",
+          "combineBy": "combineByPosition",
+          "options": {}
+        },
+        "type": "n8n-nodes-base.merge",
+        "typeVersion": 3,
+        "position": [
+          464,
+          -240
+        ],
+        "id": "1fb720de-40b2-4195-aceb-083e04155932",
+        "name": "Merge Receipt + Customer Data"
+      },
+      {
+        "parameters": {
+          "jsCode": "// Format and clean all customer data from merged inputs\n// The Merge node combines receipt data + Google Sheets customer data\nconst data = $input.item.json;\n\n// Receipt data (from Scan Receipt node)\nlet receiptContent = data.content || data.text || {};\n\n// Parse content if it's a JSON string\nif (typeof receiptContent === 'string') {\n  try {\n    receiptContent = JSON.parse(receiptContent);\n  } catch (e) {\n    console.log('Could not parse content as JSON:', e);\n  }\n}\n\n// Extract cashierName from the receipt content\nconst cashierName = receiptContent.cashierName || data.cashierName || '';\n\n// Extract first name from cashierName for budtender lookup\n// e.g., \"Brooke W.\" -> \"Brooke\", \"Sophia\" -> \"Sophia\"\nconst cashierFirstName = cashierName ? cashierName.split(' ')[0].trim() : '';\n\n// Extract fields from Google Sheets format (from Google Sheets Trigger)\nconst firstName = (data['Name - First Name'] || '').trim().replace(/[^a-zA-Z\\s-']/g, '');\nconst lastName = (data['Name - Last Name'] || '').trim().replace(/[^a-zA-Z\\s-']/g, '');\nconst phoneNumber = data['Phone Number'] || '';\nconst email = (data['Email'] || '').trim().toLowerCase();\nconst store = (data['Store'] || '').trim(); // This is the dispensary name\nconst submissionId = data['Submission ID'] || '';\nconst fileUpload = data['File Upload'] || '';\nconst question = data['Type a question'] || '';\nconst source = data['source'] || '';\n\n// Format phone number properly - keep original format, just clean it\nlet formattedPhone = phoneNumber.replace(/\\D/g, ''); // Remove all non-numeric characters\n\n// Only add +1 if it's a 10-digit US number\nif (formattedPhone.length === 10) {\n  formattedPhone = '+1' + formattedPhone;\n} else if (formattedPhone.length === 11 && formattedPhone.startsWith('1')) {\n  formattedPhone = '+' + formattedPhone;\n} else if (formattedPhone.length > 0 && !formattedPhone.startsWith('+')) {\n  formattedPhone = '+' + formattedPhone;\n}\n\n// Keep original phone number if formatting fails\nif (!formattedPhone || formattedPhone.length < 10) {\n  formattedPhone = phoneNumber;\n}\n\n// Validate email\nlet cleanEmail = email;\nif (email && !email.includes('@')) {\n  console.log('Invalid email format:', email);\n  cleanEmail = '';\n}\n\nreturn {\n  json: {\n    // Receipt scan data\n    content: receiptContent,\n    cashierName: cashierName,\n    cashierFirstName: cashierFirstName,\n    // Google Sheets customer data\n    firstName: firstName,\n    lastName: lastName,\n    phoneNumber: formattedPhone,\n    formattedPhone: formattedPhone,\n    email: cleanEmail,\n    store: store, // This is the dispensary name\n    dispensary: store, // Alias for dispensary\n    submissionId: submissionId,\n    fileUpload: fileUpload,\n    question: question,\n    source: source,\n    // Keep original data for reference\n    originalPhone: phoneNumber,\n    originalEmail: email,\n    // Debug info\n    _debug: {\n      hasFirstName: !!firstName,\n      hasLastName: !!lastName,\n      hasPhone: !!phoneNumber,\n      hasEmail: !!email,\n      hasStore: !!store,\n      hasReceipt: !!receiptContent,\n      hasCashierName: !!cashierName,\n      allKeys: Object.keys(data)\n    }\n  }\n};"
+        },
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          672,
+          -240
+        ],
+        "id": "6240f69e-dd4f-4df7-836b-218496ef3306",
+        "name": "Format Customer Data"
+      },
+      {
+        "parameters": {
+          "operation": "update",
+          "documentId": {
+            "__rl": true,
+            "value": "1_nHi6Ewc6PaJ1i2erja411kEXm1k-EtSrsrrKtMchE4",
+            "mode": "list",
+            "cachedResultName": "Customer Rewards ",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1_nHi6Ewc6PaJ1i2erja411kEXm1k-EtSrsrrKtMchE4/edit?usp=drivesdk"
+          },
+          "sheetName": {
+            "__rl": true,
+            "value": 1735141678,
+            "mode": "list",
+            "cachedResultName": "Form responses",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1_nHi6Ewc6PaJ1i2erja411kEXm1k-EtSrsrrKtMchE4/edit#gid=1735141678"
+          },
+          "columns": {
+            "mappingMode": "defineBelow",
+            "value": {
+              "Processed": "Done",
+              "Submission ID": "={{ $json[\"Submission ID\"] }}",
+              "Name - First Name": "={{ $json['Name - First Name'] }}",
+              "Name - Last Name": "={{ $json['Name - Last Name'] }}",
+              "Phone Number": "={{ $json['Phone Number'] }}",
+              "Type a question": "={{ $json['Type a question'] }}",
+              "File Upload": "={{ $json['File Upload'] }}",
+              "source": "={{ $json.source }}",
+              "Email": "={{ $json.Email }}",
+              "Store": "={{ $json.Store }}"
+            },
+            "matchingColumns": [
+              "Submission ID"
+            ],
+            "schema": [
+              {
+                "id": "Name - First Name",
+                "displayName": "Name - First Name",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Name - Last Name",
+                "displayName": "Name - Last Name",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Phone Number",
+                "displayName": "Phone Number",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "File Upload",
+                "displayName": "File Upload",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Type a question",
+                "displayName": "Type a question",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "source",
+                "displayName": "source",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Email",
+                "displayName": "Email",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Store",
+                "displayName": "Store",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "Submission ID",
+                "displayName": "Submission ID",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "Processed",
+                "displayName": "Processed",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "displayName": "row_number",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "readOnly": true,
+                "removed": true
+              }
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.googleSheets",
+        "typeVersion": 4.6,
+        "position": [
+          -176,
+          -528
+        ],
+        "id": "cea22acd-f56c-49f5-9fcb-519ac581985b",
+        "name": "Update Row",
+        "credentials": {
+          "googleSheetsOAuth2Api": {
+            "id": "LSu2bHJie7HlsZRT",
+            "name": "Google Sheets account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "operation": "append",
+          "documentId": {
+            "__rl": true,
+            "value": "1_nHi6Ewc6PaJ1i2erja411kEXm1k-EtSrsrrKtMchE4",
+            "mode": "list",
+            "cachedResultName": "Customer Rewards ",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1_nHi6Ewc6PaJ1i2erja411kEXm1k-EtSrsrrKtMchE4/edit?usp=drivesdk"
+          },
+          "sheetName": {
+            "__rl": true,
+            "value": 27001987,
+            "mode": "list",
+            "cachedResultName": "Processed",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1_nHi6Ewc6PaJ1i2erja411kEXm1k-EtSrsrrKtMchE4/edit#gid=27001987"
+          },
+          "columns": {
+            "mappingMode": "defineBelow",
+            "value": {
+              "Submission ID": "={{ $json['Submission ID'] }}",
+              "Processed": "={{ $json.Processed }}",
+              "Name - First Name": "={{ $json['Name - First Name'] }}",
+              "Name - Last Name": "={{ $json['Name - Last Name'] }}",
+              "Phone Number": "={{ $json['Phone Number'] }}",
+              "File Upload": "={{ $json['File Upload'] }}",
+              "Type a question": "={{ $json['Type a question'] }}",
+              "source": "={{ $json.source }}",
+              "Email": "={{ $json.Email }}",
+              "Store": "={{ $json.Store }}"
+            },
+            "matchingColumns": [],
+            "schema": [
+              {
+                "id": "Name - First Name",
+                "displayName": "Name - First Name",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Name - Last Name",
+                "displayName": "Name - Last Name",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Phone Number",
+                "displayName": "Phone Number",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "File Upload",
+                "displayName": "File Upload",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Type a question",
+                "displayName": "Type a question",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "source",
+                "displayName": "source",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Email",
+                "displayName": "Email",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Store",
+                "displayName": "Store",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "Submission ID",
+                "displayName": "Submission ID",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Processed",
+                "displayName": "Processed",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              }
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.googleSheets",
+        "typeVersion": 4.6,
+        "position": [
+          64,
+          -528
+        ],
+        "id": "e1bb18d4-372b-4c2f-b4cb-7b84140ad234",
+        "name": "Append Row",
+        "credentials": {
+          "googleSheetsOAuth2Api": {
+            "id": "LSu2bHJie7HlsZRT",
+            "name": "Google Sheets account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "operation": "delete",
+          "documentId": {
+            "__rl": true,
+            "value": "1_nHi6Ewc6PaJ1i2erja411kEXm1k-EtSrsrrKtMchE4",
+            "mode": "list",
+            "cachedResultName": "Customer Rewards ",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1_nHi6Ewc6PaJ1i2erja411kEXm1k-EtSrsrrKtMchE4/edit?usp=drivesdk"
+          },
+          "sheetName": {
+            "__rl": true,
+            "value": 1735141678,
+            "mode": "list",
+            "cachedResultName": "Form responses",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1_nHi6Ewc6PaJ1i2erja411kEXm1k-EtSrsrrKtMchE4/edit#gid=1735141678"
+          },
+          "startIndex": "={{ $json.row_number }}"
+        },
+        "type": "n8n-nodes-base.googleSheets",
+        "typeVersion": 4.6,
+        "position": [
+          544,
+          -528
+        ],
+        "id": "d52a876d-83b2-4b7a-b62d-62cc01d8c0d8",
+        "name": "Delete Row",
+        "credentials": {
+          "googleSheetsOAuth2Api": {
+            "id": "LSu2bHJie7HlsZRT",
+            "name": "Google Sheets account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "documentId": {
+            "__rl": true,
+            "value": "1_nHi6Ewc6PaJ1i2erja411kEXm1k-EtSrsrrKtMchE4",
+            "mode": "list",
+            "cachedResultName": "Customer Rewards ",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1_nHi6Ewc6PaJ1i2erja411kEXm1k-EtSrsrrKtMchE4/edit?usp=drivesdk"
+          },
+          "sheetName": {
+            "__rl": true,
+            "value": 1735141678,
+            "mode": "list",
+            "cachedResultName": "Form responses",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1_nHi6Ewc6PaJ1i2erja411kEXm1k-EtSrsrrKtMchE4/edit#gid=1735141678"
+          },
+          "filtersUI": {
+            "values": [
+              {
+                "lookupColumn": "Submission ID",
+                "lookupValue": "={{ $json['Submission ID'] }}"
+              }
+            ]
+          },
+          "options": {
+            "dataLocationOnSheet": {
+              "values": {
+                "rangeDefinition": "detectAutomatically"
+              }
+            },
+            "returnFirstMatch": true
+          }
+        },
+        "type": "n8n-nodes-base.googleSheets",
+        "typeVersion": 4.6,
+        "position": [
+          288,
+          -528
+        ],
+        "id": "9e50f680-d821-451b-a2a9-feac6ea21eea",
+        "name": "Get Row",
+        "credentials": {
+          "googleSheetsOAuth2Api": {
+            "id": "LSu2bHJie7HlsZRT",
+            "name": "Google Sheets account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "tableId": "messages",
+          "fieldsUi": {
+            "fieldValues": [
+              {
+                "fieldId": "phone_number",
+                "fieldValue": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('fieldValues0_Field_Value', ``, 'string') }}"
+              },
+              {
+                "fieldId": "content",
+                "fieldValue": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('fieldValues1_Field_Value', ``, 'string') }}"
+              },
+              {
+                "fieldId": "status",
+                "fieldValue": "queued"
+              },
+              {
+                "fieldId": "direction",
+                "fieldValue": "outbound"
+              }
+            ]
+          }
+        },
+        "type": "n8n-nodes-base.supabaseTool",
+        "typeVersion": 1,
+        "position": [
+          1632,
+          -16
+        ],
+        "id": "deaf8c7c-4280-4c21-b34c-dc8f12cf5934",
+        "name": "Send SMS",
+        "description": "Queue an SMS message to be sent. Provide phone_number in +1XXXXXXXXXX format and message content (under 150 chars).",
+        "credentials": {
+          "supabaseApi": {
+            "id": "hwJ1to3Ot0D92Bo5",
+            "name": "Supabase account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "content": "## SMS Conductor \n**Double click** Here we have a new system it ques to the db instead of API calling out for an outgoing.\n\nI rewired how SMS Conductor works locally, it no longer looks for or listens for api calls it now just communicates with N8N Via the Supabase SMS DB, its a much more ellegaqnt system that lets us que sms texts easily dude we've turned texts into a tool call, it ques then locally SMS Conductor grabs and sends it \n\nThis also allows us to build better testing right, check it out, we make a new db, smsconductor test, I build a simple py experience to emulate a phone digitally like a chat interface, and it still writes to the db, reads from, so when we like it, we wire it into conductor which will take 10 mins. then its live we can do this for IC IB XC XB agents.",
+          "height": 400,
+          "width": 672
+        },
+        "type": "n8n-nodes-base.stickyNote",
+        "typeVersion": 1,
+        "position": [
+          1744,
+          -144
+        ],
+        "id": "7bea9931-f19e-4bf6-b902-62defd823326",
+        "name": "Sticky Note"
+      }
+    ],
+    "connections": {
+      "Get Budtender by Dispensary": {
+        "ai_tool": [
+          [
+            {
+              "node": "Rex AI Agent",
+              "type": "ai_tool",
+              "index": 0
+            }
+          ]
+        ],
+        "main": [
+          [
+            {
+              "node": "Update Budtender Points",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Update Budtender Points": {
+        "ai_tool": [
+          [
+            {
+              "node": "Rex AI Agent",
+              "type": "ai_tool",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "OpenRouter Chat Model": {
+        "ai_languageModel": [
+          [
+            {
+              "node": "Rex AI Agent",
+              "type": "ai_languageModel",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Gmail": {
+        "ai_tool": [
+          [
+            {
+              "node": "Rex AI Agent",
+              "type": "ai_tool",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Search Customer": {
+        "ai_tool": [
+          [
+            {
+              "node": "Rex AI Agent",
+              "type": "ai_tool",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Update Customer Points": {
+        "ai_tool": [
+          [
+            {
+              "node": "Rex AI Agent",
+              "type": "ai_tool",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Create New Customer": {
+        "ai_tool": [
+          [
+            {
+              "node": "Rex AI Agent",
+              "type": "ai_tool",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Google Sheets Trigger": {
+        "main": [
+          [
+            {
+              "node": "Download Receipt Image",
+              "type": "main",
+              "index": 0
+            },
+            {
+              "node": "Update Row",
+              "type": "main",
+              "index": 0
+            },
+            {
+              "node": "Merge Receipt + Customer Data",
+              "type": "main",
+              "index": 1
+            }
+          ]
+        ]
+      },
+      "Download Receipt Image": {
+        "main": [
+          [
+            {
+              "node": "Fix MIME Type",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Fix MIME Type": {
+        "main": [
+          [
+            {
+              "node": "Scan Receipt",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Scan Receipt": {
+        "main": [
+          [
+            {
+              "node": "Merge Receipt + Customer Data",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Merge Receipt + Customer Data": {
+        "main": [
+          [
+            {
+              "node": "Format Customer Data",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Format Customer Data": {
+        "main": [
+          [
+            {
+              "node": "Rex AI Agent",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Update Row": {
+        "main": [
+          [
+            {
+              "node": "Append Row",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Append Row": {
+        "main": [
+          [
+            {
+              "node": "Get Row",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Get Row": {
+        "main": [
+          [
+            {
+              "node": "Delete Row",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Send SMS": {
+        "ai_tool": [
+          [
+            {
+              "node": "Rex AI Agent",
+              "type": "ai_tool",
+              "index": 0
+            }
+          ]
+        ]
+      }
+    },
+    "pinData": {},
+    "meta": {
+      "instanceId": "daf1db1234fdfcbbfb53be5e1fe26764ab505fd0554977269bee03ef4bae6464"
+    }
+  }

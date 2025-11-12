@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - RALPH MATTHIS
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    6015a7f6fa9dc508d3c02a70
+  Phone:          13233007210
+  Email:          Not provided
+  Tier:           Super VIP
+  Risk Status:    Cooling (72 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    93
+  Total Revenue:         $1,675.14
+  Average Transaction:   $18.01
+  Median Transaction:    $17.07
+  Min Transaction:      $0.01
+  Max Transaction:      $98.75
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      6.4 days
+  Visit Frequency:       Weekly
+  Preferred Day:         Saturday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Cash
+  Favorite Staff:        Bob McGinn
+
+  Payment Method Breakdown:
+    Cash             85 times ( 91.4%)
+    Credit            8 times (  8.6%)
+
+  Staff Interaction Breakdown:
+    Bob McGinn            34 times ( 36.6%)
+    Devon Calonzo         22 times ( 23.7%)
+    Jacob Vangellow       13 times ( 14.0%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    186
+  Unique Products:       94
+  Avg Items/Visit:       2.0
+  Favorite Category:     Flower PrePacks
+  Favorite Brand:        Dime Bag
+  Avg Item Price:        $8.77
+  Price Range:           $0.00 - $39.07
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            Super VIP
+  Engagement Level:      High
+  Loyalty Score:         High
+  Price Sensitivity:     Budget
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              VIP Treatment
+  Discount Level:        20-30%
+  Message Focus:         Flower PrePacks + Dime Bag
+  Channel:               SMS + Email + Call
+  Timing:                Saturday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi Ralph, we miss you! 🌿
+   
+   We just restocked flower prepacks from Dime Bag - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME6015A7
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  6 days between visits
+  Expected Annual Visits: 57
+  Potential Annual Value: $1,026.70
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $3.60 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        28500%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          1
+Wave:                    1
+Send Window:            Week 1 - URGENT
+Best Contact Time:      Saturday at 0:00
+Follow-up Schedule:     48 hours
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $18.01 (first visit)
+  Annual Value:          $1,026.70
+
+NOTES:
+  - Customer has been gone for 72 days
+  - Historical pattern: 93 visits, $1,675.14 total spent
+  - HIGH VALUE - Personal follow-up recommended
+  - Consider phone call if SMS doesn't convert
+
+====================================================================================================

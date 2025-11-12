@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - CHLOE CUSIMANO
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5e4ad670b97c1a0853fed3a4
+  Phone:          13308084964
+  Email:          Not provided
+  Tier:           Super VIP
+  Risk Status:    Inactive (121 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    41
+  Total Revenue:         $1,249.28
+  Average Transaction:   $30.47
+  Median Transaction:    $17.28
+  Min Transaction:      $1.08
+  Max Transaction:      $111.19
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      12.5 days
+  Visit Frequency:       Bi-weekly
+  Preferred Day:         Thursday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Credit
+  Favorite Staff:        Bob McGinn
+
+  Payment Method Breakdown:
+    Credit           30 times ( 73.2%)
+    Cash             11 times ( 26.8%)
+
+  Staff Interaction Breakdown:
+    Bob McGinn            12 times ( 29.3%)
+    Jimmy Silks           11 times ( 26.8%)
+    Devon Calonzo         10 times ( 24.4%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    173
+  Unique Products:       90
+  Avg Items/Visit:       4.2
+  Favorite Category:     Flower PrePacks
+  Favorite Brand:        MOTA
+  Avg Item Price:        $8.59
+  Price Range:           $0.00 - $54.98
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            Super VIP
+  Engagement Level:      High
+  Loyalty Score:         High
+  Price Sensitivity:     Moderate
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              VIP Treatment
+  Discount Level:        20-30%
+  Message Focus:         Flower PrePacks + MOTA
+  Channel:               SMS + Email + Call
+  Timing:                Thursday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi Chloe, we miss you! 🌿
+   
+   We just restocked flower prepacks from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME5E4AD6
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  12 days between visits
+  Expected Annual Visits: 29
+  Potential Annual Value: $883.64
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $6.09 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        14500%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          3
+Wave:                    3
+Send Window:            Week 3
+Best Contact Time:      Thursday at 0:00
+Follow-up Schedule:     48 hours
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $30.47 (first visit)
+  Annual Value:          $883.64
+
+NOTES:
+  - Customer has been gone for 121 days
+  - Historical pattern: 41 visits, $1,249.28 total spent
+  - HIGH VALUE - Personal follow-up recommended
+  - Consider phone call if SMS doesn't convert
+
+====================================================================================================

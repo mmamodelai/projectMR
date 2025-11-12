@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - MARCOS WEEDMAPS
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    67d85a042cf07872dee7cbf4
+  Phone:          14158601442
+  Email:          Not provided
+  Tier:           Regular
+  Risk Status:    Cooling (58 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         5
+  Lifetime Value:       $511.55
+  Avg Transaction:      $102.31
+  Last Visit:           2025-08-25
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Monthly
+  Expected Annual Visits:   12
+  Potential Annual Value:   $1,227.72
+  
+  ROI Analysis:
+  - Discount Budget:        $20.46 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           6000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           1
+  Priority:       9
+  Send Timing:    Week 1 - URGENT
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS
+
+====================================================================================================

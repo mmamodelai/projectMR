@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - FERNANDO MORILLO
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5ffa22f1b3475f08c00ae2b5
+  Phone:          16463426719
+  Email:          Not provided
+  Tier:           Super VIP
+  Risk Status:    Cooling (74 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    30
+  Total Revenue:         $805.17
+  Average Transaction:   $26.84
+  Median Transaction:    $17.94
+  Min Transaction:      $4.00
+  Max Transaction:      $109.15
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      18.6 days
+  Visit Frequency:       Bi-weekly
+  Preferred Day:         Friday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Cash
+  Favorite Staff:        Jacob Vangellow
+
+  Payment Method Breakdown:
+    Cash             17 times ( 56.7%)
+    Credit           13 times ( 43.3%)
+
+  Staff Interaction Breakdown:
+    Jacob Vangellow       10 times ( 33.3%)
+    Bob McGinn             5 times ( 16.7%)
+    Jimmy Silks            5 times ( 16.7%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    94
+  Unique Products:       57
+  Avg Items/Visit:       3.1
+  Favorite Category:     Flower PrePacks
+  Favorite Brand:        MOTA
+  Avg Item Price:        $9.89
+  Price Range:           $0.00 - $56.53
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            Super VIP
+  Engagement Level:      High
+  Loyalty Score:         Medium
+  Price Sensitivity:     Budget
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              VIP Treatment
+  Discount Level:        20-30%
+  Message Focus:         Flower PrePacks + MOTA
+  Channel:               SMS + Email + Call
+  Timing:                Friday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi Fernando, we miss you! 🌿
+   
+   We just restocked flower prepacks from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME5FFA22
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  19 days between visits
+  Expected Annual Visits: 19
+  Potential Annual Value: $509.94
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $5.37 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        9500%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          1
+Wave:                    1
+Send Window:            Week 1 - URGENT
+Best Contact Time:      Friday at 0:00
+Follow-up Schedule:     48 hours
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $26.84 (first visit)
+  Annual Value:          $509.94
+
+NOTES:
+  - Customer has been gone for 74 days
+  - Historical pattern: 30 visits, $805.17 total spent
+  - Standard campaign approach
+  - Consider phone call if SMS doesn't convert
+
+====================================================================================================

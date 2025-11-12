@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - COREY GLENN DIMOND
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5b20a56689fc9307fe1b2b29
+  Phone:          13103839326
+  Email:          Not provided
+  Tier:           Super VIP
+  Risk Status:    Inactive (126 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         33
+  Lifetime Value:       $1,585.44
+  Avg Transaction:      $48.04
+  Last Visit:           2025-06-18
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Weekly
+  Expected Annual Visits:   52
+  Potential Annual Value:   $2,498.08
+  
+  ROI Analysis:
+  - Discount Budget:        $9.61 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           26000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           3
+  Priority:       3
+  Send Timing:    Week 3
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS+ Email + Call
+
+====================================================================================================

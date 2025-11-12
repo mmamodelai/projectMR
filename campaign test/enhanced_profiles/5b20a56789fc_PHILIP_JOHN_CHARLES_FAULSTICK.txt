@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - PHILIP JOHN CHARLES FAULSTICK
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5b20a56789fc9307fe1b45ac
+  Phone:          13109277830
+  Email:          Not provided
+  Tier:           VIP
+  Risk Status:    Dormant (98 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    19
+  Total Revenue:         $903.08
+  Average Transaction:   $47.53
+  Median Transaction:    $28.01
+  Min Transaction:      $10.82
+  Max Transaction:      $134.06
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      30.9 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Wednesday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Cash
+  Favorite Staff:        Jacob Vangellow
+
+  Payment Method Breakdown:
+    Cash             10 times ( 52.6%)
+    Credit            9 times ( 47.4%)
+
+  Staff Interaction Breakdown:
+    Jacob Vangellow        7 times ( 36.8%)
+    Bob McGinn             5 times ( 26.3%)
+    Jimmy Silks            2 times ( 10.5%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    76
+  Unique Products:       50
+  Avg Items/Visit:       4.0
+  Favorite Category:     Flower PrePacks
+  Favorite Brand:        MOTA
+  Avg Item Price:        $15.64
+  Price Range:           $0.00 - $39.07
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            VIP
+  Engagement Level:      Medium
+  Loyalty Score:         Low
+  Price Sensitivity:     Moderate
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              Valued Customer
+  Discount Level:        15-20%
+  Message Focus:         Flower PrePacks + MOTA
+  Channel:               SMS + Email
+  Timing:                Wednesday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi PHILIP, we miss you! 🌿
+   
+   We just restocked flower prepacks from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME5B20A5
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  31 days between visits
+  Expected Annual Visits: 11
+  Potential Annual Value: $522.84
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $9.51 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        5500%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          6
+Wave:                    2
+Send Window:            Week 2
+Best Contact Time:      Wednesday at 0:00
+Follow-up Schedule:     48 hours
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $47.53 (first visit)
+  Annual Value:          $522.84
+
+NOTES:
+  - Customer has been gone for 98 days
+  - Historical pattern: 19 visits, $903.08 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+====================================================================================================

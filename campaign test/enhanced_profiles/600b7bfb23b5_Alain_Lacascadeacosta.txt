@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - ALAIN LACASCADEACOSTA
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    600b7bfb23b51108d38c5bcb
+  Phone:          13476059402
+  Email:          Not provided
+  Tier:           VIP
+  Risk Status:    Cooling (68 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    12
+  Total Revenue:         $322.21
+  Average Transaction:   $26.85
+  Median Transaction:    $25.65
+  Min Transaction:      $15.00
+  Max Transaction:      $51.99
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      51.8 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Friday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Credit
+  Favorite Staff:        Jimmy Silks
+
+  Payment Method Breakdown:
+    Credit            6 times ( 50.0%)
+    Cash              6 times ( 50.0%)
+
+  Staff Interaction Breakdown:
+    Jimmy Silks            4 times ( 33.3%)
+    Devon Calonzo          2 times ( 16.7%)
+    Lizbeth Garcia         2 times ( 16.7%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    29
+  Unique Products:       18
+  Avg Items/Visit:       2.4
+  Favorite Category:     Edibles
+  Favorite Brand:        Wyld
+  Avg Item Price:        $8.43
+  Price Range:           $0.00 - $19.20
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            VIP
+  Engagement Level:      Medium
+  Loyalty Score:         Low
+  Price Sensitivity:     Budget
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              Valued Customer
+  Discount Level:        15-20%
+  Message Focus:         Edibles + Wyld
+  Channel:               SMS + Email
+  Timing:                Friday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi Alain, we miss you! 🌿
+   
+   We just restocked edibles from Wyld - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME600B7B
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  52 days between visits
+  Expected Annual Visits: 7
+  Potential Annual Value: $187.96
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $5.37 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        3500%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          5
+Wave:                    1
+Send Window:            Week 1 - URGENT
+Best Contact Time:      Friday at 0:00
+Follow-up Schedule:     48 hours
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $26.85 (first visit)
+  Annual Value:          $187.96
+
+NOTES:
+  - Customer has been gone for 68 days
+  - Historical pattern: 12 visits, $322.21 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+====================================================================================================

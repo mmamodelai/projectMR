@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - STEPHEN MORELAND
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5f8221f4a2099008d9a84535
+  Phone:          13042790107
+  Email:          Not provided
+  Tier:           VIP
+  Risk Status:    Cooling (51 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         19
+  Lifetime Value:       $426.68
+  Avg Transaction:      $22.46
+  Last Visit:           2025-09-01
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Bi-weekly
+  Expected Annual Visits:   26
+  Potential Annual Value:   $583.96
+  
+  ROI Analysis:
+  - Discount Budget:        $4.49 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           13000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           1
+  Priority:       5
+  Send Timing:    Week 1 - URGENT
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS + Email
+
+====================================================================================================

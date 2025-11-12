@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - LAUREN SPEARMAN
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    600e01f295212d08f56e547f
+  Phone:          13126759977
+  Email:          Not provided
+  Tier:           Super VIP
+  Risk Status:    At Risk (187 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    30
+  Total Revenue:         $931.91
+  Average Transaction:   $31.06
+  Median Transaction:    $26.91
+  Min Transaction:      $5.50
+  Max Transaction:      $51.84
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      15.4 days
+  Visit Frequency:       Bi-weekly
+  Preferred Day:         Friday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Credit
+  Favorite Staff:        Bob McGinn
+
+  Payment Method Breakdown:
+    Credit           24 times ( 80.0%)
+    Cash              6 times ( 20.0%)
+
+  Staff Interaction Breakdown:
+    Bob McGinn            10 times ( 33.3%)
+    Devon Calonzo          5 times ( 16.7%)
+    Jimmy Silks            4 times ( 13.3%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    65
+  Unique Products:       39
+  Avg Items/Visit:       2.2
+  Favorite Category:     Flower PrePacks
+  Favorite Brand:        Dime Bag
+  Avg Item Price:        $9.47
+  Price Range:           $0.00 - $28.16
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            Super VIP
+  Engagement Level:      High
+  Loyalty Score:         Medium
+  Price Sensitivity:     Moderate
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              VIP Treatment
+  Discount Level:        20-30%
+  Message Focus:         Flower PrePacks + Dime Bag
+  Channel:               SMS + Email + Call
+  Timing:                Friday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi Lauren, we miss you! 🌿
+   
+   We just restocked flower prepacks from Dime Bag - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME600E01
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  15 days between visits
+  Expected Annual Visits: 23
+  Potential Annual Value: $714.46
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $6.21 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        11500%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          4
+Wave:                    4
+Send Window:            Week 4
+Best Contact Time:      Friday at 0:00
+Follow-up Schedule:     48 hours
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $31.06 (first visit)
+  Annual Value:          $714.46
+
+NOTES:
+  - Customer has been gone for 187 days
+  - Historical pattern: 30 visits, $931.91 total spent
+  - Standard campaign approach
+  - Consider phone call if SMS doesn't convert
+
+====================================================================================================

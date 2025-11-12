@@ -1,0 +1,56 @@
+
+================================================================================
+CUSTOMER SNAPSHOT - BRADLEY MILLER
+================================================================================
+
+CONTACT INFORMATION:
+  Phone:          12132718621
+  Email:          Not provided
+  Customer ID:    5dd0a2f6d6685d084912d840
+
+TIER & STATUS:
+  Tier:           Super VIP
+  Risk Status:    Cooling
+  Campaign Wave:  Wave 1 Priority
+
+ENGAGEMENT METRICS:
+  Last Visit:           2025-08-13
+  Days Since Last:      70 days
+  Total Visits:         33
+  Visit Frequency:      Weekly (when active)
+  
+VALUE METRICS:
+  Lifetime Value:       $1,125.16
+  Average Transaction:  $34.10
+  Estimated Annual:     $1,773.20 (if reactivated)
+
+URGENCY ASSESSMENT:
+  Level:          MEDIUM - Cooling Off
+  Recommended:    Light touch, promotional offer
+
+REACTIVATION STRATEGY:
+
+  Approach:       VIP Treatment
+  Offer:          20-30% off + exclusive product access
+  Message:        "We miss you! As one of our top customers, we'd love to 
+                  welcome you back with a special VIP offer..."
+  Channel:        SMS + Email (if available) + Follow-up call
+  Budget:         Up to $10.23 discount value
+
+CAMPAIGN TIMING:
+  Send Window:    Week 1 - Send immediately
+  Best Time:      Afternoon (2-5 PM) based on customer tier
+  Follow-up:      48 hours if no response
+
+SUCCESS METRICS:
+  Target ROI:     300%
+  Break-even:     1 visit at $34.10
+  Goal:           Restore to Weekly visits
+
+NOTES:
+  - Customer has been gone for 70 days
+  - Historical pattern: 33 visits, $1,125.16 total spent
+  - HIGH VALUE - Personal follow-up recommended
+  - Consider phone call if SMS doesn't convert
+
+================================================================================

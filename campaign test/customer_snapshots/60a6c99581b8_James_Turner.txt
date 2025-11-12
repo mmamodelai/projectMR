@@ -1,0 +1,55 @@
+
+================================================================================
+CUSTOMER SNAPSHOT - JAMES TURNER
+================================================================================
+
+CONTACT INFORMATION:
+  Phone:          16307407664
+  Email:          Not provided
+  Customer ID:    60a6c99581b8eb1f840e0076
+
+TIER & STATUS:
+  Tier:           Regular
+  Risk Status:    Dormant
+  Campaign Wave:  Wave 2 Priority
+
+ENGAGEMENT METRICS:
+  Last Visit:           2025-08-06
+  Days Since Last:      77 days
+  Total Visits:         8
+  Visit Frequency:      Monthly (when active)
+  
+VALUE METRICS:
+  Lifetime Value:       $202.46
+  Average Transaction:  $25.31
+  Estimated Annual:     $303.72 (if reactivated)
+
+URGENCY ASSESSMENT:
+  Level:          HIGH - Going Dormant
+  Recommended:    Strong offer, personal message
+
+REACTIVATION STRATEGY:
+
+  Approach:       Win-Back Offer
+  Offer:          10-15% off on next visit
+  Message:        "Come back and see what's new! Special offer just for you..."
+  Channel:        SMS
+  Budget:         Up to $3.80 discount value
+
+CAMPAIGN TIMING:
+  Send Window:    Week 1-2 - High priority
+  Best Time:      Afternoon (2-5 PM) based on customer tier
+  Follow-up:      None scheduled
+
+SUCCESS METRICS:
+  Target ROI:     200%
+  Break-even:     1 visit at $25.31
+  Goal:           Restore to Monthly visits
+
+NOTES:
+  - Customer has been gone for 77 days
+  - Historical pattern: 8 visits, $202.46 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+================================================================================

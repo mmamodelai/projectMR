@@ -1,0 +1,55 @@
+
+================================================================================
+CUSTOMER SNAPSHOT - JON ULRICH
+================================================================================
+
+CONTACT INFORMATION:
+  Phone:          18058005668
+  Email:          Not provided
+  Customer ID:    67ca31708ae2a30e7ae8dd76
+
+TIER & STATUS:
+  Tier:           Regular
+  Risk Status:    At Risk
+  Campaign Wave:  Wave 4 Priority
+
+ENGAGEMENT METRICS:
+  Last Visit:           2025-05-04
+  Days Since Last:      171 days
+  Total Visits:         9
+  Visit Frequency:      Monthly (when active)
+  
+VALUE METRICS:
+  Lifetime Value:       $349.63
+  Average Transaction:  $38.85
+  Estimated Annual:     $466.20 (if reactivated)
+
+URGENCY ASSESSMENT:
+  Level:          CRITICAL - At Risk of Lost Forever
+  Recommended:    Maximum effort, best offer
+
+REACTIVATION STRATEGY:
+
+  Approach:       Win-Back Offer
+  Offer:          10-15% off on next visit
+  Message:        "Come back and see what's new! Special offer just for you..."
+  Channel:        SMS
+  Budget:         Up to $5.83 discount value
+
+CAMPAIGN TIMING:
+  Send Window:    Week 1 - CRITICAL, send ASAP
+  Best Time:      Afternoon (2-5 PM) based on customer tier
+  Follow-up:      None scheduled
+
+SUCCESS METRICS:
+  Target ROI:     200%
+  Break-even:     1 visit at $38.85
+  Goal:           Restore to Monthly visits
+
+NOTES:
+  - Customer has been gone for 171 days
+  - Historical pattern: 9 visits, $349.63 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+================================================================================

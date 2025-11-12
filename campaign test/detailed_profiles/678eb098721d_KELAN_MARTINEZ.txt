@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - KELAN MARTINEZ
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    678eb098721d903a45d32f1c
+  Phone:          18186244210
+  Email:          Not provided
+  Tier:           Regular
+  Risk Status:    Inactive (122 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         5
+  Lifetime Value:       $193.52
+  Avg Transaction:      $38.70
+  Last Visit:           2025-06-22
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Monthly
+  Expected Annual Visits:   12
+  Potential Annual Value:   $464.40
+  
+  ROI Analysis:
+  - Discount Budget:        $7.74 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           6000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           3
+  Priority:       11
+  Send Timing:    Week 3
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS
+
+====================================================================================================

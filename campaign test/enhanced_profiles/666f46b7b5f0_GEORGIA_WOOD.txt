@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - GEORGIA WOOD
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    666f46b7b5f02501f3956a0e
+  Phone:          14247447614
+  Email:          Not provided
+  Tier:           Super VIP
+  Risk Status:    Dormant (78 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    20
+  Total Revenue:         $976.74
+  Average Transaction:   $48.84
+  Median Transaction:    $38.00
+  Min Transaction:      $11.38
+  Max Transaction:      $108.30
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      21.8 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Monday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Cash
+  Favorite Staff:        Bob McGinn
+
+  Payment Method Breakdown:
+    Cash             16 times ( 80.0%)
+    Credit            4 times ( 20.0%)
+
+  Staff Interaction Breakdown:
+    Bob McGinn             7 times ( 35.0%)
+    Devon Calonzo          5 times ( 25.0%)
+    Jimmy Silks            4 times ( 20.0%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    88
+  Unique Products:       41
+  Avg Items/Visit:       4.4
+  Favorite Category:     Vapes
+  Favorite Brand:        Stiiizy
+  Avg Item Price:        $15.64
+  Price Range:           $0.00 - $38.26
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            Super VIP
+  Engagement Level:      Medium
+  Loyalty Score:         Medium
+  Price Sensitivity:     Moderate
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              VIP Treatment
+  Discount Level:        20-30%
+  Message Focus:         Vapes + Stiiizy
+  Channel:               SMS + Email + Call
+  Timing:                Monday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi GEORGIA, we miss you! 🌿
+   
+   We just restocked vapes from Stiiizy - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME666F46
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  22 days between visits
+  Expected Annual Visits: 16
+  Potential Annual Value: $781.39
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $9.77 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        8000%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          2
+Wave:                    2
+Send Window:            Week 2
+Best Contact Time:      Monday at 0:00
+Follow-up Schedule:     48 hours
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $48.84 (first visit)
+  Annual Value:          $781.39
+
+NOTES:
+  - Customer has been gone for 78 days
+  - Historical pattern: 20 visits, $976.74 total spent
+  - Standard campaign approach
+  - Consider phone call if SMS doesn't convert
+
+====================================================================================================

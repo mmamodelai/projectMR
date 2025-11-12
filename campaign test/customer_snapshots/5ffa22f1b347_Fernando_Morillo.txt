@@ -1,0 +1,56 @@
+
+================================================================================
+CUSTOMER SNAPSHOT - FERNANDO MORILLO
+================================================================================
+
+CONTACT INFORMATION:
+  Phone:          16463426719
+  Email:          Not provided
+  Customer ID:    5ffa22f1b3475f08c00ae2b5
+
+TIER & STATUS:
+  Tier:           Super VIP
+  Risk Status:    Cooling
+  Campaign Wave:  Wave 1 Priority
+
+ENGAGEMENT METRICS:
+  Last Visit:           2025-08-09
+  Days Since Last:      74 days
+  Total Visits:         30
+  Visit Frequency:      Weekly (when active)
+  
+VALUE METRICS:
+  Lifetime Value:       $805.17
+  Average Transaction:  $26.84
+  Estimated Annual:     $1,395.68 (if reactivated)
+
+URGENCY ASSESSMENT:
+  Level:          MEDIUM - Cooling Off
+  Recommended:    Light touch, promotional offer
+
+REACTIVATION STRATEGY:
+
+  Approach:       VIP Treatment
+  Offer:          20-30% off + exclusive product access
+  Message:        "We miss you! As one of our top customers, we'd love to 
+                  welcome you back with a special VIP offer..."
+  Channel:        SMS + Email (if available) + Follow-up call
+  Budget:         Up to $8.05 discount value
+
+CAMPAIGN TIMING:
+  Send Window:    Week 1 - Send immediately
+  Best Time:      Afternoon (2-5 PM) based on customer tier
+  Follow-up:      48 hours if no response
+
+SUCCESS METRICS:
+  Target ROI:     300%
+  Break-even:     1 visit at $26.84
+  Goal:           Restore to Weekly visits
+
+NOTES:
+  - Customer has been gone for 74 days
+  - Historical pattern: 30 visits, $805.17 total spent
+  - Standard campaign approach
+  - Consider phone call if SMS doesn't convert
+
+================================================================================

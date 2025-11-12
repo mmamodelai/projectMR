@@ -1,0 +1,56 @@
+
+================================================================================
+CUSTOMER SNAPSHOT - JOSEPH RAMIREZ
+================================================================================
+
+CONTACT INFORMATION:
+  Phone:          13234209260
+  Email:          Not provided
+  Customer ID:    5b7a4862759ccf0813dcd8c5
+
+TIER & STATUS:
+  Tier:           Super VIP
+  Risk Status:    Cooling
+  Campaign Wave:  Wave 1 Priority
+
+ENGAGEMENT METRICS:
+  Last Visit:           2025-08-22
+  Days Since Last:      61 days
+  Total Visits:         22
+  Visit Frequency:      Weekly (when active)
+  
+VALUE METRICS:
+  Lifetime Value:       $549.22
+  Average Transaction:  $24.96
+  Estimated Annual:     $1,297.92 (if reactivated)
+
+URGENCY ASSESSMENT:
+  Level:          MEDIUM - Cooling Off
+  Recommended:    Light touch, promotional offer
+
+REACTIVATION STRATEGY:
+
+  Approach:       VIP Treatment
+  Offer:          20-30% off + exclusive product access
+  Message:        "We miss you! As one of our top customers, we'd love to 
+                  welcome you back with a special VIP offer..."
+  Channel:        SMS + Email (if available) + Follow-up call
+  Budget:         Up to $7.49 discount value
+
+CAMPAIGN TIMING:
+  Send Window:    Week 1 - Send immediately
+  Best Time:      Afternoon (2-5 PM) based on customer tier
+  Follow-up:      48 hours if no response
+
+SUCCESS METRICS:
+  Target ROI:     300%
+  Break-even:     1 visit at $24.96
+  Goal:           Restore to Weekly visits
+
+NOTES:
+  - Customer has been gone for 61 days
+  - Historical pattern: 22 visits, $549.22 total spent
+  - Standard campaign approach
+  - Consider phone call if SMS doesn't convert
+
+================================================================================

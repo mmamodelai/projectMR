@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - ALAN TEMAN
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5ea9e4391ba43208c7e3cbcf
+  Phone:          13238648582
+  Email:          Not provided
+  Tier:           VIP
+  Risk Status:    Inactive (106 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    14
+  Total Revenue:         $338.61
+  Average Transaction:   $24.19
+  Median Transaction:    $18.60
+  Min Transaction:      $8.00
+  Max Transaction:      $93.08
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      40.7 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Tuesday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Cash
+  Favorite Staff:        Devon Calonzo
+
+  Payment Method Breakdown:
+    Cash             10 times ( 71.4%)
+    Credit            4 times ( 28.6%)
+
+  Staff Interaction Breakdown:
+    Devon Calonzo          4 times ( 28.6%)
+    Bob McGinn             3 times ( 21.4%)
+    Jimmy Silks            3 times ( 21.4%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    32
+  Unique Products:       17
+  Avg Items/Visit:       2.3
+  Favorite Category:     Edibles
+  Favorite Brand:        Froot Gummies
+  Avg Item Price:        $9.27
+  Price Range:           $0.00 - $34.00
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            VIP
+  Engagement Level:      Medium
+  Loyalty Score:         Low
+  Price Sensitivity:     Budget
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              Valued Customer
+  Discount Level:        15-20%
+  Message Focus:         Edibles + Froot Gummies
+  Channel:               SMS + Email
+  Timing:                Tuesday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi Alan, we miss you! 🌿
+   
+   We just restocked edibles from Froot Gummies - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME5EA9E4
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  41 days between visits
+  Expected Annual Visits: 8
+  Potential Annual Value: $193.49
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $4.84 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        4000%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          7
+Wave:                    3
+Send Window:            Week 3
+Best Contact Time:      Tuesday at 0:00
+Follow-up Schedule:     48 hours
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $24.19 (first visit)
+  Annual Value:          $193.49
+
+NOTES:
+  - Customer has been gone for 106 days
+  - Historical pattern: 14 visits, $338.61 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+====================================================================================================

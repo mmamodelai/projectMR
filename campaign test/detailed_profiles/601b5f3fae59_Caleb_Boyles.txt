@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - CALEB BOYLES
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    601b5f3fae597008fa89fac9
+  Phone:          17045308396
+  Email:          Not provided
+  Tier:           Super VIP
+  Risk Status:    At Risk (186 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         22
+  Lifetime Value:       $721.57
+  Avg Transaction:      $32.80
+  Last Visit:           2025-04-19
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Weekly
+  Expected Annual Visits:   52
+  Potential Annual Value:   $1,705.60
+  
+  ROI Analysis:
+  - Discount Budget:        $6.56 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           26000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           4
+  Priority:       4
+  Send Timing:    Week 4
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS+ Email + Call
+
+====================================================================================================

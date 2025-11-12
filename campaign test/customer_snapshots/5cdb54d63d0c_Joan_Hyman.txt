@@ -1,0 +1,55 @@
+
+================================================================================
+CUSTOMER SNAPSHOT - JOAN HYMAN
+================================================================================
+
+CONTACT INFORMATION:
+  Phone:          13234451957
+  Email:          Not provided
+  Customer ID:    5cdb54d63d0c2f07f90f23d7
+
+TIER & STATUS:
+  Tier:           VIP
+  Risk Status:    Cooling
+  Campaign Wave:  Wave 1 Priority
+
+ENGAGEMENT METRICS:
+  Last Visit:           2025-08-29
+  Days Since Last:      54 days
+  Total Visits:         12
+  Visit Frequency:      Bi-weekly (when active)
+  
+VALUE METRICS:
+  Lifetime Value:       $292.90
+  Average Transaction:  $24.41
+  Estimated Annual:     $634.66 (if reactivated)
+
+URGENCY ASSESSMENT:
+  Level:          MEDIUM - Cooling Off
+  Recommended:    Light touch, promotional offer
+
+REACTIVATION STRATEGY:
+
+  Approach:       Valued Customer
+  Offer:          15-20% off + loyalty bonus
+  Message:        "It's been a while! We have some new products you'd love..."
+  Channel:        SMS + Email (if available)
+  Budget:         Up to $4.88 discount value
+
+CAMPAIGN TIMING:
+  Send Window:    Week 1 - Send immediately
+  Best Time:      Afternoon (2-5 PM) based on customer tier
+  Follow-up:      48 hours if no response
+
+SUCCESS METRICS:
+  Target ROI:     200%
+  Break-even:     1 visit at $24.41
+  Goal:           Restore to Bi-weekly visits
+
+NOTES:
+  - Customer has been gone for 54 days
+  - Historical pattern: 12 visits, $292.90 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+================================================================================

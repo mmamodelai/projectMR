@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - JAVIER LACAYO
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    67981771a6cdb44f21b36089
+  Phone:          15622936409
+  Email:          Not provided
+  Tier:           Regular
+  Risk Status:    At Risk (180 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    5
+  Total Revenue:         $784.93
+  Average Transaction:   $156.99
+  Median Transaction:    $178.42
+  Min Transaction:      $35.38
+  Max Transaction:      $213.58
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      22.0 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Friday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Cash
+  Favorite Staff:        Bob McGinn
+
+  Payment Method Breakdown:
+    Cash              4 times ( 80.0%)
+    Credit            1 times ( 20.0%)
+
+  Staff Interaction Breakdown:
+    Bob McGinn             3 times ( 60.0%)
+    Jacob Vangellow        1 times ( 20.0%)
+    Luis Bobadilla         1 times ( 20.0%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    15
+  Unique Products:       10
+  Avg Items/Visit:       3.0
+  Favorite Category:     Flower PrePacks
+  Favorite Brand:        MOTA
+  Avg Item Price:        $53.36
+  Price Range:           $0.71 - $115.51
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            Regular
+  Engagement Level:      Low
+  Loyalty Score:         Medium
+  Price Sensitivity:     Premium
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              Win-Back Offer
+  Discount Level:        10-15%
+  Message Focus:         Flower PrePacks + MOTA
+  Channel:               SMS
+  Timing:                Friday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi JAVIER, we miss you! 🌿
+   
+   We just restocked flower prepacks from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME679817
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  22 days between visits
+  Expected Annual Visits: 16
+  Potential Annual Value: $2,511.78
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $31.40 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        8000%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          12
+Wave:                    4
+Send Window:            Week 4
+Best Contact Time:      Friday at 0:00
+Follow-up Schedule:     None
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $156.99 (first visit)
+  Annual Value:          $2,511.78
+
+NOTES:
+  - Customer has been gone for 180 days
+  - Historical pattern: 5 visits, $784.93 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+====================================================================================================

@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - ALEX CORONA
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5fd03b177c03cb08c518da9c
+  Phone:          13219833196
+  Email:          Not provided
+  Tier:           VIP
+  Risk Status:    Inactive (134 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         15
+  Lifetime Value:       $687.61
+  Avg Transaction:      $45.84
+  Last Visit:           2025-06-10
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Bi-weekly
+  Expected Annual Visits:   26
+  Potential Annual Value:   $1,191.84
+  
+  ROI Analysis:
+  - Discount Budget:        $9.17 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           13000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           3
+  Priority:       7
+  Send Timing:    Week 3
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS + Email
+
+====================================================================================================

@@ -1,0 +1,14 @@
+{
+  "customer_id": "+16195551234",
+  "customer_name": "Sarah Johnson",
+  "customer_metrics": {
+    "ltv": 2847.5,
+    "avg_value_per_visit": 89.25,
+    "visits_per_month": 2.3,
+    "last_visit_days": 12,
+    "engagement_score": 0.75
+  },
+  "selected_text": "Hey Sarah! Your loyalty points are expiring soon. Use them before they're gone!",
+  "feedback": "lets make sure to mention the budtender",
+  "timestamp": "2025-10-20T12:48:50.541327"
+}

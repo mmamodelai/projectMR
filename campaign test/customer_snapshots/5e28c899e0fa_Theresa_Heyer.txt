@@ -1,0 +1,55 @@
+
+================================================================================
+CUSTOMER SNAPSHOT - THERESA HEYER
+================================================================================
+
+CONTACT INFORMATION:
+  Phone:          13475960556
+  Email:          Not provided
+  Customer ID:    5e28c899e0faca07cceb779b
+
+TIER & STATUS:
+  Tier:           Regular
+  Risk Status:    Inactive
+  Campaign Wave:  Wave 3 Priority
+
+ENGAGEMENT METRICS:
+  Last Visit:           2025-06-28
+  Days Since Last:      116 days
+  Total Visits:         5
+  Visit Frequency:      Monthly (when active)
+  
+VALUE METRICS:
+  Lifetime Value:       $413.72
+  Average Transaction:  $82.74
+  Estimated Annual:     $992.88 (if reactivated)
+
+URGENCY ASSESSMENT:
+  Level:          URGENT - Nearly Lost
+  Recommended:    Premium offer, call if possible
+
+REACTIVATION STRATEGY:
+
+  Approach:       Win-Back Offer
+  Offer:          10-15% off on next visit
+  Message:        "Come back and see what's new! Special offer just for you..."
+  Channel:        SMS
+  Budget:         Up to $12.41 discount value
+
+CAMPAIGN TIMING:
+  Send Window:    Week 2-3 - Urgent
+  Best Time:      Afternoon (2-5 PM) based on customer tier
+  Follow-up:      None scheduled
+
+SUCCESS METRICS:
+  Target ROI:     200%
+  Break-even:     1 visit at $82.74
+  Goal:           Restore to Monthly visits
+
+NOTES:
+  - Customer has been gone for 116 days
+  - Historical pattern: 5 visits, $413.72 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+================================================================================

@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - VAHID DAVOUDI
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5e4a0ee544a0a6082dcb7648
+  Phone:          13109268443
+  Email:          Not provided
+  Tier:           Regular
+  Risk Status:    Dormant (80 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    7
+  Total Revenue:         $213.69
+  Average Transaction:   $30.53
+  Median Transaction:    $30.36
+  Min Transaction:      $4.99
+  Max Transaction:      $54.68
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      47.2 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Friday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Credit
+  Favorite Staff:        Jimmy Silks
+
+  Payment Method Breakdown:
+    Credit            5 times ( 71.4%)
+    Cash              2 times ( 28.6%)
+
+  Staff Interaction Breakdown:
+    Jimmy Silks            3 times ( 42.9%)
+    Devon Calonzo          2 times ( 28.6%)
+    Leo Salguero           1 times ( 14.3%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    21
+  Unique Products:       12
+  Avg Items/Visit:       3.0
+  Favorite Category:     Flower PrePacks
+  Favorite Brand:        Cannabiotix
+  Avg Item Price:        $11.93
+  Price Range:           $0.00 - $41.77
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            Regular
+  Engagement Level:      Low
+  Loyalty Score:         Low
+  Price Sensitivity:     Moderate
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              Win-Back Offer
+  Discount Level:        10-15%
+  Message Focus:         Flower PrePacks + Cannabiotix
+  Channel:               SMS
+  Timing:                Friday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi Vahid, we miss you! 🌿
+   
+   We just restocked flower prepacks from Cannabiotix - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME5E4A0E
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  47 days between visits
+  Expected Annual Visits: 7
+  Potential Annual Value: $213.69
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $6.11 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        3500%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          10
+Wave:                    2
+Send Window:            Week 2
+Best Contact Time:      Friday at 0:00
+Follow-up Schedule:     None
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $30.53 (first visit)
+  Annual Value:          $213.69
+
+NOTES:
+  - Customer has been gone for 80 days
+  - Historical pattern: 7 visits, $213.69 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+====================================================================================================

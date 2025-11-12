@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - TREVOR AMES
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5e0f82b2d5e58d08245b3c4b
+  Phone:          18186359396
+  Email:          Not provided
+  Tier:           Super VIP
+  Risk Status:    Dormant (82 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    39
+  Total Revenue:         $1,340.42
+  Average Transaction:   $34.37
+  Median Transaction:    $33.93
+  Min Transaction:      $0.02
+  Max Transaction:      $78.53
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      15.0 days
+  Visit Frequency:       Bi-weekly
+  Preferred Day:         Friday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Credit
+  Favorite Staff:        Bob McGinn
+
+  Payment Method Breakdown:
+    Credit           33 times ( 84.6%)
+    Cash              6 times ( 15.4%)
+
+  Staff Interaction Breakdown:
+    Bob McGinn            12 times ( 30.8%)
+    Jimmy Silks            8 times ( 20.5%)
+    Lizbeth Garcia         6 times ( 15.4%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    88
+  Unique Products:       70
+  Avg Items/Visit:       2.3
+  Favorite Category:     Vapes
+  Favorite Brand:        MOTA
+  Avg Item Price:        $14.49
+  Price Range:           $0.00 - $38.26
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            Super VIP
+  Engagement Level:      High
+  Loyalty Score:         Medium
+  Price Sensitivity:     Moderate
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              VIP Treatment
+  Discount Level:        20-30%
+  Message Focus:         Vapes + MOTA
+  Channel:               SMS + Email + Call
+  Timing:                Friday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi Trevor, we miss you! 🌿
+   
+   We just restocked vapes from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME5E0F82
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  15 days between visits
+  Expected Annual Visits: 24
+  Potential Annual Value: $824.87
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $6.87 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        12000%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          2
+Wave:                    2
+Send Window:            Week 2
+Best Contact Time:      Friday at 0:00
+Follow-up Schedule:     48 hours
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $34.37 (first visit)
+  Annual Value:          $824.87
+
+NOTES:
+  - Customer has been gone for 82 days
+  - Historical pattern: 39 visits, $1,340.42 total spent
+  - HIGH VALUE - Personal follow-up recommended
+  - Consider phone call if SMS doesn't convert
+
+====================================================================================================

@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - PAUL OBRYAN
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5ffb755dda229a08e24d8362
+  Phone:          14154077083
+  Email:          Not provided
+  Tier:           Regular
+  Risk Status:    Cooling (65 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         8
+  Lifetime Value:       $409.19
+  Avg Transaction:      $51.15
+  Last Visit:           2025-08-18
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Monthly
+  Expected Annual Visits:   12
+  Potential Annual Value:   $613.80
+  
+  ROI Analysis:
+  - Discount Budget:        $10.23 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           6000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           1
+  Priority:       9
+  Send Timing:    Week 1 - URGENT
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS
+
+====================================================================================================

@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - SEAN B GOLLER
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5b20a56789fc9307fe1b49e2
+  Phone:          12014218395
+  Email:          Not provided
+  Tier:           VIP
+  Risk Status:    Cooling (73 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         15
+  Lifetime Value:       $636.17
+  Avg Transaction:      $42.41
+  Last Visit:           2025-08-10
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Bi-weekly
+  Expected Annual Visits:   26
+  Potential Annual Value:   $1,102.66
+  
+  ROI Analysis:
+  - Discount Budget:        $8.48 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           13000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           1
+  Priority:       5
+  Send Timing:    Week 1 - URGENT
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS + Email
+
+====================================================================================================

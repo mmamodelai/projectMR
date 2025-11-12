@@ -1,0 +1,56 @@
+
+================================================================================
+CUSTOMER SNAPSHOT - ANDREW DAVID SALES
+================================================================================
+
+CONTACT INFORMATION:
+  Phone:          17073386539
+  Email:          Not provided
+  Customer ID:    5b20a56589fc9307fe1b2481
+
+TIER & STATUS:
+  Tier:           Super VIP
+  Risk Status:    Dormant
+  Campaign Wave:  Wave 2 Priority
+
+ENGAGEMENT METRICS:
+  Last Visit:           2025-07-19
+  Days Since Last:      95 days
+  Total Visits:         22
+  Visit Frequency:      Weekly (when active)
+  
+VALUE METRICS:
+  Lifetime Value:       $926.37
+  Average Transaction:  $42.11
+  Estimated Annual:     $2,189.72 (if reactivated)
+
+URGENCY ASSESSMENT:
+  Level:          HIGH - Going Dormant
+  Recommended:    Strong offer, personal message
+
+REACTIVATION STRATEGY:
+
+  Approach:       VIP Treatment
+  Offer:          20-30% off + exclusive product access
+  Message:        "We miss you! As one of our top customers, we'd love to 
+                  welcome you back with a special VIP offer..."
+  Channel:        SMS + Email (if available) + Follow-up call
+  Budget:         Up to $12.63 discount value
+
+CAMPAIGN TIMING:
+  Send Window:    Week 1-2 - High priority
+  Best Time:      Afternoon (2-5 PM) based on customer tier
+  Follow-up:      48 hours if no response
+
+SUCCESS METRICS:
+  Target ROI:     300%
+  Break-even:     1 visit at $42.11
+  Goal:           Restore to Weekly visits
+
+NOTES:
+  - Customer has been gone for 95 days
+  - Historical pattern: 22 visits, $926.37 total spent
+  - Standard campaign approach
+  - Consider phone call if SMS doesn't convert
+
+================================================================================

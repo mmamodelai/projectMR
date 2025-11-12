@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - KATHRYN 5 JARS HAMPTON
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    00601d00dc35005399003e55
+  Phone:          12146934239
+  Email:          Not provided
+  Tier:           Regular
+  Risk Status:    At Risk (174 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    9
+  Total Revenue:         $174.72
+  Average Transaction:   $19.41
+  Median Transaction:    $17.93
+  Min Transaction:      $7.59
+  Max Transaction:      $41.04
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      55.4 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Sunday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Credit
+  Favorite Staff:        Jimmy Silks
+
+  Payment Method Breakdown:
+    Credit            7 times ( 77.8%)
+    Cash              2 times ( 22.2%)
+
+  Staff Interaction Breakdown:
+    Jimmy Silks            3 times ( 33.3%)
+    Bob McGinn             2 times ( 22.2%)
+    Devon Calonzo          2 times ( 22.2%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    24
+  Unique Products:       19
+  Avg Items/Visit:       2.7
+  Favorite Category:     Flower PrePacks
+  Favorite Brand:        MOTA
+  Avg Item Price:        $6.13
+  Price Range:           $0.00 - $17.00
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            Regular
+  Engagement Level:      Low
+  Loyalty Score:         Low
+  Price Sensitivity:     Budget
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              Win-Back Offer
+  Discount Level:        10-15%
+  Message Focus:         Flower PrePacks + MOTA
+  Channel:               SMS
+  Timing:                Sunday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi Kathryn, we miss you! 🌿
+   
+   We just restocked flower prepacks from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME00601D
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  55 days between visits
+  Expected Annual Visits: 6
+  Potential Annual Value: $116.48
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $3.88 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        3000%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          12
+Wave:                    4
+Send Window:            Week 4
+Best Contact Time:      Sunday at 0:00
+Follow-up Schedule:     None
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $19.41 (first visit)
+  Annual Value:          $116.48
+
+NOTES:
+  - Customer has been gone for 174 days
+  - Historical pattern: 9 visits, $174.72 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+====================================================================================================

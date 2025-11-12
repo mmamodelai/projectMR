@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - TROY MORGAN
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5e37472bf34dfa0832f4220f
+  Phone:          12138046665
+  Email:          Not provided
+  Tier:           VIP
+  Risk Status:    Dormant (97 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    13
+  Total Revenue:         $222.98
+  Average Transaction:   $17.15
+  Median Transaction:    $20.62
+  Min Transaction:      $1.00
+  Max Transaction:      $32.00
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      42.3 days
+  Visit Frequency:       Monthly
+  Preferred Day:         Sunday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Cash
+  Favorite Staff:        Jacob Vangellow
+
+  Payment Method Breakdown:
+    Cash              7 times ( 53.8%)
+    Credit            6 times ( 46.2%)
+
+  Staff Interaction Breakdown:
+    Jacob Vangellow        5 times ( 38.5%)
+    Jimmy Silks            4 times ( 30.8%)
+    Michael Preziosi       1 times (  7.7%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    31
+  Unique Products:       21
+  Avg Items/Visit:       2.4
+  Favorite Category:     Edibles
+  Favorite Brand:        MOTA
+  Avg Item Price:        $8.31
+  Price Range:           $0.00 - $21.33
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            VIP
+  Engagement Level:      Medium
+  Loyalty Score:         Low
+  Price Sensitivity:     Budget
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              Valued Customer
+  Discount Level:        15-20%
+  Message Focus:         Edibles + MOTA
+  Channel:               SMS + Email
+  Timing:                Sunday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi Troy, we miss you! 🌿
+   
+   We just restocked edibles from MOTA - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME5E3747
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  42 days between visits
+  Expected Annual Visits: 8
+  Potential Annual Value: $137.22
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $3.43 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        4000%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          6
+Wave:                    2
+Send Window:            Week 2
+Best Contact Time:      Sunday at 0:00
+Follow-up Schedule:     48 hours
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $17.15 (first visit)
+  Annual Value:          $137.22
+
+NOTES:
+  - Customer has been gone for 97 days
+  - Historical pattern: 13 visits, $222.98 total spent
+  - Standard campaign approach
+  - SMS only unless request callback
+
+====================================================================================================

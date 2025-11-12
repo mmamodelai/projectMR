@@ -1,0 +1,44 @@
+
+====================================================================================================
+DETAILED CUSTOMER PROFILE - JENNIFER MECHNER
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    001007009d8400a57e00544e
+  Phone:          13238285185
+  Email:          Not provided
+  Tier:           Regular
+  Risk Status:    Cooling (54 days gone)
+
+LIFETIME METRICS:
+  Total Visits:         5
+  Lifetime Value:       $116.76
+  Avg Transaction:      $23.35
+  Last Visit:           2025-08-29
+
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE:
+====================================================================================================
+
+
+VALUE RECOVERY POTENTIAL:
+  Historical Frequency:     Monthly
+  Expected Annual Visits:   12
+  Potential Annual Value:   $280.20
+  
+  ROI Analysis:
+  - Discount Budget:        $4.67 (20% off first visit)
+  - Break-even:             1 visit
+  - 12-month ROI:           6000%
+
+
+CAMPAIGN EXECUTION:
+  Wave:           1
+  Priority:       9
+  Send Timing:    Week 1 - URGENT
+  Best Time:      Afternoon (2-5 PM)
+  Channel:        SMS
+
+====================================================================================================

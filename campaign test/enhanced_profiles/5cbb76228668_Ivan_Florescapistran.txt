@@ -1,0 +1,112 @@
+
+====================================================================================================
+ENHANCED CUSTOMER PROFILE - IVAN FLORESCAPISTRAN
+====================================================================================================
+
+CONTACT & BASICS:
+  Customer ID:    5cbb76228668440800da580f
+  Phone:          17142305350
+  Email:          Not provided
+  Tier:           Super VIP
+  Risk Status:    Dormant (96 days gone)
+
+====================================================================================================
+DETAILED TRANSACTION ANALYSIS (MoTa CRM v3 Style)
+====================================================================================================
+
+BASIC METRICS:
+  Total Transactions:    66
+  Total Revenue:         $2,078.32
+  Average Transaction:   $31.49
+  Median Transaction:    $35.36
+  Min Transaction:      $0.34
+  Max Transaction:      $95.51
+
+VISIT PATTERN ANALYSIS:
+  Avg Days Between:      8.7 days
+  Visit Frequency:       Weekly
+  Preferred Day:         Saturday
+  Preferred Time:        0:00
+
+PAYMENT & STAFF PREFERENCES:
+  Primary Payment:       Credit
+  Favorite Staff:        Bob McGinn
+
+  Payment Method Breakdown:
+    Credit           42 times ( 63.6%)
+    Cash             24 times ( 36.4%)
+
+  Staff Interaction Breakdown:
+    Bob McGinn            18 times ( 27.3%)
+    Devon Calonzo         13 times ( 19.7%)
+    Jacob Vangellow       13 times ( 19.7%)
+
+
+PRODUCT PURCHASE ANALYSIS:
+  Total Items Bought:    129
+  Unique Products:       83
+  Avg Items/Visit:       2.0
+  Favorite Category:     Flower PrePacks
+  Favorite Brand:        Jeeter
+  Avg Item Price:        $13.84
+  Price Range:           $0.00 - $56.77
+
+
+====================================================================================================
+REACTIVATION INTELLIGENCE
+====================================================================================================
+
+CUSTOMER SEGMENTATION:
+  Value Tier:            Super VIP
+  Engagement Level:      High
+  Loyalty Score:         High
+  Price Sensitivity:     Moderate
+
+PERSONALIZED OFFER STRATEGY:
+  Approach:              VIP Treatment
+  Discount Level:        20-30%
+  Message Focus:         Flower PrePacks + Jeeter
+  Channel:               SMS + Email + Call
+  Timing:                Saturday around 0:00
+
+SUGGESTED MESSAGE:
+  "Hi Ivan, we miss you! 🌿
+   
+   We just restocked flower prepacks from Jeeter - 
+   your go-to brand! Come back this week and get 20% off.
+   
+   VIP Code: WELCOME5CBB76
+   Valid until 10/23"
+
+VALUE RECOVERY PROJECTION:
+  Historical Frequency:  9 days between visits
+  Expected Annual Visits: 42
+  Potential Annual Value: $1,322.57
+  
+  Campaign ROI Analysis:
+  - Discount Budget:     $6.30 (20% off first visit)
+  - Break-even:          1 visit
+  - 12-month ROI:        21000%
+
+====================================================================================================
+CAMPAIGN EXECUTION PLAN
+====================================================================================================
+
+Priority Level:          2
+Wave:                    2
+Send Window:            Week 2
+Best Contact Time:      Saturday at 0:00
+Follow-up Schedule:     48 hours
+
+Success Metrics:
+  Target Conversion:     20% (industry standard)
+  Expected Revenue:      $31.49 (first visit)
+  Annual Value:          $1,322.57
+
+NOTES:
+  - Customer has been gone for 96 days
+  - Historical pattern: 66 visits, $2,078.32 total spent
+  - HIGH VALUE - Personal follow-up recommended
+  - Consider phone call if SMS doesn't convert
+
+====================================================================================================
