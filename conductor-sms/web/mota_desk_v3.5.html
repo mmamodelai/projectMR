@@ -1974,20 +1974,17 @@
         await ensureSupabase();
         console.log('Loading all messages...');
         
-        // Query inbound separately to ensure we get ALL inbound messages
-        // Get ALL inbound regardless of status (read, unread, sent, delivered, etc.)
+        // CRITICAL: Get ALL inbound messages - NO FILTERS except SUG
+        // Get ALL inbound regardless of status, phone format, anything
         // ONLY exclude SUG (suggested messages, not real SMS)
-        // NO phone number filtering - get ALL inbound messages regardless of phone format
-        // Also exclude 'log' status and 'internal' direction
+        console.log('🔍 Fetching ALL inbound messages (excluding only SUG)...');
         const { data: inboundMessages, error: inboundError } = await supabase
           .from('messages')
           .select('id, phone_number, content, direction, status, timestamp, payload')
           .eq('direction', 'inbound')
-          .neq('status', 'SUG') // Only exclude suggested messages
-          .neq('status', 'log') // Exclude log entries
-          .neq('direction', 'internal') // Exclude internal messages
+          .neq('status', 'SUG') // ONLY exclude suggested messages
           .order('timestamp', { ascending: false })
-          .limit(1000); // Reasonable limit - get recent inbound messages
+          .limit(2000); // Large limit to get ALL recent inbound
         
         if (inboundError) {
           console.error('Error fetching inbound messages:', inboundError);
@@ -1995,29 +1992,41 @@
           return;
         }
         
-        console.log(`Found ${inboundMessages?.length || 0} inbound messages`);
+        console.log(`✅ Found ${inboundMessages?.length || 0} inbound messages`);
         
-        // Debug: Check for specific phone number (6199773020) in ALL messages
+        // CRITICAL DEBUG: Check for specific phone number (6199773020)
         const testPhoneNormalized = '6199773020';
+        console.log(`🔍 Looking for messages from ${testPhoneNormalized}...`);
+        
         if (inboundMessages && inboundMessages.length > 0) {
+          // Show ALL inbound message details for debugging
+          console.log('📋 ALL inbound messages found:', inboundMessages.map(m => ({
+            id: m.id,
+            phone: m.phone_number,
+            normalized: normalizePhone(m.phone_number || ''),
+            status: m.status,
+            direction: m.direction,
+            timestamp: m.timestamp,
+            content_preview: (m.content || '').substring(0, 50)
+          })));
+          
           const testPhone = inboundMessages.find(m => {
             const normalized = normalizePhone(m.phone_number || '');
-            return normalized === testPhoneNormalized || normalized.slice(-10) === testPhoneNormalized;
+            const match = normalized === testPhoneNormalized || normalized.slice(-10) === testPhoneNormalized;
+            if (match) {
+              console.log('✅ MATCH FOUND:', m);
+            }
+            return match;
           });
+          
           if (testPhone) {
-            console.log('✅ Found message from 6199773020:', testPhone);
+            console.log('✅✅✅ FOUND YOUR MESSAGE from 6199773020:', testPhone);
           } else {
-            console.log('⚠️ Message from 6199773020 not found in inbound results');
-            console.log('Sample inbound phone numbers:', inboundMessages.slice(0, 10).map(m => ({
-              phone: m.phone_number,
-              normalized: normalizePhone(m.phone_number || ''),
-              status: m.status,
-              direction: m.direction,
-              timestamp: m.timestamp
-            })));
+            console.log('❌ Message from 6199773020 NOT in inbound results');
+            console.log('Checking all phone formats in results...');
             
             // Try a direct query for this specific phone with all format variants
-            console.log('🔍 Searching directly for 6199773020 with all format variants...');
+            console.log('🔍 Direct search for 6199773020 with all format variants...');
             const variants = [
               testPhoneNormalized,
               `+1${testPhoneNormalized}`,
@@ -2032,16 +2041,26 @@
               .select('*')
               .or(variants.map(v => `phone_number.ilike.%${v}%`).join(','))
               .order('timestamp', { ascending: false })
-              .limit(10);
+              .limit(20);
             
             if (directSearch && directSearch.length > 0) {
               console.log('✅ Found messages in direct search:', directSearch);
-              // Add these to inboundMessages
-              inboundMessages.push(...directSearch.filter(m => m.direction === 'inbound' && m.status !== 'SUG'));
+              // Add inbound messages from direct search
+              const inboundFromDirect = directSearch.filter(m => m.direction === 'inbound' && m.status !== 'SUG');
+              if (inboundFromDirect.length > 0) {
+                console.log(`Adding ${inboundFromDirect.length} inbound messages from direct search`);
+                inboundMessages.push(...inboundFromDirect);
+              }
             } else {
-              console.log('❌ No messages found in direct search either');
+              console.log('❌ No messages found in direct search');
             }
           }
+        } else {
+          console.log('❌ NO INBOUND MESSAGES FOUND AT ALL!');
+          console.log('This means either:');
+          console.log('1. No inbound messages in database');
+          console.log('2. All inbound messages have status=SUG');
+          console.log('3. Query is failing silently');
         }
         
         // Query outbound - show sent, delivered, read, failed, rejected
@@ -2067,19 +2086,23 @@
         
         console.log(`Found ${outboundMessages?.length || 0} outbound messages`);
         
+        // PRIORITIZE INBOUND MESSAGES - show ALL inbound first, then outbound
         const allMessages = [
-          ...(inboundMessages || []),
+          ...(inboundMessages || []),  // Inbound first
           ...(outboundMessages || [])
         ];
         
-        console.log(`Total messages: ${allMessages.length}`);
+        console.log(`Total messages: ${allMessages.length} (${inboundMessages?.length || 0} inbound, ${outboundMessages?.length || 0} outbound)`);
         
-        // Sort by timestamp ONLY
+        // Sort by timestamp ONLY (newest first)
         const sorted = allMessages.sort((a, b) => {
           return new Date(b.timestamp || 0) - new Date(a.timestamp || 0);
         });
         
-        const messages = sorted.slice(0, 50); // Reduced to 50 for faster loading
+        // Take first 50 messages (prioritizing most recent, which includes all recent inbound)
+        const messages = sorted.slice(0, 50);
+        
+        console.log(`📊 Final: Displaying ${messages.length} messages (${messages.filter(m => m.direction === 'inbound').length} inbound, ${messages.filter(m => m.direction === 'outbound').length} outbound)`);
         
         console.log(`Displaying ${messages.length} messages`);
         
