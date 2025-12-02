@@ -1975,16 +1975,27 @@
         console.log('Loading all messages...');
         
         // CRITICAL: Get ALL inbound messages - NO FILTERS except SUG
-        // Get ALL inbound regardless of status, phone format, anything
+        // Get ALL inbound regardless of status, phone format, timestamp, anything
         // ONLY exclude SUG (suggested messages, not real SMS)
         console.log('🔍 Fetching ALL inbound messages (excluding only SUG)...');
-        const { data: inboundMessages, error: inboundError } = await supabase
+        
+        // First, get ALL inbound messages with NO status filter (to catch everything)
+        const { data: allInboundRaw, error: allInboundError } = await supabase
           .from('messages')
           .select('id, phone_number, content, direction, status, timestamp, payload')
           .eq('direction', 'inbound')
-          .neq('status', 'SUG') // ONLY exclude suggested messages
           .order('timestamp', { ascending: false })
-          .limit(2000); // Large limit to get ALL recent inbound
+          .limit(5000); // Very large limit
+        
+        // Filter out SUG client-side (more reliable than query filter)
+        const inboundMessages = (allInboundRaw || []).filter(m => {
+          const status = (m.status || '').toUpperCase();
+          return status !== 'SUG';
+        });
+        
+        console.log(`Raw inbound: ${allInboundRaw?.length || 0}, After filtering SUG: ${inboundMessages.length}`);
+        
+        const inboundError = allInboundError;
         
         if (inboundError) {
           console.error('Error fetching inbound messages:', inboundError);
@@ -2086,23 +2097,54 @@
         
         console.log(`Found ${outboundMessages?.length || 0} outbound messages`);
         
-        // PRIORITIZE INBOUND MESSAGES - show ALL inbound first, then outbound
-        const allMessages = [
-          ...(inboundMessages || []),  // Inbound first
-          ...(outboundMessages || [])
-        ];
+        // CRITICAL: Prioritize inbound messages - show ALL inbound first, then recent outbound
+        // This ensures ALL inbound messages are visible, even if they're older
+        const inboundCount = inboundMessages?.length || 0;
+        const outboundCount = outboundMessages?.length || 0;
         
-        console.log(`Total messages: ${allMessages.length} (${inboundMessages?.length || 0} inbound, ${outboundMessages?.length || 0} outbound)`);
+        console.log(`Total: ${inboundCount} inbound, ${outboundCount} outbound`);
         
-        // Sort by timestamp ONLY (newest first)
-        const sorted = allMessages.sort((a, b) => {
+        // Strategy: Show ALL inbound (up to 50), then fill remaining with outbound
+        let messages = [];
+        
+        // Add ALL inbound messages first (they're already sorted by timestamp desc)
+        if (inboundMessages && inboundMessages.length > 0) {
+          messages = [...inboundMessages];
+          console.log(`✅ Added ${inboundMessages.length} inbound messages`);
+        }
+        
+        // If we have room, add recent outbound messages
+        const remainingSlots = 50 - messages.length;
+        if (remainingSlots > 0 && outboundMessages && outboundMessages.length > 0) {
+          const recentOutbound = outboundMessages.slice(0, remainingSlots);
+          messages.push(...recentOutbound);
+          console.log(`✅ Added ${recentOutbound.length} outbound messages`);
+        }
+        
+        // Final sort by timestamp (newest first) to mix them chronologically
+        messages = messages.sort((a, b) => {
           return new Date(b.timestamp || 0) - new Date(a.timestamp || 0);
         });
         
-        // Take first 50 messages (prioritizing most recent, which includes all recent inbound)
-        const messages = sorted.slice(0, 50);
+        // Take first 50
+        messages = messages.slice(0, 50);
         
-        console.log(`📊 Final: Displaying ${messages.length} messages (${messages.filter(m => m.direction === 'inbound').length} inbound, ${messages.filter(m => m.direction === 'outbound').length} outbound)`);
+        const inboundInFinal = messages.filter(m => m.direction === 'inbound').length;
+        const outboundInFinal = messages.filter(m => m.direction === 'outbound').length;
+        console.log(`📊 Final: ${messages.length} messages (${inboundInFinal} inbound, ${outboundInFinal} outbound)`);
+        
+        // Debug: Check if 6199773020 messages are in the final list
+        const testMessages = messages.filter(m => {
+          const normalized = normalizePhone(m.phone_number || '');
+          return normalized === '6199773020' || normalized.slice(-10) === '6199773020';
+        });
+        if (testMessages.length > 0) {
+          console.log(`✅✅✅ YOUR MESSAGES (6199773020) ARE IN THE FINAL LIST:`, testMessages);
+        } else {
+          console.log(`❌ Your messages (6199773020) are NOT in the final 50`);
+          console.log(`   Inbound messages found: ${inboundCount}`);
+          console.log(`   Messages in final list: ${messages.length}`);
+        }
         
         console.log(`Displaying ${messages.length} messages`);
         
