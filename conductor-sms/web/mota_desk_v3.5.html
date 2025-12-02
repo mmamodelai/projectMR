@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Mota-Desk v3.5</title>
+  <title>Mota-Desk v4.0</title>
   <style>
     :root {
       --bg: #0a0e27;
@@ -214,26 +214,103 @@
       color: #ef4444 !important;
       font-weight: bold;
     }
+    
+    /* Tab System */
+    .tab-btn {
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 600;
+      transition: all 0.2s;
+      border: 1px solid transparent;
+    }
+    .tab-btn.active {
+      background: var(--accent) !important;
+      color: #000 !important;
+    }
+    
+    /* View Containers */
+    .view-container {
+      display: none;
+      flex: 1;
+      overflow: hidden;
+    }
+    .view-container.active {
+      display: flex !important;
+    }
+    
+    /* Messages Table */
+    #allMessagesList tr {
+      transition: background 0.2s;
+      cursor: pointer;
+    }
+    #allMessagesList tr:hover {
+      background: rgba(16, 185, 129, 0.08);
+    }
+    
+    /* Conversation Bubbles */
+    .message-bubble {
+      padding: 10px 14px;
+      border-radius: 12px;
+      max-width: 75%;
+      word-wrap: break-word;
+      font-size: 13px;
+      line-height: 1.4;
+    }
+    .message-bubble.inbound {
+      background: var(--panel-light);
+      border: 1px solid var(--border);
+      align-self: flex-start;
+    }
+    .message-bubble.outbound {
+      background: var(--accent);
+      color: #000;
+      align-self: flex-end;
+      margin-left: auto;
+    }
+    .message-time {
+      font-size: 10px;
+      color: var(--text-secondary);
+      margin-top: 4px;
+    }
+    
+    /* Pinned Items */
+    .queue-item.pinned {
+      background: rgba(16, 185, 129, 0.1);
+      border-left: 3px solid var(--accent);
+    }
+    .pin-icon {
+      opacity: 0.3;
+      transition: opacity 0.2s;
+    }
+    .pin-icon:hover {
+      opacity: 1;
+    }
   </style>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
   <div class="header">
-    <h1>Mota-Desk v3.8 (Chat Stable)</h1>
+    <h1>Mota-Desk v4.0</h1>
     <div style="display: flex; gap: 12px; align-items: center;">
       <span class="status-badge" id="pollStatus">Initializing...</span>
     </div>
   </div>
 
   <div class="toolbar">
+    <button id="tabDashboard" class="tab-btn active" onclick="switchView('dashboard')" style="background: var(--accent); color: #000;">📊 Dashboard</button>
+    <button id="tabMessages" class="tab-btn" onclick="switchView('messages')" style="background: var(--panel); color: var(--text); border: 1px solid var(--border);">💬 All Messages</button>
+    <div style="flex: 1;"></div>
     <button id="syncBtn" onclick="startSync()">🔄 Sync Now</button>
     <button id="stopBtn" class="secondary" onclick="stopSync()">Stop</button>
-    <div style="flex: 1;"></div>
     <button id="updateBtn" class="secondary" onclick="triggerUpdate()" title="Fetch latest version">⬇ Update System</button>
     <button id="chatBtn" class="secondary" onclick="openChatModal()" style="background: #4a5568; border-color: #718096; color: white;">💬 Team Chat</button>
   </div>
 
   <main>
+    <!-- DASHBOARD VIEW -->
+    <div class="view-container active" id="viewDashboard" style="display: flex; flex-direction: row; gap: 16px; padding: 16px;">
     <!-- LEFT: Queue -->
     <div class="queue-panel" id="queuePanel">
       <div class="queue-header panel-title-resizable">
@@ -379,6 +456,62 @@
         </div>
       </div>
     </div>
+    </div>
+    <!-- END DASHBOARD VIEW -->
+
+    <!-- MESSAGES VIEW -->
+    <div class="view-container" id="viewMessages" style="display: none; flex-direction: row; gap: 16px; padding: 16px;">
+      <!-- LEFT: Messages List -->
+      <div class="card" style="flex: 1; display: flex; flex-direction: column; overflow: hidden; min-width: 400px;">
+        <div class="card-header">
+          <span>💬 All Messages (Last 100)</span>
+        </div>
+        <div class="card-content" style="padding: 0; overflow-y: auto; flex: 1;">
+          <table style="width: 100%; border-collapse: collapse; font-size: 12px;">
+            <thead style="background: rgba(0,0,0,0.3); position: sticky; top: 0; z-index: 10;">
+              <tr>
+                <th style="padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); color: var(--accent); font-weight: 700; width: 140px;">Time</th>
+                <th style="padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); color: var(--accent); font-weight: 700; width: 80px;">Direction</th>
+                <th style="padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); color: var(--accent); font-weight: 700; width: 180px;">Phone / Customer</th>
+                <th style="padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); color: var(--accent); font-weight: 700; width: 100px;">Status</th>
+                <th style="padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); color: var(--accent); font-weight: 700;">Message</th>
+              </tr>
+            </thead>
+            <tbody id="allMessagesList">
+              <tr>
+                <td colspan="5" style="padding: 40px; text-align: center; color: var(--text-secondary);">Loading messages...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+      <!-- RIGHT: Conversation View -->
+      <div class="card" style="flex: 1; display: flex; flex-direction: column; overflow: hidden; min-width: 400px;">
+        <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
+          <span id="conversationHeader">💬 Conversation</span>
+          <button id="conversationPinBtn" 
+                  onclick="pinConversationCustomer()"
+                  style="background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 4px 8px; border-radius: 4px; cursor: pointer; font-size: 12px; opacity: 0.3;"
+                  title="Pin customer to queue">
+            📌 Pin
+          </button>
+        </div>
+        <div id="conversationView" class="card-content" style="flex: 1; overflow-y: auto; padding: 16px; display: flex; flex-direction: column; gap: 12px;">
+          <div class="muted" style="text-align: center; padding: 40px;">Click a message to view conversation</div>
+        </div>
+        <div style="padding: 10px; border-top: 1px solid var(--border); background: var(--panel);">
+          <div style="display: flex; gap: 8px; align-items: flex-start;">
+            <textarea id="conversationReplyText" placeholder="Type message..." style="flex: 1; min-height: 60px; max-height: 120px; padding: 8px; font-size: 12px; background: var(--bg); border: 1px solid var(--border); border-radius: 6px; color: var(--text); resize: vertical;"></textarea>
+            <button class="btn primary" onclick="sendConversationReply()" style="padding: 8px 16px;">Send</button>
+          </div>
+          <div style="text-align: right; margin-top: 4px;">
+            <span id="conversationCharCount" style="color: var(--text-secondary); font-size: 10px;">0 / 160</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END MESSAGES VIEW -->
   </main>
 
   <div id="chatModal" style="display: none; position: fixed; top: 0; right: 0; bottom: 0; width: 400px; background: var(--panel); z-index: 2000; border-left: 1px solid var(--border); box-shadow: -5px 0 25px rgba(0,0,0,0.5); flex-direction: column;">
@@ -441,6 +574,11 @@
     let queue = [];
     let selectedCustomerId = null;
     let selectedCustomerPhone = null;
+    let pinnedCustomers = []; // Array of customer IDs that are pinned
+    let currentView = 'dashboard';
+    let currentConversationPhone = null;
+    let currentConversationPhoneKey = null;
+    let currentConversationCustomerId = null;
     let syncTimer = null;
     let isPaused = false;
     let budtenderCache = {};
@@ -774,15 +912,39 @@
 
     function renderQueue() {
       const container = document.getElementById('queueList');
-      container.innerHTML = queue.map(customer => `
-        <div class="queue-item ${selectedCustomerId === customer.customer_id ? 'selected' : ''}" onclick="selectCustomer('${customer.customer_id}')">
-          <div class="queue-name">${customer.customer_name}${customer.vip_status ? ' ⭐' : ''}</div>
-          <div class="queue-meta">
-            <span>${customer.check_in_time.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true })}</span>
-            <span>${customer.phone ? '📱' : '⚠️'}</span>
+      if (!container) return;
+      
+      // Separate pinned and unpinned
+      const unpinned = queue.filter(c => !pinnedCustomers.includes(c.customer_id));
+      const pinned = queue.filter(c => pinnedCustomers.includes(c.customer_id));
+      
+      // Render unpinned first, then pinned at bottom
+      const allCustomers = [...unpinned, ...pinned];
+      
+      container.innerHTML = allCustomers.map(customer => {
+        const isPinned = pinnedCustomers.includes(customer.customer_id);
+        const isSelected = selectedCustomerId === customer.customer_id;
+        
+        return `
+          <div class="queue-item ${isSelected ? 'selected' : ''} ${isPinned ? 'pinned' : ''}" 
+               onclick="selectCustomer('${customer.customer_id}')"
+               style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="flex: 1;">
+              <div class="queue-name">${customer.customer_name}${customer.vip_status ? ' ⭐' : ''}</div>
+              <div class="queue-meta">
+                <span>${customer.check_in_time.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true })}</span>
+                <span>${customer.phone ? '📱' : '⚠️'}</span>
+              </div>
+            </div>
+            <span class="pin-icon" 
+                  onclick="event.stopPropagation(); togglePin('${customer.customer_id}')"
+                  style="padding: 4px 8px; cursor: pointer; font-size: 14px; opacity: ${isPinned ? '1' : '0.3'};"
+                  title="${isPinned ? 'Unpin' : 'Pin'}">
+              📌
+            </span>
           </div>
-        </div>
-      `).join('');
+        `;
+      }).join('');
     }
 
     async function selectCustomer(customerId) {
@@ -1545,33 +1707,68 @@
       updateStatus('Stopped');
     }
 
+    // --- UPDATE SYSTEM ---
+    // ALWAYS pulls latest version from GitHub (mota_desk_locked.dat)
+    // Works with launcher - launcher will download and decrypt automatically
+    const GITHUB_PAYLOAD_URL = "https://raw.githubusercontent.com/mmamodelai/projectMR/main/mota_desk_locked.dat";
+    const APP_LOAD_TIME = new Date();
+    let currentETag = null;
+    let lastCheckTime = null;
+
     function triggerUpdate() {
-      if(confirm("Update System?\n\nThis will reload the application and fetch the latest version from the server.")) {
-        window.location.reload();
+      if(confirm("Update System?\n\nThis will reload and fetch the latest MotaDesk version from GitHub.\n\nIf using the Launcher, it will automatically decrypt with your saved password.")) {
+        // Clear any cached data to force fresh download
+        if (sessionStorage.getItem('mota_session_key')) {
+          // Keep password in sessionStorage for launcher auto-reload
+          console.log("Password saved in session - launcher will auto-reload");
+        }
+        // Force reload - launcher will handle download/decryption
+        window.location.reload(true);
       }
     }
 
-    // --- Auto-Update Logic ---
-    const GITHUB_PAYLOAD_URL = "https://raw.githubusercontent.com/mmamodelai/projectMR/main/resource_pack_01.dat";
-    const APP_LOAD_TIME = new Date();
-
     async function checkForUpdates() {
         try {
-            // Fetch HEAD to get Last-Modified with cache buster
-            const response = await fetch(GITHUB_PAYLOAD_URL + "?t=" + Date.now(), { method: 'HEAD', cache: "no-store" });
-            const lastModifiedHeader = response.headers.get('Last-Modified');
+            // Always check for updates - fetch HEAD with cache buster
+            const response = await fetch(GITHUB_PAYLOAD_URL + "?t=" + Date.now() + "&r=" + Math.random(), { 
+              method: 'HEAD', 
+              cache: "no-store",
+              headers: {
+                'Cache-Control': 'no-cache, no-store, must-revalidate',
+                'Pragma': 'no-cache'
+              }
+            });
             
-            if (lastModifiedHeader) {
-                const serverTime = new Date(lastModifiedHeader);
-                // If server file is newer than our load time (with 2 min buffer)
-                if (serverTime > new Date(APP_LOAD_TIME.getTime() + 120000)) {
+            const newETag = response.headers.get('ETag') || response.headers.get('Last-Modified');
+            const lastModified = response.headers.get('Last-Modified');
+            
+            if (newETag) {
+                if (!currentETag) {
+                    // First check - store current version
+                    currentETag = newETag;
+                    lastCheckTime = lastModified ? new Date(lastModified) : new Date();
+                    console.log("Current system version:", currentETag);
+                } else if (newETag !== currentETag) {
+                    // New version detected!
+                    console.log("New version available!", newETag);
                     const btn = document.getElementById('updateBtn');
                     if (btn) {
-                        btn.classList.add('update-available');
+                        btn.classList.add('pulse-red');
                         btn.innerHTML = "⬇ Update Available";
-                        btn.title = "New version detected! Click to reload.";
-                        // Pulse animation defined in CSS
+                        btn.title = "New version detected! Click to update.";
                     }
+                }
+            } else if (lastModified) {
+                // Fallback to Last-Modified if no ETag
+                const serverTime = new Date(lastModified);
+                if (!lastCheckTime || serverTime > lastCheckTime) {
+                    const btn = document.getElementById('updateBtn');
+                    if (btn && serverTime > new Date(APP_LOAD_TIME.getTime() + 120000)) {
+                        btn.classList.add('pulse-red');
+                        btn.innerHTML = "⬇ Update Available";
+                        btn.title = "New version detected! Click to update.";
+                    }
+                    lastCheckTime = serverTime;
                 }
             }
         } catch (e) {
@@ -1579,10 +1776,10 @@
         }
     }
     
-    // Check every 60 minutes
-    setInterval(checkForUpdates, 60 * 60 * 1000);
-    // Initial check after 10 seconds
-    setTimeout(checkForUpdates, 10000);
+    // Check every 5 minutes (faster updates)
+    setInterval(checkForUpdates, 5 * 60 * 1000);
+    // Initial check after 5 seconds
+    setTimeout(checkForUpdates, 5000);
 
     // Load active budtenders for the dropdown
     async function fetchActiveBudtenders() {
@@ -1620,53 +1817,558 @@
       }
     }
 
+    // --- VIEW SWITCHING ---
+    function switchView(view) {
+      currentView = view;
+      
+      // Update tab buttons
+      document.getElementById('tabDashboard').classList.toggle('active', view === 'dashboard');
+      document.getElementById('tabMessages').classList.toggle('active', view === 'messages');
+      
+      // STRICT VIEW ISOLATION
+      const dashboardView = document.getElementById('viewDashboard');
+      const messagesView = document.getElementById('viewMessages');
+      
+      if (view === 'dashboard') {
+        dashboardView.classList.add('active');
+        dashboardView.style.display = 'flex';
+        messagesView.classList.remove('active');
+        messagesView.style.display = 'none';
+      } else if (view === 'messages') {
+        dashboardView.classList.remove('active');
+        dashboardView.style.display = 'none';
+        messagesView.classList.add('active');
+        messagesView.style.display = 'flex';
+        loadAllMessages();
+        if (currentConversationPhone && currentConversationPhoneKey) {
+          loadConversation(currentConversationPhone, currentConversationPhoneKey);
+        }
+      }
+    }
+    
+    // --- PINNING FUNCTIONALITY ---
+    function togglePin(customerId) {
+      const index = pinnedCustomers.indexOf(customerId);
+      if (index > -1) {
+        pinnedCustomers.splice(index, 1);
+      } else {
+        pinnedCustomers.push(customerId);
+        // Resolve phone number immediately when pinning
+        resolvePhoneForPinned(customerId);
+      }
+      renderQueue();
+      localStorage.setItem('mota_pinned_customers', JSON.stringify(pinnedCustomers));
+    }
+    
+    async function resolvePhoneForPinned(customerId) {
+      try {
+        await ensureSupabase();
+        const { data: signup } = await supabase
+          .from('phone_signups')
+          .select('phone')
+          .eq('member_id', customerId)
+          .order('signup_timestamp', { ascending: false })
+          .limit(1)
+          .maybeSingle();
+        
+        if (signup && signup.phone) {
+          const qItem = queue.find(q => q.customer_id === customerId);
+          if (qItem) qItem.phone = signup.phone;
+        }
+      } catch (e) {
+        console.warn('Error resolving phone for pinned:', e);
+      }
+    }
+    
+    function loadPinnedCustomers() {
+      try {
+        const saved = localStorage.getItem('mota_pinned_customers');
+        if (saved) pinnedCustomers = JSON.parse(saved);
+      } catch (e) {
+        console.warn('Failed to load pinned:', e);
+      }
+    }
+    
+    async function pinConversationCustomer() {
+      if (!currentConversationPhoneKey) {
+        alert('No phone number available. Cannot pin.');
+        return;
+      }
+      
+      // Try to find customer by phone number
+      let customerId = currentConversationCustomerId;
+      
+      if (!customerId) {
+        try {
+          await ensureSupabase();
+          const customerMap = await batchLookupCustomers([currentConversationPhoneKey]);
+          const customer = customerMap.get(currentConversationPhoneKey);
+          if (customer) {
+            customerId = customer.member_id || customer.id;
+            currentConversationCustomerId = customerId;
+          }
+        } catch (e) {
+          console.warn('Error looking up customer for pinning:', e);
+        }
+      }
+      
+      // If still no customer ID, try to find by phone in queue
+      if (!customerId && currentConversationPhoneKey) {
+        const queueCustomer = queue.find(q => {
+          const qPhone = normalizePhone(q.phone || '');
+          return qPhone.slice(-10) === currentConversationPhoneKey.slice(-10);
+        });
+        if (queueCustomer) {
+          customerId = queueCustomer.customer_id;
+          currentConversationCustomerId = customerId;
+        }
+      }
+      
+      // If we have a customer ID, pin it normally
+      if (customerId) {
+        togglePin(customerId);
+        switchView('dashboard');
+        if (selectCustomer) {
+          selectCustomer(customerId);
+        } else {
+          // If customer not in queue, just switch to dashboard
+          renderQueue();
+        }
+      } else {
+        // No customer ID found - pin by phone number as fallback
+        // Store phone-based pins separately
+        const phonePins = JSON.parse(localStorage.getItem('mota_pinned_phones') || '[]');
+        if (!phonePins.includes(currentConversationPhoneKey)) {
+          phonePins.push(currentConversationPhoneKey);
+          localStorage.setItem('mota_pinned_phones', JSON.stringify(phonePins));
+          alert(`Phone number ${currentConversationPhoneKey} pinned. Will appear when customer is in queue.`);
+        } else {
+          phonePins.splice(phonePins.indexOf(currentConversationPhoneKey), 1);
+          localStorage.setItem('mota_pinned_phones', JSON.stringify(phonePins));
+          alert(`Phone number ${currentConversationPhoneKey} unpinned.`);
+        }
+        switchView('dashboard');
+        renderQueue();
+      }
+    }
+    
+    // --- PHONE NUMBER NORMALIZATION ---
+    function normalizePhone(phone) {
+      if (!phone) return '';
+      const digits = phone.replace(/\D/g, '');
+      return digits.length >= 10 ? digits.slice(-10) : digits;
+    }
+    
+    // --- ALL MESSAGES LOADING ---
+    async function loadAllMessages() {
+      const tbody = document.getElementById('allMessagesList');
+      if (!tbody) return;
+      tbody.innerHTML = '<tr><td colspan="5" style="padding: 40px; text-align: center; color: var(--text-secondary);">Loading messages...</td></tr>';
+      
+      try {
+        await ensureSupabase();
+        
+        // Query inbound separately to ensure we get ALL inbound messages
+        // Get ALL inbound regardless of status (read, unread, sent, delivered, etc.)
+        // ONLY exclude SUG (suggested messages, not real SMS)
+        const { data: inboundMessages } = await supabase
+          .from('messages')
+          .select('id, phone_number, content, direction, status, timestamp, payload')
+          .eq('direction', 'inbound')
+          .neq('status', 'SUG') // Only exclude suggested messages
+          .order('timestamp', { ascending: false })
+          .limit(2000); // Large limit to ensure we get all inbound
+        
+        // Query outbound (excluding unwanted statuses and internal logs)
+        let outboundQuery = supabase
+          .from('messages')
+          .select('id, phone_number, content, direction, status, timestamp, payload')
+          .eq('direction', 'outbound')
+          .neq('status', 'SUG')
+          .neq('status', 'APR')
+          .neq('status', 'scheduled')
+          .neq('status', 'queued')
+          .neq('status', 'log') // Exclude log entries
+          .neq('direction', 'internal'); // Exclude internal messages
+        
+        const { data: outboundMessages } = await outboundQuery
+          .order('timestamp', { ascending: false })
+          .limit(500);
+        
+        const allMessages = [
+          ...(inboundMessages || []),
+          ...(outboundMessages || [])
+        ];
+        
+        // Sort by timestamp ONLY
+        const sorted = allMessages.sort((a, b) => {
+          return new Date(b.timestamp || 0) - new Date(a.timestamp || 0);
+        });
+        
+        const messages = sorted.slice(0, 100);
+        
+        if (!messages || messages.length === 0) {
+          tbody.innerHTML = '<tr><td colspan="5" style="padding: 40px; text-align: center; color: var(--text-secondary);">No messages found</td></tr>';
+          return;
+        }
+        
+        // Batch lookup customers
+        const phoneNumbers = [...new Set(messages.map(m => {
+          const normalized = normalizePhone(m.phone_number || '');
+          return normalized.length >= 10 ? normalized.slice(-10) : normalized;
+        }).filter(p => p.length >= 10))];
+        
+        const customerMap = await batchLookupCustomers(phoneNumbers);
+        
+        // Render
+        tbody.innerHTML = messages.map(msg => {
+          const rawPhone = msg.phone_number || 'Unknown';
+          const normalizedPhone = normalizePhone(rawPhone);
+          const phoneKey = normalizedPhone.length >= 10 ? normalizedPhone.slice(-10) : normalizedPhone;
+          const displayPhone = phoneKey.length === 10 
+            ? `(${phoneKey.slice(0,3)}) ${phoneKey.slice(3,6)}-${phoneKey.slice(6)}`
+            : rawPhone;
+          
+          const customer = customerMap.get(phoneKey);
+          const customerName = customer ? (customer.name || `${customer.first_name || ''} ${customer.last_name || ''}`.trim()) : null;
+          
+          const time = new Date(msg.timestamp || new Date()).toLocaleString('en-US', {
+            month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit'
+          });
+          
+          const direction = msg.direction === 'inbound' ? '📥 In' : '📤 Out';
+          const statusDisplay = (msg.status || 'unknown').toUpperCase();
+          
+          let content = msg.content || '';
+          if (content.match(/^[0-9A-Fa-f]+$/)) {
+            try {
+              content = decodeHexUCS2(content);
+            } catch (e) {
+              content = msg.content || '';
+            }
+          }
+          if (content.length > 60) content = content.substring(0, 57) + '...';
+          
+          return `
+            <tr onclick="loadConversation('${rawPhone}', '${phoneKey}')">
+              <td style="padding: 12px 16px; color: var(--text-secondary); font-size: 11px;">${time}</td>
+              <td style="padding: 12px 16px; color: ${msg.direction === 'inbound' ? '#10b981' : '#3b82f6'}; font-weight: 600;">${direction}</td>
+              <td style="padding: 12px 16px;">
+                ${customerName ? `<strong>${customerName}</strong><br><span style="color: var(--text-secondary); font-size: 11px;">${displayPhone}</span>` : displayPhone}
+              </td>
+              <td style="padding: 12px 16px; color: var(--text-secondary); font-size: 11px;">${statusDisplay}</td>
+              <td style="padding: 12px 16px;">${content}</td>
+            </tr>
+          `;
+        }).join('');
+        
+      } catch (error) {
+        console.error('Error loading messages:', error);
+        tbody.innerHTML = '<tr><td colspan="5" style="padding: 40px; text-align: center; color: var(--danger);">Error loading messages</td></tr>';
+      }
+    }
+    
+    // --- CONVERSATION FUNCTIONS ---
+    async function loadConversation(phone, phoneKey) {
+      currentConversationPhone = phone;
+      currentConversationPhoneKey = phoneKey;
+      
+      const container = document.getElementById('conversationView');
+      const header = document.getElementById('conversationHeader');
+      
+      container.innerHTML = '<div class="muted" style="text-align: center; padding: 20px;">Loading conversation...</div>';
+      
+      try {
+        await ensureSupabase();
+        
+        // Get phone variants for flexible matching
+        const variants = getPhoneVariants(phone);
+        
+        // Build OR query for all variants - get ALL messages for this phone
+        // Exclude only internal/log messages, but include all real SMS (inbound and outbound)
+        let query = supabase.from('messages').select('*');
+        query = query.or(variants.map(v => `phone_number.ilike.%${v}%`).join(','));
+        // Exclude internal log messages but include all real SMS
+        query = query.neq('direction', 'internal');
+        query = query.neq('status', 'log');
+        query = query.order('timestamp', { ascending: true });
+        
+        const { data: messages } = await query;
+        
+        if (!messages || messages.length === 0) {
+          container.innerHTML = '<div class="muted" style="text-align: center; padding: 40px;">No messages found</div>';
+          return;
+        }
+        
+        // Find customer - use more robust lookup
+        const customerMap = await batchLookupCustomers([phoneKey]);
+        const customer = customerMap.get(phoneKey);
+        
+        if (customer) {
+          currentConversationCustomerId = customer.member_id || customer.id;
+          const customerName = customer.name || 
+                              (customer.first_name && customer.last_name ? `${customer.first_name} ${customer.last_name}`.trim() : null) ||
+                              customer.first_name ||
+                              'Unknown';
+          header.textContent = `💬 ${customerName} (${phoneKey})`;
+          
+          // Update pin button
+          const pinBtn = document.getElementById('conversationPinBtn');
+          if (pinBtn) {
+            const isPinned = pinnedCustomers.includes(currentConversationCustomerId);
+            pinBtn.style.opacity = isPinned ? '1' : '0.3';
+            pinBtn.textContent = isPinned ? '📌 Pinned' : '📌 Pin';
+          }
+        } else {
+          // Try one more time with the raw phone
+          const rawPhoneNormalized = normalizePhone(phone).slice(-10);
+          const customer2 = customerMap.get(rawPhoneNormalized);
+          if (customer2) {
+            currentConversationCustomerId = customer2.member_id || customer2.id;
+            const customerName = customer2.name || 
+                                (customer2.first_name && customer2.last_name ? `${customer2.first_name} ${customer2.last_name}`.trim() : null) ||
+                                customer2.first_name ||
+                                'Unknown';
+            header.textContent = `💬 ${customerName} (${phoneKey})`;
+          } else {
+            header.textContent = `💬 ${phoneKey}`;
+            // Still allow pinning by phone
+            const pinBtn = document.getElementById('conversationPinBtn');
+            if (pinBtn) {
+              pinBtn.style.opacity = '0.5';
+              pinBtn.textContent = '📌 Pin (by phone)';
+            }
+          }
+        }
+        
+        // Render messages
+        container.innerHTML = messages.map(m => {
+          const isInbound = m.direction === 'inbound';
+          let content = m.content || '';
+          if (content.match(/^[0-9A-Fa-f]+$/)) {
+            try {
+              content = decodeHexUCS2(content);
+            } catch (e) {}
+          }
+          
+          const time = new Date(m.timestamp || new Date()).toLocaleString('en-US', {
+            month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit'
+          });
+          
+          return `
+            <div class="message-bubble ${isInbound ? 'inbound' : 'outbound'}">
+              <div>${content}</div>
+              <div class="message-time">${time} • ${(m.status || 'unknown').toUpperCase()}</div>
+            </div>
+          `;
+        }).join('');
+        
+        container.scrollTop = container.scrollHeight;
+        
+      } catch (error) {
+        console.error('Error loading conversation:', error);
+        container.innerHTML = '<div class="muted" style="text-align: center; padding: 40px; color: var(--danger);">Error loading conversation</div>';
+      }
+    }
+    
+    function getPhoneVariants(phone) {
+      const normalized = normalizePhone(phone);
+      return [
+        normalized,
+        `+1${normalized}`,
+        `1${normalized}`,
+        `+${normalized}`,
+        phone
+      ].filter((v, i, arr) => arr.indexOf(v) === i);
+    }
+    
+    async function sendConversationReply() {
+      const text = document.getElementById('conversationReplyText').value.trim();
+      if (!text || !currentConversationPhone) return;
+      
+      try {
+        await ensureSupabase();
+        const { error } = await supabase.from('messages').insert({
+          phone_number: currentConversationPhone,
+          content: text,
+          direction: 'outbound',
+          status: 'queued',
+          timestamp: new Date().toISOString()
+        });
+        
+        if (error) throw error;
+        
+        document.getElementById('conversationReplyText').value = '';
+        loadConversation(currentConversationPhone, currentConversationPhoneKey);
+        loadAllMessages();
+      } catch (error) {
+        console.error('Error sending reply:', error);
+        alert('Failed to send: ' + error.message);
+      }
+    }
+    
+    async function batchLookupCustomers(phoneNumbers) {
+      const customerMap = new Map();
+      if (!phoneNumbers || phoneNumbers.length === 0) return customerMap;
+      
+      try {
+        await ensureSupabase();
+        
+        // Normalize all phone numbers to last 10 digits for matching
+        const normalizedPhones = phoneNumbers.map(p => {
+          const normalized = normalizePhone(p);
+          return normalized.length >= 10 ? normalized.slice(-10) : normalized;
+        }).filter(p => p.length >= 10);
+        
+        if (normalizedPhones.length === 0) return customerMap;
+        
+        // Strategy 1: Check phone_signups by phone (not phone_normalized column)
+        for (const phone of normalizedPhones) {
+          try {
+            const { data: signups } = await supabase
+              .from('phone_signups')
+              .select('member_id, phone, customer_name, first_name, last_name')
+              .or(`phone.ilike.%${phone}%,phone.ilike.%+1${phone}%,phone.ilike.%1${phone}%`)
+              .limit(1);
+            
+            if (signups && signups.length > 0) {
+              const s = signups[0];
+              const key = normalizePhone(s.phone).slice(-10);
+              if (key && !customerMap.has(key)) {
+                customerMap.set(key, {
+                  member_id: s.member_id,
+                  id: s.member_id,
+                  name: s.customer_name || `${s.first_name || ''} ${s.last_name || ''}`.trim(),
+                  first_name: s.first_name,
+                  last_name: s.last_name
+                });
+              }
+            }
+          } catch (e) {
+            console.warn('Error checking phone_signups:', e);
+          }
+        }
+        
+        // Strategy 2: Check customers_blaze with flexible matching
+        for (const phone of normalizedPhones) {
+          if (customerMap.has(phone)) continue; // Already found
+          
+          try {
+            const { data: customers } = await supabase
+              .from('customers_blaze')
+              .select('member_id, id, phone, phone_number, name, first_name, last_name')
+              .or(`phone.ilike.%${phone}%,phone_number.ilike.%${phone}%,phone.ilike.%+1${phone}%,phone_number.ilike.%+1${phone}%`)
+              .limit(1);
+            
+            if (customers && customers.length > 0) {
+              const c = customers[0];
+              const phoneValue = c.phone || c.phone_number;
+              const key = normalizePhone(phoneValue).slice(-10);
+              if (key && !customerMap.has(key)) {
+                customerMap.set(key, {
+                  member_id: c.member_id,
+                  id: c.id || c.member_id,
+                  name: c.name || `${c.first_name || ''} ${c.last_name || ''}`.trim(),
+                  first_name: c.first_name,
+                  last_name: c.last_name
+                });
+              }
+            }
+          } catch (e) {
+            console.warn('Error checking customers_blaze:', e);
+          }
+        }
+        
+        // Strategy 3: Also check customers table
+        for (const phone of normalizedPhones) {
+          if (customerMap.has(phone)) continue; // Already found
+          
+          try {
+            const { data: customers } = await supabase
+              .from('customers')
+              .select('id, member_id, phone, name, first_name, last_name')
+              .or(`phone.ilike.%${phone}%,phone.ilike.%+1${phone}%`)
+              .limit(1);
+            
+            if (customers && customers.length > 0) {
+              const c = customers[0];
+              const key = normalizePhone(c.phone).slice(-10);
+              if (key && !customerMap.has(key)) {
+                customerMap.set(key, {
+                  member_id: c.member_id,
+                  id: c.id,
+                  name: c.name || `${c.first_name || ''} ${c.last_name || ''}`.trim(),
+                  first_name: c.first_name,
+                  last_name: c.last_name
+                });
+              }
+            }
+          } catch (e) {
+            console.warn('Error checking customers:', e);
+          }
+        }
+      } catch (e) {
+        console.warn('Error in batch lookup:', e);
+      }
+      
+      return customerMap;
+    }
+    
+    function decodeHexUCS2(hex) {
+      // Hex to UCS2 decoder (handles emojis with surrogate pairs)
+      const bytes = [];
+      for (let i = 0; i < hex.length; i += 2) {
+        bytes.push(parseInt(hex.substr(i, 2), 16));
+      }
+      let result = '';
+      for (let i = 0; i < bytes.length; i += 2) {
+        const codePoint = (bytes[i] << 8) | bytes[i + 1];
+        if (codePoint >= 0xD800 && codePoint <= 0xDBFF && i + 2 < bytes.length) {
+          const high = codePoint;
+          const low = (bytes[i + 2] << 8) | bytes[i + 3];
+          if (low >= 0xDC00 && low <= 0xDFFF) {
+            const surrogate = 0x10000 + ((high - 0xD800) << 10) + (low - 0xDC00);
+            result += String.fromCodePoint(surrogate);
+            i += 2;
+          } else {
+            result += String.fromCharCode(codePoint);
+          }
+        } else {
+          result += String.fromCharCode(codePoint);
+        }
+      }
+      return result;
+    }
+    
+    async function ensureSupabase() {
+      if (!supabase) {
+        await initSupabase();
+      }
+      return supabase;
+    }
+
     window.addEventListener('DOMContentLoaded', async () => {
       await initSupabase();
       loadColumnWidths();
+      loadPinnedCustomers(); // Load pinned customers
       fetchActiveBudtenders(); // Load dropdown options
       startSync();
       
       // Subscribe to chat on page load (for pulse notifications)
       subscribeToChat();
       
-      // Initial check for updates
-      checkForUpdates();
-      // Check every hour
-      setInterval(checkForUpdates, 60 * 60 * 1000);
-    });
-
-    // --- UPDATE CHECKER ---
-    const UPDATE_CHECK_URL = "https://raw.githubusercontent.com/mmamodelai/projectMR/main/resource_pack_01.dat";
-    let currentETag = null;
-
-    async function checkForUpdates() {
-      try {
-        console.log("Checking for system updates...");
-        // Add cache buster to ensure we check real server state
-        // Use HEAD request to be lightweight, but if CORS fails, use GET with range or just GET text
-        const response = await fetch(UPDATE_CHECK_URL + "?t=" + Date.now(), { method: 'HEAD', cache: 'no-store' });
-        
-        const newETag = response.headers.get('ETag');
-        
-        if (newETag) {
-            if (!currentETag) {
-                currentETag = newETag;
-                console.log("System Version (ETag):", currentETag);
-            } else if (newETag !== currentETag) {
-                console.log("New version detected!", newETag);
-                // Update available!
-                const btn = document.getElementById('updateBtn');
-                if (btn) {
-                    btn.classList.add('pulse-red');
-                    btn.title = "New version available! Click to update.";
-                    btn.innerText = "⬇ Update Available";
-                }
-            }
-        }
-      } catch (e) {
-        console.log("Update check failed", e);
+      // Character count for conversation reply
+      const replyText = document.getElementById('conversationReplyText');
+      const charCount = document.getElementById('conversationCharCount');
+      if (replyText && charCount) {
+        replyText.addEventListener('input', () => {
+          const len = replyText.value.length;
+          charCount.textContent = `${len} / 160`;
+        });
       }
-    }
+      
+      // Update checking is handled by the main checkForUpdates function above
+    });
   </script>
 </body>
 </html>
