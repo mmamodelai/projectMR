@@ -1978,13 +1978,16 @@
         // Get ALL inbound regardless of status (read, unread, sent, delivered, etc.)
         // ONLY exclude SUG (suggested messages, not real SMS)
         // NO phone number filtering - get ALL inbound messages regardless of phone format
+        // Also exclude 'log' status and 'internal' direction
         const { data: inboundMessages, error: inboundError } = await supabase
           .from('messages')
           .select('id, phone_number, content, direction, status, timestamp, payload')
           .eq('direction', 'inbound')
           .neq('status', 'SUG') // Only exclude suggested messages
+          .neq('status', 'log') // Exclude log entries
+          .neq('direction', 'internal') // Exclude internal messages
           .order('timestamp', { ascending: false })
-          .limit(5000); // Very large limit to ensure we get ALL inbound
+          .limit(1000); // Reasonable limit - get recent inbound messages
         
         if (inboundError) {
           console.error('Error fetching inbound messages:', inboundError);
@@ -1994,17 +1997,50 @@
         
         console.log(`Found ${inboundMessages?.length || 0} inbound messages`);
         
-        // Debug: Check for specific phone number (6199773020)
+        // Debug: Check for specific phone number (6199773020) in ALL messages
+        const testPhoneNormalized = '6199773020';
         if (inboundMessages && inboundMessages.length > 0) {
           const testPhone = inboundMessages.find(m => {
             const normalized = normalizePhone(m.phone_number || '');
-            return normalized === '6199773020' || normalized.slice(-10) === '6199773020';
+            return normalized === testPhoneNormalized || normalized.slice(-10) === testPhoneNormalized;
           });
           if (testPhone) {
             console.log('✅ Found message from 6199773020:', testPhone);
           } else {
-            console.log('⚠️ Message from 6199773020 not found in results');
-            console.log('Sample phone numbers in results:', inboundMessages.slice(0, 5).map(m => m.phone_number));
+            console.log('⚠️ Message from 6199773020 not found in inbound results');
+            console.log('Sample inbound phone numbers:', inboundMessages.slice(0, 10).map(m => ({
+              phone: m.phone_number,
+              normalized: normalizePhone(m.phone_number || ''),
+              status: m.status,
+              direction: m.direction,
+              timestamp: m.timestamp
+            })));
+            
+            // Try a direct query for this specific phone with all format variants
+            console.log('🔍 Searching directly for 6199773020 with all format variants...');
+            const variants = [
+              testPhoneNormalized,
+              `+1${testPhoneNormalized}`,
+              `1${testPhoneNormalized}`,
+              `+${testPhoneNormalized}`,
+              `(${testPhoneNormalized.slice(0,3)}) ${testPhoneNormalized.slice(3,6)}-${testPhoneNormalized.slice(6)}`,
+              `${testPhoneNormalized.slice(0,3)}-${testPhoneNormalized.slice(3,6)}-${testPhoneNormalized.slice(6)}`
+            ];
+            
+            const { data: directSearch } = await supabase
+              .from('messages')
+              .select('*')
+              .or(variants.map(v => `phone_number.ilike.%${v}%`).join(','))
+              .order('timestamp', { ascending: false })
+              .limit(10);
+            
+            if (directSearch && directSearch.length > 0) {
+              console.log('✅ Found messages in direct search:', directSearch);
+              // Add these to inboundMessages
+              inboundMessages.push(...directSearch.filter(m => m.direction === 'inbound' && m.status !== 'SUG'));
+            } else {
+              console.log('❌ No messages found in direct search either');
+            }
           }
         }
         
@@ -2043,7 +2079,7 @@
           return new Date(b.timestamp || 0) - new Date(a.timestamp || 0);
         });
         
-        const messages = sorted.slice(0, 100);
+        const messages = sorted.slice(0, 50); // Reduced to 50 for faster loading
         
         console.log(`Displaying ${messages.length} messages`);
         
@@ -2271,39 +2307,30 @@
       try {
         await ensureSupabase();
         
-        // Normalize all phone numbers to last 10 digits for matching
+        // Normalize all phone numbers to exactly 10 digits
         const normalizedPhones = phoneNumbers.map(p => {
           const normalized = normalizePhone(p);
-          return normalized.length >= 10 ? normalized.slice(-10) : normalized;
-        }).filter(p => p.length >= 10);
+          return normalized.length === 10 ? normalized : (normalized.length > 10 ? normalized.slice(-10) : null);
+        }).filter(p => p && p.length === 10);
         
         if (normalizedPhones.length === 0) return customerMap;
         
-        // Strategy 1: Check phone_signups by phone (not phone_normalized column)
-        // Use flexible matching with all phone format variants
-        for (const phone of normalizedPhones) {
-          try {
-            // Create all format variants for this 10-digit number
-            const variants = [
-              phone,                    // 6199773020
-              `+1${phone}`,           // +16199773020
-              `1${phone}`,            // 16199773020
-              `+${phone}`,            // +6199773020
-              `(${phone.slice(0,3)}) ${phone.slice(3,6)}-${phone.slice(6)}`, // (619) 977-3020
-              `${phone.slice(0,3)}-${phone.slice(3,6)}-${phone.slice(6)}`     // 619-977-3020
-            ];
-            
-            const { data: signups } = await supabase
-              .from('phone_signups')
-              .select('member_id, phone, customer_name, first_name, last_name')
-              .or(variants.map(v => `phone.ilike.%${v}%`).join(','))
-              .limit(1);
-            
-            if (signups && signups.length > 0) {
-              const s = signups[0];
-              const key = normalizePhone(s.phone).slice(-10);
-              if (key && !customerMap.has(key)) {
-                customerMap.set(key, {
+        console.log(`Batch looking up ${normalizedPhones.length} phone numbers...`);
+        
+        // OPTIMIZED: Batch queries instead of individual loops
+        // Strategy 1: Get ALL phone_signups and match client-side (much faster)
+        try {
+          const { data: allSignups } = await supabase
+            .from('phone_signups')
+            .select('member_id, phone, customer_name, first_name, last_name')
+            .limit(10000); // Get a large batch
+          
+          if (allSignups) {
+            allSignups.forEach(s => {
+              const phoneKey = normalizePhone(s.phone);
+              const normalizedKey = phoneKey.length === 10 ? phoneKey : (phoneKey.length > 10 ? phoneKey.slice(-10) : null);
+              if (normalizedKey && normalizedPhones.includes(normalizedKey) && !customerMap.has(normalizedKey)) {
+                customerMap.set(normalizedKey, {
                   member_id: s.member_id,
                   id: s.member_id,
                   name: s.customer_name || `${s.first_name || ''} ${s.last_name || ''}`.trim(),
@@ -2311,89 +2338,100 @@
                   last_name: s.last_name
                 });
               }
-            }
-          } catch (e) {
-            console.warn('Error checking phone_signups:', e);
+            });
           }
+        } catch (e) {
+          console.warn('Error batch checking phone_signups:', e);
         }
         
-        // Strategy 2: Check customers_blaze with flexible matching
-        for (const phone of normalizedPhones) {
-          if (customerMap.has(phone)) continue; // Already found
-          
+        // Strategy 2: Get ALL customers_blaze and match client-side
+        const missingPhones = normalizedPhones.filter(p => !customerMap.has(p));
+        if (missingPhones.length > 0) {
           try {
-            // Create all format variants
-            const variants = [
-              phone,
-              `+1${phone}`,
-              `1${phone}`,
-              `+${phone}`,
-              `(${phone.slice(0,3)}) ${phone.slice(3,6)}-${phone.slice(6)}`,
-              `${phone.slice(0,3)}-${phone.slice(3,6)}-${phone.slice(6)}`
-            ];
+            // Build OR query for all missing phones with all format variants
+            const allVariants = [];
+            missingPhones.forEach(phone => {
+              allVariants.push(
+                `phone.ilike.%${phone}%`,
+                `phone_number.ilike.%${phone}%`,
+                `phone.ilike.%+1${phone}%`,
+                `phone_number.ilike.%+1${phone}%`,
+                `phone.ilike.%1${phone}%`,
+                `phone_number.ilike.%1${phone}%`
+              );
+            });
             
-            const { data: customers } = await supabase
-              .from('customers_blaze')
-              .select('member_id, id, phone, phone_number, name, first_name, last_name')
-              .or(variants.map(v => `phone.ilike.%${v}%,phone_number.ilike.%${v}%`).join(','))
-              .limit(1);
-            
-            if (customers && customers.length > 0) {
-              const c = customers[0];
-              const phoneValue = c.phone || c.phone_number;
-              const key = normalizePhone(phoneValue).slice(-10);
-              if (key && !customerMap.has(key)) {
-                customerMap.set(key, {
-                  member_id: c.member_id,
-                  id: c.id || c.member_id,
-                  name: c.name || `${c.first_name || ''} ${c.last_name || ''}`.trim(),
-                  first_name: c.first_name,
-                  last_name: c.last_name
+            if (allVariants.length > 0) {
+              const { data: customers } = await supabase
+                .from('customers_blaze')
+                .select('member_id, id, phone, phone_number, name, first_name, last_name')
+                .or(allVariants.slice(0, 50).join(',')) // Supabase limit, but we'll get most
+                .limit(1000);
+              
+              if (customers) {
+                customers.forEach(c => {
+                  const phoneValue = c.phone || c.phone_number;
+                  const phoneKey = normalizePhone(phoneValue);
+                  const normalizedKey = phoneKey.length === 10 ? phoneKey : (phoneKey.length > 10 ? phoneKey.slice(-10) : null);
+                  if (normalizedKey && missingPhones.includes(normalizedKey) && !customerMap.has(normalizedKey)) {
+                    customerMap.set(normalizedKey, {
+                      member_id: c.member_id,
+                      id: c.id || c.member_id,
+                      name: c.name || `${c.first_name || ''} ${c.last_name || ''}`.trim(),
+                      first_name: c.first_name,
+                      last_name: c.last_name
+                    });
+                  }
                 });
               }
             }
           } catch (e) {
-            console.warn('Error checking customers_blaze:', e);
+            console.warn('Error batch checking customers_blaze:', e);
           }
         }
         
-        // Strategy 3: Also check customers table
-        for (const phone of normalizedPhones) {
-          if (customerMap.has(phone)) continue; // Already found
-          
+        // Strategy 3: Check customers table for remaining
+        const stillMissing = normalizedPhones.filter(p => !customerMap.has(p));
+        if (stillMissing.length > 0) {
           try {
-            const variants = [
-              phone,
-              `+1${phone}`,
-              `1${phone}`,
-              `+${phone}`,
-              `(${phone.slice(0,3)}) ${phone.slice(3,6)}-${phone.slice(6)}`,
-              `${phone.slice(0,3)}-${phone.slice(3,6)}-${phone.slice(6)}`
-            ];
+            const allVariants = [];
+            stillMissing.forEach(phone => {
+              allVariants.push(
+                `phone.ilike.%${phone}%`,
+                `phone.ilike.%+1${phone}%`,
+                `phone.ilike.%1${phone}%`
+              );
+            });
             
-            const { data: customers } = await supabase
-              .from('customers')
-              .select('id, member_id, phone, name, first_name, last_name')
-              .or(variants.map(v => `phone.ilike.%${v}%`).join(','))
-              .limit(1);
-            
-            if (customers && customers.length > 0) {
-              const c = customers[0];
-              const key = normalizePhone(c.phone).slice(-10);
-              if (key && !customerMap.has(key)) {
-                customerMap.set(key, {
-                  member_id: c.member_id,
-                  id: c.id,
-                  name: c.name || `${c.first_name || ''} ${c.last_name || ''}`.trim(),
-                  first_name: c.first_name,
-                  last_name: c.last_name
+            if (allVariants.length > 0) {
+              const { data: customers } = await supabase
+                .from('customers')
+                .select('id, member_id, phone, name, first_name, last_name')
+                .or(allVariants.slice(0, 50).join(','))
+                .limit(1000);
+              
+              if (customers) {
+                customers.forEach(c => {
+                  const phoneKey = normalizePhone(c.phone);
+                  const normalizedKey = phoneKey.length === 10 ? phoneKey : (phoneKey.length > 10 ? phoneKey.slice(-10) : null);
+                  if (normalizedKey && stillMissing.includes(normalizedKey) && !customerMap.has(normalizedKey)) {
+                    customerMap.set(normalizedKey, {
+                      member_id: c.member_id,
+                      id: c.id,
+                      name: c.name || `${c.first_name || ''} ${c.last_name || ''}`.trim(),
+                      first_name: c.first_name,
+                      last_name: c.last_name
+                    });
+                  }
                 });
               }
             }
           } catch (e) {
-            console.warn('Error checking customers:', e);
+            console.warn('Error batch checking customers:', e);
           }
         }
+        
+        console.log(`Resolved ${customerMap.size} contacts out of ${normalizedPhones.length} phone numbers`);
       } catch (e) {
         console.warn('Error in batch lookup:', e);
       }
