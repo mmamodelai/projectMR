@@ -789,8 +789,12 @@
       );
     }
 
+    // STANDARDIZED: Always return exactly 10 digits (last 10 digits)
     function normalizePhone(phone) {
-      return (phone + "").replace(/\D/g, "");
+      if (!phone) return '';
+      const digits = (phone + "").replace(/\D/g, "");
+      // Always return last 10 digits (strip country code if present)
+      return digits.length >= 10 ? digits.slice(-10) : digits;
     }
 
     function decodeHexUCS2(hex) {
@@ -1955,12 +1959,7 @@
       }
     }
     
-    // --- PHONE NUMBER NORMALIZATION ---
-    function normalizePhone(phone) {
-      if (!phone) return '';
-      const digits = phone.replace(/\D/g, '');
-      return digits.length >= 10 ? digits.slice(-10) : digits;
-    }
+    // Phone normalization is defined above - using the same function
     
     // --- ALL MESSAGES LOADING ---
     async function loadAllMessages() {
@@ -1978,13 +1977,14 @@
         // Query inbound separately to ensure we get ALL inbound messages
         // Get ALL inbound regardless of status (read, unread, sent, delivered, etc.)
         // ONLY exclude SUG (suggested messages, not real SMS)
+        // NO phone number filtering - get ALL inbound messages regardless of phone format
         const { data: inboundMessages, error: inboundError } = await supabase
           .from('messages')
           .select('id, phone_number, content, direction, status, timestamp, payload')
           .eq('direction', 'inbound')
           .neq('status', 'SUG') // Only exclude suggested messages
           .order('timestamp', { ascending: false })
-          .limit(2000); // Large limit to ensure we get all inbound
+          .limit(5000); // Very large limit to ensure we get ALL inbound
         
         if (inboundError) {
           console.error('Error fetching inbound messages:', inboundError);
@@ -1993,6 +1993,20 @@
         }
         
         console.log(`Found ${inboundMessages?.length || 0} inbound messages`);
+        
+        // Debug: Check for specific phone number (6199773020)
+        if (inboundMessages && inboundMessages.length > 0) {
+          const testPhone = inboundMessages.find(m => {
+            const normalized = normalizePhone(m.phone_number || '');
+            return normalized === '6199773020' || normalized.slice(-10) === '6199773020';
+          });
+          if (testPhone) {
+            console.log('✅ Found message from 6199773020:', testPhone);
+          } else {
+            console.log('⚠️ Message from 6199773020 not found in results');
+            console.log('Sample phone numbers in results:', inboundMessages.slice(0, 5).map(m => m.phone_number));
+          }
+        }
         
         // Query outbound - show sent, delivered, read, failed, rejected
         // Exclude only: SUG (suggested), APR (approved but not sent), scheduled, queued, log, internal
@@ -2033,29 +2047,38 @@
         
         console.log(`Displaying ${messages.length} messages`);
         
+        // Debug: Show phone number formats found
+        const phoneFormats = [...new Set(messages.slice(0, 10).map(m => m.phone_number))];
+        console.log('Sample phone number formats in messages:', phoneFormats);
+        
         if (!messages || messages.length === 0) {
           tbody.innerHTML = '<tr><td colspan="5" style="padding: 40px; text-align: center; color: var(--text-secondary);">No messages found. Check console for details.</td></tr>';
           return;
         }
         
-        // Batch lookup customers
+        // Normalize ALL phone numbers to exactly 10 digits for consistent lookup
+        // This ensures 619-977-3020, +16199773020, 16199773020 all become 6199773020
         const phoneNumbers = [...new Set(messages.map(m => {
           const normalized = normalizePhone(m.phone_number || '');
-          return normalized.length >= 10 ? normalized.slice(-10) : normalized;
-        }).filter(p => p.length >= 10))];
+          return normalized.length === 10 ? normalized : null;
+        }).filter(p => p && p.length === 10))];
         
+        console.log(`Looking up ${phoneNumbers.length} unique phone numbers`);
         const customerMap = await batchLookupCustomers(phoneNumbers);
         
         // Render
         tbody.innerHTML = messages.map(msg => {
           const rawPhone = msg.phone_number || 'Unknown';
-          const normalizedPhone = normalizePhone(rawPhone);
-          const phoneKey = normalizedPhone.length >= 10 ? normalizedPhone.slice(-10) : normalizedPhone;
-          const displayPhone = phoneKey.length === 10 
-            ? `(${phoneKey.slice(0,3)}) ${phoneKey.slice(3,6)}-${phoneKey.slice(6)}`
+          // ALWAYS normalize to exactly 10 digits
+          const phoneKey = normalizePhone(rawPhone);
+          // Ensure it's exactly 10 digits
+          const normalizedKey = phoneKey.length === 10 ? phoneKey : (phoneKey.length > 10 ? phoneKey.slice(-10) : phoneKey.padStart(10, '0'));
+          const displayPhone = normalizedKey.length === 10 
+            ? `(${normalizedKey.slice(0,3)}) ${normalizedKey.slice(3,6)}-${normalizedKey.slice(6)}`
             : rawPhone;
           
-          const customer = customerMap.get(phoneKey);
+          // Lookup customer using normalized 10-digit key
+          const customer = customerMap.get(normalizedKey);
           const customerName = customer ? (customer.name || `${customer.first_name || ''} ${customer.last_name || ''}`.trim()) : null;
           
           const time = new Date(msg.timestamp || new Date()).toLocaleString('en-US', {
@@ -2076,7 +2099,7 @@
           if (content.length > 60) content = content.substring(0, 57) + '...';
           
           return `
-            <tr onclick="loadConversation('${rawPhone}', '${phoneKey}')">
+            <tr onclick="loadConversation('${rawPhone}', '${normalizedKey}')">
               <td style="padding: 12px 16px; color: var(--text-secondary); font-size: 11px;">${time}</td>
               <td style="padding: 12px 16px; color: ${msg.direction === 'inbound' ? '#10b981' : '#3b82f6'}; font-weight: 600;">${direction}</td>
               <td style="padding: 12px 16px;">
@@ -2200,14 +2223,20 @@
     }
     
     function getPhoneVariants(phone) {
+      // Always normalize to exactly 10 digits first
       const normalized = normalizePhone(phone);
+      const tenDigits = normalized.length === 10 ? normalized : (normalized.length > 10 ? normalized.slice(-10) : normalized.padStart(10, '0'));
+      
+      // Return all possible formats for flexible matching
       return [
-        normalized,
-        `+1${normalized}`,
-        `1${normalized}`,
-        `+${normalized}`,
-        phone
-      ].filter((v, i, arr) => arr.indexOf(v) === i);
+        tenDigits,                    // 6199773020
+        `+1${tenDigits}`,            // +16199773020
+        `1${tenDigits}`,             // 16199773020
+        `+${tenDigits}`,             // +6199773020
+        `(${tenDigits.slice(0,3)}) ${tenDigits.slice(3,6)}-${tenDigits.slice(6)}`, // (619) 977-3020
+        `${tenDigits.slice(0,3)}-${tenDigits.slice(3,6)}-${tenDigits.slice(6)}`,   // 619-977-3020
+        phone                         // Original format
+      ].filter((v, i, arr) => arr.indexOf(v) === i && v);
     }
     
     async function sendConversationReply() {
@@ -2251,12 +2280,23 @@
         if (normalizedPhones.length === 0) return customerMap;
         
         // Strategy 1: Check phone_signups by phone (not phone_normalized column)
+        // Use flexible matching with all phone format variants
         for (const phone of normalizedPhones) {
           try {
+            // Create all format variants for this 10-digit number
+            const variants = [
+              phone,                    // 6199773020
+              `+1${phone}`,           // +16199773020
+              `1${phone}`,            // 16199773020
+              `+${phone}`,            // +6199773020
+              `(${phone.slice(0,3)}) ${phone.slice(3,6)}-${phone.slice(6)}`, // (619) 977-3020
+              `${phone.slice(0,3)}-${phone.slice(3,6)}-${phone.slice(6)}`     // 619-977-3020
+            ];
+            
             const { data: signups } = await supabase
               .from('phone_signups')
               .select('member_id, phone, customer_name, first_name, last_name')
-              .or(`phone.ilike.%${phone}%,phone.ilike.%+1${phone}%,phone.ilike.%1${phone}%`)
+              .or(variants.map(v => `phone.ilike.%${v}%`).join(','))
               .limit(1);
             
             if (signups && signups.length > 0) {
@@ -2282,10 +2322,20 @@
           if (customerMap.has(phone)) continue; // Already found
           
           try {
+            // Create all format variants
+            const variants = [
+              phone,
+              `+1${phone}`,
+              `1${phone}`,
+              `+${phone}`,
+              `(${phone.slice(0,3)}) ${phone.slice(3,6)}-${phone.slice(6)}`,
+              `${phone.slice(0,3)}-${phone.slice(3,6)}-${phone.slice(6)}`
+            ];
+            
             const { data: customers } = await supabase
               .from('customers_blaze')
               .select('member_id, id, phone, phone_number, name, first_name, last_name')
-              .or(`phone.ilike.%${phone}%,phone_number.ilike.%${phone}%,phone.ilike.%+1${phone}%,phone_number.ilike.%+1${phone}%`)
+              .or(variants.map(v => `phone.ilike.%${v}%,phone_number.ilike.%${v}%`).join(','))
               .limit(1);
             
             if (customers && customers.length > 0) {
@@ -2312,10 +2362,19 @@
           if (customerMap.has(phone)) continue; // Already found
           
           try {
+            const variants = [
+              phone,
+              `+1${phone}`,
+              `1${phone}`,
+              `+${phone}`,
+              `(${phone.slice(0,3)}) ${phone.slice(3,6)}-${phone.slice(6)}`,
+              `${phone.slice(0,3)}-${phone.slice(3,6)}-${phone.slice(6)}`
+            ];
+            
             const { data: customers } = await supabase
               .from('customers')
               .select('id, member_id, phone, name, first_name, last_name')
-              .or(`phone.ilike.%${phone}%,phone.ilike.%+1${phone}%`)
+              .or(variants.map(v => `phone.ilike.%${v}%`).join(','))
               .limit(1);
             
             if (customers && customers.length > 0) {
