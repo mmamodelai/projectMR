@@ -2005,13 +2005,21 @@
         
         console.log(`✅ Found ${inboundMessages?.length || 0} inbound messages`);
         
+        // CRITICAL DEBUG: Show the MOST RECENT inbound message timestamp
+        if (inboundMessages && inboundMessages.length > 0) {
+          const mostRecent = inboundMessages[0];
+          console.log(`📅 MOST RECENT INBOUND MESSAGE: ${mostRecent.timestamp} from ${mostRecent.phone_number}`);
+        } else {
+          console.log('❌ NO INBOUND MESSAGES FOUND IN DATABASE');
+        }
+        
         // CRITICAL DEBUG: Check for specific phone number (6199773020)
         const testPhoneNormalized = '6199773020';
         console.log(`🔍 Looking for messages from ${testPhoneNormalized}...`);
         
         if (inboundMessages && inboundMessages.length > 0) {
-          // Show ALL inbound message details for debugging
-          console.log('📋 ALL inbound messages found:', inboundMessages.map(m => ({
+          // Show ALL inbound message details for debugging (first 20)
+          console.log('📋 FIRST 20 inbound messages found:', inboundMessages.slice(0, 20).map(m => ({
             id: m.id,
             phone: m.phone_number,
             normalized: normalizePhone(m.phone_number || ''),
