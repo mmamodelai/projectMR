@@ -397,6 +397,10 @@
           <option value="">Select Identity...</option>
         </select>
       </div>
+      <div style="display: flex; gap: 8px; align-items: center; margin-bottom: 8px;">
+        <input type="checkbox" id="productFeedbackCheck" style="margin: 0; cursor: pointer;">
+        <label for="productFeedbackCheck" style="color: var(--text-secondary); font-size: 12px; cursor: pointer; margin: 0;">Product Feedback</label>
+      </div>
       <div style="display: flex; gap: 8px;">
         <input type="text" id="chatInput" placeholder="Type a message..." style="flex: 1; padding: 8px; background: var(--bg); border: 1px solid var(--border); color: var(--text); border-radius: 4px;" onkeypress="if(event.key==='Enter') sendChatMessage()">
         <button onclick="sendChatMessage()" class="primary">Send</button>
@@ -516,6 +520,7 @@
         const container = document.getElementById('chatMessages');
         const sender = msg.payload?.sender || 'Unknown';
         const time = new Date(msg.timestamp || new Date()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        const isProductFeedback = msg.payload?.product_feedback || false;
         
         const msgDiv = document.createElement('div');
         msgDiv.style.marginBottom = '8px';
@@ -523,7 +528,7 @@
         msgDiv.dataset.messageId = msg.id;
         msgDiv.innerHTML = `
             <div style="font-size: 10px; color: var(--accent); font-weight: 700; margin-bottom: 2px; display: flex; justify-content: space-between; align-items: center;">
-                <span>${sender} <span style="color: var(--text-secondary); font-weight: 400;">${time}</span></span>
+                <span>${sender} <span style="color: var(--text-secondary); font-weight: 400;">${time}</span> ${isProductFeedback ? '<span style="color: #f59e0b; font-size: 9px;">📝 Product Feedback</span>' : ''}</span>
                 <button onclick="deleteChatMessage('${msg.id}')" class="chat-delete-btn" style="display: none; background: transparent; border: none; color: #ef4444; cursor: pointer; font-size: 14px; padding: 2px 6px; opacity: 0.6; transition: opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'" title="Delete message">🗑️</button>
             </div>
             <div style="background: #2d3748; padding: 8px 12px; border-radius: 8px; font-size: 13px; line-height: 1.4; color: #e2e8f0;">
@@ -566,8 +571,10 @@
     async function sendChatMessage() {
         const input = document.getElementById('chatInput');
         const select = document.getElementById('chatIdentity');
+        const productFeedbackCheck = document.getElementById('productFeedbackCheck');
         const content = input.value.trim();
         const sender = select.value;
+        const isProductFeedback = productFeedbackCheck ? productFeedbackCheck.checked : false;
 
         if (!content) return;
         if (!sender) {
@@ -578,16 +585,18 @@
         // Save identity
         localStorage.setItem('mota_chat_identity', sender);
 
-        input.value = ''; // clear immediately
-
-        // Optimistic append? No, wait for realtime or ack.
+        input.value = '';
+        if (productFeedbackCheck) productFeedbackCheck.checked = false;
         
         const { error } = await supabase.from('messages').insert({
-            phone_number: 'TEAM', // Dummy
+            phone_number: 'TEAM',
             direction: 'internal',
             status: 'chat',
             content: content,
-            payload: { sender: sender }
+            payload: { 
+                sender: sender,
+                product_feedback: isProductFeedback
+            }
         });
         
         if (error) {
