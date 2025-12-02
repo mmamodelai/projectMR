@@ -1839,10 +1839,13 @@
         dashboardView.style.display = 'none';
         messagesView.classList.add('active');
         messagesView.style.display = 'flex';
-        loadAllMessages();
-        if (currentConversationPhone && currentConversationPhoneKey) {
-          loadConversation(currentConversationPhone, currentConversationPhoneKey);
-        }
+        // Small delay to ensure view is visible before loading
+        setTimeout(() => {
+          loadAllMessages();
+          if (currentConversationPhone && currentConversationPhoneKey) {
+            loadConversation(currentConversationPhone, currentConversationPhoneKey);
+          }
+        }, 100);
       }
     }
     
@@ -1962,16 +1965,20 @@
     // --- ALL MESSAGES LOADING ---
     async function loadAllMessages() {
       const tbody = document.getElementById('allMessagesList');
-      if (!tbody) return;
+      if (!tbody) {
+        console.error('allMessagesList element not found!');
+        return;
+      }
       tbody.innerHTML = '<tr><td colspan="5" style="padding: 40px; text-align: center; color: var(--text-secondary);">Loading messages...</td></tr>';
       
       try {
         await ensureSupabase();
+        console.log('Loading all messages...');
         
         // Query inbound separately to ensure we get ALL inbound messages
         // Get ALL inbound regardless of status (read, unread, sent, delivered, etc.)
         // ONLY exclude SUG (suggested messages, not real SMS)
-        const { data: inboundMessages } = await supabase
+        const { data: inboundMessages, error: inboundError } = await supabase
           .from('messages')
           .select('id, phone_number, content, direction, status, timestamp, payload')
           .eq('direction', 'inbound')
@@ -1979,7 +1986,16 @@
           .order('timestamp', { ascending: false })
           .limit(2000); // Large limit to ensure we get all inbound
         
-        // Query outbound (excluding unwanted statuses and internal logs)
+        if (inboundError) {
+          console.error('Error fetching inbound messages:', inboundError);
+          tbody.innerHTML = `<tr><td colspan="5" style="padding: 40px; text-align: center; color: var(--danger);">Error: ${inboundError.message}</td></tr>`;
+          return;
+        }
+        
+        console.log(`Found ${inboundMessages?.length || 0} inbound messages`);
+        
+        // Query outbound - show sent, delivered, read, failed, rejected
+        // Exclude only: SUG (suggested), APR (approved but not sent), scheduled, queued, log, internal
         let outboundQuery = supabase
           .from('messages')
           .select('id, phone_number, content, direction, status, timestamp, payload')
@@ -1988,17 +2004,25 @@
           .neq('status', 'APR')
           .neq('status', 'scheduled')
           .neq('status', 'queued')
-          .neq('status', 'log') // Exclude log entries
-          .neq('direction', 'internal'); // Exclude internal messages
+          .neq('status', 'log')
+          .neq('direction', 'internal');
         
-        const { data: outboundMessages } = await outboundQuery
+        const { data: outboundMessages, error: outboundError } = await outboundQuery
           .order('timestamp', { ascending: false })
-          .limit(500);
+          .limit(1000); // Increased limit
+        
+        if (outboundError) {
+          console.error('Error fetching outbound messages:', outboundError);
+        }
+        
+        console.log(`Found ${outboundMessages?.length || 0} outbound messages`);
         
         const allMessages = [
           ...(inboundMessages || []),
           ...(outboundMessages || [])
         ];
+        
+        console.log(`Total messages: ${allMessages.length}`);
         
         // Sort by timestamp ONLY
         const sorted = allMessages.sort((a, b) => {
@@ -2007,8 +2031,10 @@
         
         const messages = sorted.slice(0, 100);
         
+        console.log(`Displaying ${messages.length} messages`);
+        
         if (!messages || messages.length === 0) {
-          tbody.innerHTML = '<tr><td colspan="5" style="padding: 40px; text-align: center; color: var(--text-secondary);">No messages found</td></tr>';
+          tbody.innerHTML = '<tr><td colspan="5" style="padding: 40px; text-align: center; color: var(--text-secondary);">No messages found. Check console for details.</td></tr>';
           return;
         }
         
@@ -2064,7 +2090,9 @@
         
       } catch (error) {
         console.error('Error loading messages:', error);
-        tbody.innerHTML = '<tr><td colspan="5" style="padding: 40px; text-align: center; color: var(--danger);">Error loading messages</td></tr>';
+        console.error('Error stack:', error.stack);
+        const errorMsg = error.message || String(error);
+        tbody.innerHTML = `<tr><td colspan="5" style="padding: 40px; text-align: center; color: var(--danger);">Error loading messages: ${errorMsg}<br><small>Check browser console for details</small></td></tr>`;
       }
     }
     
